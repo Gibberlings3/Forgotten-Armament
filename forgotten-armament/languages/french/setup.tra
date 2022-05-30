@@ -1,16 +1,15 @@
 // Forgotten Armament, American English
 
 @1  = ~Installer " Armes et Equipements oublies "~
-//@1 = ~Install IWD:EE Items~
-@2  = ~Installer " Armes et Equipements oublies " (Objets issus de Neverwinter Nights 2)~
+@2  = ~Installer " Objets issus de Neverwinter Nights 2 "~
 @3  = ~Deplacer certains objets a des emplacements plus difficiles~
 @4  = ~Mise a jour des statistiques des objets ameliores pour une meilleur integration~
-@5  = ~Mise a jour des styles de combat (Armes a deux mains, Arme a une main et épée et bouclier)~
-@6  = ~1/2 attaque supplementaire par round pour les Armes a deux mains pour les specialistes (2 points de competences)~
-@7  = ~1 attaque supplementaire par round pour les Armes a deux mains pour les specialistes (2 points de competences)~
+@5  = ~Mise a jour des styles de combat (Armes a deux mains, Arme a une main et Épée et bouclier)~
+@6  = ~1/2 attaque supplementaire par round avec les Armes a deux mains pour les specialistes (2 points de competences)~
+@7  = ~1 attaque supplementaire par round avec les Armes a deux mains pour les specialistes (2 points de competences)~
 @8  = ~Remplacer les Bottes de Rapidite (Les Pattes de Guepard)~
 @9  = ~Ennemis mieux equipes~
-@10 = ~Lances ameliorees~
+@10 = ~Armes dans le style de NWN2~
 
 @3000 = ~Ce composant necessite BG: EE, BGII: EE, ou EET~
 @3001 = ~DLCMerger est necessaire avant d'installer des mods sur les jeux SoD~

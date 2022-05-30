@@ -6,9 +6,9 @@
 
 [A Gibberlings Three Mod](https://www.gibberlings3.net/)
 
-**Author**: [morpheus562](https://www.gibberlings3.net/profile/11591-morpheus562/)
+**Auteur**: [morpheus562](https://www.gibberlings3.net/profile/11591-morpheus562/)
 
-**On the Web**: [Discussion Topic](https://www.gibberlings3.net/forums/topic/33923-forgotten-armament-beta/)
+**Sur le Web**: [Forum de discussion](https://www.gibberlings3.net/forums/topic/33923-forgotten-armament-beta/)
 
 ## Introduction
 
@@ -20,19 +20,21 @@ Forgotten Armament a pour but d'apporter de nombreuses armes, armures et objets 
 
 Ce composant installe tous les nouveaux objets. 
 
-Une liste des descriptions des objets se trouve [ici] 
-(https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md).
+Une liste des descriptions des objets se trouve [ici](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md).
 
-Une liste des descriptions des objets se trouve [ici]
-(https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md).
+
+Une liste des emplacements des objets se trouve [ici](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md).
+
 
 ### Remplacer les Bottes de Rapidité (Les Pattes de Guepard)
 
 Ce composant remplace les bottes de Rapidité (Les Pattes de guépard) par d'autres options de bottes.
 
-### Lances améliorées
+### Armes dans le style de NWN2
 
-Ce composant améliore les lances, leurs dégâts de base passe de 1d6 à 1d8 et inflige 1d8 dégâts supplémentaire en cas de coup critique.
+Ce composant améliore les armes, les rendant plus proche de Neverwinter Nights 2.
+
+N'installez pas le composant Armes dans le style de NWN2 avec d'autres mods qui modifient les dégâts des armes comme Scales of Balance.
 
 ## Compatibilité
 
