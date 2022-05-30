@@ -10,6 +10,7 @@
 COPY ~forgotten-armament/spl/MOSPR01.SPL~ ~override~ // +1d8 DMG on Crit Strike
 COPY ~forgotten-armament/spl/MOSPR02.SPL~ ~override~ // +1d10 DMG on Crit Strike
 COPY ~forgotten-armament/spl/MOSPR03.SPL~ ~override~ // +1d6 DMG on Crit Strike
+COPY ~forgotten-armament/spl/MOSPR04.SPL~ ~override~ // +1d12 DMG on Crit Strike
 
 ///////////////////////////////////////////////////////////////////////////
 // Review and Update all Weapons                                         //
@@ -46,6 +47,7 @@ OUTER_SPRINT bstdcrit    @20102
 OUTER_SPRINT throwncrit  @20200
 OUTER_SPRINT oldthrown1  @20201
 OUTER_SPRINT newthrown1  @20202
+OUTER_SPRINT oldgreaxe   @20203  // 2d12
 
 OUTER_SPRINT oldtwohand  @20300  // 1d12
 OUTER_SPRINT newtwohand  @20301  // 2d6
@@ -92,6 +94,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   READ_BYTE  0x31 prof
   READ_SHORT 0x1c type
   READ_LONG  0x60 ench
+  READ_BYTE  0x18 handed
   READ_LONG  0x6a fx_off ELSE 0
   READ_SHORT 0x6e fx_ind ELSE 0
   READ_SHORT 0x70 fx_num ELSE 0
@@ -99,6 +102,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   SET critmatch = 0
   SET critamount = 0
   SET meleeaxe = 0
+  SET twohand = 0
 
   // Bastard Swords
   PATCH_IF (prof = 89) BEGIN
@@ -342,6 +346,13 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 
   // Axe
   END ELSE PATCH_IF (prof = 92) BEGIN
+    PATCH_IF ((%handed% BAND 0b00000010) = 0b00000010) BEGIN
+      // Update to 1d12 damage
+      LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=12 dicenumber=1 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR04~ END
+      SET twohand = 1
+    END
+
     // Check if existing keen property
     FOR (index = 0 ; index < fx_num ; ++index) BEGIN
       READ_SHORT (fx_off + 0x30 * index) opcode
@@ -363,6 +374,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         READ_STRREF ~%offset%~ desc
         found_index1 = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%newslash%~ ~%desc%~)
         found_index2 = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%oldthrown1%~ ~%desc%~)
+        found_index3 = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%oldpierc%~ ~%desc%~)
 
         PATCH_IF found_index1 > "-1" BEGIN
           SET meleeaxe = 1
@@ -375,6 +387,13 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           INNER_PATCH_SAVE desc ~%desc%~ BEGIN
             REPLACE_TEXTUALLY ~%oldthrown1%~ ~%newthrown1%~
             REPLACE_TEXTUALLY ~%speedfactor%~ ~%throwncrit%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        END ELSE PATCH_IF found_index3 > "-1" BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%oldpierc%~ ~~
+            REPLACE_TEXTUALLY ~%speedfactor%~ ~%newpierc%~
+            REPLACE_TEXTUALLY ~%speedfactor%~ ~%spearcrit%~
           END
           SAY_EVALUATED ~%offset%~ ~%desc%~
         END ELSE BEGIN
@@ -415,9 +434,18 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           SAY_EVALUATED ~%offset%~ ~%desc%~
         END
       END
+
+      PATCH_IF twohand BEGIN
+        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+          REPLACE_TEXTUALLY ~%speardmgnew%~ ~%oldtwohand%~
+          REPLACE_TEXTUALLY ~%oldgreaxe%~ ~%oldtwohand%~
+          REPLACE_TEXTUALLY ~%bstddmgnew%~ ~%oldtwohand%~
+        END
+        SAY_EVALUATED ~%offset%~ ~%desc%~
+      END
     END
 
-    PATCH_IF meleeaxe BEGIN
+    PATCH_IF meleeaxe AND !twohand BEGIN
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR01~ END
     END
 
@@ -698,7 +726,6 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         found_index1 = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%newcrush%~ ~%desc%~)
 
         PATCH_IF found_index1 > "-1" BEGIN
-          SET meleeaxe = 1
           INNER_PATCH_SAVE desc ~%desc%~ BEGIN
             REPLACE_TEXTUALLY ~%speedfactor%~ ~%throwncrit%~
             REPLACE_TEXTUALLY ~%olddmgtyp%~ ~%newdmgtyp%~
@@ -1140,12 +1167,20 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_LONG ~%offset%~ desc_strref
       PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
         READ_STRREF ~%offset%~ desc
-        found_index = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%newmissi%~ ~%desc%~)
+        found_index1 = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%newmissi%~ ~%desc%~)
+        found_index2 = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%oldcrush%~ ~%desc%~)
 
-        PATCH_IF found_index > "-1" BEGIN
+        PATCH_IF found_index1 > "-1" BEGIN
           INNER_PATCH_SAVE desc ~%desc%~ BEGIN
             REPLACE_TEXTUALLY ~%speedfactor%~ ~%bowcrit%~
             REPLACE_TEXTUALLY ~%olddmgtyp%~ ~%newdmgtyp%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        END ELSE PATCH_IF found_index2 > "-1" BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%oldcrush%~ ~~
+            REPLACE_TEXTUALLY ~%speedfactor%~ ~%newcrush%~
+            REPLACE_TEXTUALLY ~%speedfactor%~ ~%bowcrit%~
           END
           SAY_EVALUATED ~%offset%~ ~%desc%~
         END ELSE BEGIN
