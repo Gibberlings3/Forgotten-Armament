@@ -22,10 +22,10 @@ ACTION_IF !VARIABLE_IS_SET ~initialise~ BEGIN
 // Detect third-party mods                                               //
 ///////////////////////////////////////////////////////////////////////////
    // Detect Rogue Rebalancing
-   ACTION_IF MOD_IS_INSTALLED ~skills-and-abilities.tp2~ ~120~ THEN BEGIN
-      OUTER_SET rogue_rebalancing=1
-   END ELSE BEGIN
+   ACTION_IF MOD_IS_INSTALLED ~setup-rr.tp2~ ~7~ THEN BEGIN
       OUTER_SET rogue_rebalancing=0
+   END ELSE BEGIN
+      OUTER_SET rogue_rebalancing=1
    END
 
 

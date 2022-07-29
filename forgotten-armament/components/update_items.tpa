@@ -1432,7 +1432,7 @@ END
 // The Shadow's Blade +3                                                 //
 // Luck +1, +1 Backstab (Thieves only)                                   //
 ///////////////////////////////////////////////////////////////////////////
-ACTION_IF FILE_EXISTS_IN_GAME ~SW1H10.ITM~ BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~SW1H10.ITM~ AND rogue_rebalancing BEGIN
 COPY ~forgotten-armament/eff/update_item/MO1H10.EFF~ ~override~
 OUTER_SPRINT oldshort4 @31306
 OUTER_SPRINT newshort4 @31307
