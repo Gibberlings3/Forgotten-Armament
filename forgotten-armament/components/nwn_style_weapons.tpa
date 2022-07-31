@@ -392,7 +392,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 
   // Axe
   END ELSE PATCH_IF (prof = 92) BEGIN
-    PATCH_IF ((%handed% BAND 0b00000010) = 0b00000010) BEGIN
+    PATCH_IF ((%handed% BAND 0b00000010) = 0b00000010) AND !("%item_name%" STRING_EQUAL_CASE "GIAFIR2.ITM") BEGIN
       // Update to 1d12 damage
       LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=12 dicenumber=1 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR04~ END
@@ -653,7 +653,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   END ELSE PATCH_IF (prof = 97) BEGIN
 
     // Update to 1d8 Damage
-    PATCH_IF !("%item_name%" STRING_EQUAL_CASE "MH#HAMM2.ITM") BEGIN
+    PATCH_IF !("%item_name%" STRING_EQUAL_CASE "MH#HAMM2.ITM") AND !("%item_name%" STRING_EQUAL_CASE "GIAFIR.ITM")BEGIN
       LPF ALTER_ITEM_HEADER INT_VAR dicesize=8 dicenumber=1 damage_bonus = ench END
     END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR06~ END

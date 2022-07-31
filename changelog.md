@@ -1,3 +1,11 @@
+## Version 0.7.2 BETA
+
+July 31, 2022
+
+### Changed
+
+- Corrected bug with NWN style weapons, so it will no longer alter Fire Giant weapons.
+
 ## Version 0.7.1 BETA
 
 June 26, 2022
