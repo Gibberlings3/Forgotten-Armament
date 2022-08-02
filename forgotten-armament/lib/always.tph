@@ -12,8 +12,16 @@ ACTION_IF !VARIABLE_IS_SET ~initialise~ BEGIN
   OUTER_SET initialise=1
 
 ///////////////////////////////////////////////////////////////////////////
+// Set up ini system                                                     //
+///////////////////////////////////////////////////////////////////////////
+   INCLUDE ~forgotten-armament/lib/lib_ini.tpa~
+    OUTER_SPRINT ini_to_read "forgotten-armament/forgotten-armament.ini"
+    LAF SFO_read_ini_file RET_ARRAY SFO_reserved_ini_hash END
+
+///////////////////////////////////////////////////////////////////////////
 // General variables, macros and functions                               //
 ///////////////////////////////////////////////////////////////////////////
+   INCLUDE ~forgotten-armament/sfo/install_sfo.tpa~
    INCLUDE ~forgotten-armament/lib/lib.tpa~
    OUTER_SPRINT ~folder~ ~forgotten-armament~
    //SILENT
@@ -27,6 +35,5 @@ ACTION_IF !VARIABLE_IS_SET ~initialise~ BEGIN
    END ELSE BEGIN
       OUTER_SET rogue_rebalancing=1
    END
-
 
 END

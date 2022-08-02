@@ -1,0 +1,171 @@
+// NB: as of SCS v33.5 SFO needs the ini system to have been installed already (from lib_ini)
+// Taken and modified from SCS
+
+ACTION_IF !VARIABLE_IS_SET sfo_installed BEGIN
+
+  OUTER_SET sfo_installed=1
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Sanity check for AUTO_EVAL_STRINGS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ OUTER_SPRINT var testers
+ OUTER_SPRINT players var
+ ACTION_IF !"%%players%%" STRING_EQUAL testers BEGIN
+      FAIL "AUTO_EVAL_STRINGS is not set (you need to include it in your tp2 preamble to use SFO)"
+ END
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Get the debug variable from ini; run silent if it's set to zero
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+LAF check_ini STR_VAR ini="debug_variable" RET debug_variable=value END
+ACTION_IF debug_variable=0 BEGIN SILENT END
+
+///////////////////////////////////////////////////////////////////////////
+// Detect ini Presets                                                    //
+///////////////////////////////////////////////////////////////////////////
+    LAF check_ini STR_VAR ini="update_nwn_bstswrd" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_bstswrd=1
+    END ELSE BEGIN
+      OUTER_SET nwn_bstswrd=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_lngswrd" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_lngswrd=1
+    END ELSE BEGIN
+      OUTER_SET nwn_lngswrd=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_katana" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_katana=1
+    END ELSE BEGIN
+      OUTER_SET nwn_katana=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_shtswrd" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_shtswrd=1
+    END ELSE BEGIN
+      OUTER_SET nwn_shtswrd=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_dagger" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_dagger=1
+    END ELSE BEGIN
+      OUTER_SET nwn_dagger=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_axe" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_axe=1
+    END ELSE BEGIN
+      OUTER_SET nwn_axe=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_twohnd" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_twohnd=1
+    END ELSE BEGIN
+      OUTER_SET nwn_twohnd=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_scimwaknin" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_scimwaknin=1
+    END ELSE BEGIN
+      OUTER_SET nwn_scimwaknin=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_warham" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_warham=1
+    END ELSE BEGIN
+      OUTER_SET nwn_warham=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_club" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_club=1
+    END ELSE BEGIN
+      OUTER_SET nwn_club=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_spear" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_spear=1
+    END ELSE BEGIN
+      OUTER_SET nwn_spear=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_halberd" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_halberd=1
+    END ELSE BEGIN
+      OUTER_SET nwn_halberd=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_flailmorn" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_flailmorn=1
+    END ELSE BEGIN
+      OUTER_SET nwn_flailmorn=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_mace" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_mace=1
+    END ELSE BEGIN
+      OUTER_SET nwn_mace=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_staff" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_staff=1
+    END ELSE BEGIN
+      OUTER_SET nwn_staff=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_xbow" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_xbow=1
+    END ELSE BEGIN
+      OUTER_SET nwn_xbow=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_lngbow" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_lngbow=1
+    END ELSE BEGIN
+      OUTER_SET nwn_lngbow=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_shtbow" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_shtbow=1
+    END ELSE BEGIN
+      OUTER_SET nwn_shtbow=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_dart" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_dart=1
+    END ELSE BEGIN
+      OUTER_SET nwn_dart=0
+    END
+
+    LAF check_ini STR_VAR ini="update_nwn_sling" RET value END
+    ACTION_IF value BEGIN
+      OUTER_SET nwn_sling=1
+    END ELSE BEGIN
+      OUTER_SET nwn_sling=0
+    END
+
+END
+VERBOSE
+
+
+
