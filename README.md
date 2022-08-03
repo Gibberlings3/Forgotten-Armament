@@ -42,6 +42,8 @@ This component adds a couple of Breach scrolls to Sorcerous Sundries.
 
 This component updates all weapons to match weapons in NWN2 to include damage, damage type, and critical threat range/damage. This includes all weapons added by mods. A detailed description of the new base weapon stats is [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/NWN2_STYLE_WEAPONS.md).
 
+Please Note: You can update the ini file prior to install if you do not want some of the weapon changes. All weapons are defaulted to update (1), but changing to 0 will ensure they remain untouched.
+
 ### Update Items Setting an Ability Score to Increment the Increase
 
 This component updates all items to increment increases to ability scores instead of setting them. For example, the Belt of Hill Giant normally sets Strength to 19. This component will update the item to increment Strength by +2. All items that set ability scores, included those added by other mods, will be updated to increment with this component.

@@ -1,10 +1,10 @@
 ## Version 0.7.3 BETA
 
-August xx, 2022
+August 2, 2022
 
 ### Changed
 
-- Added option in the ini file to select which items will be included in the NWN Style Weapons component.
+- Added option in the ini file to select which weapons will be included in the NWN Style Weapons component.
 
 ## Version 0.7.2 BETA
 
