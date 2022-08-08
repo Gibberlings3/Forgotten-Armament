@@ -6,7 +6,7 @@ call "%~dp0..\ModPackaging\utilities\ie_games.bat"
 
 REM /* MODIFY: set the values of the 3 variables below to reflect the current mod version */
 set "mod_name=Forgotten Armament"
-set "mod_version=v0.7.3-beta"
+set "mod_version=v0.8-beta"
 set mod_folder=forgotten-armament
 
 REM /* MODIFY: list here which IE games the mod is compatible with, from this list of possibilities: */

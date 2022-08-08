@@ -1,3 +1,12 @@
+## Version 0.8 BETA
+
+August xx, 2022
+
+### Changed
+
+- Updated the following items:
+  - The Equalizer
+
 ## Version 0.7.3 BETA
 
 August 2, 2022
