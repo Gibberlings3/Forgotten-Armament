@@ -122,9 +122,9 @@
   - Chaotic Neutral, Lawful Neutral: +10% Magic Resistance
   - Neutral Good, Neutral Evil: +5% Magic Resistance
 - Damage bonus versus alignments:
-  vs. Chaotic Neutral, Lawful Neutral: +2 magic damage
-  vs. Neutral Good, Neutral Evil: +4 magic damage
-  vs. Other Alignments: +6 magic damage
+  - vs. Chaotic Neutral, Lawful Neutral: +2 magic damage
+  - vs. Neutral Good, Neutral Evil: +4 magic damage
+  - vs. Other Alignments: +6 magic damage
 
 #### Tongue of Acid +3
 - +1d6 acid damage (previously +1d3)
