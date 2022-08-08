@@ -114,6 +114,18 @@
 #### Daystar
 - +3 weapon (previously +2 weapon)
 
+#### The Equalizer
+- +4 weapon (previously +3 weapon)
+- 1d8+4 damage (previously variable based on enemy alignment
+- Update Magic Resistance based on the user's alignment
+  - True Neutral: +20% Magic Resistance
+  - Chaotic Neutral, Lawful Neutral: +10% Magic Resistance
+  - Neutral Good, Neutral Evil: +5% Magic Resistance
+- Damage bonus versus alignments:
+  vs. Chaotic Neutral, Lawful Neutral: +2 magic damage
+  vs. Neutral Good, Neutral Evil: +4 magic damage
+  vs. Other Alignments: +6 magic damage
+
 #### Tongue of Acid +3
 - +1d6 acid damage (previously +1d3)
 
