@@ -116,7 +116,7 @@
 
 #### The Equalizer
 - +4 weapon (previously +3 weapon)
-- 1d8+4 damage (previously variable based on enemy alignment
+- 1d8+4 damage (previously variable based on enemy alignment)
 - Update Magic Resistance based on the user's alignment
   - True Neutral: +20% Magic Resistance
   - Chaotic Neutral, Lawful Neutral: +10% Magic Resistance
