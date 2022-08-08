@@ -295,6 +295,28 @@ Weight: 4~
 @30710 = ~\+1d3 (acid)~
 @30711 = ~+1d6 acid damage~
 
+@30712 = ~Immunity to charm and confusion~
+@30713 = ~Immunity to charm and confusion
+– Update Magic Resistance based on the user's alignment
+  True Neutral: +20% Magic Resistance
+  Chaotic Neutral, Lawful Neutral: +10% Magic Resistance
+  Neutral Good, Neutral Evil: +5% Magic Resistance~
+
+@30714 = ~Strikes as a \+3 weapon
+
+THAC0 & Damage:
+  vs. True Neutral: \+0 to hit, 1d8 damage
+  vs. Chaotic Neutral, Lawful Neutral: \+1 to hit, 1d8\+2 damage
+  vs. Neutral Good, Neutral Evil: \+2 to hit, 1d8\+4 damage
+  vs. Other Alignments: \+3 to hit, 1d8\+6 damage~
+@30715 = ~Damage Bonus versus alignments:
+  vs. Chaotic Neutral, Lawful Neutral: +2 magic damage
+  vs. Neutral Good, Neutral Evil: +4 magic damage
+  vs. Other Alignments: +6 magic damage
+
+THAC0: +4
+Damage: 1d8+4~
+
 ///////////////////////////////////////////////////////////////////////////
 // Mace                                                                  //
 ///////////////////////////////////////////////////////////////////////////
