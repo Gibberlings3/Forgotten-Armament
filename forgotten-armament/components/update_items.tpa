@@ -893,7 +893,6 @@ OUTER_SPRINT newlong6 @30711
       END
 END
 
-/*
 ///////////////////////////////////////////////////////////////////////////
 // The Equalizer                                                         //
 // Update damage vs. opposing alignment and self buffs                   //
@@ -913,21 +912,34 @@ ACTION_FOR_EACH equal IN
       8 // Lawful Good - IDS 17
     BEGIN
       COPY ~forgotten-armament/eff/update_item/EQUAL0%equal%.EFF~ ~override~
-      COPY ~forgotten-armament/eff/update_item/MO#EQ0%equal%.EFF~ ~override~
+      //COPY ~forgotten-armament/eff/update_item/MO#EQ0%equal%.EFF~ ~override~
     END
+
+COPY ~forgotten-armament/eff/update_item/MO#EQ01.EFF~ ~override~ // +20% MR
+COPY ~forgotten-armament/eff/update_item/MO#EQ02.EFF~ ~override~ // +10% MR
+COPY ~forgotten-armament/eff/update_item/MO#EQ03.EFF~ ~override~ // +5% MR
+COPY ~forgotten-armament/eff/update_item/MO#EQ04.EFF~ ~override~ // MR Icon
 
     COPY_EXISTING ~SW1H54.ITM~ ~override~
       WRITE_LONG 0x60 4
       LPF ALTER_ITEM_HEADER INT_VAR header_type=1 thac0_bonus = 4 damage_bonus = 4 END
       LPF DELETE_EFFECT INT_VAR check_headers = 0 match_opcode = 177 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 50 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq01~ END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 18 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq02~ END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 33 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq03~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 50 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 18 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq01~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 18 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 33 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq02~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 33 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 35 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq02~ END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 35 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 51 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq05~ END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 49 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq06~ END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 19 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq07~ END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 17 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq08~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 51 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq03~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 51 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 49 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq03~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 49 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 19 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq03~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 19 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 17 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq03~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 17 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
 
         PATCH_FOR_EACH offset IN 0xc 0x54 BEGIN
         READ_LONG ~%offset%~ desc_strref
@@ -940,7 +952,6 @@ ACTION_FOR_EACH equal IN
             END
       END
 END
-*/
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
