@@ -937,17 +937,15 @@ COPY ~forgotten-armament/eff/update_item/MO#EQ04.EFF~ ~override~ // MR Icon
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 35 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq03~ END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 35 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq04~ END
 
-        PATCH_FOR_EACH offset IN 0xc 0x54 BEGIN
-        READ_LONG ~%offset%~ desc_strref
-            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-              READ_STRREF ~%offset%~ desc
-              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-                REPLACE_TEXTUALLY ~%oldlong7%~ ~%newlong7%~
-                REPLACE_TEXTUALLY ~%oldlong8%~ ~%newlong8%~
-              END
-              SAY_EVALUATED ~%offset%~ ~%desc%~
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldlong7%~ ~%newlong7%~
+              REPLACE_TEXTUALLY ~%oldlong8%~ ~%newlong8%~
             END
-      END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
 END
 
 ///////////////////////////////////////////////////////////////////////////

@@ -309,7 +309,7 @@ THAC0 & Damage:
   vs. Chaotic Neutral, Lawful Neutral: \+1 to hit, 1d8\+2 damage
   vs. Neutral Good, Neutral Evil: \+2 to hit, 1d8\+4 damage
   vs. Other Alignments: \+3 to hit, 1d8\+6 damage~
-@30715 = ~Damage Bonus versus alignments:
+@30715 = ~Damage bonus versus alignments:
   vs. Chaotic Neutral, Lawful Neutral: +2 magic damage
   vs. Neutral Good, Neutral Evil: +4 magic damage
   vs. Other Alignments: +6 magic damage
