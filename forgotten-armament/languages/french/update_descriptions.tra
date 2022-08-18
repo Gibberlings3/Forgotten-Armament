@@ -294,6 +294,31 @@ Poids : 4~
 @30710 = ~\+1d3 (acide)~
 @30711 = ~+1d6 dégâts d'acide~
 
+@30712 = ~Immunité contre le charme et la confusion~
+@30713 = ~Immunité au charme et à la confusion
+– Augmente la résistance à la magie en fonction de l'alignement du porteur
+	Neutre strict : +20 % de résistance à la magie
+	Chaotique neutre et Loyal neutre : +10 % de résistance à la magie
+	Neutre bon et Neutre mauvais :  +5 %  de résistance à la magie~
+
+@30714 = ~Frappe comme une arme +3.
+
+TAC0 et dégâts :
+  Contre neutre strict : +0 à la frappe, 1d8 points de dégâts
+  Contre chaotique neutre, loyal neutre : +1 à la frappe, 1d8+2 points de dégâts
+  Contre neutre bon, neutre mauvais : +2 à la frappe, 1d8+4 points de dégâts
+  Contre autres alignements : +3 à la frappe, 1d8+6 points de dégâts~
+@30715 = ~Inflige des dégâts magiques en fonction de l'alignement des créatures :
+  - Inflige 2 points de dégâts magiques contre les créatures chaotiques neutres et loyales neutres
+  - Inflige 4 points de dégâts magiques contre les créatures neutres bonnes et neutres mauvaises
+  - Inflige 6 points de dégâts magiques contre les autres alignements
+
+Enchantement : +4
+TAC0 : +4
+Dégâts : 1d8+4~
+
+
+
 ///////////////////////////////////////////////////////////////////////////
 // Mace                                                                  //
 ///////////////////////////////////////////////////////////////////////////

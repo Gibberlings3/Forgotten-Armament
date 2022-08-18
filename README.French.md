@@ -45,6 +45,8 @@ Ce composant met à jour toutes les armes sur le modèle de Neverwinter Nights 2
 
 Une description détaillée des nouvelles statistiques est disponible [ici](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/NWN2_STYLE_WEAPONS.md).
 
+Remarque : Vous pouvez modifier le fichier .ini avant l'installation si vous désirez éviter de changer certaines categories armes. Par défaut, toutes les armes sont mises à jour (1), mais si vous passez à (0), celles-ci ne seront pas altérées. Vous trouverais la liste des types d'armes au debut du fichier "forgotten-armament.ini" sous la ligne [weapon tweaks] et n'aurais plus qu'à faire votre choix.
+
 ### Mise a jour des statistiques et scores de capacité des objets améliorés pour une meilleur integration
 
 Ce composant met à jour tous les objets qui attribuent un score de capacité pour accroître les statistiques. Par exemple, la Ceinture de Géant des Collines porte normalement la Force à 19. Ce composant met à jour l'objet en question afin d'augmenter la force de 2. Tous les objets qui attribuent des scores de capacité, y compris ceux ajoutés par d'autres mods, seront mis à jour pour être améliorés par ce composant.
