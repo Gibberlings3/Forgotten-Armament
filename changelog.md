@@ -1,11 +1,11 @@
-## Version 0.8 BETA
+## Version 1.0
 
-August xx, 2022
+September 3, 2022
 
 ### Changed
 
-- Updated the following items:
-  - The Equalizer
+- Official v1.0 release
+- Updated The Equalizer
 
 ## Version 0.7.3 BETA
 
