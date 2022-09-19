@@ -2935,7 +2935,7 @@ OUTER_SET morale = RESOLVE_STR_REF (@30009)
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 24 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 23 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 106 timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 296 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~cdhorror~END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 296 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~cdhorror~ END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 106 target = 1 parameter1 = 1 parameter2 = 1 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 36 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 161 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 END
@@ -3106,5 +3106,23 @@ END
 // Shield of the Falling Stars +1                                        //
 // +10% resistance to missile damage                                     //
 ///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+// Rings                                                                //
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Ring of Spell Turning                                                 //
+// Change from Minor Turning to Turning                                  //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~RING34.ITM~ BEGIN
+  COPY ~forgotten-armament/itm/update/RING34.ITM~ ~override~
+    SAY NAME1 @34200
+    SAY NAME2 @34202
+    SAY UNIDENTIFIED_DESC @34201
+    SAY DESC @34203
+END
 
 // Bracers: Mintassan's Miraculous Bracers, Red Guard, Clasps of the Devoted, Bracers of the Inner Planes
