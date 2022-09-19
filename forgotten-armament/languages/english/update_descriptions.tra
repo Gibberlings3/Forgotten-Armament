@@ -856,3 +856,31 @@ Equipped abilities:
 @33300 = ~\+4 vs. missile attacks~
 @33301 = ~+4 vs. missile attacks
 – +10% resistance to missile damage~
+
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+// Accessories                                                           //
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Ring                                                                  //
+///////////////////////////////////////////////////////////////////////////
+@34200 = ~Ring~
+@34201 = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession.
+
+STATISTICS:
+
+Weight: 0~
+
+@34202 = ~Ring of Spell Turning~
+@34203 = ~A gift to Derek Poodon, apprentice warrior, this ring was his salvation when he stumbled upon two Red Wizards traveling through the Cloakwood Forest. Enraged at being disturbed, the mages unleashed a score of Magic Missiles at the seemingly helpless Derek, but to their brief surprise, the assault reflected back and killed them both. Thereafter, without having lifted his blade, Derek was rather sheepishly known as Derek the Red Slayer.
+
+STATISTICS:
+
+Charge abilities:
+– Spell Turning once per day
+  Special: Rebounds spells cast directly at the user
+  Duration: 15 rounds or until 12 spell levels have been rebounded
+
+Weight: 0~
