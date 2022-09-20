@@ -1,3 +1,11 @@
+## Version 1.1
+
+September xx, 2022
+
+### Changed
+
+- Updated Ring of Spell Turning
+
 ## Version 1.0
 
 September 3, 2022
