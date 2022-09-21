@@ -444,3 +444,7 @@
 ### Helmets
 
 ### Rings
+
+#### Ring of Spell Turning
+- Now casts Spell Turning instead of Minor Spell Turning
+
