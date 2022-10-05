@@ -78,6 +78,8 @@ STATISTICS:
 
 ## Halberds
 
+Range increased from 2 feet to 3 feet.
+
 STATISTICS:
 - Damage: 1d10 
 - Damage Type: Piercing or Slashing
@@ -258,6 +260,8 @@ STATISTICS:
 - Weight: 0
 
 ## Spears
+
+Range increased from 2 feet to 3 feet.
 
 STATISTICS:
 - Damage: 1d8 
