@@ -1,10 +1,11 @@
 ## Version 1.1
 
-September xx, 2022
+October xx, 2022
 
 ### Changed
 
-- Updated Ring of Spell Turning
+- Updated Ring of Spell Turning.
+- Spears and Halberds have an increased range of 3.
 
 ## Version 1.0
 
