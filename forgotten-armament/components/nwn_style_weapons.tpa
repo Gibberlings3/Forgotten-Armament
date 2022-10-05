@@ -128,7 +128,6 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   READ_SHORT 0x1c type
   READ_LONG  0x60 ench
   READ_BYTE  0x18 handed
-  READ_LONG  0x64 ab_off ELSE 0
   READ_LONG  0x6a fx_off ELSE 0
   READ_SHORT 0x6e fx_ind ELSE 0
   READ_SHORT 0x70 fx_num ELSE 0
@@ -825,11 +824,8 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 
   // SPEAR --------------------------------------------------------------------//
   END ELSE PATCH_IF (prof = 98) AND nwn_spear BEGIN
-    // Update Range to 3
-    WRITE_SHORT ab_off+0x38+0xe 3
-    
     // Update to 1d8 Damage
-    LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 END
+    LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 range = 3 END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR01~ END
     
     // Check if existing keen property
@@ -906,11 +902,8 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 
   // HALBERD ------------------------------------------------------------------//
   END ELSE PATCH_IF (prof = 99) AND nwn_halberd BEGIN
-    // Update Range to 3
-    WRITE_SHORT ab_off+0x38+0xe 3
-
     // Update damage to 1d10 Piercing or Slashing 
-    LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=10 dicenumber=1 damage_type=7 END
+    LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=10 dicenumber=1 damage_type=7 range = 3 END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR02~ END
 
     // Check if existing keen property
