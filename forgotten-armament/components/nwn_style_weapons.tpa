@@ -825,7 +825,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   // SPEAR --------------------------------------------------------------------//
   END ELSE PATCH_IF (prof = 98) AND nwn_spear BEGIN
     // Update Range to 3
-    WRITE_SHORT off+0xe 3
+    WRITE_SHORT 0x34+0xe 3
     
     // Update to 1d8 Damage
     LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 END
@@ -906,8 +906,8 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   // HALBERD ------------------------------------------------------------------//
   END ELSE PATCH_IF (prof = 99) AND nwn_halberd BEGIN
     // Update Range to 3
-    WRITE_SHORT off+0xe 3
-    
+    WRITE_SHORT 0x34+0xe 3
+
     // Update damage to 1d10 Piercing or Slashing 
     LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=10 dicenumber=1 damage_type=7 END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR02~ END
