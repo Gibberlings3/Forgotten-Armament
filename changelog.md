@@ -1,6 +1,6 @@
 ## Version 1.1
 
-October xx, 2022
+October 26, 2022
 
 ### Changed
 
