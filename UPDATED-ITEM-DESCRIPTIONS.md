@@ -224,9 +224,11 @@
 
 #### Carsomyr +5
 - +10% Magic Resistance (previously set to 50%)
+- 25% chance to Dispel Magic at level 30 on each hit
 
 #### Carsomyr +6
 - +25% Magic Resistance (previously set to 50%)
+- 50% chance to Dispel Magic at level 30 whenever the sword strikes an opponent
 
 #### Dragon Blade +3
 - +1d6 cold (previously +1)

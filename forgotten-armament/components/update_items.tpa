@@ -1690,15 +1690,19 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~SW2H10.ITM~ BEGIN
 OUTER_SPRINT oldtwohand1 @31500
 OUTER_SPRINT newtwohand1 @31501
+OUTER_SPRINT oldtwohand9 @31517
+OUTER_SPRINT newtwohand9 @31518
 
     COPY_EXISTING ~SW2H10.ITM~ ~override~ 
       LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 166 parameter1 = 10 parameter2 = 0 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 25 END 
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%oldtwohand1%~ ~%newtwohand1%~
+              REPLACE_TEXTUALLY ~%oldtwohand9%~ ~%newtwohand9%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
@@ -1709,19 +1713,23 @@ END
 // +25% Magic Resistance (previously set to 50%)                         //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~SW2H19.ITM~ BEGIN
-OUTER_SPRINT oldtwohand7 @31500
-OUTER_SPRINT newtwohand7 @31514
-OUTER_SPRINT oldtwohand8 @31515
-OUTER_SPRINT newtwohand8 @31516
+OUTER_SPRINT oldtwohand7  @31500
+OUTER_SPRINT newtwohand7  @31514
+OUTER_SPRINT oldtwohand8  @31515
+OUTER_SPRINT newtwohand8  @31516
+OUTER_SPRINT oldtwohand10 @31519
+OUTER_SPRINT newtwohand10 @31520
 
     COPY_EXISTING ~SW2H19.ITM~ ~override~ 
       LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 166 parameter1 = 25 parameter2 = 0 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 50 END 
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%oldtwohand7%~ ~%newtwohand7%~
+              REPLACE_TEXTUALLY ~%oldtwohand10%~ ~%newtwohand10%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END

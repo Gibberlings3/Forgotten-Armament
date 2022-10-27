@@ -6,6 +6,7 @@ October xx, 2022
 
 - Updated Ring of Spell Turning.
 - Spears and Halberds have an increased range of 3.
+- Reduce chance for Carsomyr +5/+6 to dispel magic on hit.
 
 ## Version 1.0
 
