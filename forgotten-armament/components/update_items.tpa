@@ -1239,6 +1239,27 @@ OUTER_SPRINT newstaff2 @31103
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Staff of the Magi                                                     //
+// 25% chance to dispel magic on hit                                     //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~STAF11.ITM~ BEGIN
+OUTER_SPRINT oldstaff3 @31104
+OUTER_SPRINT newstaff3 @31105
+
+    COPY_EXISTING ~STAF11.ITM~ ~override~ 
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 25 END 
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldstaff3%~ ~%newstaff3%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Scimitar                                                              //
 ///////////////////////////////////////////////////////////////////////////

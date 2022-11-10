@@ -171,6 +171,9 @@
 - AC: +1 Bonus
 - Regenerate 1 Hit Point per round
 
+#### Staff of the Magi
+- 25% chance to Dispel Magic at level 30 on each hit
+
 ### Scimitars
 
 #### Dervish Crescent +2

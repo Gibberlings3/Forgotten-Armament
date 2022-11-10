@@ -400,6 +400,9 @@ Equipped abilities:
 – Armor Class: +1
 – Regenerate 1 Hit Point per round~
 
+@31104 = ~Dispel Magic at level 30 on each hit~
+@31105 = ~25% chance to Dispel Magic at level 30 on each hit~
+
 ///////////////////////////////////////////////////////////////////////////
 // Scimitar                                                              //
 ///////////////////////////////////////////////////////////////////////////
