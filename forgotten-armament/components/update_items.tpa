@@ -3182,8 +3182,8 @@ OUTER_SPRINT oldring1  @34204
 OUTER_SPRINT newring1  @34205
 
     COPY_EXISTING ~RING39.ITM~ ~override~ 
-      LPF ALTER_EFFECT INT_VAR header_type = 3 match_opcode = 142 duration = 60 END
-      LPF ALTER_EFFECT INT_VAR header_type = 3 match_opcode = 16 duration = 60 END
+      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 142 duration = 60 END
+      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 16 duration = 60 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
