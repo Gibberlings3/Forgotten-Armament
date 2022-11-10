@@ -1,3 +1,12 @@
+## Version 1.2
+
+November xx, 2022
+
+### Changed
+
+- Corrected Carsomyr so on-hit animations and text aligned with the new on-hit chance.
+- Reduce chance for Staff of the Magi to dispel magic on hit.
+
 ## Version 1.1
 
 October 26, 2022

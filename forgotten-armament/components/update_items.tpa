@@ -3173,4 +3173,25 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RING34.ITM~ BEGIN
     SAY DESC @34203
 END
 
+///////////////////////////////////////////////////////////////////////////
+// Ring of Gaxx                                                          //
+// Improved Haste lasts 1 Turn                                           //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~RING39.ITM~ BEGIN
+OUTER_SPRINT oldring1  @34204
+OUTER_SPRINT newring1  @34205
+
+    COPY_EXISTING ~RING39.ITM~ ~override~ 
+      LPF ALTER_EFFECT INT_VAR header_type = 3 match_opcode = 142 duration = 60 END
+      LPF ALTER_EFFECT INT_VAR header_type = 3 match_opcode = 16 duration = 60 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldring1%~ ~%newring1%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+
 // Bracers: Mintassan's Miraculous Bracers, Red Guard, Clasps of the Devoted, Bracers of the Inner Planes
