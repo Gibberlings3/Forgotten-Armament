@@ -1247,7 +1247,14 @@ OUTER_SPRINT oldstaff3 @31104
 OUTER_SPRINT newstaff3 @31105
 
     COPY_EXISTING ~STAF11.ITM~ ~override~ 
-      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 25 END 
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 177 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 81 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 77 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 139 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 215 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 240 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 141 probability1 = 25 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -1716,7 +1723,13 @@ OUTER_SPRINT newtwohand9 @31518
 
     COPY_EXISTING ~SW2H10.ITM~ ~override~ 
       LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 166 parameter1 = 10 parameter2 = 0 END
-      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 25 END 
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 177 match_parameter1 = 7 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 81 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 77 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 139 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 215 probability1 = 25 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 240 probability1 = 25 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -1743,7 +1756,13 @@ OUTER_SPRINT newtwohand10 @31520
 
     COPY_EXISTING ~SW2H19.ITM~ ~override~ 
       LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 166 parameter1 = 25 parameter2 = 0 END
-      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 50 END 
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 50 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 177 match_parameter1 = 7 probability1 = 50 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 81 probability1 = 50 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 77 probability1 = 50 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 139 probability1 = 50 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 215 probability1 = 50 END
+      LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 240 probability1 = 50 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
