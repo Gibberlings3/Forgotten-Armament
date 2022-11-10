@@ -6,6 +6,10 @@ November xx, 2022
 
 - Corrected Carsomyr so on-hit animations and text aligned with the new on-hit chance.
 - Reduce chance for Staff of the Magi to dispel magic on hit.
+- Ring of Gaxx's Improved Haste will now last for 5 rounds (up from 10 seconds).
+- Updated Bracer's of Blinding Strike:
+  - Improved Haste will now last for 1 turn (up from 20 seconds).
+  - On equip will now grant an extra 1/2 attack per round.
 
 ## Version 1.1
 
