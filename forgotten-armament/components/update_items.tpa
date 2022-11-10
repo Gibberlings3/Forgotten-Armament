@@ -3193,5 +3193,6 @@ OUTER_SPRINT newring1  @34205
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
+END
 
 // Bracers: Mintassan's Miraculous Bracers, Red Guard, Clasps of the Devoted, Bracers of the Inner Planes
