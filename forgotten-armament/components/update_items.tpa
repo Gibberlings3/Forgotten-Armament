@@ -3163,22 +3163,26 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Bracers of Blinding Strike                                            //
-// Improved Haste lasts 2 Turns                                          //
+// Improved Haste lasts 1 Turn                                           //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~BRAC16.ITM~ BEGIN
 OUTER_SPRINT oldbrac1  @33900
 OUTER_SPRINT newbrac1  @33901
+OUTER_SPRINT oldbrac2  @33902
+OUTER_SPRINT newbrac2  @33903
 
     COPY_EXISTING ~BRAC16.ITM~ ~override~ 
-      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 142 match_parameter2 = 110 duration = 120 END
-      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 16 duration = 120 END
-      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 174 match_timing = 4 duration = 120 END
+      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 142 match_parameter2 = 110 duration = 60 END
+      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 16 duration = 60 END
+      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 174 match_timing = 4 duration = 60 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 1 target = 1 parameter1 = 6 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%oldbrac1%~ ~%newbrac1%~
+              REPLACE_TEXTUALLY ~%oldbrac2%~ ~%newbrac2%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
@@ -3211,8 +3215,8 @@ OUTER_SPRINT oldring1  @34204
 OUTER_SPRINT newring1  @34205
 
     COPY_EXISTING ~RING39.ITM~ ~override~ 
-      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 142 match_parameter2 = 110 duration = 60 END
-      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 16 duration = 60 END
+      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 142 match_parameter2 = 110 duration = 30 END
+      LPF ALTER_EFFECT INT_VAR check_headers = 1 match_opcode = 16 duration = 30 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN

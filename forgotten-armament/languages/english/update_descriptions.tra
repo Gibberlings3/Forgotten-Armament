@@ -875,7 +875,12 @@ Equipped abilities:
 // Bracers                                                               //
 ///////////////////////////////////////////////////////////////////////////
 @33900 = ~Duration: 20 seconds~
-@33901 = ~Duration: 2 turns~
+@33901 = ~Duration: 1 turn~
+@33902 = ~STATISTICS:~
+@33903 = ~STATISTICS:
+
+Combat abilities:
+– Extra 1/2 attack per round~
 
 ///////////////////////////////////////////////////////////////////////////
 // Ring                                                                  //
@@ -900,4 +905,4 @@ Charge abilities:
 Weight: 0~
 
 @34204 = ~Duration: 10 seconds~
-@34205 = ~Duration: 1 turn~
+@34205 = ~Duration: 5 rounds~
