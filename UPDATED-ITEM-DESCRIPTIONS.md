@@ -442,6 +442,9 @@
 
 ### Bracers
 
+#### Bracers of Blinding Strike
+- Improved Haste will now last for 2 turns instead of 20 seconds
+
 ### Cloaks
 
 ### Gauntlets
@@ -449,6 +452,9 @@
 ### Helmets
 
 ### Rings
+
+#### Ring of Gaxx
+- Improved Haste will now last for 1 turn instead of 10 seconds
 
 #### Ring of Spell Turning
 - Now casts Spell Turning instead of Minor Spell Turning
