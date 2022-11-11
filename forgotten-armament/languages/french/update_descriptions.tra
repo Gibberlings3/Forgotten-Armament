@@ -15,7 +15,7 @@ Capacités d'équipement :
 @30004 = ~\+2~
 @30005 = ~+1d6~
 
-@30006 = ~\+1 dégât de froid~
+@30006 = ~\+1 de froid~
 @30007 = ~+1d4 dégâts de froid~
 
 @30008 = ~Panique~
@@ -27,22 +27,22 @@ Capacités d'équipement :
 @30100 = ~\+1~
 @30101 = ~+1d6~
 
-@30102 = ~, \+4 points de dégâts supplémentaires contre les adversaires chaotiques mauvais~
+@30102 = ~, \+4 contre les alignements chaotiques mauvais~
 @30103 = ~~
 
-@30104 = ~\+30 %
+@30104 = ~\+30 %
 
 Capacités de charge :
 - Dissipation de la magie de niveau 20, deux fois par jour
-  Portée : 12 m
-  Zone d'effet : rayon de 4,5 m
+  Portée : 12 mètres
+  Zone d'effet : rayon de 4,5 mètres
 
 - Guérison de masse une fois par jour
-  Spécial : soigne les membres du groupe de 1d8+20 points de vie
-  Zone d'effet : rayon de 4,5 m~
+  Spécial : soigne les membres du groupe de 1d8 +20 points de vie
+  Zone d'effet : rayon de 4,5 mètres~
 @30105 = ~+20 %~
 
-@30106 = ~, \+5 points de dégâts supplémentaires contre les adversaires chaotiques mauvais~
+@30106 = ~, \+5 contre les alignements chaotiques mauvais~
 @30107 = ~~
 
 @30108 = ~\+20 %~
@@ -51,7 +51,7 @@ Capacités de charge :
 
 @30110 = ~\+20 %~
 @30111 = ~+20 %
-– Purifie et protège le porteur ainsi que tous ses alliés contre les effets suivants : confusion, maladie, débilité mentale, peur, drainage de niveau et poison.~
+– Purifie et protège le porteur ainsi que tous ses alliés contre les effets suivants : confusion, maladie, débilité mentale, peur, drainage de niveau et poison dans un rayon de 4,5 m.~
 
 ///////////////////////////////////////////////////////////////////////////
 // Club                                                                  //
@@ -77,12 +77,12 @@ Capacités d'équipement :
 @30208 = ~5 %~
 @30209 = ~10 %~
 
-@30210 = ~\+3 dégâts d'acide~
+@30210 = ~\+3 d'acide~
 @30211 = ~+1d6 dégâts d'acide~
 
 @30212 = ~Capacités de combat :
-30 % de chance d'infliger 15 points de dégâts de feu supplémentaires à la cible pour chaque coup réussi
-5 % de chance qu'une boule de feu explose à chaque coup réussi~
+- 30 % de chances que la cible subisse 15 points de dégâts de feu supplémentaires à chaque coup porté
+- 5 % de chances qu'une boule de feu d'un rayon de 4,5 mètres explose à chaque coup porté (10d6 points de dégâts de feu, jet de sauvegarde contre les sorts pour la moitié)~
 @30213 = ~Capacités de combat :
 – 30 % de chance d'infliger 15 points de dégâts de feu supplémentaires à la cible à chaque coup réussi
 – 10 % chance qu'une boule de feu d'un rayon de 4,5 m explose à chaque coup réussi (inflige 10d6 points de dégâts de feu ; jet de sauvegarde contre les sorts pour diviser par deux)~
@@ -106,15 +106,15 @@ Capacités d'équipement :
 @30306 = ~ (acide)~
 @30307 = ~+1d4 dégâts d'acide~
 
-@30308 = ~+1d4 dégâts  de feu~
+@30308 = ~d4 de feu~
 @30309 = ~ dégâts de feu~
 
 ///////////////////////////////////////////////////////////////////////////
 // Flails                                                                //
 ///////////////////////////////////////////////////////////////////////////
 @30400 = ~Capacités d'équipement :
-– Resistance magique : \+5 %
-– Action libre
+- Action libre
+- Résistance à la magie : \+5 %
 
 ~
 @30401 = ~PARAMÈTRES :~
@@ -126,20 +126,19 @@ Capacités d'équipement :
 @30403 = ~PARAMÈTRES :
 
 Capacités d'équipement :
-	Action libre 
-	+5 % de résistance à la magie
+- Action libre
+- Résistance à la magie : +5 %
 
-Capacités de combat : 
-   33 % de chances que la cible soit ralentie pendant 20 s à chaque coup réussi (Pas de jet de sauvegarde)
+Capacités de combat :
+- 33 % de chances de ralentir la cible pendant 20 secondes à chaque coup porté
 
-TAC0 :  \+5 bonus
-Dégâts :  1D6 \+ 6, \+2 dégâts d'acide, \+2 dégâts de froid, \+2 dégâts de feu, \+2 dégâts de poison,  \+2 dégâts d'électricité
-Type de dégâts :  contondant
-Poids : 8
+TAC0 : \+5
+Dégâts : 1d6 \+6 (contondant), \+2 d'acide, \+2 de froid, \+2 de feu, \+2 de poison, \+2 d'électricité
 Facteur de vitesse : 2
-Type de compétence : Fléau d'armes / morgenstern
-Type : arme à une main
-Nécessite : 13 en Force~
+Type de compétence : fléau/étoile du matin
+Type : arme à une main
+Nécessite :
+ 13 en Force~
 @30404 = ~PARAMÈTRES :
 
 Capacités de combat :
@@ -156,17 +155,16 @@ Nécessite :
 
 @30405 = ~PARAMÈTRES :
 
-Capacités de combat : 
-   33 % de chances que la cible soit ralentie pendant 20 s à chaque coup réussi (Pas de jet de sauvegarde)
+Capacités de combat :
+- 33 % de chances que la cible soit ralentie pendant 20 secondes à chaque coup porté
 
-TAC0 : \+4
-Dégâts :  1D6 \+ 5, \+1 dégât de feu, \+1 dégât de froid, \+1 dégât d'acide, \+1 dégât d'électricité
-Type de dégâts :  contondant
-Poids : 9
+TAC0 : \+4
+Dégâts : 1d6 \+5 (contondant), \+1 de feu, \+1 de froid, \+1 d'acide, \+1 d'électricité
 Facteur de vitesse : 3
-Type de compétence : Fléau d'armes / morgenstern
-Type : arme à une main
-Nécessite : 13 en Force~
+Type de compétence : fléau/étoile du matin
+Type : arme à une main
+Nécessite :
+ 13 en Force~
 @30406 = ~PARAMÈTRES :
 
 Capacités de combat : 
@@ -183,17 +181,16 @@ Nécessite :
 
 @30407 = ~PARAMÈTRES :
 
-Capacités de combat : 
-   33 % de chances que la cible soit ralentie pendant 20 s à chaque coup réussi (Pas de jet de sauvegarde)
+Capacités de combat :
+- 33 % de chances que la cible soit ralentie pendant 20 secondes à chaque coup porté
 
-TAC0 : \+4
-Dégâts :  1D6 \+ 5, \+1 dégât de feu, \+1 dégât de froid, \+1 dégât d'acide, \+1 dégât de poison
-Type de dégâts :  contondant
-Poids : 9
+TAC0 : \+4
+Dégâts : 1d6 \+5 (contondant), \+1 de feu, \+1 de froid, \+1 d'acide, \+1 de poison
 Facteur de vitesse : 3
-Type de compétence : Fléau d'armes / morgenstern
-Type : arme à une main
-Nécessite : 13 en Force~
+Type de compétence : fléau/étoile du matin
+Type : arme à une main
+Nécessite :
+ 13 en Force~
 @30408 = ~PARAMÈTRES :
 
 Capacités de combat : 
@@ -220,7 +217,7 @@ Capacités de combat :
 @30502 = ~1d10~
 @30503 = ~1d10 +4~
 
-@30504 = ~\+2 points~
+@30504 = ~\+2~
 @30505 = ~+1d6 points~
 
 @30506 = ~\+2~
@@ -252,7 +249,7 @@ Type de dégâts : Tranchant~
 @30606 = ~\+2~
 @30607 = ~+3~
 
-@30608 = ~\+1 dégâts d'acide~
+@30608 = ~\+1 d'acide~
 @30609 = ~+1d4 dégâts d'acide~
 
 ///////////////////////////////////////////////////////////////////////////
@@ -356,8 +353,11 @@ Capacités d'équipement :
 @30816 = ~\+1~
 @30817 = ~+1d4~
 
-@30818 = ~Capacités d'équipement : \+20 % de résistance à l'électricité 
-Capacités de combat : 5 % de chances de lancer le sort Chaîne d'éclairs sur la cible à chaque coup réussi~
+@30818 = ~Capacités d'équipement :
+- Résistance à l'électricité : \+20 %
+
+Capacités de combat :
+- 5 % de chances de lancer le sort Chaîne d'éclairs sur la cible à chaque coup réussi (10d6 points de dégâts électriques dans son sillage, jet de sauvegarde contre les sorts pour la moitié)~
 @30819 = ~Capacités d'équipement :
 – Résistance à l'électricité : +20 %
 
@@ -400,6 +400,9 @@ Capacités d'équipement :
 – Classe d'armure : +1
 – Régénère 1 Point de vie par round~
 
+@31104 = ~Dissipation de la magie de niveau 30 à chaque frappe~
+@31105 = ~25 % de chance de dissiper la magie comme un magicien de niveau 30, à chaque coup~
+
 ///////////////////////////////////////////////////////////////////////////
 // Scimitar                                                              //
 ///////////////////////////////////////////////////////////////////////////
@@ -412,7 +415,7 @@ Capacités de combat :
 @31202 = ~Perce-armure~
 @31203 = ~Critique~
 
-@31204 = ~\+10 au TAC0~
+@31204 = ~bonus de \+10 au TAC0~
 @31205 = ~Tous les jets d'attaque effectués pendant que la capacité est active réussissent un 20 naturel, soit un coup critique.~
 
 @31206 = ~3 rounds~
@@ -433,7 +436,7 @@ Capacités d'équipement :
 @31214 = ~\+1~
 @31215 = ~+1d4~
 
-@31216 = ~\+1 dégât de feu~
+@31216 = ~\+1 de feu~
 @31217 = ~+1d4 dégât de feu~
 
 ///////////////////////////////////////////////////////////////////////////
@@ -451,7 +454,7 @@ Capacités de combat :
 Capacités d'équipement :  
 – Indétectable par des moyens magiques comme la détection de l'invisibilité et la scrutation.~
 
-@31304 = ~15 % de chance de drainer 1 niveau à chaque coup~
+@31304 = ~15 % de chances de drainer 1 niveau à la cible à chaque coup réussi~
 @31305 = ~5 % de chance d'activer la capacité spéciale Assassinat pendant un round à chaque coup~
 
 @31306 = ~PARAMÈTRES :~
@@ -467,7 +470,7 @@ Capacités d'équipement :
 Capacités d'équipement :
 – Vocaliser~
 
-@31310 = ~Réduit au silence~
+@31310 = ~Réduit(e) au silence~
 @31311 = ~Silence~
 
 ///////////////////////////////////////////////////////////////////////////
@@ -477,27 +480,31 @@ Capacités d'équipement :
 @31401 = ~+1d8~
 
 @31402 = ~Capacités d'équipement :
-– Action libre
+- Action libre
 
 ~
 
-@31403 = ~Jet de sauvegarde contre la paralysie pour annuler~
+@31403 = ~jet de sauvegarde contre la paralysie pour annuler~
 @31404 = ~Jet de sauvegarde contre la paralysie à -4 pour annuler~
 
-@31405 = ~Points de vie : \+8~
-@31406 = ~Points de vie : +8
+@31405 = ~Capacité d'équipement : +8 au maximum de PV~
+@31406 = ~Capacité d'équipement :
+- Points de vie : +8
 – +20 % de résistance aux dégâts tranchant, perforant et contondant~
 
 @31407 = ~\+ 4~
 @31408 = ~+1d8~
 
-@31409 = ~\+2 dégâts de poison~
+@31409 = ~\+2 de poison~
 @31410 = ~+1d4 dégâts de poison~
 
-@31411 = ~Capacités d'équipement : Action libre en permanence 
-Capacités de combat : À chaque coup réussi l'adversaire doit effectuer un jet de sauvegarde ou être immobiliser pendant 3 rounds et subit 1d6+5 points de dégâts supplémentaires par round~
+@31411 = ~Capacités d'équipement :
+- Action libre
+
+Capacités de combat :
+- La cible est empalée au sol pour 3 rounds et subit 1d6 +5 points de dégâts perforants par round (jet de sauvegarde contre la paralysie pour annuler).~
 @31412 = ~Capacités de combat :
-– La cible est empalée au sol pour 3 rounds et subit 1d6+5 points de dégâts perforants par round (jet de sauvegarde contre la paralysie à -4 pour annuler)~
+– La cible est empalée au sol pour 3 rounds et subit 1d6+5 points de dégâts perforants par round (jet de sauvegarde contre la paralysie à -4 pour annuler).~
 
 ///////////////////////////////////////////////////////////////////////////
 // Two-Handed Sword                                                      //
@@ -506,10 +513,10 @@ Capacités de combat : À chaque coup réussi l'adversaire doit effectuer un je
 @31501 = ~+10 %~
 
 @31502 = ~Capacités d'équipement :
-– Immunité au charme 
+- Immunité contre charme
 
 Capacités de combat :
-– 50 % chance de dissiper la magie à chaque coup~
+- 50 % chance de dissiper la magie à chaque attaque~
 @31503 = ~Capacités de combat :
 – Chaque coup draine 5 points de vie à la cible pour les ajouter au porteur, qui ne peut pas dépasser son maximum.
 – 10 % de chance de décapiter l'adversaire à chaque coup réussi (jet de sauvegarde contre la mort à -4 pour annuler)~
@@ -536,13 +543,13 @@ Nécessite :
 
 Poids : 15~
 
-@31506 = ~\+1 dégât de froid~
+@31506 = ~\+1 de froid~
 @31507 = ~+1d6 dégâts de froid~
 
 @31508 = ~\+5~
 @31509 = ~+4~
 
-@31510 = ~À chaque coup la cible doit réussir un Jet de Sauvegarde contre la mort à -5 ou perdre 1 niveau~
+@31510 = ~À chaque coup porté, la cible doit réussir un jet de sauvegarde contre la mort à -5 ou perdre 1 niveau~
 @31511 = ~À chaque coup la cible perd 1 point de Force pendant 5 rounds~
 
 @31512 = ~PARAMÈTRES :~
@@ -556,23 +563,27 @@ Capacités de combat :
 @31515 = ~PARAMÈTRES :
 
 Capacités d'équipement :
-    50% de résistance à la magie
-    Dissipation de la magie trois fois par jour
-Capacités de combat : 
-    \+6 points de dégâts contre les adversaires chaotiques mauvais en plus des autres bonus.
-    Dissipation de la magie à chaque coup réussi
-TAC0 : \+6
-Dégâts :  1D12 \+ 6
-Type de dégâts : tranchant
-Poids :  6
+- Résistance à la magie : 50 %
+
+Capacités de combat :
+- Dissipation de la magie de niveau 30 à chaque fois que l'épée frappe un adversaire.
+
+Capacités de charge :
+- Dissipation de la magie de niveau 15, trois fois par jour.
+  Portée : 12 mètres
+  Zone d'effet : rayon de 4,5 mètres
+
+TAC0 : \+6
+Dégâts : 1d12 \+6 (tranchant), \+6 contre les alignements chaotiques mauvais
 Facteur de vitesse : 4
 Type de compétence : épée à deux mains
-Type : arme à deux mains
-Nécessite : 14 en force~
+Type : arme à deux mains
+Nécessite :
+ 14 en Force~
 @31516 = ~PARAMÈTRES :
 
 Capacités d'équipement :
-– Résistance à la magie : +2 5%
+– Résistance à la magie : +25%
 
 Capacités de combat : 
 – Dissipation de la magie au niveau 30 à chaque coup réussi
@@ -590,6 +601,11 @@ Type de compétence : épée à deux mains
 Type : arme à deux mains
 Nécessite :
  14 en force~
+ 
+@31517 = ~Dissipation de la magie de niveau 30 à chaque attaque~
+@31518 = ~25 % de chance de dissiper la magie comme un magicien de niveau 30, à chaque coup~
+@31519 = ~Dissipation de la magie de niveau 30 à chaque fois que l'épée frappe un adversaire.~
+@31520 = ~50 % de chance de dissiper la magie comme un magicien de niveau 30, lorsque un adversaire est touché~ 
 
 ///////////////////////////////////////////////////////////////////////////
 // Wakisashi                                                             //
@@ -600,8 +616,8 @@ Nécessite :
 Capacités de combat :
 – 1 attaque supplémentaire par round~
 
-@31602 = ~round~
-@31603 = ~tour~
+@31602 = ~rounds~
+@31603 = ~tours~
 
 ///////////////////////////////////////////////////////////////////////////
 // War Hammer                                                            //
@@ -669,11 +685,11 @@ Capacités d'équipement :
 ///////////////////////////////////////////////////////////////////////////
 // Robe                                                                  //
 ///////////////////////////////////////////////////////////////////////////
-@32200 = ~– Classe d'armure : \+1 contre les armes contondantes
-– Jet de sauvegarde contre la Pétrification/Métamorphose : \+1~
+@32200 = ~- Classe d'armure : \+1 contre les armes contondantes
+- Jet de sauvegarde la pétrification/métamorphose : \+1~
 @32201 = ~– +5 % de résistance contre les dégâts tranchants, perforants et contondants~
 
-@32202 = ~Cette robe a été spécialement enchantée pour satisfaire les besoins éclectiques du mage aventurier. Elle protège non seulement contre diverses formes de dégâts contondants, mais aussi contre le regard pétrifiant du Basilic et les pouvoirs de métamorphoses des mages rivaux. Tout comme d'autres robes de ce type, la robe de l'aventurier ne peut être portée que par ceux qui suivent la voie du magicien.~
+@32202 = ~Cette robe a été spécialement enchantée pour satisfaire les besoins éclectiques du mage aventurier. Elle protège non seulement contre diverses formes de dégâts contondants, mais aussi contre le regard pétrifiant du basilic et les pouvoirs métamorphosants des mages rivaux. Tout comme d'autres robes de ce type, la Robe d'aventurier ne peut être portée que par les membres des professions exerçant la magie.~
 @32203 = ~Autrefois, Vangerdahast l'ancien magicien royal du roi Azoun IV de Cormyr était un aventurier accompli et de grande renommée. La raison principale de sa popularité parmi les sorciers était « la Robe d'Aventurier », une de ses créations les plus appréciées. Les mages ont toujours lutté pour lever les restrictions imposées par leur capacité à lancer des sorts. En absorbant une partie des dégâts reçus, ces robes donnent au mage un atout supplémentaire pour survivre aux mauvaises rencontres avec des combattants spécialisés en combats rapprochés.~
 
 @32204 = ~Classe d'armure : 5~
@@ -685,7 +701,7 @@ Capacités d'équipement :
 @32208 = ~Classe d'armure : 5~
 @32209 = ~Classe d'armure : +3~
 
-@32210 = ~Ses enchantements protègent de la flèche du bandit et de la jalousie du mage-voleur qui incante Nuage puant, tapi en embuscade.~
+@32210 = ~Ses enchantements protègent de la flèche du bandit et de la jalousie du voleur-mage, tapi en embuscade avec son Nuage puant.~
 @32211 = ~Ses enchantements protègent de la flèche du bandit ou de la jalousie du mage-voleur, tapi en embuscade.~
 
 @32212 = ~\+1 contre les projectiles
@@ -693,12 +709,12 @@ Capacités d'équipement :
 @32213 = ~+1
 – Résistance à la magie: +5 %~
 
-@32214 = ~Classe d'armure : \+1 contre les attaques tranchantes
-– Jets de sauvegarde contre la mort : \+1~
+@32214 = ~- Classe d'armure : \+1 contre les armes tranchantes
+- Jet de sauvegarde contre la mort : \+1~
 @32215 = ~Il y a 10 % de chance que l'utilisateur devienne invisible à chaque fois que celui-ci est touché par une attaque.
 – Si le porteur est invisible ou caché dans l'ombre, celui-ci est indétectable par des moyens magiques comme la détection de l'invisibilité et de la scrutation~
 
-@32216 = ~protège son porteur contre les coups de lames et l'empoisonnement, très répandus dans les ruelles sombres.~
+@32216 = ~protéger quiconque la porte contre les lames et les poisons des ruelles sombres.~
 @32217 = ~rend l'utilisateur invisible et indétectable par des moyens magiques lorsque celui-ci est touché en combat.~
 
 ///////////////////////////////////////////////////////////////////////////
@@ -715,7 +731,7 @@ Capacités d'équipement :
 ///////////////////////////////////////////////////////////////////////////
 // Studded Leather Armor                                                 //
 ///////////////////////////////////////////////////////////////////////////
-@32400 = ~– Se cacher dans l'ombre : +15 %~
+@32400 = ~- Se cacher dans l'ombre : \+15 %~
 @32401 = ~– Se cacher dans l'ombre : +15 %
 – Furtivité : +15 %~
 
@@ -736,31 +752,31 @@ Capacités d'équipement :
 @32406 = ~~
 @32407 = ~~
 
-@32408 = ~Résistance à l'acide : \+50 %~
+@32408 = ~Résistance à l'acide : \+50 %~
 @32409 = ~Résistance à l'acide : +40 %~
 
 ///////////////////////////////////////////////////////////////////////////
 // Chain Mail Armor                                                      //
 ///////////////////////////////////////////////////////////////////////////
-@32600 = ~Le lancer de sorts n'est pas désactivé~
-@32601 = ~Le lancer de sorts n'est pas désactivé
+@32600 = ~N'empêche pas de lancer des sorts~
+@32601 = ~N'empêche pas de lancer des sorts
 – Jets de sauvegarde : +1~
 
-@32602 = ~Le lancer de sorts n'est pas désactivé~
-@32603 = ~Le lancer de sorts n'est pas désactivé
+@32602 = ~N'empêche pas de lancer des sorts~
+@32603 = ~N'empêche pas de lancer des sorts
 – Vocaliser
 – Les effets du Chant du Barde persistent pendant 2 rounds supplémentaires quand celui-ci arrête de chanter~
 
-@32604 = ~Le lancer de sorts n'est pas désactivé~
+@32604 = ~N'empêche pas de lancer des sorts~
 @32605 = ~Le lancer de sorts n'est pas désactivé
 – Vitesse de déplacement augmentée de 2 (la base est de 9)
 – Augmente la vitesse d'incantation de 1~
 
 @32606 = ~Capacités d'équipement :
-– Immunité contre toutes les armes non magiques~
+- Immunité contre les armes non-magiques~
 @32607 = ~Capacités d'équipement :~
 
-@32608 = ~Le lancer de sorts n'est pas désactivé~
+@32608 = ~N'empêche pas de lancer des sorts~
 @32609 = ~Le lancer de sorts n'est pas désactivé
 – Résistance aux dégâts physique : +10 %~
 
@@ -781,28 +797,28 @@ Capacités d'équipement :
 Capacités d'équipement :
 – Jets de sauvegarde contre la Paralysie, le Poison et la Mort : +4~
 
-@32702 = ~Résistance au froid : \+50 %~
+@32702 = ~Résistance au froid : \+50 %~
 @32703 = ~Résistance au froid : +40 %~
 
 ///////////////////////////////////////////////////////////////////////////
 // Plate Armor                                                           //
 ///////////////////////////////////////////////////////////////////////////
-@32900 = ~Charisme : \+1
-– Points de vie : \+4~
+@32900 = ~Charisme : \+1
+- Points de vie : +4~
 @32901 = ~Charisme : +3
 – Régénère 1 Point de vie par round~
 
-@32902 = ~Jets de sauvegarde contre les sorts : \+2~
+@32902 = ~Jet de sauvegarde contre les sorts : \+2~
 @32903 = ~Jets de sauvegarde : +1~
 
-@32904 = ~Résistance à l'électricité : \+90 %~
+@32904 = ~Résistance à l'électricité : \+90 %~
 @32905 = ~Résistance à l'électricité : +40 %~
 
-@32906 = ~Résistance au feu : \+50 %~
+@32906 = ~Résistance au feu : \+50 %~
 @32907 = ~Résistance au feu : +40 %~
 
-@32908 = ~Résistance à la magie : \+5 %
-– Immunité contre les attaques sournoises~
+@32908 = ~Résistance à la magie : \+5 %
+- Immunité contre les attaques sournoises~
 @32909 = ~+10 % de résistance aux attaques tranchantes et perforantes~
 
 @32910 = ~le dos.~
@@ -843,8 +859,8 @@ Capacités d'équipement :
 @32925 = ~Poison~
 @32926 = ~Empoisonné~
 
-@32927 = ~Dextérité : \+1
-– Résistance au feu : \+20 %~
+@32927 = ~Dextérité : \+1
+- Résistance au feu : \+20 %~
 @32928 = ~1/2 attaque supplémentaire par round
 – Chance : +1
 – Vitesse de déplacement augmentée de 2 (la base est de 9)~
@@ -852,8 +868,50 @@ Capacités d'équipement :
 ///////////////////////////////////////////////////////////////////////////
 // Shields                                                               //
 ///////////////////////////////////////////////////////////////////////////
-@33300 = ~\+4  contre les projectiles~
+@33300 = ~\+4 contre les projectiles~
 @33301 = ~+4  contre les projectiles
 – +10 % de résistance aux dégâts de projectiles~ 
+
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+// Accessories                                                           //
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Bracers                                                               //
+///////////////////////////////////////////////////////////////////////////
+@33900 = ~Durée : 20 secondes~
+@33901 = ~Durée : 1 tour~
+@33902 = ~PARAMÈTRES :~
+@33903 = ~PARAMÈTRES :
+
+Capacités de combat :
+– Une demi attaque supplémentaire par round~
+
+///////////////////////////////////////////////////////////////////////////
+// Ring                                                                  //
+///////////////////////////////////////////////////////////////////////////
+@34200 = ~Anneau~
+@34201 = ~Un anneau est une fine lanière de métal précieux. Il sert en général d'ornement. Plus rares, certains sont enchantés et permettent à quiconque les porte d'user de la magie qu'ils contiennent. Ils sont de ce fait très recherchés par les aventuriers.
+
+PARAMÈTRES :
+
+Poids : 0~
+
+@34202 = ~Anneau de Renvoi des Sorts~
+@34203 = ~Cet anneau a sauvé Derek Poodon, guerrier débutant à qui il avait été donné, lors d'une rencontre avec deux Sorciers Rouges dans la Forêt de Bois-Manteau. Les deux sorciers, fous de colère d'avoir été dérangés, ont lancé des Projectiles magiques contre le guerrier apparemment inoffensif. À leur grand désarroi, l'anneau renvoya les sorts, les tuant tous les deux. Depuis, malgré le fait qu'il n'a même pas sorti son épée du fourreau, Derek est connu sous le surnom de Derek "le tueur de Rouges".
+
+PARAMÈTRES :
+
+Capacités de charge :
+– Renvoi des sorts une fois par jour
+  Spécial : Retourne à l'envoyeur les sorts jetés sur le porteur
+  Durée : 42 rounds ou jusqu'à ce que 12 niveaux de sorts aient été renvoyés.
+
+Poids : 0~
+
+@34204 = ~Durée : 10 secondes~
+@34205 = ~Durée : 5 rounds~
 
 
