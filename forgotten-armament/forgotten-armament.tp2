@@ -146,6 +146,6 @@ INCLUDE ~forgotten-armament/components/stat_item_update.tpa~
 // Nerf APR Increasing One-Handed Melee Weapons                          //
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @19 DESIGNATED 19 LABEL ForgottenArmament-NerfAPR
-REQUIRE_PREDICATE GAME_IS ~bgee eet~ @3004
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3004
 
 INCLUDE ~forgotten-armament/components/nerf_apr.tpa~
