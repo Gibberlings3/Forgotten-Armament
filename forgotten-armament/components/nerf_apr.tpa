@@ -22,7 +22,7 @@ ACTION_FOR_EACH apr_weapon IN
     BEGIN
       ACTION_IF FILE_EXISTS_IN_GAME ~%apr_weapon%.ITM~ BEGIN
         COPY_EXISTING ~%apr_weapon%.ITM~ ~override~
-          LPF ALTER_ITEM_EFFECT INT_VAR match_opcode = 1 parameter1 = 6 END
+          LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 1 parameter1 = 6 END
 
           READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
