@@ -31,6 +31,8 @@ Une liste des emplacements des objets se trouve [ici](https://github.com/Gibberl
 Ce composant secondaire et facultatif met à jour de nombreuses armes, armures et objets du jeu. Il est actuellement en développement actif...
 Une description des nouvelles statistiques pour les objets mis à jour est disponible [ici](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/UPDATED-ITEM-DESCRIPTIONS.md).
 
+"Mise à jour des objets existants en plus de l'ajout des nouveaux objets" doit être installé avec les mods de correction de la traduction française disponible [ici pour BGEE](https://github.com/r-e-d/correctfrBG1EE/releases) et [ici pour BG2EE](https://github.com/r-e-d/correctfrBG2EE/releases)
+
 ### Remplacer les Bottes de Rapidité (Les Pattes de Guepard)
 
 Ce composant remplace les bottes de Rapidité (Les Pattes de guépard) par d'autres options de bottes.
