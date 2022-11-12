@@ -48,6 +48,17 @@ Please Note: You can update the ini file prior to install if you do not want som
 
 This component updates all items to increment increases to ability scores instead of setting them. For example, the Belt of Hill Giant normally sets Strength to 19. This component will update the item to increment Strength by +2. All items that set ability scores, included those added by other mods, will be updated to increment with this component.
 
+### Nerf APR Increasing One-Handed Melee Weapons
+
+This component will update the following melee weapons to provide an extra 1/2 attack per round instead of one extra attack per round:
+- Belm +2
+- Kundane
+- Ninjato of the Scarlet Brotherhood
+- Yamato +4 (Forgotten Armament Update)
+- Monkey Paw of Discipline
+- Long Sword of Action +4
+- Vipers Edge +2
+
 ## Compatibility
 
 If you are upgrading from an earlier version of this mod, I recommend uninstalling all mod components and replacing all files with the new ones before doing a fresh install.

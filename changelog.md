@@ -1,6 +1,6 @@
 ## Version 1.2
 
-November xx, 2022
+November 12, 2022
 
 ### Changed
 
@@ -10,6 +10,7 @@ November xx, 2022
 - Updated Bracer's of Blinding Strike:
   - Improved Haste will now last for 1 turn (up from 20 seconds).
   - On equip will now grant an extra 1/2 attack per round.
+- Added new component to nerf one-handed APR increasing melee weapons.
 
 ## Version 1.1
 
