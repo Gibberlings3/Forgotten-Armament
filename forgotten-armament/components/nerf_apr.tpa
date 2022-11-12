@@ -1,0 +1,38 @@
+// Forgotten Armament - Nerf APR Melee Weapons
+
+///////////////////////////////////////////////////////////////////////////
+// Get Text Variables                                                    //
+///////////////////////////////////////////////////////////////////////////
+OUTER_SPRINT oldapr1 @34300
+OUTER_SPRINT oldapr2 @34302
+OUTER_SPRINT newapr1 @34301
+
+///////////////////////////////////////////////////////////////////////////
+// Nerf APR Melee Weapons                                                //
+///////////////////////////////////////////////////////////////////////////
+ACTION_FOR_EACH apr_weapon IN
+      SW1H30   // Belm
+      SW1H25   // Kundane
+      U#CLUBMP // Monkey Paw of Discipline
+      SW1H66   // Yamato +4
+      ULSWD5A  // Long Sword of Action +4
+      CWSPGRD  // Long Sword of Action +4
+      WANINJA  // SNT
+      SW1P01   // Viper's Edge +2
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%apr_weapon%.ITM~ BEGIN
+        COPY_EXISTING ~%apr_weapon%.ITM~ ~override~
+          LPF ALTER_ITEM_EFFECT INT_VAR match_opcode = 1 parameter1 = 6 END
+
+          READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldapr1%~ ~%newapr1%~
+              REPLACE_TEXTUALLY ~%oldapr2%~ ~%newapr1%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+        BUT_ONLY
+      END
+    END
