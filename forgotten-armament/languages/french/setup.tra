@@ -4,26 +4,28 @@
 @2  = ~Installer " Objets issus de Neverwinter Nights 2 "~
 @3  = ~Deplacer certains objets a des emplacements plus difficiles~
 @4  = ~Mise a jour des statistiques et scores de capacite des objets ameliores pour une meilleur integration~
-@5  = ~Mise a jour des styles de combat (Armes a deux mains, Arme a une main et Épée et bouclier)~
+@5  = ~Mise a jour des styles de combat (Armes a deux mains, Arme a une main et Epee et bouclier)~
 @6  = ~1/2 attaque supplementaire par round avec les Armes a deux mains pour les specialistes (2 points de competences)~
 @7  = ~1 attaque supplementaire par round avec les Armes a deux mains pour les specialistes (2 points de competences)~
 @8  = ~Remplacer les Bottes de Rapidite (Les Pattes de Guepard)~
 @9  = ~Ennemis mieux equipes~
 @10 = ~Armes dans le style de NWN2~
 @11 = ~Ajouter le parchemin Breche au Bazar Magique de la Porte de Baldur~
-@12 = ~Définir une limite pour la résistance contre les dégâts physiques~
-@13 = ~Au maximum 90 % de résistance contre les dégâts physiques~
-@14 = ~Au maximum 80 % de résistance contre les dégâts physiques~
-@15 = ~Au maximum 70 % de résistance contre les dégâts physiques~
-@16 = ~Au maximum 60 % de résistance contre les dégâts physiques~
+@12 = ~Definir une limite pour la resistance contre les degats physiques~
+@13 = ~Au maximum 90 % de resistance contre les degats physiques~
+@14 = ~Au maximum 80 % de resistance contre les degats physiques~
+@15 = ~Au maximum 70 % de resistance contre les degats physiques~
+@16 = ~Au maximum 60 % de resistance contre les degats physiques~
 @17 = ~Mise à jour des objets existants et ajout des nouveaux objets~
 @18 = ~Ajouter SEULEMENT les nouveaux objets~
+@19 = ~Reduire le bonus d'attaque par round pour certaines armes a une main~
 
 @3000 = ~Ce composant necessite BG: EE, BGII: EE, ou EET~
 @3001 = ~DLCMerger est necessaire avant d'installer des mods sur les jeux SoD~
-@3002 = ~Ce composant necessite BGII: EE or EET~
+@3002 = ~Ce composant necessite BGII: EE ou EET~
 @3003 = ~Ignorer car Item Revisions n'est pas installe~
-@3004 = ~Ce composant necessite BG: EE oU EET~
+@3004 = ~Ce composant necessite BG: EE ou EET~
+@3005 = ~Ce composant necessite BG: EE, BGII: EE, EET ou IWDEE~
 
 
 /* =============== *
