@@ -6,9 +6,9 @@
 
 [A Gibberlings Three Mod](https://www.gibberlings3.net/)
 
-**Auteur**: [morpheus562](https://www.gibberlings3.net/profile/11591-morpheus562/)
+**Auteur** : [morpheus562](https://www.gibberlings3.net/profile/11591-morpheus562/)
 
-**Sur le Web**: [Page du mod](https://www.gibberlings3.net/mods/items/forgotten_armament/) et [Forum de discussion](https://www.gibberlings3.net/forums/topic/33923-forgotten-armament-beta/)
+**Sur le Web** : [Page du mod](https://www.gibberlings3.net/mods/items/forgotten_armament/) et [Forum de discussion](https://www.gibberlings3.net/forums/topic/33923-forgotten-armament-beta/)
 
 ## Introduction
 
@@ -52,6 +52,19 @@ Remarque : Vous pouvez modifier le fichier .ini avant l'installation si vous dé
 ### Mise a jour des statistiques et scores de capacité des objets améliorés pour une meilleur integration
 
 Ce composant met à jour tous les objets qui attribuent un score de capacité pour accroître les statistiques. Par exemple, la Ceinture de Géant des Collines porte normalement la Force à 19. Ce composant met à jour l'objet en question afin d'augmenter la force de 2. Tous les objets qui attribuent des scores de capacité, y compris ceux ajoutés par d'autres mods, seront mis à jour pour être améliorés par ce composant.
+
+### Nerf APR Increasing One-Handed Melee Weapons
+
+Ce composant mettra à jour certaines armes de mêlée afin qu'elles n'offrent qu'une 1/2 attaque supplémentaire par round au lieu d'une attaque supplémentaire par round.
+Les armes modifiées sont les suivantes :
+
+- Belm +2
+- Kundane
+- Ninja-to violet +3
+- Yamato +4 (Forgotten Armament version)
+- Patte de Singe de Discipline~
+- Épée longue d'action +4
+- Le Tranchant de la vipère +2
 
 ## Compatibilité
 
