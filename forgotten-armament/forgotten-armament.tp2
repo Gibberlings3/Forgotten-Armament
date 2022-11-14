@@ -7,7 +7,7 @@
 BACKUP ~forgotten-armament/backup~
 AUTHOR ~morpheus562~
 
-VERSION ~v1.2~
+VERSION ~v1.3~
 README ~forgotten-armament/readme.html~
 AUTO_EVAL_STRINGS
 
@@ -126,7 +126,7 @@ INCLUDE ~forgotten-armament/components/cap_damage_resist.tpa~
 // NWN2 Style Weapons                                                    //
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @10 DESIGNATED 10 LABEL ForgottenArmament-NWNStyleWeapons
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
 
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/nwn_descriptions.tra~
 
@@ -136,7 +136,7 @@ INCLUDE ~forgotten-armament/components/nwn_style_weapons.tpa~
 // Update Items Setting an Ability Score to Increment the Increase       //
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @4 DESIGNATED 4 LABEL ForgottenArmament-StatIncreaseItems
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
 
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
 
@@ -146,6 +146,6 @@ INCLUDE ~forgotten-armament/components/stat_item_update.tpa~
 // Nerf APR Increasing One-Handed Melee Weapons                          //
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @19 DESIGNATED 19 LABEL ForgottenArmament-NerfAPR
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3004
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
 
 INCLUDE ~forgotten-armament/components/nerf_apr.tpa~

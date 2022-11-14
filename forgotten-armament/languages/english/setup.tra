@@ -25,4 +25,5 @@
 @3002 = ~Component requires BGII: EE or EET~
 @3003 = ~Skipping since Item Revisions is installed~
 @3004 = ~Component requires BG: EE or EET~
+@3005 = ~Component requires BG: EE, BGII: EE, EET, or IWDEE~
 

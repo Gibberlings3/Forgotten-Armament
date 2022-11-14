@@ -1,3 +1,13 @@
+## Version 1.3
+
+November xx, 2022
+
+### Changed
+
+- The following components are now compatible with IWDEE:
+  - NWN2 Style Weapons
+  - Update Items Setting an Ability Score to Increment the Increase
+
 ## Version 1.2
 
 November 12, 2022
