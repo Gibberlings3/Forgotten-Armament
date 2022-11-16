@@ -240,7 +240,7 @@
 - +4 weapon (previously +5)
 
 #### Gram the Sword of Grief +5
-- Hit target loses 1 point of Strength per hit for 5 rounds (replaces level drain)
+- Hit target loses 1 point of Strength per hit for 2 rounds (replaces level drain)
 
 #### Greater Silver Sword
 - Upgrade from Cespenar for Silver Sword, Liquid Mercury, and 15,000 gold

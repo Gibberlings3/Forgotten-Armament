@@ -5,8 +5,9 @@ November xx, 2022
 ### Changed
 
 - The following components are now compatible with IWDEE:
-  - NWN2 Style Weapons
-  - Update Items Setting an Ability Score to Increment the Increase
+  - NWN2 Style Weapons.
+  - Update Items Setting an Ability Score to Increment the Increase.
+- Upgraded version of Gram on-hit effect reduced from 5 rounds to 2 rounds.
 
 ## Version 1.2
 

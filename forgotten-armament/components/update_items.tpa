@@ -1914,8 +1914,8 @@ OUTER_SPRINT newtwohand5 @31511
     COPY_EXISTING ~SW2H18.ITM~ ~override~ 
       LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 216 END
       LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 139 END
-      LPF ADD_ITEM_EFFECT INT_VAR opcode = 44 type = 1 target = 2 parameter1 = ~-1~ parameter2 = 0 timing = 0 resist_dispel = 2 duration = 30 probability1 = 100 END
-      LPF ADD_ITEM_EFFECT INT_VAR opcode = 142 type = 1 target = 2 parameter2 = 91 timing = 0 resist_dispel = 2 duration = 30 probability1 = 100 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 44 type = 1 target = 2 parameter1 = ~-1~ parameter2 = 0 timing = 0 resist_dispel = 2 duration = 12 probability1 = 100 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 142 type = 1 target = 2 parameter2 = 91 timing = 0 resist_dispel = 2 duration = 12 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
