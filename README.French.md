@@ -53,7 +53,7 @@ Remarque : Vous pouvez modifier le fichier .ini avant l'installation si vous dé
 
 Ce composant met à jour tous les objets qui attribuent un score de capacité pour accroître les statistiques. Par exemple, la Ceinture de Géant des Collines porte normalement la Force à 19. Ce composant met à jour l'objet en question afin d'augmenter la force de 2. Tous les objets qui attribuent des scores de capacité, y compris ceux ajoutés par d'autres mods, seront mis à jour pour être améliorés par ce composant.
 
-### Nerf APR Increasing One-Handed Melee Weapons
+### Réduire le bonus d'attaque par round pour certaines armes à une main
 
 Ce composant mettra à jour certaines armes de mêlée afin qu'elles n'offrent qu'une 1/2 attaque supplémentaire par round au lieu d'une attaque supplémentaire par round.
 Les armes modifiées sont les suivantes :
