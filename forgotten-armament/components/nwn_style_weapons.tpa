@@ -718,7 +718,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           REPLACE_TEXTUALLY ~%oldhamm05%~  ~%newhamm03%~
           REPLACE_TEXTUALLY ~%oldhamm06%~  ~%newhamm04%~
           REPLACE_TEXTUALLY ~%oldhamm07%~  ~%newhamm05%~
-          REPLACE_TEXTUALLY ~%oldhamm09%~  ~%newhamm05%~
+          REPLACE_TEXTUALLY ~%oldhamm09%~  ~%newhamm04%~
           REPLACE_TEXTUALLY ~%bstddmgnew%~ ~%speardmgnew%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~
