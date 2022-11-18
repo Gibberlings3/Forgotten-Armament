@@ -91,6 +91,7 @@ OUTER_SPRINT oldhamm05   @20606  // 2d4+3
 OUTER_SPRINT oldhamm06   @20607  // 2d4+4
 OUTER_SPRINT oldhamm07   @20608  // 2d4+5
 OUTER_SPRINT oldhamm08   @20614  // 2d4+3, +5 electrical
+OUTER_SPRINT oldhamm09   @20616  // 1d4+5
 OUTER_SPRINT newhamm01   @20609  // 1d8+1
 OUTER_SPRINT newhamm02   @20610  // 1d8+2
 OUTER_SPRINT newhamm03   @20611  // 1d8+3
@@ -717,6 +718,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           REPLACE_TEXTUALLY ~%oldhamm05%~  ~%newhamm03%~
           REPLACE_TEXTUALLY ~%oldhamm06%~  ~%newhamm04%~
           REPLACE_TEXTUALLY ~%oldhamm07%~  ~%newhamm05%~
+          REPLACE_TEXTUALLY ~%oldhamm09%~  ~%newhamm05%~
           REPLACE_TEXTUALLY ~%bstddmgnew%~ ~%speardmgnew%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~

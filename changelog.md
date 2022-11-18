@@ -8,6 +8,7 @@ November xx, 2022
   - NWN2 Style Weapons.
   - Update Items Setting an Ability Score to Increment the Increase.
 - Upgraded version of Gram on-hit effect reduced from 5 rounds to 2 rounds.
+- IWDEE Warhammer fix for NWN2 style weapons.
 
 ## Version 1.2
 
