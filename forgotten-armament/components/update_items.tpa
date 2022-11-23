@@ -117,6 +117,44 @@ OUTER_SPRINT newaxe3 @30007
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Beruel's Retort +1                                                    //
+// Make returning                                                        //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~AX1H18.ITM~ BEGIN
+OUTER_SPRINT oldaxe5 @30000
+OUTER_SPRINT newaxe5 @30010
+
+    COPY_EXISTING ~AX1H18.ITM~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR header_type=2 charges=0 END
+      WRITE_SHORT 0x34 1500
+      WRITE_SHORT 0x38 1
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldaxe5%~ ~%newaxe5%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+  COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
+    READ_LONG 0x34 sale_off  ELSE 0
+    READ_LONG 0x38 sale_num  ELSE 0
+    READ_LONG 0x2c itm_off   ELSE 0
+    READ_LONG 0x4c drink_off ELSE 0
+    READ_LONG 0x70 cure_off  ELSE 0
+    FOR (index = 0 ; index < sale_num ; ++index) BEGIN
+      READ_ASCII (sale_off +        (index * 0x1c)) item
+      PATCH_IF ("%item%" STRING_COMPARE_REGEXP "^_?[Aa][Xx]1[Hh]18$" = 0) BEGIN // Beruel's Retort
+        //WRITE_SHORT (sale_off + 0x0a + (index * 0x1c)) 1
+        REMOVE_STORE_ITEM ~ax1h18~
+        ADD_STORE_ITEM ~ax1h18~ AT ~%index%~ #0 #0 #0 ~IDENTIFIED~ #1
+      END
+    END
+    BUT_ONLY
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Bastard Sword                                                         //
 ///////////////////////////////////////////////////////////////////////////

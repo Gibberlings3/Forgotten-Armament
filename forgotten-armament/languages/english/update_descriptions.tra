@@ -21,6 +21,11 @@ Equipped abilities:
 @30008 = ~Panic~
 @30009 = ~Morale Failure: Panic~
 
+@30010 = ~STATISTICS:
+
+Combat abilities:
+– Returns to the wielder's hand when thrown~
+
 ///////////////////////////////////////////////////////////////////////////
 // Bastard Sword                                                         //
 ///////////////////////////////////////////////////////////////////////////
