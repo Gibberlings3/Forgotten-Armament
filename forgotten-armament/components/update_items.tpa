@@ -125,7 +125,7 @@ OUTER_SPRINT oldaxe5 @30000
 OUTER_SPRINT newaxe5 @30010
 
     COPY_EXISTING ~AX1H18.ITM~ ~override~
-      LPF ALTER_ITEM_HEADER INT_VAR header_type=2 charges=0 END
+      LPF ALTER_ITEM_HEADER INT_VAR header_type=2 charges=0 animation_overhand=100 END
       WRITE_SHORT 0x34 1500
       WRITE_SHORT 0x38 1
       WRITE_SHORT 0xa8 0
