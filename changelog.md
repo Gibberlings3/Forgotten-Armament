@@ -9,6 +9,7 @@ November xx, 2022
   - Update Items Setting an Ability Score to Increment the Increase.
 - Upgraded version of Gram on-hit effect reduced from 5 rounds to 2 rounds.
 - IWDEE Warhammer fix for NWN2 style weapons.
+- Updated the following items: Bereul's Retort +1
 
 ## Version 1.2
 

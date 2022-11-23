@@ -7,6 +7,9 @@
 #### Azuredge
 - No alignment restriction to use
 
+#### Bereul's Retort +1
+- Returns to the wielder's hand when thrown
+
 #### Chill Axe +2
 - +1d4 cold damage (previously +1)
 
