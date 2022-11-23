@@ -128,6 +128,7 @@ OUTER_SPRINT newaxe5 @30010
       LPF ALTER_ITEM_HEADER INT_VAR header_type=2 charges=0 END
       WRITE_SHORT 0x34 1500
       WRITE_SHORT 0x38 1
+      WRITE_SHORT 0xa8 0
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
