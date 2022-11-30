@@ -1,3 +1,11 @@
+## Version 1.4
+
+December xx, 2022
+
+### Changed
+
+- Updated NWN Style Weapons to not alter P&P Celestials Weapons.
+
 ## Version 1.3
 
 November 23, 2022
