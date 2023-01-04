@@ -40,10 +40,10 @@ LANGUAGE ~French~
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-// Forgotten Armament by Auve and Morpheus562                            //
+// Forgotten Armament by Morpheus562                                     //
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-
+/*
 ///////////////////////////////////////////////////////////////////////////
 // Add New Forgotten Armament Items into the Game                        //
 ///////////////////////////////////////////////////////////////////////////
@@ -68,6 +68,31 @@ LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
 
 INCLUDE ~forgotten-armament/components/add_items_iwd.tpa~
 INCLUDE ~forgotten-armament/components/add_items_nwn.tpa~
+*/
+
+///////////////////////////////////////////////////////////////////////////
+// Add New Forgotten Armament Items into the Game                        //
+///////////////////////////////////////////////////////////////////////////
+BEGIN @20 DESIGNATED 20 LABEL ForgottenArmament-AddItems
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
+
+INCLUDE ~forgotten-armament/components/add_items_iwd.tpa~
+INCLUDE ~forgotten-armament/components/add_items_nwn.tpa~
+
+///////////////////////////////////////////////////////////////////////////
+// Update Existing In-Game Items                                         //
+///////////////////////////////////////////////////////////////////////////
+BEGIN @21 DESIGNATED 21 LABEL ForgottenArmament-UpdateItems
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/update_descriptions.tra~
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/cespenar_dialog.tra~
+
+INCLUDE ~forgotten-armament/components/update_items.tpa~
+INCLUDE ~forgotten-armament/components/cespenar_upgrade.tpa~
 
 ///////////////////////////////////////////////////////////////////////////
 // Add Breach Scrolls to Sorcerous Sundries                              //
