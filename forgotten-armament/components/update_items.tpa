@@ -2421,10 +2421,10 @@ OUTER_SET slow = RESOLVE_STR_REF (@31915)
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 4 target = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 dicenumber = 1 dicesize = 6 END
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 2 target = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 dicenumber = 1 dicesize = 6 END
       LPF ALTER_ITEM_HEADER INT_VAR header_type = 2 thac0_bonus = 5 damage_bonus = 5 dicenumber = 1 projectile = 102 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 139 type = 4 target = 2 parameter1 = ~%slow%~ timing = 9 resist_dispel = 0 probability1 = 20 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 139 type = 2 target = 2 parameter1 = ~%slow%~ timing = 9 resist_dispel = 0 probability1 = 20 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 40 type = 4 target = 2 timing = 0 duration = 10 resist_dispel = 0 probability1 = 20 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 40 type = 2 target = 2 timing = 0 duration = 10 resist_dispel = 0 probability1 = 20 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 139 type = 4 target = 2 parameter1 = ~%slow%~ timing = 9 resist_dispel = 0 probability1 = 20 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 139 type = 2 target = 2 parameter1 = ~%slow%~ timing = 9 resist_dispel = 0 probability1 = 20 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 40 type = 4 target = 2 timing = 0 duration = 10 resist_dispel = 0 probability1 = 20 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 40 type = 2 target = 2 timing = 0 duration = 10 resist_dispel = 0 probability1 = 20 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
