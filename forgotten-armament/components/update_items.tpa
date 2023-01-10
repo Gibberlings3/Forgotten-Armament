@@ -2253,15 +2253,86 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~BOW22.ITM~ BEGIN
 OUTER_SPRINT oldlbow4 @31906
 OUTER_SPRINT newlbow4 @31907
+OUTER_SPRINT oldlbow8 @31913
+OUTER_SPRINT newlbow8 @31916
+OUTER_SET arow01_name = RESOLVE_STR_REF (@31910)
+
+    COPY_EXISTING ~arow01.itm~ ~override~
+      READ_LONG 0x64 abil_off       
+      READ_ASCII (abil_off       ) "ability" (56) // read in whole ability
+      READ_SHORT (abil_off + 0x1e) "fx_num"
+      PATCH_IF ("fx_num" != 0) BEGIN
+        READ_SHORT  (abil_off + 0x20) "fx_idx"
+        READ_LONG 0x6a fx_off
+        READ_ASCII (fx_off + (fx_idx * 0x30)) "effects" (fx_num * 0x30)
+      END ELSE BEGIN
+        SPRINT "effects" ""
+      END
+      PATCH_IF ("%SOURCE_RES%" STRING_COMPARE_CASE "arow01" = 0) BEGIN
+        SPRINT arow01_ability "%ability%"
+        SPRINT arow01_effects "%effects%"
+        SET    arow01_fx_num = fx_num
+      END
 
     COPY_EXISTING ~BOW22.ITM~ ~override~
-      LPF ALTER_ITEM_HEADER INT_VAR header_type=4 thac0_bonus = 4 damage_bonus = 4 END
+      SPRINT ability "%arow01_ability%"
+      SPRINT imported_effects "%arow01_effects%" 
+      SET imported_fx_num = "%arow01_fx_num%"
+      SET name = "%arow01_name%"
+      READ_LONG   0x64 abil_off
+      READ_SHORT  0x68 abil_num
+      SET inserted = 0
+      SET new_fx = 0
+      FOR (index = 0 ; index < abil_num ; ++index) BEGIN
+        PATCH_IF inserted BEGIN 
+          WRITE_SHORT (abil_off + 0x20 + (index * 0x38)) (THIS + new_fx) // if already inserted, just correct the effect index
+        END ELSE BEGIN
+          READ_BYTE (abil_off +        (index * 0x38)) type
+          PATCH_IF type = 4 BEGIN // insert before first launcher type
+            READ_SHORT (abil_off + 0x1e + (index * 0x38)) abil_fx_num
+            READ_SHORT (abil_off + 0x20 + (index * 0x38)) abil_fx_idx
+            SET abil_num += 1
+            SET inserted = 1
+            SET new_fx = abil_fx_num + imported_fx_num
+            PATCH_IF (index < 2) BEGIN // for adjusting tooltip
+              DEFINE_ASSOCIATIVE_ARRAY cd_abil_table BEGIN "%SOURCE_RES%","%name%","%index%" => 0 END
+            END  
+            PATCH_IF new_fx BEGIN // if we also clone existing effects
+              READ_LONG 0x6a fx_off
+              PATCH_IF abil_fx_num BEGIN // if we also need to clone existing effects
+                READ_ASCII   (fx_off + (abil_fx_idx * 0x30)) effects (abil_fx_num * 0x30)
+                INSERT_BYTES (fx_off + (abil_fx_idx * 0x30)) (abil_fx_num * 0x30) // create new effect(s)
+                WRITE_ASCIIE (fx_off + (abil_fx_idx * 0x30)) "%effects%"          // write in info
+              END    
+              PATCH_IF imported_fx_num BEGIN // if we also clone existing effects
+                INSERT_BYTES (fx_off + (abil_fx_idx * 0x30)) (imported_fx_num * 0x30) // create new effect(s)
+                WRITE_ASCIIE (fx_off + (abil_fx_idx * 0x30)) "%imported_effects%"     // write in info
+              END     
+            END   
+            INSERT_BYTES (abil_off +        (index * 0x38)) 0x38        // create new ability
+            WRITE_ASCIIE (abil_off +        (index * 0x38)) "%ability%" // write in info
+            WRITE_BYTE   (abil_off + 0x10 + (index * 0x38)) 0           // no launcher required
+            WRITE_SHORT  (abil_off + 0x1e + (index * 0x38)) new_fx      // combine existing + imported effects
+            WRITE_SHORT  (abil_off + 0x20 + (index * 0x38)) abil_fx_idx // use correct index
+            WRITE_SHORT  (abil_off + 0x22 + (index * 0x38)) 0           // no charges             
+          END 
+        END
+      END
+      PATCH_IF inserted BEGIN
+        WRITE_SHORT 0x68 abil_num
+        WRITE_LONG  0x6a (THIS + 0x38)
+      END
+      LPF ALTER_ITEM_HEADER INT_VAR header_type = 4 thac0_bonus = 4 damage_bonus = 4 dicenumber = 1 projectile = 102 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 4 target = 2 parameter1 = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 2 target = 2 parameter1 = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 END
+      LPF ALTER_ITEM_HEADER INT_VAR header_type = 2 thac0_bonus = 4 damage_bonus = 4 dicenumber = 1 projectile = 102 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%oldlbow4%~ ~%newlbow4%~
+              REPLACE_TEXTUALLY ~%oldlbow8%~ ~%newlbow8%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
@@ -2274,11 +2345,12 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~BOW23.ITM~ BEGIN
 OUTER_SPRINT oldlbow5 @31908
 OUTER_SPRINT newlbow5 @31909
-OUTER_SPRINT oldlbow6 @31911
-OUTER_SPRINT newlbow6 @31912
+//OUTER_SPRINT oldlbow6 @31911
+//OUTER_SPRINT newlbow6 @31912
 OUTER_SPRINT oldlbow7 @31913
 OUTER_SPRINT newlbow7 @31914
 OUTER_SET arow01_name = RESOLVE_STR_REF (@31910)
+OUTER_SET slow = RESOLVE_STR_REF (@31915)
 
     COPY_EXISTING ~arow01.itm~ ~override~
       READ_LONG 0x64 abil_off       
@@ -2346,16 +2418,20 @@ OUTER_SET arow01_name = RESOLVE_STR_REF (@31910)
         WRITE_LONG  0x6a (THIS + 0x38)
       END
       LPF ALTER_ITEM_HEADER INT_VAR header_type = 4 thac0_bonus = 5 damage_bonus = 5 dicenumber = 1 projectile = 102 END
-      LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 4 target = 2 parameter1 = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 END
-      LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 2 target = 2 parameter1 = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 4 target = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 dicenumber = 1 dicesize = 6 END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 2 target = 2 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 dicenumber = 1 dicesize = 6 END
       LPF ALTER_ITEM_HEADER INT_VAR header_type = 2 thac0_bonus = 5 damage_bonus = 5 dicenumber = 1 projectile = 102 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 139 type = 4 target = 2 parameter1 = ~%slow%~ timing = 9 resist_dispel = 0 probability1 = 20 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 139 type = 2 target = 2 parameter1 = ~%slow%~ timing = 9 resist_dispel = 0 probability1 = 20 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 40 type = 4 target = 2 timing = 0 duration = 10 resist_dispel = 0 probability1 = 20 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 40 type = 2 target = 2 timing = 0 duration = 10 resist_dispel = 0 probability1 = 20 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%oldlbow5%~ ~%newlbow5%~
-              REPLACE_TEXTUALLY ~%oldlbow6%~ ~%newlbow6%~
+              //REPLACE_TEXTUALLY ~%oldlbow6%~ ~%newlbow6%~
               REPLACE_TEXTUALLY ~%oldlbow7%~ ~%newlbow7%~
             END
             SAY_EVALUATED 0x54 ~%desc%~

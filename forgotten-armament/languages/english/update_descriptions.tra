@@ -667,7 +667,14 @@ Damage type: Missile~
 @31914 = ~STATISTICS:
 
 Combat abilities:
-– When no arrows are equipped, the longbow fires missiles that are treated as +5 for the purposes of determining what enemies they can damage. The arrows receive +5 to hit, including the bonus listed below, and deal a total of 1d6+5 missile and 2 magic damage.~
+– When no arrows are equipped, the longbow fires missiles that are treated as +5 for the purposes of determining what enemies they can damage. The arrows receive +5 to hit, including the bonus listed below, and deal a total of 1d6+5 missile and 1d6 magic damage.
+– 20% chance of slowing target for 10 seconds~
+
+@31915 = ~Slow~
+@31916 = ~STATISTICS:
+
+Combat abilities:
+– When no arrows are equipped, the longbow fires missiles that are treated as +4 for the purposes of determining what enemies they can damage. The arrows receive +4 to hit, including the bonus listed below, and deal a total of 1d6+4 missile and 2 magic damage.~
 
 ///////////////////////////////////////////////////////////////////////////
 // Shortbow                                                              //
