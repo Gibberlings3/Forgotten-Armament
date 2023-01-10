@@ -1,10 +1,11 @@
 ## Version 1.4
 
-December xx, 2022
+January xx, 2023
 
 ### Changed
 
 - Updated NWN Style Weapons to not alter P&P Celestials Weapons.
+- Updated Taralash +4 and +5.
 
 ## Version 1.3
 
