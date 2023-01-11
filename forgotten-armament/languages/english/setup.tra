@@ -21,6 +21,9 @@
 @19 = ~Nerf APR Increasing One-Handed Melee Weapons~
 @20 = ~Add New Items to the Game~
 @21 = ~Update Existing In-Game Items~
+@22 = ~Update Crit Immunity~
+@23 = ~Remove Crit Immunity from Difficult Enemies~
+@24 = ~Allow Difficult Enemies to Remain Crit Immune~
 
 @3000 = ~Component requires BG: EE, BGII: EE, or EET~
 @3001 = ~DLCMerger is needed before modding SoD games~

@@ -294,10 +294,11 @@
 - Immunity to Charm and Confusion
 
 #### Taralash +4
-- +4 Thac0 (previously +5) and +4 Damage (missile)
+- When no arrows are equipped, the longbow fires missiles that are treated as +4 for the purposes of determining what enemies they can damage. The arrows receive +4 to hit and deal a total of 1d6+4 missile and 2 magic damage.
 
 #### Taralash +5
-- When no arrows are equipped, the longbow fires missiles that are treated as +5 for the purposes of determining what enemies they can damage. The arrows receive +5 to hit and deal a total of 1d6+5 missile and 2 magic damage.
+- When no arrows are equipped, the longbow fires missiles that are treated as +5 for the purposes of determining what enemies they can damage. The arrows receive +5 to hit and deal a total of 1d6+5 missile and 1d6 magic damage.
+- 20% chance of slowing target for 10 seconds
 
 ### Shortbow
 

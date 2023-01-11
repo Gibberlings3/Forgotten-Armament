@@ -1,0 +1,130 @@
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+// Forgotten Armament Critical Hit Updates                               //
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Import Files                                                          //
+///////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////
+// Review and Update all Weapons                                         //
+///////////////////////////////////////////////////////////////////////////
+OUTER_SPRINT critrang1   @20011  // 20
+OUTER_SPRINT critrang2   @20012  // 19-20
+OUTER_SPRINT critrang3   @20013  // 18-20
+OUTER_SPRINT critrang4   @20014  // 17-20
+OUTER_SPRINT critrang5   @20015  // 16-20
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
+  READ_SHORT 0x1c type
+  READ_ASCII 0x22 appearance (2)
+  READ_BYTE  24+3 flags
+  READ_LONG  0x6a fx_off ELSE 0
+  READ_SHORT 0x6e fx_ind ELSE 0
+  READ_SHORT 0x70 fx_num ELSE 0
+  SPRINT item_name ~%SOURCE_FILE%~
+  SET acbonus = 0
+
+  // HELMETS ------------------------------------------------------------------//
+  PATCH_IF (type = 7) AND ((~%appearance%~ STRING_COMPARE_CASE ~H0~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H1~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H2~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H3~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H4~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H5~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H6~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H7~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J0~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J1~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J2~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J3~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J4~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J5~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J6~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J7~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J8~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J9~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~JA~ = 0) OR
+           (~%appearance%~ STRING_COMPARE_CASE ~JC~ = 0)) BEGIN
+
+    PATCH_PRINT ~Removing Critical Hit Immunity from %item_name%~
+    // Remove Crit Immunity
+    WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
+    
+    // Check if existing AC Bonus
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      PATCH_IF (opcode = 0) BEGIN
+        SET acbonus = 1
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+      END
+    END
+
+    // Update AC Bonus 
+    PATCH_IF acbonus BEGIN
+        param1 += 1
+        LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = param1 END
+  
+    // +1 AC Bonus
+    END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 END
+    END
+
+    /*
+    // Update Item Description
+    PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
+      READ_LONG ~%offset%~ desc_strref
+      PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+        READ_STRREF ~%offset%~ desc
+        found_index = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%newslash%~ ~%desc%~)
+
+        PATCH_IF found_index > "-1" BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%bstddmgold%~  ~%bstddmgnew%~
+            REPLACE_TEXTUALLY ~%bstddmgold1%~ ~%bstddmgnew%~
+            REPLACE_TEXTUALLY ~%speedfactor%~ ~%bstdcrit%~
+            REPLACE_TEXTUALLY ~%olddmgtyp%~   ~%newdmgtyp%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        END ELSE BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%oldslash%~    ~~
+            REPLACE_TEXTUALLY ~%oldslash2%~   ~%oldweight%~
+            REPLACE_TEXTUALLY ~%speedfactor%~ ~%newslash%~
+            REPLACE_TEXTUALLY ~%bstddmgold%~  ~%bstddmgnew%~
+            REPLACE_TEXTUALLY ~%bstddmgold1%~ ~%bstddmgnew%~
+            REPLACE_TEXTUALLY ~%speedfactor%~ ~%bstdcrit%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        END
+      END
+      
+      PATCH_IF critmatch BEGIN
+        // 18-20
+        PATCH_IF param1 = 2 BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang3%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        // 17-20
+        END ELSE PATCH_IF param1 = 3 BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang4%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        // 16-20
+        END ELSE PATCH_IF param1 = 4 BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang5%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        END 
+      END
+    END
+    */
+  END 
+
+  BUT_ONLY
