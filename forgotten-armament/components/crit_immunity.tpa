@@ -70,7 +70,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   
     // +1 AC Bonus
     END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 9 timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 15 timing = 2 resist_dispel = 0 probability1 = 100 END
     END
 
     /*
