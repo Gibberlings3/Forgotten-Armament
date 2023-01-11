@@ -9,6 +9,8 @@
 @50004 = ~Equipped abilities:~
 @50005 = ~Equipped abilities:
 – Armor Class: +1~
-@50006 = ~– Armor Class: +1~
+@50006 = ~– Armor Class: \+1~
 @50007 = ~– Armor Class: +2~
+@50008 = ~– Protects against critical hits 
+–~
 

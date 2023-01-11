@@ -20,6 +20,7 @@ OUTER_SPRINT oldarmor1  @50004
 OUTER_SPRINT newarmor1  @50005
 OUTER_SPRINT oldarmor2  @50006
 OUTER_SPRINT newarmor2  @50007
+OUTER_SPRINT oldcrit3   @50008
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   READ_SHORT 0x1c type
@@ -81,11 +82,12 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_LONG ~%offset%~ desc_strref
       PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
         READ_STRREF ~%offset%~ desc
-        //found_index = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%oldarmor2%~ ~%desc%~)
+        found_index = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%oldarmor2%~ ~%desc%~)
 
         INNER_PATCH_SAVE desc ~%desc%~ BEGIN
           REPLACE_TEXTUALLY ~%oldcrit1%~  ~%newcrit1%~
           REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~
+          REPLACE_TEXTUALLY ~%oldcrit3%~  ~%newcrit2%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~
         
@@ -111,7 +113,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           REPLACE_TEXTUALLY ~%oldarmor2%~ ~%newarmor2%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~
-      END ELSE BEGIN
+      END ELSE PATCH_IF !(found_index > "-1") BEGIN
         INNER_PATCH_SAVE desc ~%desc%~ BEGIN
           REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
         END
