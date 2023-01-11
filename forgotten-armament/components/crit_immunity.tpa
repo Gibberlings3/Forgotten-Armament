@@ -113,7 +113,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           REPLACE_TEXTUALLY ~%oldarmor2%~ ~%newarmor2%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~
-      END ELSE PATCH_IF !(found_index > "-1") BEGIN
+      END ELSE PATCH_IF found_index > "-1" BEGIN
         INNER_PATCH_SAVE desc ~%desc%~ BEGIN
           REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
         END
