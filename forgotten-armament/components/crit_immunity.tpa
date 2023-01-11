@@ -53,29 +53,27 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
            (~%appearance%~ STRING_COMPARE_CASE ~JA~ = 0) OR
            (~%appearance%~ STRING_COMPARE_CASE ~JC~ = 0)) BEGIN
 
-    PATCH_IF !("%item_name%" STRING_EQUAL_CASE "HELMNOAN.ITM") OR !boss_immune BEGIN
-      PATCH_PRINT ~Removing Critical Hit Immunity from %item_name%~
-      // Remove Crit Immunity - Provided by Suy
-      WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
+    PATCH_PRINT ~Removing Critical Hit Immunity from %item_name%~
+    // Remove Crit Immunity - Provided by Suy
+    WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
       
-      // Check if existing AC Bonus
-      FOR (index = 0 ; index < fx_num ; ++index) BEGIN
-        READ_SHORT (fx_off + 0x30 * index) opcode
-        PATCH_IF (opcode = 0) BEGIN
-          SET acbonus = 1
-          READ_LONG (fx_off + 0x30 * index + 4) param1
-        END
+    // Check if existing AC Bonus
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      PATCH_IF (opcode = 0) BEGIN
+        SET acbonus = 1
+        READ_LONG (fx_off + 0x30 * index + 4) param1
       END
+    END
 
-      // Update AC Bonus 
-      PATCH_IF acbonus BEGIN
-          param1 += 1
-          LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = param1 END
-    
-      // +1 AC Bonus
-      END ELSE BEGIN
-          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
-      END
+    // Update AC Bonus 
+    PATCH_IF acbonus BEGIN
+        param1 += 1
+        LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = param1 END
+  
+    // +1 AC Bonus
+    END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
     END
 
     // Update Item Description
@@ -83,19 +81,19 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_LONG ~%offset%~ desc_strref
       PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
         READ_STRREF ~%offset%~ desc
-        found_index = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%newslash%~ ~%desc%~)
+        found_index = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%oldarmor2%~ ~%desc%~)
 
         PATCH_IF found_index > "-1" BEGIN
           INNER_PATCH_SAVE desc ~%desc%~ BEGIN
             REPLACE_TEXTUALLY ~%oldcrit1%~  ~%newcrit1%~
-            REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~
-            REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
+            REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~            
           END
           SAY_EVALUATED ~%offset%~ ~%desc%~
         END ELSE BEGIN
           INNER_PATCH_SAVE desc ~%desc%~ BEGIN
             REPLACE_TEXTUALLY ~%oldcrit1%~  ~%newcrit1%~
             REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~
+            REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
           END
           SAY_EVALUATED ~%offset%~ ~%desc%~
         END
@@ -113,6 +111,32 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         SAY_EVALUATED ~%offset%~ ~%desc%~
       END
     END
-  END 
+
+  // REMOVE BOSS CRIT IMMUNITY ------------------------------------------------//
+  END ELSE PATCH_IF ("%item_name%" STRING_EQUAL_CASE "HELMNOAN.ITM") AND !boss_immune BEGIN
+
+    PATCH_PRINT ~Removing Critical Hit Immunity from %item_name%~
+    // Remove Crit Immunity - Provided by Suy
+    WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
+      
+    // Check if existing AC Bonus
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      PATCH_IF (opcode = 0) BEGIN
+        SET acbonus = 1
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+      END
+    END
+
+    // Update AC Bonus 
+    PATCH_IF acbonus BEGIN
+        param1 += 1
+        LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = param1 END
+  
+    // +1 AC Bonus
+    END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+    END
+  END
 
   BUT_ONLY
