@@ -21,6 +21,7 @@ OUTER_SPRINT newarmor1  @50005
 OUTER_SPRINT oldarmor2  @50006
 OUTER_SPRINT newarmor2  @50007
 OUTER_SPRINT oldcrit3   @50008
+OUTER_SPRINT newshield1 @50009
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   READ_SHORT 0x1c type
@@ -81,19 +82,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
       READ_LONG ~%offset%~ desc_strref
       PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-        READ_STRREF ~%offset%~ desc
-        
-        /*  ////////////////////////////////////
-        found_index = INDEX (CASE_INSENSITIVE EXACT_MATCH ~%oldarmor2%~ ~%desc%~)
-
-        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-          REPLACE_TEXTUALLY ~%oldcrit1%~  ~%newcrit1%~
-          REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~
-          REPLACE_TEXTUALLY ~%oldcrit3%~  ~%newcrit2%~
-        END
-        SAY_EVALUATED ~%offset%~ ~%desc%~
-        */
-        
+        READ_STRREF ~%offset%~ desc      
         PATCH_IF acbonus BEGIN
           INNER_PATCH_SAVE desc ~%desc%~ BEGIN
             REPLACE_TEXTUALLY ~%oldarmor2%~ ~%newarmor2%~
@@ -111,37 +100,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           END
           SAY_EVALUATED ~%offset%~ ~%desc%~
         END
-
-        /* ////////////////////////////////////
-        PATCH_IF found_index > "-1" BEGIN
-          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-            REPLACE_TEXTUALLY ~%oldcrit1%~  ~%newcrit1%~
-            REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~            
-          END
-          SAY_EVALUATED ~%offset%~ ~%desc%~
-        END ELSE BEGIN
-          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-            REPLACE_TEXTUALLY ~%oldcrit1%~  ~%newcrit1%~
-            REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~
-          END
-          SAY_EVALUATED ~%offset%~ ~%desc%~
-        END
-        */
-      END
-      
-      /* ////////////////////////////////////
-      PATCH_IF acbonus BEGIN
-        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-          REPLACE_TEXTUALLY ~%oldarmor2%~ ~%newarmor2%~
-        END
-        SAY_EVALUATED ~%offset%~ ~%desc%~
-      END ELSE PATCH_IF found_index > "-1" BEGIN
-        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-          REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
-        END
-        SAY_EVALUATED ~%offset%~ ~%desc%~
-      END
-      */
+      END  
     END
 
   // REMOVE BOSS CRIT IMMUNITY ------------------------------------------------//
@@ -168,6 +127,24 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     // +1 AC Bonus
     END ELSE BEGIN
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+    END
+
+  // SHIELDS ------------------------------------------------------------------//  
+  END ELSE PATCH_IF (type = 12) BEGIN
+    PATCH_PRINT ~Adding Critical Hit Immunity to %item_name%~
+    // Add Crit Immunity - Provided by Suy
+    WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
+
+    // Update Item Description
+    PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
+      READ_LONG ~%offset%~ desc_strref
+      PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+        READ_STRREF ~%offset%~ desc      
+        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+          REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newshield1%~
+        END
+        SAY_EVALUATED ~%offset%~ ~%desc%~
+      END  
     END
   END
 
