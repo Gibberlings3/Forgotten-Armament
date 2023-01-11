@@ -1,6 +1,6 @@
 /* Forgotten Armament
  *
- * New items for BG: EE, BGII: EE, and EET
+ * New items for BG: EE, BGII: EE, EET, and IWD: EE
  *
  */
 
@@ -25,6 +25,7 @@ LANGUAGE ~English~
          ~forgotten-armament/languages/english/style_descriptions.tra~
          ~forgotten-armament/languages/english/nwn_descriptions.tra~
          ~forgotten-armament/languages/english/update_descriptions.tra~
+         ~forgotten-armament/languages/english/crit_descriptions.tra~
 LANGUAGE ~French~
          ~french~
          ~forgotten-armament/languages/english/setup.tra~
@@ -32,6 +33,7 @@ LANGUAGE ~French~
          ~forgotten-armament/languages/english/style_descriptions.tra~
          ~forgotten-armament/languages/english/nwn_descriptions.tra~
          ~forgotten-armament/languages/english/update_descriptions.tra~
+         ~forgotten-armament/languages/english/crit_descriptions.tra~
          ~forgotten-armament/languages/french/setup.tra~
          ~forgotten-armament/languages/french/item_descriptions.tra~
          ~forgotten-armament/languages/french/style_descriptions.tra~
@@ -181,7 +183,7 @@ INCLUDE ~forgotten-armament/components/nerf_apr.tpa~
 BEGIN @23 DESIGNATED 23 SUBCOMPONENT @22 LABEL ForgottenArmament-CritImmunity1
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
 
-LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/crit_descriptions.tra~
 
 OUTER_SET boss_immune=0
 INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
@@ -191,7 +193,7 @@ INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
 BEGIN @24 DESIGNATED 24 SUBCOMPONENT @22 LABEL ForgottenArmament-CritImmunity2
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
 
-LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/crit_descriptions.tra~
 
 OUTER_SET boss_immune=1
 INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
