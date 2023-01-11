@@ -74,3 +74,4 @@ Do not install the NWN2 Style Weapons component with other mods that alter weapo
 - Auve for support in the creation, inspiration, testing, and feedback for this mod.
 - JohnBob for translating into French.
 - Bubb and CamDawg_G3 for their usual expertise, guidance, and assistance with coding.
+- Suy for providing code to toggle critical hit immunity.
