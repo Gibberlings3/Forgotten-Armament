@@ -87,7 +87,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
           INNER_PATCH_SAVE desc ~%desc%~ BEGIN
             REPLACE_TEXTUALLY ~%oldcrit1%~  ~%newcrit1%~
             REPLACE_TEXTUALLY ~%oldcrit2%~  ~%newcrit2%~
-            REPLACE_TEXTUALLY ~%oldarmor1%~ ~newarmor1%~
+            REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
           END
           SAY_EVALUATED ~%offset%~ ~%desc%~
         END ELSE BEGIN
@@ -101,12 +101,12 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       
       PATCH_IF acbonus BEGIN
         INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-          REPLACE_TEXTUALLY ~%oldarmor2%~ ~newarmor2%~
+          REPLACE_TEXTUALLY ~%oldarmor2%~ ~%newarmor2%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~
       END ELSE BEGIN
         INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-          REPLACE_TEXTUALLY ~%oldarmor1%~ ~newarmor1%~
+          REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~
       END
