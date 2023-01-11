@@ -174,3 +174,24 @@ BEGIN @19 DESIGNATED 19 LABEL ForgottenArmament-NerfAPR
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
 
 INCLUDE ~forgotten-armament/components/nerf_apr.tpa~
+
+///////////////////////////////////////////////////////////////////////////
+// Update Crit Immunity                                                  //
+///////////////////////////////////////////////////////////////////////////
+BEGIN @23 DESIGNATED 23 SUBCOMPONENT @22 LABEL ForgottenArmament-CritImmunity1
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
+
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
+
+OUTER_SET boss_immune=0
+INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
+
+////////////////////////////////////////////////////
+
+BEGIN @24 DESIGNATED 24 SUBCOMPONENT @22 LABEL ForgottenArmament-CritImmunity2
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
+
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
+
+OUTER_SET boss_immune=1
+INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
