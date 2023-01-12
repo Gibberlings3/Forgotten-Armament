@@ -63,7 +63,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       END
     END
 
-    // Update AC Bonus 
+    // Update Existing AC Bonus 
     PATCH_IF acbonus BEGIN
         param1 += 1
         LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = param1 END
