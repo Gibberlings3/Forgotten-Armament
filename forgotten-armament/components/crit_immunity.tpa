@@ -104,25 +104,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     PATCH_PRINT ~Removing Critical Hit Immunity from %item_name%~
     // Remove Crit Immunity - Provided by Suy
     WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
-      
-    // Check if existing AC Bonus
-    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
-      READ_SHORT (fx_off + 0x30 * index) opcode
-      PATCH_IF (opcode = 0) BEGIN
-        SET acbonus = 1
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-      END
-    END
-
-    // Update AC Bonus 
-    PATCH_IF acbonus BEGIN
-        param1 += 1
-        LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = param1 END
-  
+    
     // +1 AC Bonus
-    END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
-    END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
 
   // SHIELDS ------------------------------------------------------------------//  
   END ELSE PATCH_IF (type = 12) BEGIN

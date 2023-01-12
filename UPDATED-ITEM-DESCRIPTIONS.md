@@ -269,7 +269,7 @@
 - Increase duration of drain from one round to turns 
 
 #### Yamato +4
-- +1 APR Bonus
+- Protects against critical hits
 
 ### Warhammers
 

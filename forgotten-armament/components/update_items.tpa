@@ -2018,14 +2018,16 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Yamato +4                                                             //
-// +1 APR                                                                //
+// Add Crit Immunity                                                     //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~SW1H66.ITM~ BEGIN
 OUTER_SPRINT oldyamato @31600
 OUTER_SPRINT newyamato @31601
 
-    COPY_EXISTING ~SW1H66.ITM~ ~override~ 
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 1 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+    COPY_EXISTING ~SW1H66.ITM~ ~override~
+      READ_BYTE  24+3 flags
+      WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010) 
+      //LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 1 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN

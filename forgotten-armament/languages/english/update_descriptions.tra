@@ -608,10 +608,10 @@ Requires:
 // Wakisashi                                                             //
 ///////////////////////////////////////////////////////////////////////////
 @31600 = ~– Armor Class: \+1~
-@31601 = ~– Armor Class: +1
 
-Combat abilities:
-– 1 extra attack per round~
+
+@31601 = ~– Protects against critical hits
+– Armor Class: +1~
 
 @31602 = ~round~
 @31603 = ~turn~
