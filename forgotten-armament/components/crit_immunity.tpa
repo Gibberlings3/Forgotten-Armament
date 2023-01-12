@@ -5,12 +5,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
-// Import Files                                                          //
-///////////////////////////////////////////////////////////////////////////
-
-
-///////////////////////////////////////////////////////////////////////////
-// Review and Update all Weapons                                         //
+// Review and Update all Items                                           //
 ///////////////////////////////////////////////////////////////////////////
 OUTER_SPRINT oldcrit1   @50000
 OUTER_SPRINT newcrit1   @50001
@@ -146,6 +141,27 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         SAY_EVALUATED ~%offset%~ ~%desc%~
       END  
     END
+
+  // OTHER ITEMS --------------------------------------------------------------//  
+  END ELSE PATCH_IF ("%item_name%" STRING_EQUAL_CASE "MOBRO1.ITM") OR    // Imaskari Bracer's of Immortality
+                    ("%item_name%" STRING_EQUAL_CASE "MISC72.ITM") OR    // Claw of Klazgaroth
+                    ("%item_name%" STRING_EQUAL_CASE "BRAC23.ITM") BEGIN // Blessed Bracers
+    PATCH_PRINT ~Adding Critical Hit Immunity to %item_name%~
+    // Add Crit Immunity - Provided by Suy
+    WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
+
+    // Update Item Description
+    PATCH_FOR_EACH offset IN 0x54 BEGIN
+      READ_LONG ~%offset%~ desc_strref
+      PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+        READ_STRREF ~%offset%~ desc      
+        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+          REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newshield1%~
+        END
+        SAY_EVALUATED ~%offset%~ ~%desc%~
+      END  
+    END
+  END
   END
 
   BUT_ONLY
