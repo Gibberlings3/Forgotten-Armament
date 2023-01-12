@@ -30,25 +30,26 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 
   // HELMETS ------------------------------------------------------------------//
   PATCH_IF (type = 7) AND ((~%appearance%~ STRING_COMPARE_CASE ~H0~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~H1~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~H2~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~H3~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~H4~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~H5~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~H6~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~H7~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J0~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J1~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J2~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J3~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J4~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J5~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J6~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J7~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J8~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~J9~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~JA~ = 0) OR
-           (~%appearance%~ STRING_COMPARE_CASE ~JC~ = 0)) BEGIN
+           (~%appearance%~ STRING_COMPARE_CASE ~H1~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H2~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H3~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H4~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H5~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H6~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~H7~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J0~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J1~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J2~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J3~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J4~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J5~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J6~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J7~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J8~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~J9~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~JA~ = 0)   OR
+           (~%appearance%~ STRING_COMPARE_CASE ~JC~ = 0))  AND
+           !("%item_name%" STRING_EQUAL_CASE "HELM32.ITM") BEGIN // Horned Helm of the Rock
 
     PATCH_PRINT ~Removing Critical Hit Immunity from %item_name%~
     // Remove Crit Immunity - Provided by Suy
@@ -127,9 +128,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     END
 
   // OTHER ITEMS --------------------------------------------------------------//  
-  END ELSE PATCH_IF ("%item_name%" STRING_EQUAL_CASE "MOBR01.ITM") OR    // Imaskari Bracer's of Immortality
-                    ("%item_name%" STRING_EQUAL_CASE "MISC72.ITM") OR    // Claw of Klazgaroth
-                    ("%item_name%" STRING_EQUAL_CASE "BRAC23.ITM") BEGIN // Blessed Bracers
+  END ELSE PATCH_IF ("%item_name%" STRING_EQUAL_CASE "MOBR01.ITM")   OR    // Imaskari Bracer's of Immortality
+                    ("%item_name%" STRING_EQUAL_CASE "MISC72.ITM")   OR    // Claw of Klazgaroth
+                    ("%item_name%" STRING_EQUAL_CASE "BOOT12.ITM")   OR    // Gargoyle Boots
+                    ("%item_name%" STRING_EQUAL_CASE "SECRET05.ITM") OR    // Big Metal Unit
+                    ("%item_name%" STRING_EQUAL_CASE "BRAC23.ITM") BEGIN   // Blessed Bracers
     PATCH_PRINT ~Adding Critical Hit Immunity to %item_name%~
     // Add Crit Immunity - Provided by Suy
     WRITE_BYTE 24+3 ("%flags%" BOR 0b00000010)
@@ -141,6 +144,23 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         READ_STRREF ~%offset%~ desc      
         INNER_PATCH_SAVE desc ~%desc%~ BEGIN
           REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newshield1%~
+        END
+        SAY_EVALUATED ~%offset%~ ~%desc%~
+      END  
+    END
+
+  // HELM OF THE ROCK ---------------------------------------------------------//  
+  END ELSE PATCH_IF ("%item_name%" STRING_EQUAL_CASE "HELM32.ITM") BEGIN   // Horned Helm of the Rock
+    PATCH_PRINT ~Adding AC Bonus to %item_name%~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+
+    // Update Item Description
+    PATCH_FOR_EACH offset IN 0x54 BEGIN
+      READ_LONG ~%offset%~ desc_strref
+      PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+        READ_STRREF ~%offset%~ desc      
+        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+          REPLACE_TEXTUALLY ~%oldarmor1%~ ~%newarmor1%~
         END
         SAY_EVALUATED ~%offset%~ ~%desc%~
       END  
