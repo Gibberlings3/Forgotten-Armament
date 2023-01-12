@@ -26,9 +26,9 @@ A list of the item descriptions is [here](https://github.com/Gibberlings3/Forgot
 
 A list of the item locations is [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md).
 
-#### OPTIONAL SUBCOMPONENT - Update Existing Items in Addition to Adding New Ones
+### Update Existing Items in Addition to Adding New Ones
 
-This subcomponent is optional and updates many weapons, armors, and items within the game. This is actively in development, and the current changes to items can be found [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/UPDATED-ITEM-DESCRIPTIONS.md).
+This component updates many weapons, armors, and items within the game. The current changes to items can be found [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/UPDATED-ITEM-DESCRIPTIONS.md).
 
 ### Replace Boots of Speed (Paws of the Cheetah)
 
@@ -54,10 +54,13 @@ This component will update the following melee weapons to provide an extra 1/2 a
 - Belm +2
 - Kundane
 - Ninjato of the Scarlet Brotherhood
-- Yamato +4 (Forgotten Armament Update)
 - Monkey Paw of Discipline
 - Long Sword of Action +4
 - Vipers Edge +2
+
+### Update Critical Hit Immunity
+
+This component removes Critical Hit Immunity from Helmets and makes Shields immune to Critical Hits. Additionally, the following items will receive Critical Hit Immunity: Horned Helm of the Rock, Claw of Kazgaroth, Gargoyle Boots, Sensate Amulet, Blessed Bracers, Big Metal Unit, and Imaskari Bracer's of Immortality. Finally, the player will have the option to either allow or remove the Critical Hit Immunity many bosses and difficult foes have.
 
 ## Compatibility
 

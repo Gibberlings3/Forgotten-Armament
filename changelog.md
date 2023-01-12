@@ -7,6 +7,7 @@ January xx, 2023
 - Updated NWN Style Weapons to not alter P&P Celestials Weapons.
 - Updated Taralash +4 and +5.
 - Changed Yamato +4 to provide Critical Hit Immunity instead of extra APR.
+- Add new component to remove Critical Hit Immunity from Helmets and make Shields immune to Critical Hits.
 
 ## Version 1.3
 
