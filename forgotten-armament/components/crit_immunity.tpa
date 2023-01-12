@@ -162,6 +162,5 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       END  
     END
   END
-  END
 
   BUT_ONLY
