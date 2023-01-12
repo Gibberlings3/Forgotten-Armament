@@ -143,7 +143,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     END
 
   // OTHER ITEMS --------------------------------------------------------------//  
-  END ELSE PATCH_IF ("%item_name%" STRING_EQUAL_CASE "MOBRO1.ITM") OR    // Imaskari Bracer's of Immortality
+  END ELSE PATCH_IF ("%item_name%" STRING_EQUAL_CASE "MOBR01.ITM") OR    // Imaskari Bracer's of Immortality
                     ("%item_name%" STRING_EQUAL_CASE "MISC72.ITM") OR    // Claw of Klazgaroth
                     ("%item_name%" STRING_EQUAL_CASE "BRAC23.ITM") BEGIN // Blessed Bracers
     PATCH_PRINT ~Adding Critical Hit Immunity to %item_name%~
