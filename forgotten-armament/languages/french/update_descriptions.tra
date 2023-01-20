@@ -21,6 +21,11 @@ Capacités d'équipement :
 @30008 = ~Panique~
 @30009 = ~Perte de moral : Panique~
 
+@30010 = ~PARAMÈTRES :
+
+Capacités de combat :
+- Revient dans la main de son porteur après avoir été lancée~
+
 ///////////////////////////////////////////////////////////////////////////
 // Bastard Sword                                                         //
 ///////////////////////////////////////////////////////////////////////////
@@ -611,10 +616,10 @@ Nécessite :
 // Wakisashi                                                             //
 ///////////////////////////////////////////////////////////////////////////
 @31600 = ~– Classe d'Armure : \+1~
-@31601 = ~– Classe d'Armure : +1
 
-Capacités de combat :
-– 1 attaque supplémentaire par round~
+
+@31601 = ~- Protège contre les coups critiques
+– Classe d'Armure : +1~
 
 @31602 = ~rounds~
 @31603 = ~tours~
@@ -654,11 +659,12 @@ Capacités d'équipement :
 
 @31906 = ~TAC0: \+5~
 @31907 = ~TAC0: +4
-Dégâts : +4 (projectile)~
+Dégâts : 1d6+4, +2 points de dégâts magiques
+Type de dégâts : Projectile~
 
 @31908 = ~TAC0: \+6~
 @31909 = ~TAC0: +5
-Dégâts : 1d6+5, +2 dégâts de magie
+Dégâts : 1d6+5, +1d6 points de dégâts magiques
 Type de dégâts : Projectile~
 
 @31910 = ~Flèches non magique~
@@ -670,7 +676,14 @@ Type de dégâts : Projectile~
 @31914 = ~PARAMÈTRES :
 
 Capacités de combat :
-– Lorsque aucune flèche n'est équipée, cet arc long tire des projectiles considérés comme +5 pour déterminer le type d'ennemis qu'ils peuvent toucher. Les flèches bénéficieront d'un bonus de 5 au toucher, ainsi que les bonus indiqués ci-dessous, elles infligeront un total de 1d6+5 points de dégâts de projectiles et 2 points de dégâts magiques.~
+– Lorsque aucune flèche n'est équipée, cet arc long tire des projectiles considérés comme +5 pour déterminer le type d'ennemis qu'ils peuvent atteindre. Les flèches bénéficient d'un bonus de 5 au toucher, incluant les bonus indiqués ci-dessous, elles infligeront un total de 1d6+5 points de dégâts de projectile et 1d6 points de dégâts magiques.
+– 20 % de chances de ralentir la cible pendant 10 secondes~
+
+@31915 = ~Lenteur~
+@31916 = ~PARAMÈTRES :
+
+Capacités de combat :
+– Lorsque aucune flèche n'est équipée, l'arc long tire des projectiles considérés comme +4 pour déterminer le type d'ennemis susceptibles d'être atteints. Les flèches bénéficient d'un bonus de 4 au toucher, comprenant les bonus indiqués ci-dessous, infligeant un total de 1d6+4 points de dégâts de projectile et 2 points de dégâts magiques.~
 
 ///////////////////////////////////////////////////////////////////////////
 // Shortbow                                                              //
@@ -870,7 +883,7 @@ Capacités d'équipement :
 ///////////////////////////////////////////////////////////////////////////
 @33300 = ~\+4 contre les projectiles~
 @33301 = ~+4  contre les projectiles
-– +10 % de résistance aux dégâts de projectiles~ 
+– +10 % de résistance aux dégâts de projectile~ 
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////

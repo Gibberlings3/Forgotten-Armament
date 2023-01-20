@@ -26,9 +26,9 @@ Une liste des descriptions des objets se trouve [ici](https://github.com/Gibberl
 
 Une liste des emplacements des objets se trouve [ici](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md).
 
-#### COMPOSANT OPTIONNEL - Mise à jour des objets existants en plus de l'ajout des nouveaux objets
+#### Mise à jour des objets existants
 
-Ce composant secondaire et facultatif met à jour de nombreuses armes, armures et objets du jeu. Il est actuellement en développement actif...
+Ce composant met à jour de nombreuses armes, armures et objets du jeu. Il est actuellement en développement actif...
 Une description des nouvelles statistiques pour les objets mis à jour est disponible [ici](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/UPDATED-ITEM-DESCRIPTIONS.md).
 
 "Mise à jour des objets existants en plus de l'ajout des nouveaux objets" doit être installé avec les mods de correction de la traduction française disponible [ici pour BGEE](https://github.com/r-e-d/correctfrBG1EE/releases) et [ici pour BG2EE](https://github.com/r-e-d/correctfrBG2EE/releases)
@@ -61,10 +61,13 @@ Les armes modifiées sont les suivantes :
 - Belm +2
 - Kundane
 - Ninja-to violet +3
-- Yamato +4 (Forgotten Armament version)
 - Patte de Singe de Discipline~
 - Épée longue d'action +4
 - Le Tranchant de la vipère +2
+
+### Mettre à jour les immunités contre les coups critiques
+
+Ce composant retire l'immunité aux coups critiques accordée par les heaumes et les casques et confère cette immunité aux boucliers. Par ailleurs, les objets suivants offriront l'immunité aux coups critiques : le Heaume de Granit, la Griffe de Kazgaroth, les Bottes de gargouille, l'Amulette de Sensation, les Bracelets sacrés, la Grosse Machine de Métal et les Bracelets Imaskaris d'immortalité. Enfin, le joueur aura la possibilité de choisir entre supprimer l'immunité aux coups critiques dont bénéficient de nombreux boss et autres ennemis coriaces ou de la conserver.
 
 ## Compatibilité
 
@@ -77,3 +80,4 @@ J'ai examiné et résolu les problèmes de compatibilité avec plusieurs mods d'
 - Auve pour son soutien dans la création, l'inspiration, les tests et les retours.
 - JohnBob for translating into French.
 - Bubb and CamDawg_G3 for their usual expertise, guidance, and assistance with coding.
+- Suy for providing code to toggle critical hit immunity.
