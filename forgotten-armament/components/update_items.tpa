@@ -2843,6 +2843,7 @@ OUTER_SPRINT oldchain4 @32606
 OUTER_SPRINT newchain4 @32607
 OUTER_SPRINT oldchain5 @32608
 OUTER_SPRINT newchain5 @32609
+COPY ~forgotten-armament/eff/update_item/moapr01.eff~ ~override~ // 0.5 APR Increase at level 8
     
     COPY_EXISTING ~CHAN19.ITM~ ~override~
       LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 120 END
@@ -2850,6 +2851,10 @@ OUTER_SPRINT newchain5 @32609
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 16397 parameter2 = 9 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~moapr01~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 7 parameter2 = 5 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~moapr01~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 10 parameter2 = 5 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~moapr01~ END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 17 parameter2 = 5 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~moapr01~ END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN

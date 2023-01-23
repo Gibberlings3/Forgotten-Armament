@@ -1,3 +1,11 @@
+## Version 2.1
+
+February xx, 2023
+
+### Changed
+
+- Silly me forgot to push the update to the sourcode before publishing the release. 
+
 ## Version 2.0.1
 
 January 12, 2023
