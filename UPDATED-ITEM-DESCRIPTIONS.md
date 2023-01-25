@@ -110,7 +110,7 @@
 - +2d4+1 fire damage (previously 1d4+1)
 
 #### Blackrazor +4
-- Upgrade from Cespenar for Blackrazor +3, Balor's Claw, and 10,000 gold
+- Upgrade from Cespenar for Blackrazor +3, Baalor's Claw, and 10,000 gold
 - +4 weapon (previously +3 weapon)
 - 25% chance of proccing weapon's effects (previously 15%)
 
