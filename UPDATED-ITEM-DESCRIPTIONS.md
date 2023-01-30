@@ -218,7 +218,7 @@
 
 #### Ixil's Spike +6
 - Removed Free Action
-- Save vs. Paralysis at -4 negates attack effect (previously no bonus to save)
+- 10% chance hit target is pinned for 3 rounds and takes an additional 1d6+5 piercing damage each round
 
 #### Spear of Kuldahar +3
 - +20% resistance to slashing, piercing, and crushing damage

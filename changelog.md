@@ -4,7 +4,8 @@ February xx, 2023
 
 ### Changed
 
-- Silly me forgot to push the update to the sourcode before publishing the release. 
+- Silly me forgot to push the update to the sourcode before publishing the release.
+- Update Ixil's Spike +6.
 
 ## Version 2.0.1
 

@@ -489,8 +489,8 @@ Equipped abilities:
 
 ~
 
-@31403 = ~Save vs. Paralysis negates~
-@31404 = ~Save vs. Paralysis at -4 negates~
+@31403 = ~Hit target is pinned for 3 rounds and takes an additional 1d6\+5 piercing damage each round (Save vs. Paralysis negates)~
+@31404 = ~10% chance hit target is pinned for 3 rounds and takes an additional 1d6+5 piercing damage each round~
 
 @31405 = ~Hit Points: \+8~
 @31406 = ~Hit Points: +8
