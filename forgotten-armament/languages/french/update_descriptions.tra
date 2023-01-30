@@ -489,8 +489,8 @@ Capacités d'équipement :
 
 ~
 
-@31403 = ~jet de sauvegarde contre la paralysie pour annuler~
-@31404 = ~Jet de sauvegarde contre la paralysie à -4 pour annuler~
+@31403 = ~La cible est empalée au sol pour 3 rounds et subit 1d6\ +5 points de dégâts perforants par round (jet de sauvegarde contre la paralysie pour annuler).~
+@31404 = ~10 % de chance que la cible soit empalée au sol pendant 3 rounds et subisse 1d6 +5 points de dégâts perforants par round~
 
 @31405 = ~Capacité d'équipement : +8 au maximum de PV~
 @31406 = ~Capacité d'équipement :
@@ -791,7 +791,8 @@ Capacités d'équipement :
 
 @32608 = ~N'empêche pas de lancer des sorts~
 @32609 = ~Le lancer de sorts n'est pas désactivé
-– Résistance aux dégâts physique : +10 %~
+– Résistance aux dégâts physique : +10 %
+– 1/2 attaque supplémentaire par round (Maître-lames et Guerrier / Mage afin d'inclure les personnages jumelés et les multiclasses, double ou triple.)~
 
 @32610 = ~PARAMÈTRES :~
 @32611 = ~PARAMÈTRES :
