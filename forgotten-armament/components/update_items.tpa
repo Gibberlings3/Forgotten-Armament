@@ -1662,8 +1662,8 @@ OUTER_SPRINT newspear7 @31412
         LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 206 END
         LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 162 END
         LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 240 END
-        LPF ALTER_ITEM_EFFECT INT_VAR check_headers = 1 match_opcode = 12 savebonus = ~-4~ END
-        LPF ALTER_ITEM_EFFECT INT_VAR check_headers = 1 match_opcode = 39 savebonus = ~-4~ END
+        LPF ALTER_ITEM_EFFECT INT_VAR check_headers = 1 match_opcode = 12 probability1 = 10 savingthrow = 0 END
+        LPF ALTER_ITEM_EFFECT INT_VAR check_headers = 1 match_opcode = 39 probability1 = 10 savingthrow = 0 END
 
         READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
