@@ -1759,9 +1759,21 @@ OUTER_SPRINT oldtwohand1 @31500
 OUTER_SPRINT newtwohand1 @31501
 OUTER_SPRINT oldtwohand9 @31517
 OUTER_SPRINT newtwohand9 @31518
+COPY ~forgotten-armament/spl/update_item/mowsl01.SPL~ ~override~ // Adds dispel magic on hit spell
+COPY ~forgotten-armament/eff/update_item/mowsl01.eff~ ~override~ // Adds 10% chance of dispel magic on hit effect
 
     COPY_EXISTING ~SW2H10.ITM~ ~override~ 
       LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 166 parameter1 = 10 parameter2 = 0 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 248 target = 2 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 special = 1 STR_VAR resource = "mowsl01" END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 240 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 81 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 177 match_parameter2 = 7 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 58 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 215 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 77 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 139 END
+
+      /*
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 25 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 177 match_parameter1 = 7 probability1 = 25 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 81 probability1 = 25 END
@@ -1769,6 +1781,7 @@ OUTER_SPRINT newtwohand9 @31518
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 139 probability1 = 25 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 215 probability1 = 25 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 240 probability1 = 25 END
+      */
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -1792,9 +1805,21 @@ OUTER_SPRINT oldtwohand8  @31515
 OUTER_SPRINT newtwohand8  @31516
 OUTER_SPRINT oldtwohand10 @31519
 OUTER_SPRINT newtwohand10 @31520
+COPY ~forgotten-armament/spl/update_item/mowsl01.SPL~ ~override~ // Adds dispel magic on hit spell
+COPY ~forgotten-armament/eff/update_item/mowsl02.eff~ ~override~ // Adds 25% chance of dispel magic on hit effect
 
     COPY_EXISTING ~SW2H19.ITM~ ~override~ 
       LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 166 parameter1 = 25 parameter2 = 0 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 248 target = 2 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 special = 1 STR_VAR resource = "mowsl02" END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 240 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 81 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 177 match_parameter2 = 7 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 58 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 215 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 77 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 139 END
+
+      /*
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 58 probability1 = 50 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 177 match_parameter1 = 7 probability1 = 50 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 81 probability1 = 50 END
@@ -1802,6 +1827,7 @@ OUTER_SPRINT newtwohand10 @31520
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 139 probability1 = 50 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 215 probability1 = 50 END
       LPF ALTER_EFFECT INT_VAR header_type = 1 match_opcode = 240 probability1 = 50 END
+      */
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
