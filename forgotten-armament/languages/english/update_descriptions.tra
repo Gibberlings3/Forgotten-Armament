@@ -600,9 +600,9 @@ Requires:
  14 Strength~
 
 @31517 = ~Dispel Magic at level 30 on each hit~
-@31518 = ~25% chance to Dispel Magic at level 30 on each hit~
+@31518 = ~10% chance to Dispel Magic at level 30 on each hit~
 @31519 = ~Dispel Magic at level 30 whenever the sword strikes an opponent~
-@31520 = ~50% chance to Dispel Magic at level 30 whenever the sword strikes an opponent~
+@31520 = ~25% chance to Dispel Magic at level 30 whenever the sword strikes an opponent~
 
 ///////////////////////////////////////////////////////////////////////////
 // Wakisashi                                                             //
