@@ -608,9 +608,9 @@ Nécessite :
  14 en force~
  
 @31517 = ~Dissipation de la magie de niveau 30 à chaque attaque~
-@31518 = ~25 % de chance de dissiper la magie comme un magicien de niveau 30, à chaque coup~
+@31518 = ~10 % de chance de dissiper la magie comme un magicien de niveau 30, à chaque coup~
 @31519 = ~Dissipation de la magie de niveau 30 à chaque fois que l'épée frappe un adversaire.~
-@31520 = ~50 % de chance de dissiper la magie comme un magicien de niveau 30, lorsque un adversaire est touché~ 
+@31520 = ~25 % de chance de dissiper la magie comme un magicien de niveau 30, lorsque un adversaire est touché~ 
 
 ///////////////////////////////////////////////////////////////////////////
 // Wakisashi                                                             //
