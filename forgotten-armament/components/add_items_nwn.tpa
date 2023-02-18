@@ -1055,7 +1055,7 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
         WRITE_LONG 0x34 4000
 
     COPY_EXISTING ~UDSIMYAZ.CRE~ ~override~
-        REPLACE_CRE_ITEM ~MOMSH02~ #0 #0 #0 ~UNSTEALABLE~ ~SHIELD~        
+        REPLACE_CRE_ITEM ~MOMSH02~ #0 #0 #0 ~UNSTEALABLE~ ~SHIELD~ EQUIP       
 END
 
 ///////////////////////////////////////////////////////////////////////////
@@ -1071,7 +1071,7 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
         WRITE_LONG 0x34 4000
 
     COPY_EXISTING ~HLREVAN.CRE~ ~override~
-        REPLACE_CRE_ITEM ~MOMSH03~ #0 #0 #0 ~UNSTEALABLE~ ~SHIELD~       
+        REPLACE_CRE_ITEM ~MOMSH03~ #0 #0 #0 ~UNSTEALABLE~ ~SHIELD~ EQUIP        
 END
 
 ///////////////////////////////////////////////////////////////////////////
