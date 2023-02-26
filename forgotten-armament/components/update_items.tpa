@@ -1910,7 +1910,7 @@ ACTION_FOR_EACH silver_sword IN
       devaevil
       gith
       planetar
-      sw1h15
+      sw2h15
     BEGIN
       ACTION_IF FILE_EXISTS_IN_GAME ~%silver_sword%.ITM~ BEGIN
         
