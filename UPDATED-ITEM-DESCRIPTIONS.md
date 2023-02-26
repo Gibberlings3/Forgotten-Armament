@@ -4,6 +4,9 @@
 
 ### Battle Axes
 
+#### Axe of the Unyielding
+- A creature that successfully saves vs. Vorpal still receives 1d8 points of damage.
+
 #### Azuredge
 - No alignment restriction to use
 

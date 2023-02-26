@@ -156,6 +156,26 @@ OUTER_SPRINT newaxe5 @30010
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Axe of the Unyielding +5                                              //
+// Target takes damage on Vorpal hit save                                //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~AX1H15.ITM~ BEGIN
+OUTER_SPRINT oldaxe6 @31000
+OUTER_SPRINT newaxe6 @31001
+
+    COPY_EXISTING ~AX1H15.ITM~ ~override~
+      LPF CLONE_EFFECT INT_VAR match_opcode = 13 opcode = 12 parameter1 = 0 parameter2 = 256 dicenumber = 1 dicesize = 8 savingthrow = 0 savebonus = 0 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldaxe6%~ ~%newaxe6%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Bastard Sword                                                         //
 ///////////////////////////////////////////////////////////////////////////

@@ -26,6 +26,9 @@ Equipped abilities:
 Combat abilities:
 – Returns to the wielder's hand when thrown~
 
+@30011 = ~10% chance of decapitating opponent with each successful attack (Save vs. Death at -4 negates)~
+@30012 = ~10% chance of decapitating opponent with each successful attack (Save vs. Death at -4 negates). A creature that successfully saves still receives 1d8 points of damage.~
+
 ///////////////////////////////////////////////////////////////////////////
 // Bastard Sword                                                         //
 ///////////////////////////////////////////////////////////////////////////
