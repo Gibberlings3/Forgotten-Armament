@@ -4,7 +4,7 @@ February xx, 2023
 
 ### Changed
 
-- Silly me forgot to push the update to the sourcode before publishing the release.
+- Update Axe of the Unyielding.
 - Update Ixil's Spike +6.
 
 ## Version 2.0.1
