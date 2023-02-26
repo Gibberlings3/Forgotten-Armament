@@ -523,7 +523,7 @@ Combat abilities:
 – 50% chance to Dispel Magic on each hit~
 @31503 = ~Combat abilities:
 – Each hit drains 5 Hit Points from the target and transfers them to the wielder. This will not heal beyond the wielder's maximum.
-– 10% chance of decapitating opponent with each successful attack (Save vs. Death at -4 negates)~
+– 10% chance of decapitating opponent with each successful attack (Save vs. Death at -4 negates). A creature that successfully saves still receives 2d6 points of damage.~
 
 @31504 = ~Greater Silver Sword~
 @31505 = ~Imbued with the Liquid Mercury, this vorpal weapon becomes a Greater Silver Sword. When drawn from the sheath, the blade appears as a column of silvery liquid and is as much a weapon of the mind as a piece of metal in the hand. 
@@ -606,6 +606,9 @@ Requires:
 @31518 = ~10% chance to Dispel Magic at level 30 on each hit~
 @31519 = ~Dispel Magic at level 30 whenever the sword strikes an opponent~
 @31520 = ~25% chance to Dispel Magic at level 30 whenever the sword strikes an opponent~
+
+@31521 = ~25% chance per hit that target must save vs. Death at -2 or die~
+@31522 = ~25% chance per hit that target must save vs. Death at -2 or die. A creature that successfully saves still receives 2d6 points of damage.~
 
 ///////////////////////////////////////////////////////////////////////////
 // Wakisashi                                                             //

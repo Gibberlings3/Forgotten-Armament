@@ -248,17 +248,20 @@
 #### Gram the Sword of Grief +5
 - Hit target loses 1 point of Strength per hit for 2 rounds (replaces level drain)
 
+#### Silver Sword
+- A creature that successfully saves vs. Vorpal still receives 2d6 points of damage.
+
 #### Greater Silver Sword
 - Upgrade from Cespenar for Silver Sword, Liquid Mercury, and 15,000 gold
 - +4 weapon (previously +3)
 - Immunity to confusion and all psionic attacks
 - Immunity to charm 
-- 25% chance per hit that target must save vs. Death at -4 or die (previously -2 save)
+- 25% chance per hit that target must save vs. Death at -4 or die (previously -2 save). A creature that successfully saves vs. still receives 2d6 points of damage.
 
 #### Ir'revrykal
 - Remove Dispel on Hit and Immunity to Charm
 - Each hit drains 5 Hit Points from the target and transfers them to the wielder. This will not heal beyond the wielder's maximum.
-- 10% chance of decapitating opponent with each successful attack (Save vs. Death at -4 negates)
+- 10% chance of decapitating opponent with each successful attack (Save vs. Death at -4 negates). A creature that successfully saves vs. still receives 2d6 points of damage.
 
 #### Joril's Dagger +3
 - +1d6 cold (previously +1)

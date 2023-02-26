@@ -1887,6 +1887,7 @@ OUTER_SPRINT newtwohand2 @31503
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 139 type = 1 target = 2 parameter1 = 64285 timing = 9 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 13 type = 1 target = 2 parameter1 = 0 parameter2 = 8 timing = 1 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 141 type = 1 target = 2 parameter1 = 0 parameter2 = 39 timing = 1 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
+      LPF CLONE_EFFECT INT_VAR match_opcode = 13 opcode = 12 parameter1 = 0 parameter2 = 16777216 dicenumber = 2 dicesize = 6 savingthrow = 0 savebonus = 0 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -1897,6 +1898,35 @@ OUTER_SPRINT newtwohand2 @31503
             SAY_EVALUATED 0x54 ~%desc%~
           END
 END
+
+///////////////////////////////////////////////////////////////////////////
+// Silver Sword                                                          //
+// Successful save vs. Vorpal results in damage                          //
+///////////////////////////////////////////////////////////////////////////
+OUTER_SPRINT oldtwohand11 @31521
+OUTER_SPRINT newtwohand11 @31522
+
+ACTION_FOR_EACH silver_sword IN
+      devaevil
+      gith
+      planetar
+      sw1h15
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%silver_sword%.ITM~ BEGIN
+        
+        COPY_EXISTING ~%silver_sword%.ITM~ ~override~ 
+          LPF CLONE_EFFECT INT_VAR match_opcode = 13 opcode = 12 parameter1 = 0 parameter2 = 16777216 dicenumber = 2 dicesize = 6 savingthrow = 0 savebonus = 0 END
+
+          READ_LONG 0x54 desc_strref
+              PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+                READ_STRREF 0x54 desc
+                INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                  REPLACE_TEXTUALLY ~%oldtwohand11%~ ~%newtwohand11%~
+                END
+                SAY_EVALUATED 0x54 ~%desc%~
+              END
+      END
+    END
 
 ///////////////////////////////////////////////////////////////////////////
 // Greater Silver Sword                                                  //
