@@ -175,6 +175,7 @@ OUTER_SPRINT newaxe6 @30012
             SAY_EVALUATED 0x54 ~%desc%~
           END
 END
+
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Bastard Sword                                                         //
@@ -1937,6 +1938,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SW2H15.ITM~ BEGIN
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~spin775~ END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~sppr709~ END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~spwi401~ END
+      LPF CLONE_EFFECT INT_VAR match_opcode = 13 opcode = 12 parameter1 = 0 parameter2 = 16777216 dicenumber = 2 dicesize = 6 savingthrow = 0 savebonus = 0 END
       SAY NAME1 @31504
       SAY NAME2 @31504
       SAY DESC  @31505
