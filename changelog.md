@@ -1,10 +1,11 @@
 ## Version 2.1
 
-February xx, 2023
+February 26, 2023
 
 ### Changed
 
-- Update Axe of the Unyielding.
+- Updated Axe of the Unyielding and Silver Swords to deal damage if the target makes a successful save vs. vorpal strike.
+- If EEex is installed, the updated Carsomyr (+5/+6) will bypass protections like PfMW.
 - Update Ixil's Spike +6.
 
 ## Version 2.0.1
