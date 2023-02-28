@@ -26,6 +26,9 @@ Capacités d'équipement :
 Capacités de combat :
 - Revient dans la main de son porteur après avoir été lancée~
 
+@30011 = ~10 % de chances à chaque coup réussi de tuer un adversaire en le décapitant (jet de sauvegarde contre la mort à -4 pour annuler)~
+@30012 = ~10 % de chance de décapiter l'adversaire à chaque coup réussi (Jet de sauvegarde contre la mort à -4 pour annuler). Une créature qui réussit son jet de sauvegarde subit tout de même 1d8 points de dégâts.~
+
 ///////////////////////////////////////////////////////////////////////////
 // Bastard Sword                                                         //
 ///////////////////////////////////////////////////////////////////////////
@@ -524,7 +527,7 @@ Capacités de combat :
 - 50 % chance de dissiper la magie à chaque attaque~
 @31503 = ~Capacités de combat :
 – Chaque coup draine 5 points de vie à la cible pour les ajouter au porteur, qui ne peut pas dépasser son maximum.
-– 10 % de chance de décapiter l'adversaire à chaque coup réussi (jet de sauvegarde contre la mort à -4 pour annuler)~
+– 10 % de chance de décapiter l'adversaire à chaque coup réussi (jet de sauvegarde contre la mort à -4 pour annuler). Une créature qui réussit son jet de sauvegarde subit tout de même 2d6 points de dégâts.~
 
 @31504 = ~Épée d'argent +4~
 @31505 = ~Imprégnée par le Mercure liquide, l'épée vorpale s'améliore considérablement. Tirée de son fourreau, la lame semble être composée d'un fluide argenté, oscillant entre esprit et métal. 
@@ -536,7 +539,7 @@ Capacités d'équipement :
 – Immunité au charme 
 
 Capacités de combat :
-- 25 % de chance que la cible ait à réussir un Jet de Sauvegarde contre la mort à -4 ou mourir
+- 25 % de chance que la cible ait à réussir un Jet de Sauvegarde contre la mort à -4 ou mourir. Une créature qui réussit son jet de sauvegarde subit tout de même 2d6 points de dégâts.
 
 TAC0 : +4
 Dégâts : 1d10 +4 (tranchant)
@@ -609,8 +612,11 @@ Nécessite :
  
 @31517 = ~Dissipation de la magie de niveau 30 à chaque attaque~
 @31518 = ~10 % de chance de dissiper la magie comme un magicien de niveau 30, à chaque coup~
-@31519 = ~Dissipation de la magie de niveau 30 à chaque fois que l'épée frappe un adversaire.~
+@31519 = ~Dissipation de la magie de niveau 30 à chaque fois que l'épée frappe un adversaire~
 @31520 = ~25 % de chance de dissiper la magie comme un magicien de niveau 30, lorsque un adversaire est touché~ 
+
+@31521 = ~25 % de chance que la cible ait à réussir un jet de sauvegarde contre la mort à -2 ou mourir~
+@31522 = ~À chaque coup, 25 % de chance que la cible doive effectuer un jet de sauvegarde contre la mort à -2 pour ne pas mourir. Une créature qui réussit son jet de sauvegarde subit tout de même 2d6 points de dégâts.~
 
 ///////////////////////////////////////////////////////////////////////////
 // Wakisashi                                                             //
