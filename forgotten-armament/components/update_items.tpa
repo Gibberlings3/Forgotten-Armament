@@ -3409,7 +3409,7 @@ OUTER_SPRINT newhelm1  @34001
 
     COPY_EXISTING ~OHDMASK.ITM~ ~override~ 
       LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
-      LPF ADD_ITEM_HEADER INT_VAR type = 3 location = 3 alt_dicesize = 6 target = 5 range = 1 charges = 3 depletion = 3 flags = 2560 STR_VAR icon = ~OHRSCRL1~ END
+      LPF ADD_ITEM_HEADER INT_VAR type = 3 location = 3 target = 5 range = 1 charges = 3 depletion = 3 flags = 2560 STR_VAR icon = ~OHRSCRL1~ END
       //LPF ADD_ITEM_EFFECT INT_VAR opcode = 146 type = 3 target = 1 parameter1 = 1 parameter2 = 1 timing = 1 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~SPPR505~ END
       // Flags = 9 and 11 only
       READ_LONG 0x54 desc_strref
