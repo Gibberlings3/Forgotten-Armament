@@ -23,6 +23,7 @@ ACTION_IF !VARIABLE_IS_SET ~initialise~ BEGIN
 ///////////////////////////////////////////////////////////////////////////
    INCLUDE ~forgotten-armament/sfo/install_sfo.tpa~
    INCLUDE ~forgotten-armament/lib/lib.tpa~
+   INCLUDE ~forgotten-armament/lib/macros.tpa~
    OUTER_SPRINT ~folder~ ~forgotten-armament~
    //SILENT
 

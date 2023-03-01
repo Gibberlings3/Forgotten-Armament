@@ -903,6 +903,18 @@ Combat abilities:
 – Extra 1/2 attack per round~
 
 ///////////////////////////////////////////////////////////////////////////
+// Helm                                                                  //
+///////////////////////////////////////////////////////////////////////////
+@34000 = ~Domination once per day (Save vs. Spell at -2 negates)
+  Duration: 8 rounds
+
+– Breathe Acid once per day
+  Damage: 6d6 acid (Save vs. Breath for half)
+  Target must save vs. Death at -4 or fall unconscious for 2 rounds~
+@34001 = ~True Seeing three times per day
+  Duration: 1 turn~
+
+///////////////////////////////////////////////////////////////////////////
 // Ring                                                                  //
 ///////////////////////////////////////////////////////////////////////////
 @34200 = ~Ring~

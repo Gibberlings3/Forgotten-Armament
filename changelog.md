@@ -5,6 +5,7 @@ March xx, 2023
 ### Changed
 
 - Updated Ir'revrykal to reduce dispel on hit to 25%; however, if EEex is installed it will bypass protections like PfMW.
+- Added Ardanis' macros.tpa to use ADD_SPELL_HEADER.
 
 ## Version 2.1
 

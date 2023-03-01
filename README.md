@@ -78,3 +78,4 @@ Do not install the NWN2 Style Weapons component with other mods that alter weapo
 - JohnBob for translating into French.
 - Bubb and CamDawg_G3 for their usual expertise, guidance, and assistance with coding.
 - Suy for providing code to toggle critical hit immunity.
+- Ardanis for ADD_SPELL_HEADER code in the macros.tpa.
