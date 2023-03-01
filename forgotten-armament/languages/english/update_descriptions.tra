@@ -905,14 +905,22 @@ Combat abilities:
 ///////////////////////////////////////////////////////////////////////////
 // Helm                                                                  //
 ///////////////////////////////////////////////////////////////////////////
-@34000 = ~Domination once per day (Save vs. Spell at -2 negates)
-  Duration: 8 rounds
+@34000 = ~The Visage~
+@34001 = ~Few would dare double-cross a fiend, and fewer still would attempt to triple-cross one. Dorn Il-Khan, half-orc blackguard from the city of Luskan, was one of the few. Approached by a rival of his demonic patron, he agreed to betray his master. Instead, at a critical juncture, he turned the situation on the rival, binding her into a powerful sword. As a reward, his patron granted him this terrifying mask. The silver mask has a grotesque face distorted into a grimace. When donned, the eyes pulse with a deep red when the wearer speaks, adding to its unsettling presence. It hums with a variety of magical enchantments, inspiring fear in all who gaze upon it.
 
-– Breathe Acid once per day
-  Damage: 6d6 acid (Save vs. Breath for half)
-  Target must save vs. Death at -4 or fall unconscious for 2 rounds~
-@34001 = ~True Seeing three times per day
-  Duration: 1 turn~
+STATISTICS:
+
+Equipped abilities: 
+– THAC0: +1
+– Saving Throws: +1
+– Immunity to feeblemind, confusion, fear, and charm
+– Protects against critical hits
+
+Charge abilities: 
+– True Seeing three times per day
+  Duration: 1 turn
+
+Weight: 1~
 
 ///////////////////////////////////////////////////////////////////////////
 // Ring                                                                  //
