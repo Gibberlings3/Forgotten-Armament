@@ -1,3 +1,11 @@
+## Version 2.2
+
+March xx, 2023
+
+### Changed
+
+- Updated Ir'revrykal to reduce dispel on hit to 25%; however, if EEex is installed it will bypass protections like PfMW.
+
 ## Version 2.1
 
 February 26, 2023
