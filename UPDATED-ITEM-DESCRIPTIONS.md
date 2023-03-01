@@ -259,9 +259,9 @@
 - 25% chance per hit that target must save vs. Death at -4 or die (previously -2 save). A creature that successfully saves still receives 2d6 points of damage.
 
 #### Ir'revrykal
-- Remove Dispel on Hit and Immunity to Charm
+- Remove Immunity to Charm
 - Each hit drains 5 Hit Points from the target and transfers them to the wielder. This will not heal beyond the wielder's maximum.
-- 10% chance of decapitating opponent with each successful attack (Save vs. Death at -4 negates). A creature that successfully saves still receives 2d6 points of damage.
+- 25% chance to Dispel Magic at level 30 whenever the sword strikes an opponent (this will bypass protections like PfMW if EEex is installed)
 
 #### Joril's Dagger +3
 - +1d6 cold (previously +1)

@@ -1863,12 +1863,15 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Ir'revrykal                                                           //
-// Remove Dispel on Hit and Immunity to Charm                            //
-// Add vorpal strike and healing per hit                                 //
+// Remove Immunity to Charm                                              //
+// Add healing per hit                                                   //
+// Dispel Magic on Hit is reduced (25%) but will now bypass PfMW         //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~OHREAVER.ITM~ BEGIN
 OUTER_SPRINT oldtwohand2 @31502
 OUTER_SPRINT newtwohand2 @31503
+COPY ~forgotten-armament/spl/update_item/mowsl01.SPL~ ~override~ // Adds dispel magic on hit spell
+COPY ~forgotten-armament/eff/update_item/mowsl02.eff~ ~override~ // Adds 25% chance of dispel magic on hit effect
 
     COPY_EXISTING ~OHREAVER.ITM~ ~override~
       LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 81 END
@@ -1884,10 +1887,11 @@ OUTER_SPRINT newtwohand2 @31503
       LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 296 END
       LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 169 END
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 12 type = 1 target = 2 parameter1 = 5 parameter2 = 4194304 timing = 1 resist_dispel = 0 probability1 = 100 special = 1 END
-      LPF ADD_ITEM_EFFECT INT_VAR opcode = 139 type = 1 target = 2 parameter1 = 64285 timing = 9 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
-      LPF ADD_ITEM_EFFECT INT_VAR opcode = 13 type = 1 target = 2 parameter1 = 0 parameter2 = 8 timing = 1 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
-      LPF ADD_ITEM_EFFECT INT_VAR opcode = 141 type = 1 target = 2 parameter1 = 0 parameter2 = 39 timing = 1 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
-      LPF CLONE_EFFECT INT_VAR match_opcode = 13 opcode = 12 parameter1 = 0 parameter2 = 16777216 dicenumber = 2 dicesize = 6 savingthrow = 0 savebonus = 0 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 248 target = 2 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 special = 1 STR_VAR resource = "mowsl02" END
+      //LPF ADD_ITEM_EFFECT INT_VAR opcode = 139 type = 1 target = 2 parameter1 = 64285 timing = 9 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
+      //LPF ADD_ITEM_EFFECT INT_VAR opcode = 13 type = 1 target = 2 parameter1 = 0 parameter2 = 8 timing = 1 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
+      //LPF ADD_ITEM_EFFECT INT_VAR opcode = 141 type = 1 target = 2 parameter1 = 0 parameter2 = 39 timing = 1 resist_dispel = 2 probability1 = 10 savingthrow = 4 savebonus = ~-4~ END
+      //LPF CLONE_EFFECT INT_VAR match_opcode = 13 opcode = 12 parameter1 = 0 parameter2 = 16777216 dicenumber = 2 dicesize = 6 savingthrow = 0 savebonus = 0 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
