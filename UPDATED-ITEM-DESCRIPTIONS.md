@@ -293,7 +293,7 @@
 ### Longbow
 
 #### Elven Court Bow
-- +3 Thac0 (previously +4) and +3 Damage (missile)
+- Added Bless and +5% Crit Chance if Elf/Half-Elf
 
 #### Ripper +2
 - +4 missile Damage (previously +2)

@@ -641,9 +641,17 @@ Damage type: Crushing~
 ///////////////////////////////////////////////////////////////////////////
 // Longbow                                                               //
 ///////////////////////////////////////////////////////////////////////////
+/*
 @31900 = ~THAC0: \+4~
 @31901 = ~THAC0: +3
 Damage: +3 (missile)~
+*/
+@31900 = ~STATISTICS:~
+@31901 = ~STATISTICS:
+
+Equipped abilities:
+– Chance to score a critical hit: +5% (Elf/Half-Ef for ranged attacks only)
+– Bless~
 
 @31902 = ~STATISTICS:~
 @31903 = ~STATISTICS:
@@ -682,13 +690,6 @@ Combat abilities:
 
 Combat abilities:
 – When no arrows are equipped, the longbow fires missiles that are treated as +4 for the purposes of determining what enemies they can damage. The arrows receive +4 to hit, including the bonus listed below, and deal a total of 1d6+4 missile and 2 magic damage.~
-
-@31917 = ~STATISTICS:~
-@31918 = ~STATISTICS:
-
-Equipped abilities:
-– Chance to score a critical hit: +5% (Elf/Half-Ef for ranged attacks only)
-– Bless~
 
 ///////////////////////////////////////////////////////////////////////////
 // Shortbow                                                              //

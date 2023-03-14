@@ -2270,18 +2270,18 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Elven Court Bow                                                       //
-// +3 Thac0 (previously +4) and +3 Damage (missile)                      //
+// Added Bless and +5% Crit Chance if Elf/Half-Elf                       //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~BOW12.ITM~ BEGIN
 OUTER_SPRINT oldlbow1 @31900
 OUTER_SPRINT newlbow1 @31901
-OUTER_SPRINT oldlbow9 @31917
-OUTER_SPRINT newlbow9 @31918
+//OUTER_SPRINT oldlbow9 @31917
+//OUTER_SPRINT newlbow9 @31918
 
 COPY ~forgotten-armament/eff/update_item/MO#EQ05.EFF~ ~override~ // +5% Crit
 
     COPY_EXISTING ~BOW12.ITM~ ~override~
-      LPF ALTER_ITEM_HEADER INT_VAR header_type=4 thac0_bonus = 3 damage_bonus = 3 END
+      //LPF ALTER_ITEM_HEADER INT_VAR header_type=4 thac0_bonus = 3 damage_bonus = 3 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 130 target = 1 parameter1 = 1 timing = 2 resist_dispel = 0 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 17 timing = 2 resist_dispel = 0 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 4 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo#eq05~ END
@@ -2292,7 +2292,6 @@ COPY ~forgotten-armament/eff/update_item/MO#EQ05.EFF~ ~override~ // +5% Crit
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%oldlbow1%~ ~%newlbow1%~
-              REPLACE_TEXTUALLY ~%oldlbow9%~ ~%newlbow9%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
