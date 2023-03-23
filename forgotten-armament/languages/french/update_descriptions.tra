@@ -341,7 +341,7 @@ Capacités d'équipement :
 @30807 = ~PARAMÈTRES :
 
 Capacités d'équipement : 
-– Chance de coup critique : +5 % (seulement avec cette arme)~
+– Chance d'effectuer un coup critique : +5 % (seulement avec cette arme)~
 
 @30808 = ~\+3~
 @30809 = ~-2~
@@ -356,7 +356,7 @@ Capacités d'équipement :
 @30815 = ~PARAMÈTRES :
 
 Capacités d'équipement : 
-– Chance de coup critique : +10 % (seulement avec cette arme)~
+– Chance d'effectuer un coup critique : +10 % (seulement avec cette arme)~
 
 @30816 = ~\+1~
 @30817 = ~+1d4~
@@ -433,7 +433,7 @@ Capacités de combat :
 @31209 = ~PARAMÈTRES :
 
 Capacités d'équipement : 
-– Chance de coup critique : +5 % (seulement avec cette arme)~
+– Chance d'effectuer un coup critique : +5 % (seulement avec cette arme)~
 
 @31210 = ~\+1d6~
 @31211 = ~+2d4+1~
@@ -527,7 +527,7 @@ Capacités de combat :
 - 50 % chance de dissiper la magie à chaque attaque~
 @31503 = ~Capacités de combat :
 – Chaque coup draine 5 points de vie à la cible pour les ajouter au porteur, qui ne peut pas dépasser son maximum.
-– 10 % de chance de décapiter l'adversaire à chaque coup réussi (jet de sauvegarde contre la mort à -4 pour annuler). Une créature qui réussit son jet de sauvegarde subit tout de même 2d6 points de dégâts.~
+– 25 % de chance de lancer une Dissipation de la magie de niveau 30 à chaque coup réussi.~
 
 @31504 = ~Épée d'argent +4~
 @31505 = ~Imprégnée par le Mercure liquide, l'épée vorpale s'améliore considérablement. Tirée de son fourreau, la lame semble être composée d'un fluide argenté, oscillant entre esprit et métal. 
@@ -649,10 +649,17 @@ Type de dégâts : Contondant~
 ///////////////////////////////////////////////////////////////////////////
 // Longbow                                                               //
 ///////////////////////////////////////////////////////////////////////////
+/*
 @31900 = ~TAC0: \+4~
 @31901 = ~TAC0: +3
 Dégâts : +3 (projectile)~
+*/
+@31900 = ~PARAMÈTRES :~
+@31901 = ~PARAMÈTRES :
 
+Capacités d'équipement :
+– Chance d'effectuer un coup critique : +5 % (Elfe et Demi-Elfe uniquement)
+– « Bénédiction »~
 @31902 = ~PARAMÈTRES :~
 @31903 = ~PARAMÈTRES :
 
@@ -908,6 +915,25 @@ Capacités d'équipement :
 
 Capacités de combat :
 – Une demi attaque supplémentaire par round~
+
+///////////////////////////////////////////////////////////////////////////
+// Helm                                                                  //
+///////////////////////////////////////////////////////////////////////////
+@34000 = ~Le Visage~
+@34001 = ~Peu nombreux sont ceux qui oseraient trahir un démon, et plus rares encore ceux qui tenteraient de jouer un double-jeu avec lui. Dorn Il-Khan, un chevalier noir demi-orque de la ville de Luskan, en fait partie. Approché par une rivale de son protecteur démoniaque, il accepta de trahir son maître. Mais au lieu de cela, au moment crucial, il se retourna contre elle et l'emprisonna dans une puissante épée. Son protecteur le récompensa en lui donnant ce masque en argent terrifiant qui représente un visage aux traits déformés par une grimace grotesque. Lorsque celui qui le porte parle, ses yeux se mettent à briller d'un rouge sombre ; ce qui accentue son aspect inquiétant. Le masque vibre d'énergie magique résultant d'une multitude d'enchantements, inspirant la terreur chez tous ceux qui le regardent.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+– TAC0 : +1
+– +1 à tous les jets de sauvegarde.
+– Immunité à la débilité mentale, la confusion, la terreur et les charmes.
+– Protège contre les coups critiques
+
+Capacités de charge :
+– Vision véritable trois fois par jour.
+
+Poids : 1~
 
 ///////////////////////////////////////////////////////////////////////////
 // Ring                                                                  //
