@@ -2093,6 +2093,41 @@ OUTER_SPRINT newtwohand6 @31513
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Soul Reaver +6                                                        //
+// +25% Magic Resistance (previously +50%)                               //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~C2SW2H02.ITM~ BEGIN
+OUTER_SPRINT oldtwohand12 @31523
+OUTER_SPRINT newtwohand12 @31524
+OUTER_SPRINT oldtwohand13 @31525
+OUTER_SPRINT newtwohand13 @31526
+COPY ~forgotten-armament/spl/update_item/mowsl01.SPL~ ~override~ // Adds dispel magic on hit spell
+COPY ~forgotten-armament/eff/update_item/mowsl01.eff~ ~override~ // Adds 10% chance of dispel magic on hit effect
+
+    COPY_EXISTING ~C2SW2H02.ITM~ ~override~ 
+      LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 166 target = 1 parameter1 = 25 parameter2 = 0 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 248 target = 2 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 special = 1 STR_VAR resource = "mowsl01" END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 240 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 81 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 177 match_parameter2 = 7 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 58 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 215 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 77 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 139 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 141 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 174 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldtwohand12%~ ~%newtwohand12%~
+              REPLACE_TEXTUALLY ~%oldtwohand13%~ ~%newtwohand13%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Wakizashi                                                             //
 ///////////////////////////////////////////////////////////////////////////

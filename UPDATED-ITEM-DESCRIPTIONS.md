@@ -266,6 +266,10 @@
 #### Joril's Dagger +3
 - +1d6 cold (previously +1)
 
+#### Soul Reaver +6 (Item Upgrades mod)
+- Toned down Magic Resistance increase to +25% (Previously +50%) to better align with Carsomyr changes.
+- 10% chance to Dispel Magic at level 30 whenever the sword strikes an opponent (this will bypass protections like PfMW if EEex is installed). This is to better align with the Carsomyr changes.
+
 #### The World's Edge +3
 - On a critical hit, the wielder gains +1 Strength bonus for 2 rounds (non-cumulative)
 

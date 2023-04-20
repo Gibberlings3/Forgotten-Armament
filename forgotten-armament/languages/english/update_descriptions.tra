@@ -610,6 +610,12 @@ Requires:
 @31521 = ~25% chance per hit that target must save vs. Death at -2 or die~
 @31522 = ~25% chance per hit that target must save vs. Death at -2 or die. A creature that successfully saves still receives 2d6 points of damage.~
 
+@31523 = ~\+50~
+@31524 = ~+25~
+
+@31525 = ~Dispel Magic on each hit~
+@31526 = ~10% chance to Dispel Magic at level 30 on each hit~
+
 ///////////////////////////////////////////////////////////////////////////
 // Wakisashi                                                             //
 ///////////////////////////////////////////////////////////////////////////
