@@ -3474,6 +3474,30 @@ ACTION_IF FILE_EXISTS_IN_GAME ~OHDMASK.ITM~ BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Helm of the Rock                                                      //
+// Remove Domination and Acid Breathe                                    //
+// Add True Seeing x3 a day                                              //
+///////////////////////////////////////////////////////////////////////////
+/*ACTION_IF FILE_EXISTS_IN_GAME ~HELM31.ITM~ BEGIN
+OUTER_SPRINT oldhelm1  @34002
+OUTER_SPRINT newhelm1  @34003
+
+    COPY_EXISTING ~HELM31.ITM~ ~override~ 
+      LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+      LPF ADD_ITEM_HEADER INT_VAR target = 5 required_id = 1 range = 1 charges = 3 depletion = 3 flags = 2560 STR_VAR icon = ~OHRSCRL1~ END
+      LPF ADD_ITEM_EFFECT INT_VAR opcode = 146 type = 3 target = 1 parameter1 = 1 parameter2 = 1 timing = 1 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~SPPR505~ END
+      // Flags = 9 and 11 only
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%olhelm1%~ ~%newhelm1%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END*/
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Rings                                                                //
 ///////////////////////////////////////////////////////////////////////////
