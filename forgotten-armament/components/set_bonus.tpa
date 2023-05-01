@@ -18,35 +18,49 @@ COPY ~forgotten-armament/spl/set_bonus/moset1c.spl~ ~override~
 
 // Elvenkind Set
 COPY ~forgotten-armament/spl/set_bonus/moset2a.spl~ ~override~
-  SAY NAME1 @60004 
-  SAY NAME2 @60004
+  SAY NAME1 @60006 
+  SAY NAME2 @60006
 COPY ~forgotten-armament/spl/set_bonus/moset2b.spl~ ~override~
-  SAY NAME1 @60004 
-  SAY NAME2 @60004
+  SAY NAME1 @60006 
+  SAY NAME2 @60006
 COPY ~forgotten-armament/spl/set_bonus/moset2c.spl~ ~override~
-  SAY NAME1 @60005 
-  SAY NAME2 @60005
+  SAY NAME1 @60007 
+  SAY NAME2 @60007
 
 ///////////////////////////////////////////////////////////////////////////
 // Set On-Equip for Set Items                                            //
 ///////////////////////////////////////////////////////////////////////////
 OUTER_SPRINT oldtext  @60000 // STATISTICS:
+OUTER_SPRINT oldsword @60004 // Sword of Balduran (BGEE version)
+OUTER_SPRINT newsword @60005 // Ceremonial Sword of Balduran (BGEE version)
 OUTER_SPRINT newtext1 @60003 // Balduran Set
-OUTER_SPRINT newtext2 @60006 // Elvenkind Set
+OUTER_SPRINT newtext2 @60008 // Elvenkind Set
 
 ACTION_FOR_EACH balduran_set IN
-      CLCK05    // Cloak of Balduran
-      COMPS18   // Sword of Balduran
-      HELM07    // Helm of Balduran
-      SW1H18    // Sword of Balduran
-      WA2PLAT   // Plate of Balduran
-      WA2SHIELD // Shield of Balduran
+      CLCK05   // Cloak of Balduran
+      HELM07   // Helm of Balduran
+      WA2PLAT  // Plate of Balduran
+      WA2SHIEL // Shield of Balduran
+      WA2S1H   // Sword of Balduran
     BEGIN
       ACTION_IF FILE_EXISTS_IN_GAME ~%balduran_set%.ITM~ BEGIN
         COPY_EXISTING ~%balduran_set%.ITM~ ~override~ 
           LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSET01~ END
       END
     END
+
+// Ceremonial Sword of Balduran
+ACTION_IF FILE_EXISTS_IN_GAME ~SW1H18.ITM~ BEGIN
+  COPY_EXISTING ~SW1H18.ITM~ ~override~
+    READ_LONG 0x8 name_strref
+      PATCH_IF (name_strref >= 0 && name_strref < 2147483646) BEGIN
+        READ_STRREF 0x8 name
+        INNER_PATCH_SAVE name ~%name%~ BEGIN
+          REPLACE_TEXTUALLY ~%oldtext%~ ~%newtext2%~
+        END
+        SAY_EVALUATED 0x8 ~%name%~
+      END
+END
 
 ACTION_FOR_EACH elvenkind_set IN
       BOOT07    // Boots of Elvenkind

@@ -7,9 +7,12 @@
 Balduran Set Bonuses:
 – ~
 
-@60004 = ~Add Elvenkind Set Bonus~
-@60005 = ~Remove Elvenkind Set Bonus~
-@60006 = ~STATISTICS:
+@60004 = ~Sword~
+@60005 = ~Ceremonial Sword~
+
+@60006 = ~Add Elvenkind Set Bonus~
+@60007 = ~Remove Elvenkind Set Bonus~
+@60008 = ~STATISTICS:
 
 Elvenkind Set Bonuses:
 – +2 Dexterity (2 pieces)~
