@@ -24,6 +24,7 @@
 @22 = ~Update Critical Hit Immunity~
 @23 = ~Remove Critical Hit Immunity from Difficult Enemies~
 @24 = ~Allow Difficult Enemies to Remain Immune to Critical Hits~
+@25 = ~Add Set Bonuses to Items~
 
 @3000 = ~Component requires BG: EE, BGII: EE, or EET~
 @3001 = ~DLCMerger is needed before modding SoD games~

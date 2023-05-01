@@ -1,0 +1,37 @@
+// Forgotten Armament - Set Bonuses for Items
+
+///////////////////////////////////////////////////////////////////////////
+// Import Files                                                          //
+///////////////////////////////////////////////////////////////////////////
+COPY ~forgotten-armament/eff/set_bonus/moset01.eff~ ~override~
+COPY ~forgotten-armament/spl/set_bonus/moset1a.spl~ ~override~
+  SAY NAME1 @60000 
+  SAY NAME2 @60000
+COPY ~forgotten-armament/spl/set_bonus/moset1b.spl~ ~override~
+  SAY NAME1 @60000 
+  SAY NAME2 @60000
+COPY ~forgotten-armament/spl/set_bonus/moset1c.spl~ ~override~
+  SAY NAME1 @60001 
+  SAY NAME2 @60001
+
+///////////////////////////////////////////////////////////////////////////
+// Set On-Equip for Set Items                                            //
+///////////////////////////////////////////////////////////////////////////
+ACTION_FOR_EACH set_item IN
+      CLCK05    // Cloak of Balduran
+      COMPS18   // Sword of Balduran
+      HELM07    // Helm of Balduran
+      SW1H18    // Sword of Balduran
+      WA2PLAT   // Plate of Balduran
+      WA2SHIELD // Shield of Balduran
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%set_item%.ITM~ BEGIN
+      COPY_EXISTING ~%set_item%.ITM~ ~override~ 
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR ~MOSET01.EFF~ END
+    END
+
+///////////////////////////////////////////////////////////////////////////
+// Copy .BCS file to override folder                                     //
+///////////////////////////////////////////////////////////////////////////
+COPY ~forgotten-armament/baf/moset1.baf~ ~override/moset1.bcs~
+  COMPILE_BAF_TO_BCS

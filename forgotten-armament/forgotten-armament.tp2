@@ -7,7 +7,7 @@
 BACKUP ~forgotten-armament/backup~
 AUTHOR ~morpheus562~
 
-VERSION ~v2.2~
+VERSION ~v3.0~
 README ~forgotten-armament/readme.html~
 AUTO_EVAL_STRINGS
 
@@ -26,6 +26,7 @@ LANGUAGE ~English~
          ~forgotten-armament/languages/english/nwn_descriptions.tra~
          ~forgotten-armament/languages/english/update_descriptions.tra~
          ~forgotten-armament/languages/english/crit_descriptions.tra~
+         ~forgotten-armament/languages/english/set_descriptions.tra~
 LANGUAGE ~French~
          ~french~
          ~forgotten-armament/languages/english/setup.tra~
@@ -34,6 +35,7 @@ LANGUAGE ~French~
          ~forgotten-armament/languages/english/nwn_descriptions.tra~
          ~forgotten-armament/languages/english/update_descriptions.tra~
          ~forgotten-armament/languages/english/crit_descriptions.tra~
+         ~forgotten-armament/languages/english/set_descriptions.tra~
          ~forgotten-armament/languages/french/setup.tra~
          ~forgotten-armament/languages/french/item_descriptions.tra~
          ~forgotten-armament/languages/french/style_descriptions.tra~
@@ -198,3 +200,11 @@ LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/crit_descriptions.tra~
 
 OUTER_SET boss_immune=1
 INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
+
+///////////////////////////////////////////////////////////////////////////
+// Nerf APR Increasing One-Handed Melee Weapons                          //
+///////////////////////////////////////////////////////////////////////////
+BEGIN @25 DESIGNATED 25 LABEL ForgottenArmament-SetBonus
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+
+INCLUDE ~forgotten-armament/components/set_bonus.tpa~
