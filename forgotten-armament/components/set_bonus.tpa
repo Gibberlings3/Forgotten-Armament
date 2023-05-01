@@ -27,7 +27,7 @@ ACTION_FOR_EACH set_item IN
     BEGIN
       ACTION_IF FILE_EXISTS_IN_GAME ~%set_item%.ITM~ BEGIN
         COPY_EXISTING ~%set_item%.ITM~ ~override~ 
-          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR ~MOSET01~ END
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSET01~ END
       END
     END
 
