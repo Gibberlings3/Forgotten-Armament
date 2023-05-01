@@ -6,8 +6,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("MO_BalduranSet","LOCALS",1)
-    ApplySpellRES("MOSET1A",Myself)  // Storm's Spell Thrust
-    Wait(2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran Set Bonus
 END
 
 IF
@@ -19,6 +18,26 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("MO_BalduranSet","LOCALS",0)
-    ApplySpellRES("MOSET1c",Myself)  // Storm's Spell Thrust
-    Wait(2)
+    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran Set Bonus
+END
+
+IF
+  HasItemEquiped("BOOT07",Myself)  // Boots of Elvenkind
+  HasItemEquiped("clck23",Myself)  // Cloak of Elvenkind
+  Global("MO_ElvenkindSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_ElvenkindSet","LOCALS",1)
+    ApplySpellRES("MOSET2A",Myself)  // Add Elvenkind Set Bonus
+END
+
+IF
+  OR(2)
+    !HasItemEquiped("BOOT07",Myself)  // Boots of Elvenkind
+    !HasItemEquiped("clck23",Myself)  // Cloak of Elvenkind
+  Global("MO_ElvenkindSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_ElvenkindSet","LOCALS",0)
+    ApplySpellRES("MOSET2C",Myself)  // Remove Elvenkind Set Bonus
 END

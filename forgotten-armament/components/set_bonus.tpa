@@ -4,20 +4,37 @@
 // Import Files                                                          //
 ///////////////////////////////////////////////////////////////////////////
 COPY ~forgotten-armament/eff/set_bonus/moset01.eff~ ~override~
+
+// Balduran Set
 COPY ~forgotten-armament/spl/set_bonus/moset1a.spl~ ~override~
-  SAY NAME1 @60000 
-  SAY NAME2 @60000
-COPY ~forgotten-armament/spl/set_bonus/moset1b.spl~ ~override~
-  SAY NAME1 @60000 
-  SAY NAME2 @60000
-COPY ~forgotten-armament/spl/set_bonus/moset1c.spl~ ~override~
   SAY NAME1 @60001 
   SAY NAME2 @60001
+COPY ~forgotten-armament/spl/set_bonus/moset1b.spl~ ~override~
+  SAY NAME1 @60001 
+  SAY NAME2 @60001
+COPY ~forgotten-armament/spl/set_bonus/moset1c.spl~ ~override~
+  SAY NAME1 @60002 
+  SAY NAME2 @60002
+
+// Elvenkind Set
+COPY ~forgotten-armament/spl/set_bonus/moset2a.spl~ ~override~
+  SAY NAME1 @60004 
+  SAY NAME2 @60004
+COPY ~forgotten-armament/spl/set_bonus/moset2b.spl~ ~override~
+  SAY NAME1 @60004 
+  SAY NAME2 @60004
+COPY ~forgotten-armament/spl/set_bonus/moset2c.spl~ ~override~
+  SAY NAME1 @60005 
+  SAY NAME2 @60005
 
 ///////////////////////////////////////////////////////////////////////////
 // Set On-Equip for Set Items                                            //
 ///////////////////////////////////////////////////////////////////////////
-ACTION_FOR_EACH set_item IN
+OUTER_SPRINT oldtext  @60000 // STATISTICS:
+OUTER_SPRINT newtext1 @60003 // Balduran Set
+OUTER_SPRINT newtext2 @60006 // Elvenkind Set
+
+ACTION_FOR_EACH balduran_set IN
       CLCK05    // Cloak of Balduran
       COMPS18   // Sword of Balduran
       HELM07    // Helm of Balduran
@@ -25,9 +42,28 @@ ACTION_FOR_EACH set_item IN
       WA2PLAT   // Plate of Balduran
       WA2SHIELD // Shield of Balduran
     BEGIN
-      ACTION_IF FILE_EXISTS_IN_GAME ~%set_item%.ITM~ BEGIN
-        COPY_EXISTING ~%set_item%.ITM~ ~override~ 
+      ACTION_IF FILE_EXISTS_IN_GAME ~%balduran_set%.ITM~ BEGIN
+        COPY_EXISTING ~%balduran_set%.ITM~ ~override~ 
           LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSET01~ END
+      END
+    END
+
+ACTION_FOR_EACH elvenkind_set IN
+      BOOT07    // Boots of Elvenkind
+      CLCK23    // Cloak of Elvenkind
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%elvenkind_set%.ITM~ BEGIN
+        COPY_EXISTING ~%elvenkind_set%.ITM~ ~override~ 
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSET01~ END
+
+          READ_LONG 0x54 desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF 0x54 desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldtext%~ ~%newtext2%~
+              END
+              SAY_EVALUATED 0x54 ~%desc%~
+            END
       END
     END
 

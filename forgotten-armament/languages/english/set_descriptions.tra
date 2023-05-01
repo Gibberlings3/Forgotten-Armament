@@ -1,4 +1,15 @@
 // Forgotten Armament - Set Descriptions
+@60000 = ~STATISTICS:~
+@60001 = ~Add Balduran Set Bonus~
+@60002 = ~Remove Balduran Set Bonus~
+@60003 = ~STATISTICS:
 
-@60000 = ~Add Balduran Set Bonus~
-@60001 = ~Remove Balduran Set Bonus~
+Balduran Set Bonuses:
+– ~
+
+@60004 = ~Add Elvenkind Set Bonus~
+@60005 = ~Remove Elvenkind Set Bonus~
+@60006 = ~STATISTICS:
+
+Elvenkind Set Bonuses:
+– +2 Dexterity (2 pieces)~
