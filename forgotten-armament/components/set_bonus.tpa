@@ -52,13 +52,13 @@ ACTION_FOR_EACH balduran_set IN
 // Ceremonial Sword of Balduran
 ACTION_IF FILE_EXISTS_IN_GAME ~SW1H18.ITM~ BEGIN
   COPY_EXISTING ~SW1H18.ITM~ ~override~
-    READ_LONG 0x8 name_strref
+    READ_LONG 0xc name_strref
       PATCH_IF (name_strref >= 0 && name_strref < 2147483646) BEGIN
-        READ_STRREF 0x8 name
+        READ_STRREF 0xc name
         INNER_PATCH_SAVE name ~%name%~ BEGIN
-          REPLACE_TEXTUALLY ~%oldtext%~ ~%newtext2%~
+          REPLACE_TEXTUALLY ~%oldsword%~ ~%newsword%~
         END
-        SAY_EVALUATED 0x8 ~%name%~
+        SAY_EVALUATED 0xc ~%name%~
       END
 END
 
