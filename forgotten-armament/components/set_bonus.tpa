@@ -26,8 +26,9 @@ ACTION_FOR_EACH set_item IN
       WA2SHIELD // Shield of Balduran
     BEGIN
       ACTION_IF FILE_EXISTS_IN_GAME ~%set_item%.ITM~ BEGIN
-      COPY_EXISTING ~%set_item%.ITM~ ~override~ 
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR ~MOSET01.EFF~ END
+        COPY_EXISTING ~%set_item%.ITM~ ~override~ 
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR ~MOSET01.EFF~ END
+      END
     END
 
 ///////////////////////////////////////////////////////////////////////////
