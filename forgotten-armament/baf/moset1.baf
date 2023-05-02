@@ -1,26 +1,523 @@
+// BALDURAN SET ---------------------------------------------------------//
+// No Set
 IF
-  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
-  HasItemEquiped("clck05",Myself)  // Cloak of Balduran
-  HasItemEquiped("wa2plat",Myself)  // Plate of Balduran
-  Global("MO_BalduranSet","LOCALS",0)
-THEN
-  RESPONSE #100
-    SetGlobal("MO_BalduranSet","LOCALS",1)
-    ApplySpellRES("MOSET1A",Myself)  // Add Balduran Set Bonus
-END
-
-IF
-  OR(3)
-    !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
-    !HasItemEquiped("clck05",Myself)  // Cloak of Balduran
-    !HasItemEquiped("wa2plat",Myself)  // Plate of Balduran
-  Global("MO_BalduranSet","LOCALS",1)
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",0)
 THEN
   RESPONSE #100
     SetGlobal("MO_BalduranSet","LOCALS",0)
-    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran Set Bonus
+    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
 END
 
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",0)
+    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",0)
+    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",0)
+    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",0)
+    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",0)
+    ApplySpellRES("MOSET1C",Myself)  // Remove Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+// 2 Piece
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",1)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1F",Myself)  // Remove Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+// 3 Piece
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",2)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1I",Myself)  // Remove Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+// 4 Piece
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",3)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",3)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1H",Myself)  // Add Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",3)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",3)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1H",Myself)  // Add Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",3)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",3)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1H",Myself)  // Add Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",3)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",3)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1H",Myself)  // Add Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+IF
+  !HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",3)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",3)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1H",Myself)  // Add Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1L",Myself)  // Remove Balduran 5 Piece Set Bonus
+END
+
+// 5 Piece
+IF
+  HasItemEquiped("CLCK05",Myself)  // Cloak of Balduran
+  HasItemEquiped("HELM07",Myself)  // Helm of Balduran
+  HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !Global("MO_BalduranSet","LOCALS",4)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_BalduranSet","LOCALS",4)
+    ApplySpellRES("MOSET1A",Myself)  // Add Balduran 2 Piece Set Bonus
+    ApplySpellRES("MOSET1E",Myself)  // Add Balduran 3 Piece Set Bonus
+    ApplySpellRES("MOSET1H",Myself)  // Add Balduran 4 Piece Set Bonus
+    ApplySpellRES("MOSET1J",Myself)  // Add Balduran 5 Piece Set Bonus
+END
+
+// ELVENKIND SET --------------------------------------------------------//
+// 2 Piece
 IF
   HasItemEquiped("BOOT07",Myself)  // Boots of Elvenkind
   HasItemEquiped("clck23",Myself)  // Cloak of Elvenkind

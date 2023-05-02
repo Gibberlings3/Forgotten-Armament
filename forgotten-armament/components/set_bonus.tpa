@@ -5,7 +5,8 @@
 ///////////////////////////////////////////////////////////////////////////
 COPY ~forgotten-armament/eff/set_bonus/moset01.eff~ ~override~
 
-// Balduran Set
+// BALDURAN SET ---------------------------------------------------------//
+// 2 Piece 
 COPY ~forgotten-armament/spl/set_bonus/moset1a.spl~ ~override~
   SAY NAME1 @60001 
   SAY NAME2 @60001
@@ -15,8 +16,40 @@ COPY ~forgotten-armament/spl/set_bonus/moset1b.spl~ ~override~
 COPY ~forgotten-armament/spl/set_bonus/moset1c.spl~ ~override~
   SAY NAME1 @60002 
   SAY NAME2 @60002
+// 3 Piece
+COPY ~forgotten-armament/spl/set_bonus/moset1d.spl~ ~override~
+  SAY NAME1 @60009 
+  SAY NAME2 @60009
+COPY ~forgotten-armament/spl/set_bonus/moset1e.spl~ ~override~
+  SAY NAME1 @60009 
+  SAY NAME2 @60009
+COPY ~forgotten-armament/spl/set_bonus/moset1f.spl~ ~override~
+  SAY NAME1 @60010 
+  SAY NAME2 @60010
+// 4 Piece
+COPY ~forgotten-armament/spl/set_bonus/moset1g.spl~ ~override~
+  SAY NAME1 @60011 
+  SAY NAME2 @60011
+COPY ~forgotten-armament/spl/set_bonus/moset1h.spl~ ~override~
+  SAY NAME1 @60011 
+  SAY NAME2 @60011
+COPY ~forgotten-armament/spl/set_bonus/moset1i.spl~ ~override~
+  SAY NAME1 @60012 
+  SAY NAME2 @60012
+// 5 Piece
+COPY ~forgotten-armament/spl/set_bonus/moset1j.spl~ ~override~
+  SAY NAME1 @60013 
+  SAY NAME2 @60013
+COPY ~forgotten-armament/spl/set_bonus/moset1k.spl~ ~override~
+  SAY NAME1 @60013 
+  SAY NAME2 @60013
+COPY ~forgotten-armament/eff/set_bonus/moset1k.eff~ ~override~
+COPY ~forgotten-armament/spl/set_bonus/moset1l.spl~ ~override~
+  SAY NAME1 @60014 
+  SAY NAME2 @60014
 
-// Elvenkind Set
+// ELVENKIND SET --------------------------------------------------------//
+// 2 Piece
 COPY ~forgotten-armament/spl/set_bonus/moset2a.spl~ ~override~
   SAY NAME1 @60006 
   SAY NAME2 @60006
