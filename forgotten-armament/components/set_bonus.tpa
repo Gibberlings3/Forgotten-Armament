@@ -79,6 +79,15 @@ ACTION_FOR_EACH balduran_set IN
       ACTION_IF FILE_EXISTS_IN_GAME ~%balduran_set%.ITM~ BEGIN
         COPY_EXISTING ~%balduran_set%.ITM~ ~override~ 
           LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSET01~ END
+
+          READ_LONG 0x54 desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF 0x54 desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldtext%~ ~%newtext1%~
+              END
+              SAY_EVALUATED 0x54 ~%desc%~
+            END
       END
     END
 
