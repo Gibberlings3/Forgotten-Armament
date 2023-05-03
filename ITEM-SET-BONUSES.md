@@ -8,7 +8,7 @@ This set includes the Cloak of Balduran, Helm of Balduran, Plate of Baldura, Swo
 - +20% resistance to physical damage (4 pieces)
 - Balduran's Sword is treated as having a +4 enchantment for the purposes of determining what it can hit. The sword also deals an additional +1d8 cold damage per hit (5 pieces)
 
-## Dooguard Set 
+## Doomguard Set 
 
 This set includes Haer'Dalis' Entropy and Chaos Blades. The Doomguard Set bonuses include:
 - Extra 1 attack per round (2 pieces)
