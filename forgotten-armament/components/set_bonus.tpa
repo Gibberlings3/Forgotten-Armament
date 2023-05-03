@@ -18,35 +18,35 @@ COPY ~forgotten-armament/spl/set_bonus/moset1c.spl~ ~override~
   SAY NAME2 @60002
 // 3 Piece
 COPY ~forgotten-armament/spl/set_bonus/moset1d.spl~ ~override~
-  SAY NAME1 @60009 
-  SAY NAME2 @60009
+  SAY NAME1 @60001 
+  SAY NAME2 @60001
 COPY ~forgotten-armament/spl/set_bonus/moset1e.spl~ ~override~
-  SAY NAME1 @60009 
-  SAY NAME2 @60009
+  SAY NAME1 @60001 
+  SAY NAME2 @60001
 COPY ~forgotten-armament/spl/set_bonus/moset1f.spl~ ~override~
-  SAY NAME1 @60010 
-  SAY NAME2 @60010
+  SAY NAME1 @60002 
+  SAY NAME2 @60002 
 // 4 Piece
 COPY ~forgotten-armament/spl/set_bonus/moset1g.spl~ ~override~
-  SAY NAME1 @60011 
-  SAY NAME2 @60011
+  SAY NAME1 @60001
+  SAY NAME2 @60001
 COPY ~forgotten-armament/spl/set_bonus/moset1h.spl~ ~override~
-  SAY NAME1 @60011 
-  SAY NAME2 @60011
+  SAY NAME1 @60001
+  SAY NAME2 @60001
 COPY ~forgotten-armament/spl/set_bonus/moset1i.spl~ ~override~
-  SAY NAME1 @60012 
-  SAY NAME2 @60012
+  SAY NAME1 @60002  
+  SAY NAME2 @60002 
 // 5 Piece
 COPY ~forgotten-armament/spl/set_bonus/moset1j.spl~ ~override~
-  SAY NAME1 @60013 
-  SAY NAME2 @60013
+  SAY NAME1 @60001
+  SAY NAME2 @60001
 COPY ~forgotten-armament/spl/set_bonus/moset1k.spl~ ~override~
-  SAY NAME1 @60013 
-  SAY NAME2 @60013
+  SAY NAME1 @60001
+  SAY NAME2 @60001
 COPY ~forgotten-armament/eff/set_bonus/moset1k.eff~ ~override~
 COPY ~forgotten-armament/spl/set_bonus/moset1l.spl~ ~override~
-  SAY NAME1 @60014 
-  SAY NAME2 @60014
+  SAY NAME1 @60002 
+  SAY NAME2 @60002 
 
 // ELVENKIND SET --------------------------------------------------------//
 // 2 Piece
@@ -60,6 +60,18 @@ COPY ~forgotten-armament/spl/set_bonus/moset2c.spl~ ~override~
   SAY NAME1 @60007 
   SAY NAME2 @60007
 
+// DOOMGUARD SET --------------------------------------------------------//
+// 2 Piece
+COPY ~forgotten-armament/spl/set_bonus/moset2a.spl~ ~override~
+  SAY NAME1 @60009 
+  SAY NAME2 @60009
+COPY ~forgotten-armament/spl/set_bonus/moset2b.spl~ ~override~
+  SAY NAME1 @60009 
+  SAY NAME2 @60009
+COPY ~forgotten-armament/spl/set_bonus/moset2c.spl~ ~override~
+  SAY NAME1 @60010 
+  SAY NAME2 @60010
+
 ///////////////////////////////////////////////////////////////////////////
 // Set On-Equip for Set Items                                            //
 ///////////////////////////////////////////////////////////////////////////
@@ -68,7 +80,9 @@ OUTER_SPRINT oldsword @60004 // Sword of Balduran (BGEE version)
 OUTER_SPRINT newsword @60005 // Ceremonial Sword of Balduran (BGEE version)
 OUTER_SPRINT newtext1 @60003 // Balduran Set
 OUTER_SPRINT newtext2 @60008 // Elvenkind Set
+OUTER_SPRINT newtext3 @60011 // Doomguard Set
 
+// Balduran Set
 ACTION_FOR_EACH balduran_set IN
       CLCK05   // Cloak of Balduran
       HELM07   // Helm of Balduran
@@ -104,6 +118,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SW1H18.ITM~ BEGIN
       END
 END
 
+// Elvenkind Set
 ACTION_FOR_EACH elvenkind_set IN
       BOOT07    // Boots of Elvenkind
       CLCK23    // Cloak of Elvenkind
@@ -123,6 +138,25 @@ ACTION_FOR_EACH elvenkind_set IN
       END
     END
 
+// Doomguard Set
+ACTION_FOR_EACH doomguard_set IN
+      NPSW05    // Entropy +2
+      NPSW06    // Chaos Blade
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%doomguard_set%.ITM~ BEGIN
+        COPY_EXISTING ~%doomguard_set%.ITM~ ~override~ 
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSET01~ END
+
+          READ_LONG 0x54 desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF 0x54 desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldtext%~ ~%newtext3%~
+              END
+              SAY_EVALUATED 0x54 ~%desc%~
+            END
+      END
+    END
 ///////////////////////////////////////////////////////////////////////////
 // Copy .BCS file to override folder                                     //
 ///////////////////////////////////////////////////////////////////////////

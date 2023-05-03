@@ -5,7 +5,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",0)
 THEN
   RESPONSE #100
@@ -21,7 +21,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",0)
 THEN
   RESPONSE #100
@@ -37,7 +37,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",0)
 THEN
   RESPONSE #100
@@ -53,7 +53,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",0)
 THEN
   RESPONSE #100
@@ -69,7 +69,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",0)
 THEN
   RESPONSE #100
@@ -85,7 +85,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",0)
 THEN
   RESPONSE #100
@@ -102,7 +102,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -118,7 +118,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -134,7 +134,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -150,7 +150,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -166,7 +166,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -182,7 +182,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -198,7 +198,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -214,7 +214,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -230,7 +230,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -246,7 +246,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",1)
 THEN
   RESPONSE #100
@@ -263,7 +263,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -279,7 +279,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -295,7 +295,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -311,7 +311,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -327,7 +327,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -343,7 +343,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -359,7 +359,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -375,7 +375,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -391,7 +391,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -407,7 +407,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",2)
 THEN
   RESPONSE #100
@@ -424,7 +424,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  !HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  !HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",3)
 THEN
   RESPONSE #100
@@ -440,7 +440,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   !HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",3)
 THEN
   RESPONSE #100
@@ -456,7 +456,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   !HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",3)
 THEN
   RESPONSE #100
@@ -472,7 +472,7 @@ IF
   !HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",3)
 THEN
   RESPONSE #100
@@ -488,7 +488,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",3)
 THEN
   RESPONSE #100
@@ -505,7 +505,7 @@ IF
   HasItemEquiped("HELM07",Myself)  // Helm of Balduran
   HasItemEquiped("WA2PLAT",Myself)  // Plate of Balduran
   HasItemEquiped("WA2S1H",Myself)  // Sword of Balduran
-  HasItemEquiped("WA2SHIEL",Myself)  // Plate of Balduran
+  HasItemEquiped("WA2SHIEL",Myself)  // Shield of Balduran
   !Global("MO_BalduranSet","LOCALS",4)
 THEN
   RESPONSE #100
@@ -537,4 +537,27 @@ THEN
   RESPONSE #100
     SetGlobal("MO_ElvenkindSet","LOCALS",0)
     ApplySpellRES("MOSET2C",Myself)  // Remove Elvenkind Set Bonus
+END
+
+// DOOMGUARD SET --------------------------------------------------------//
+// 2 Piece
+IF
+  HasItemEquiped("NPSW05",Myself)  // Entropy +2
+  HasItemEquiped("NPSW06",Myself)  // Chaos Blade
+  Global("MO_DoomguardSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_DoomguardSet","LOCALS",1)
+    ApplySpellRES("MOSET3A",Myself)  // Add Doomguard Set Bonus
+END
+
+IF
+  OR(2)
+    !HasItemEquiped("NPSW05",Myself)  // Entropy +2
+    !HasItemEquiped("NPSW06",Myself)  // Chaos Blade
+  Global("MO_DoomguardSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_DoomguardSet","LOCALS",0)
+    ApplySpellRES("MOSET3C",Myself)  // Remove Doomguard Set Bonus
 END

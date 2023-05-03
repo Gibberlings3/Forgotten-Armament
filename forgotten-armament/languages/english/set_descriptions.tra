@@ -1,14 +1,14 @@
 // Forgotten Armament - Set Descriptions
 @60000 = ~STATISTICS:~
-@60001 = ~Add Balduran 2 Piece Set Bonus~
-@60002 = ~Remove Balduran 2 Piece Set Bonus~
+@60001 = ~Update Balduran Set Bonus~
+@60002 = ~Remove Balduran Set Bonus~
 @60003 = ~STATISTICS:
 
 Balduran Set Bonuses:
-– Hit Points: +10 (2 pieces)
-– Saving Throws: +2 (3 pieces)
+– +10 Hit Points (2 pieces)
+– Regenerate 1 Hit Point per round (3 pieces)
 – +20% resistance to physical damage (4 pieces)
-– Balduran's Sword is treated as having a +4 enchantment for the purposes of determining what it can hit. The sword also deals an additional +1d8 fire damage per hit (5 pieces)~
+– Balduran's Sword is treated as having a +4 enchantment for the purposes of determining what it can hit. The sword also deals an additional +1d8 cold damage per hit (5 pieces)~
 
 @60004 = ~Sword~
 @60005 = ~Ceremonial Sword~
@@ -20,9 +20,9 @@ Balduran Set Bonuses:
 Elvenkind Set Bonuses:
 – +2 Dexterity (2 pieces)~
 
-@60009 = ~Add Balduran 3 Piece Set Bonus~
-@60010 = ~Remove Balduran 3 Piece Set Bonus~
-@60011 = ~Add Balduran 4 Piece Set Bonus~
-@60012 = ~Remove Balduran 4 Piece Set Bonus~
-@60013 = ~Add Balduran 5 Piece Set Bonus~
-@60014 = ~Remove Balduran 5 Piece Set Bonus~
+@60009 = ~Add Doomguard Set Bonus~
+@60010 = ~Remove Doomguard Set Bonus~
+@60011 = ~STATISTICS:
+
+Doomguard Set Bonuses:
+– Extra 1 attack per round (2 pieces)~
