@@ -17,3 +17,8 @@ This set includes Haer'Dalis' Entropy and Chaos Blades. The Doomguard Set bonuse
 
 This set includes the Boots of Elvenkind and the Cloak of Elvenkind. The Elvenkind Set bonuses include:
 - +2 Dexterity (2 pieces)
+
+## Wormsor Set
+
+This set includes the Dragon Helm and the Dragon Scale Shield. The Wormsor Set bonuses include:
+- Protects against wing buffets and all forms of panic (2 pieces)

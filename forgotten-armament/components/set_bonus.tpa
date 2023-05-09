@@ -62,15 +62,27 @@ COPY ~forgotten-armament/spl/set_bonus/moset2c.spl~ ~override~
 
 // DOOMGUARD SET --------------------------------------------------------//
 // 2 Piece
-COPY ~forgotten-armament/spl/set_bonus/moset2a.spl~ ~override~
+COPY ~forgotten-armament/spl/set_bonus/moset3a.spl~ ~override~
   SAY NAME1 @60009 
   SAY NAME2 @60009
-COPY ~forgotten-armament/spl/set_bonus/moset2b.spl~ ~override~
+COPY ~forgotten-armament/spl/set_bonus/moset3b.spl~ ~override~
   SAY NAME1 @60009 
   SAY NAME2 @60009
-COPY ~forgotten-armament/spl/set_bonus/moset2c.spl~ ~override~
+COPY ~forgotten-armament/spl/set_bonus/moset3c.spl~ ~override~
   SAY NAME1 @60010 
   SAY NAME2 @60010
+
+// WORMSOR SET ----------------------------------------------------------//
+// 2 Piece
+COPY ~forgotten-armament/spl/set_bonus/moset4a.spl~ ~override~
+  SAY NAME1 @60012 
+  SAY NAME2 @60012
+COPY ~forgotten-armament/spl/set_bonus/moset4b.spl~ ~override~
+  SAY NAME1 @60012 
+  SAY NAME2 @60012
+COPY ~forgotten-armament/spl/set_bonus/moset4c.spl~ ~override~
+  SAY NAME1 @60013 
+  SAY NAME2 @60013
 
 ///////////////////////////////////////////////////////////////////////////
 // Set On-Equip for Set Items                                            //
@@ -81,6 +93,7 @@ OUTER_SPRINT newsword @60005 // Ceremonial Sword of Balduran (BGEE version)
 OUTER_SPRINT newtext1 @60003 // Balduran Set
 OUTER_SPRINT newtext2 @60008 // Elvenkind Set
 OUTER_SPRINT newtext3 @60011 // Doomguard Set
+OUTER_SPRINT newtext4 @60014 // Wormsor Set
 
 // Balduran Set
 ACTION_FOR_EACH balduran_set IN
@@ -152,6 +165,26 @@ ACTION_FOR_EACH doomguard_set IN
               READ_STRREF 0x54 desc
               INNER_PATCH_SAVE desc ~%desc%~ BEGIN
                 REPLACE_TEXTUALLY ~%oldtext%~ ~%newtext3%~
+              END
+              SAY_EVALUATED 0x54 ~%desc%~
+            END
+      END
+    END
+
+// Wormsor Set
+ACTION_FOR_EACH wormsor_set IN
+      HELM21    // Dragon Helm
+      SHLD21    // Dragon Scale Shield +2
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%wormsor_set%.ITM~ BEGIN
+        COPY_EXISTING ~%wormsor_set%.ITM~ ~override~ 
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 2 parameter2 = 2 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSET01~ END
+
+          READ_LONG 0x54 desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF 0x54 desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldtext%~ ~%newtext4%~
               END
               SAY_EVALUATED 0x54 ~%desc%~
             END

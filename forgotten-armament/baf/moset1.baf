@@ -561,3 +561,26 @@ THEN
     SetGlobal("MO_DoomguardSet","LOCALS",0)
     ApplySpellRES("MOSET3C",Myself)  // Remove Doomguard Set Bonus
 END
+
+// WORMSOR SET ----------------------------------------------------------//
+// 2 Piece
+IF
+  HasItemEquiped("HELM21",Myself)  // Dragon Helm
+  HasItemEquiped("SHLD21",Myself)  // Dragon Scale Shield +2
+  Global("MO_WormsorSet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_WormsorSet","LOCALS",1)
+    ApplySpellRES("MOSET4A",Myself)  // Add Wormsor Set Bonus
+END
+
+IF
+  OR(2)
+    !HasItemEquiped("HELM21",Myself)  // Dragon Helm
+    !HasItemEquiped("SHLD21",Myself)  // Dragon Scale Shield +2
+  Global("MO_WormsorSet","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_WormsorSet","LOCALS",0)
+    ApplySpellRES("MOSET4C",Myself)  // Remove Wormsor Set Bonus
+END

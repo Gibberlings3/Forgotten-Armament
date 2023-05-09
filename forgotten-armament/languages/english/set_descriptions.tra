@@ -26,3 +26,10 @@ Elvenkind Set Bonuses:
 
 Doomguard Set Bonuses:
 – Extra 1 attack per round (2 pieces)~
+
+@60012 = ~Add Wormsor Set Bonus~
+@60013 = ~Remove Wormsor Set Bonus~
+@60014 = ~STATISTICS:
+
+Wormsor Set Bonuses:
+– Protects against wing buffets and all forms of panic (2 pieces)~
