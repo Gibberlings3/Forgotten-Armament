@@ -1,0 +1,35 @@
+// Forgotten Armament - Set Descriptions
+@60000 = ~PARAMÈTRES :~
+@60001 = ~Équipement de Baldurien : Bonus ajoutés~ // Ajouter des bonus si plusieurs pièces d'équipement de Baldurien sont équipées
+@60002 = ~Équipement de Baldurien : Bonus retirés~ // Retirer les bonus pour l'assortiment de l'équipement de Baldurien
+@60003 = ~PARAMÈTRES :
+
+Bonus d'équipement de Baldurien :
+- Points de vie : +10 (2 pièces d'équipement)
+- Régénère 1 point de vie par rounds (3 pièces d'équipement)
+- Résistance contre les dégâts physiques : +20 % (4 pièces d'équipement)
+– L'épée de Baldurien est considérée comme une arme +4 pour déterminer ce qu'elle peut toucher et inflige également 1d8 points de dégâts de froid supplémentaires à chaque coup réussi. (5 pièces d'équipement)~
+
+@60004 = ~Épée~
+@60005 = ~Épée de cérémonie~
+
+@60006 = ~Équipement elfiques : Bonus ajoutés~ // Ajouter des bonus si plusieurs pièces d'Équipement elfiques sont équipées
+@60007 = ~Équipement elfiques : Bonus retirés~ // Retirer les bonus pour l'assortiment de l'équipement elfiques
+@60008 = ~PARAMÈTRES :
+
+Bonus d'équipement elfiques :
+– Dextérité : +2 (2 pièces d'équipement)~
+
+@60009 = ~Équipement du Chaos : Bonus ajoutés~ // Ajouter des bonus si plusieurs pièces d'équipement du Chaos sont équipées (Entropie et Lame du chaos)
+@60010 = ~Équipement du Chaos : Bonus retirés~ // Retirer les bonus pour l'assortiment de l'équipement du Chaos sont équipées (Entropie et Lame du chaos)
+@60011 = ~PARAMÈTRES :
+
+Bonus d'équipement du Chaos :
+– 1 attaque supplémentaire par round (2 pièces d'équipement)~
+
+@60012 = ~Équipement de Wormsor : Bonus ajoutés~ // Ajouter des bonus si plusieurs pièces d'équipement de Wormsor sont équipées
+@60013 = ~Équipement de Wormsor : Bonus retirés~ // Retirer les bonus pour l'assortiment de l'équipement de Wormsor
+@60014 = ~PARAMÈTRES :
+
+Bonus d'équipement de Wormsor :
+– Protège contre les coups d'ailes et toutes les formes de terreur (2 pièces d'équipement)~

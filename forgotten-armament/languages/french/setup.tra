@@ -16,14 +16,15 @@
 @14 = ~Au maximum 80 % de resistance contre les degats physiques~
 @15 = ~Au maximum 70 % de resistance contre les degats physiques~
 @16 = ~Au maximum 60 % de resistance contre les degats physiques~
-@17 = ~Mise à jour des objets existants et ajout des nouveaux objets~
+@17 = ~Mise a jour des objets existants et ajout des nouveaux objets~
 @18 = ~Ajouter SEULEMENT les nouveaux objets~
 @19 = ~Reduire le bonus d'attaque par round pour certaines armes a une main~
 @20 = ~Ajouter de nouveaux objets~
-@21 = ~Mettre à jour des objets existants~
-@22 = ~Mettre à jour les immunites contre les coups critiques~
+@21 = ~Mettre a jour des objets existants~
+@22 = ~Mettre a jour les immunites contre les coups critiques~
 @23 = ~Retirer l'immunite aux coups critiques des ennemis les plus coriaces.~
 @24 = ~Permettre aux ennemis les plus coriaces de rester immunisés contre les coups critiques.~
+@25 = ~Ajouter des bonus pour les pièces d'équipement assorties~
 
 @3000 = ~Ce composant necessite BG: EE, BGII: EE, ou EET~
 @3001 = ~DLCMerger est necessaire avant d'installer des mods sur les jeux SoD~
