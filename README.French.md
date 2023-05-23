@@ -69,6 +69,10 @@ Les armes modifiées sont les suivantes :
 
 Ce composant retire l'immunité aux coups critiques accordée par les heaumes et les casques et confère cette immunité aux boucliers. Par ailleurs, les objets suivants offriront l'immunité aux coups critiques : le Heaume de Granit, la Griffe de Kazgaroth, les Bottes de gargouille, l'Amulette de Sensation, les Bracelets sacrés, la Grosse Machine de Métal et les Bracelets Imaskaris d'immortalité. Enfin, le joueur aura la possibilité de choisir entre supprimer l'immunité aux coups critiques dont bénéficient de nombreux boss et autres ennemis coriaces ou de la conserver.
 
+### Ajouter des bonus pour les pièces d'équipement assorties (coming soon)
+
+Ce composant ajoute des bonus, si plusieurs pièces d'équipement assorties sont équipées, pour de nombreux objets à travers la saga. Une description détaillée des pièces d'équipement concernées est disponible ici [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-SET-BONUSES.md).
+
 ## Compatibilité
 
 Si vous effectuez une mise à jour à partir d'une version antérieure de ce mod, je vous recommande de désinstaller tous les composants du mod et de remplacer tous les fichiers par les nouveaux avant de procéder à une nouvelle installation.

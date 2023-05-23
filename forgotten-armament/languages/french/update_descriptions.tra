@@ -618,6 +618,12 @@ Nécessite :
 @31521 = ~25 % de chance que la cible ait à réussir un jet de sauvegarde contre la mort à -2 ou mourir~
 @31522 = ~À chaque coup, 25 % de chance que la cible doive effectuer un jet de sauvegarde contre la mort à -2 pour ne pas mourir. Une créature qui réussit son jet de sauvegarde subit tout de même 2d6 points de dégâts.~
 
+@31523 = ~bonus de 50 %~
+@31524 = ~bonus de 25 %~
+
+@31525 = ~Dissipation de la Magie à chaque coup.~
+@31526 = ~10 % de chances de lancer Dissipation de la Magie à chaque coup (comme un lanceur de sorts de niveau 30).~
+
 ///////////////////////////////////////////////////////////////////////////
 // Wakisashi                                                             //
 ///////////////////////////////////////////////////////////////////////////
