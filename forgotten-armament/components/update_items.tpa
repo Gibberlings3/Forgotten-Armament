@@ -3368,6 +3368,29 @@ END
 // Shield of the Falling Stars +1                                        //
 // +10% resistance to missile damage                                     //
 ///////////////////////////////////////////////////////////////////////////
+OUTER_SPRINT oldshield1 @33300
+OUTER_SPRINT newshield1 @33301
+
+ACTION_FOR_EACH fall_shld IN
+      SHLD07
+      SHLD07A
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%fall_shld%.ITM~ BEGIN
+        COPY_EXISTING ~%fall_shld%.ITM~ ~override~
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+
+        READ_LONG 0x54 desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF 0x54 desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldshield1%~ ~%newshield1%~
+              END
+              SAY_EVALUATED 0x54 ~%desc%~
+            END
+        END
+    END
+
+/*
 ACTION_IF FILE_EXISTS_IN_GAME ~SHLD07.ITM~ BEGIN
 OUTER_SPRINT oldshield1 @33300
 OUTER_SPRINT newshield1 @33301
@@ -3383,7 +3406,7 @@ OUTER_SPRINT newshield1 @33301
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
-END
+END*/
 
 /*************************************************************************/
 ///////////////////////////////////////////////////////////////////////////
