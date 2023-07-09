@@ -1038,9 +1038,9 @@ Requires:
 Weight: 5~
 
 ///////////////////////////////////////////////////////////////////////////
-// Courtesan Blade + 2 (NWN2)                                            //
+// Courtesan Blade +2 (NWN2)                                             //
 ///////////////////////////////////////////////////////////////////////////
-@11002 = ~Courtesan Blade+2~
+@11002 = ~Courtesan Blade +2~
 @11003 = ~Courtesan assassins were famous for using their wit and charm to infiltrate the intimate chambers of the enemy by the most disarming method imaginable: they were invited. The practice became infamous, which is likely why it is used so infrequently today.
 
 STATISTICS:
