@@ -3104,6 +3104,29 @@ OUTER_SPRINT newsplint2 @32703
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Armor of Faith                                                        //
+// Protection from Evil                                                  //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~CHAN18.ITM~ BEGIN
+OUTER_SPRINT oldsplint3 @32704
+OUTER_SPRINT newsplint3 @32705
+
+    COPY_EXISTING ~CHAN18.ITM~ ~override~
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 9 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 219 target = 1 parameter1 = 3 parameter2 = 8 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 100 target = 1 parameter1 = 9 parameter2 = 7 timing = 2 resist_dispel = 0 probability1 = 100 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldsplint3%~ ~%newsplint3%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
+
+///////////////////////////////////////////////////////////////////////////
 // Plate of Balduran                                                     //
 // Remove Hit Point Bonus                                                //
 // Charisma: +3 (previously +1) and Regenerate 1 Hit Point per round     //

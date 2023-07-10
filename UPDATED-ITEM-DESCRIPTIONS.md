@@ -391,6 +391,9 @@
 
 ### Splint Mail Armors
 
+#### Armor of Faith +3 (COMING SOON)
+- Protection from Evil
+
 #### Ashen Scales +2
 - Save vs. Paralyze/Poison/Death: +4
 

@@ -7,6 +7,7 @@ May xx, 2023
 - Added item set bonuses component.
 - The "Update Existing In-Game Items" component added the following items:
   - Ankheg Plate: +15% acid resistance.
+  - Armor of Faith: Protection from Evil.
   - Crimson Chain +5: Regenerate 2 HP/round.
   - Ir'revrykal: reduced dispel on hit to 25%; however, if EEex is installed it will bypass protections like PfMW.
   - Mail of the Dead: +10% fire resistance.
