@@ -9,6 +9,7 @@ May xx, 2023
   - Ankheg Plate: +15% acid resistance.
   - Crimson Chain +5: Regenerate 2 HP/round.
   - Ir'revrykal: reduced dispel on hit to 25%; however, if EEex is installed it will bypass protections like PfMW.
+  - Mail of the Dead: +10% fire resistance.
   - Soul Reaver +6 (Item Upgrade mod): reduced dispel on hit to 10%; however, if EEex is installed it will bypass protections like PfMW. MR is also reduced to better align with changes to Carsomyr.
 - Added Ardanis' macros.tpa to use ADD_SPELL_HEADER.
 - Fixed Shield of the Falling Stars to update text for BGEE version.

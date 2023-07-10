@@ -376,6 +376,9 @@
 - Fire Resistance: +10%
 - Electrical Resistance: +10%
 
+#### Mail of the Dead +2
+- Fire Resistance: +10%
+
 #### Melodic Chain +3
 - Vocalize
 - Bard song effects linger on for 2 additional rounds after the bard stops singing

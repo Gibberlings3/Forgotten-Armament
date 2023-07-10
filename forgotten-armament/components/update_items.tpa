@@ -3041,8 +3041,25 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Mail of the Dead +2                                                   //
-//             //
+// Fire Resistance: +10%                                                 //
 ///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~CHAN03.ITM~ BEGIN
+OUTER_SPRINT oldchain8 @32614
+OUTER_SPRINT newchain8 @32615
+
+    COPY_EXISTING ~CHAN03.ITM~ ~override~
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 16 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 30 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldchain8%~ ~%newchain8%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
 
 ///////////////////////////////////////////////////////////////////////////
 // Ashen Scales +2                                                       //
