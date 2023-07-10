@@ -3019,8 +3019,25 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Crimson Chain +5                                                      //
-// Upon receiving damage, the character is healed 1 point of damage and damages the enemy by 1 point of damage      //
+// Regenerate 2 HP/round                                                 //
 ///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~CHAN11.ITM~ BEGIN
+OUTER_SPRINT oldchain7 @32612
+OUTER_SPRINT newchain7 @32613
+
+    COPY_EXISTING ~CHAN11.ITM~ ~override~
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 87 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 98 target = 1 parameter1 = 3 parameter2 = 3 timing = 2 resist_dispel = 2 probability1 = 100 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldchain7%~ ~%newchain7%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
 
 ///////////////////////////////////////////////////////////////////////////
 // Mail of the Dead +2                                                   //

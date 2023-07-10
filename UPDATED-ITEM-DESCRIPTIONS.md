@@ -362,6 +362,9 @@
 #### Bladesinger Chain +4
 - Saving Throws: +1
 
+#### Crimson Chain +5 (COMING SOON)
+- Regenerate 2 HP/round
+
 #### Elven Chain +1
 - Saving Throws: +1
 
