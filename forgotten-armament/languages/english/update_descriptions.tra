@@ -842,6 +842,16 @@ Equipped abilities:
 @32705 = ~Equipped abilities:
 – Protection from Evil~
 
+@32706 = ~– Spellcasting is not disabled~
+@32707 = ~– Spellcasting is not disabled
+– Physical Damage Resistance: +10%~
+
+@32708 = ~Armor Class: -~
+@32709 = ~Equipped abilities:
+– Physical Damage Resistance: +10%
+
+Armor Class: -~
+
 ///////////////////////////////////////////////////////////////////////////
 // Plate Armor                                                           //
 ///////////////////////////////////////////////////////////////////////////

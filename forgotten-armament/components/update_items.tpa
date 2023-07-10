@@ -3127,6 +3127,39 @@ OUTER_SPRINT newsplint3 @32705
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Drow Adamantine Armor                                                 //
+// Physical Damage Resistance: +10%                                      //
+///////////////////////////////////////////////////////////////////////////
+OUTER_SPRINT olddrow1 @32706
+OUTER_SPRINT newdrow1 @32707
+OUTER_SPRINT olddrow2 @32708
+OUTER_SPRINT newdrow2 @32709
+
+ACTION_FOR_EACH drow IN
+      CHAN01 // Drow elven Chain +3
+      CHAN02 // Drow Adamantine Chain +5
+      PLAT01 // Drow Full Plate +5
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~DW%drow%.ITM~ BEGIN
+        COPY_EXISTING ~DW%drow%.ITM~ ~override~
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+
+        READ_LONG 0x54 desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF 0x54 desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%olddrow1%~ ~%newdrow1%~
+                REPLACE_TEXTUALLY ~%olddrow2%~ ~%newdrow2%~
+              END
+              SAY_EVALUATED 0x54 ~%desc%~
+            END
+        END
+    END
+
+///////////////////////////////////////////////////////////////////////////
 // Plate of Balduran                                                     //
 // Remove Hit Point Bonus                                                //
 // Charisma: +3 (previously +1) and Regenerate 1 Hit Point per round     //

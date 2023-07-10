@@ -365,6 +365,15 @@
 #### Crimson Chain +5 (COMING SOON)
 - Regenerate 2 HP/round
 
+#### Drow Elven Chain +3 (COMING SOON)
+- Physical Damage Resistance: +10%
+
+#### Drow Adamantine Chain +5 (COMING SOON)
+- Physical Damage Resistance: +10%
+
+#### Drow Full Plate +5 (COMING SOON)
+- Physical Damage Resistance: +10%
+
 #### Elven Chain +1
 - Saving Throws: +1
 
