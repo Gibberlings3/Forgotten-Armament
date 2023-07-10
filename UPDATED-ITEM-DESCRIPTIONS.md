@@ -393,6 +393,9 @@
 
 ### Plate Mail Armors
 
+#### Ankheg Plate Mail (COMING SOON)
+- Acid Resistance: +15%
+
 #### Delver's Plate +2
 - Saving Throws: +1
 

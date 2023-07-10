@@ -3019,7 +3019,7 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Crimson Chain +5                                                      //
-//              //
+// Upon receiving damage, the character is healed 1 point of damage and damages the enemy by 1 point of damage      //
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
@@ -3353,6 +3353,27 @@ OUTER_SPRINT newplate12 @32928
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%oldplate12%~ ~%newplate12%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
+
+///////////////////////////////////////////////////////////////////////////
+// Ankheg Plate                                                          //
+// +15% resistance to acid                                               //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~PLAT06.ITM~ BEGIN
+OUTER_SPRINT oldplate13 @32929
+OUTER_SPRINT newplate13 @32930
+
+    COPY_EXISTING ~PLAT06.ITM~ ~override~
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 27 target = 1 parameter1 = 15 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldplate13%~ ~%newplate13%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
