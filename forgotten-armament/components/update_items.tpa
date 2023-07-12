@@ -3186,7 +3186,7 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Delver's Plate +2                                                     //
-// Saving Throws: +1                                                     //
+// Saving Throws: +2                                                     //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~PLAT11.ITM~ BEGIN
 OUTER_SPRINT oldplate2 @32902
@@ -3194,10 +3194,10 @@ OUTER_SPRINT newplate2 @32903
 
     COPY_EXISTING ~PLAT11.ITM~ ~override~
       LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 37 parameter1 = 1 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 33 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 34 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 35 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 36 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 33 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 34 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 35 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 36 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -3372,7 +3372,7 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Doomplate +3                                                          //
-// Luck: -1, Slashing Resistance: +10%                                   //
+// Luck: -1, Slashing Resistance: +20%                                   //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~PLAT12.ITM~ BEGIN
 OUTER_SPRINT oldplate10 @32921
@@ -3380,7 +3380,7 @@ OUTER_SPRINT newplate10 @32922
 
     COPY_EXISTING ~PLAT12.ITM~ ~override~
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 22 target = 1 parameter1 = ~-1~ parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = 10 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = 20 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN

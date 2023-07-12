@@ -415,11 +415,11 @@
 - Acid Resistance: +15%
 
 #### Delver's Plate +2
-- Saving Throws: +1
+- Saving Throws: +2
 
 #### Doomplate +3
 - Luck: -1
-- Slashing Resistance: +10%
+- Slashing Resistance: +20%
 
 #### Fallorain's Plate +1
 - Immunity to poison
