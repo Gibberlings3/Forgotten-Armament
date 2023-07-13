@@ -16,6 +16,7 @@ May xx, 2023
 - Added Ardanis' macros.tpa to use ADD_SPELL_HEADER.
 - Fixed Shield of the Falling Stars to update text for BGEE version.
 - Corrected typo for Courtesan's Blade +2.
+- For stat item updates component, Crom was giving the incorrect Strength bonus. This has been corrected.
 
 ## Version 2.1
 
