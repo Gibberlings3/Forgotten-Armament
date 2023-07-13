@@ -821,6 +821,18 @@ Capacités d'équipement :
 – Résistance au feu : +10 %
 – Résistance à l'électricité : +10 %~
 
+@32612 = ~PARAMÈTRES :~
+@32613 = ~PARAMÈTRES :
+
+Capacités d'équipement :
+- Régénère 2 point de vie par round~
+
+@32614 = ~PARAMÈTRES :~
+@32615 = ~PARAMÈTRES :
+
+Capacités d'équipement :
+- Résistance au feu : +20 %~
+
 ///////////////////////////////////////////////////////////////////////////
 // Splint Mail Armor                                                     //
 ///////////////////////////////////////////////////////////////////////////
@@ -833,6 +845,20 @@ Capacités d'équipement :
 @32702 = ~Résistance au froid : \+50 %~
 @32703 = ~Résistance au froid : +40 %~
 
+@32704 = ~Capacités d'équipement :~
+@32705 = ~Capacités d'équipement :
+- Protection contre le mal~
+
+@32706 = ~- N'empêche pas de lancer des sorts~
+@32707 = ~- N'empêche pas de lancer des sorts
+- Résistance aux dégâts physiques : +25 %~
+
+@32708 = ~Classe d'armure : -~
+@32709 = ~Capacités d'équipement :
+- Résistance aux dégâts physiques : +10 %
+
+Classe d'armure : -~
+
 ///////////////////////////////////////////////////////////////////////////
 // Plate Armor                                                           //
 ///////////////////////////////////////////////////////////////////////////
@@ -842,7 +868,7 @@ Capacités d'équipement :
 – Régénère 1 Point de vie par round~
 
 @32902 = ~Jet de sauvegarde contre les sorts : \+2~
-@32903 = ~Jets de sauvegarde : +1~
+@32903 = ~Jets de sauvegarde : +2~
 
 @32904 = ~Résistance à l'électricité : \+90 %~
 @32905 = ~Résistance à l'électricité : +40 %~
@@ -898,11 +924,17 @@ Capacités d'équipement :
 – Chance : +1
 – Vitesse de déplacement augmentée de 2 (la base est de 9)~
 
+@32929 = ~PARAMÈTRES :~
+@32930 = ~PARAMÈTRES :
+
+Capacités d'équipement :
+- Résistance à l'acide : +15 %~
+
 ///////////////////////////////////////////////////////////////////////////
 // Shields                                                               //
 ///////////////////////////////////////////////////////////////////////////
-@33300 = ~\+4 contre les projectiles~
-@33301 = ~+4  contre les projectiles
+@33300 = ~contre les projectiles~
+@33301 = ~contre les projectiles
 – +10 % de résistance aux dégâts de projectile~ 
 
 ///////////////////////////////////////////////////////////////////////////
