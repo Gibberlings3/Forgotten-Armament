@@ -120,7 +120,7 @@ FOR (index = 0 ; index < fx_num ; ++index) BEGIN
         END
     END ELSE PATCH_IF (strength = 25) BEGIN
         PATCH_PRINT ~%item_name% alters Strength by +8~
-        LPF ALTER_EFFECT INT_VAR match_opcode = 44 parameter1 = 6 parameter2 = 0 END
+        LPF ALTER_EFFECT INT_VAR match_opcode = 44 parameter1 = 8 parameter2 = 0 END
 
         PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
             READ_LONG ~%offset%~ desc_strref
