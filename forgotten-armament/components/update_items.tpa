@@ -2941,23 +2941,26 @@ END
 // Sylvan Chain +2                                                       //
 // Movement rate increased by 2 and Improves casting speed by 1          //
 ///////////////////////////////////////////////////////////////////////////
-ACTION_IF FILE_EXISTS_IN_GAME ~CHAN14.ITM~ BEGIN
 OUTER_SPRINT oldchain3 @32604
 OUTER_SPRINT newchain3 @32605
-    
-    COPY_EXISTING ~CHAN14.ITM~ ~override~
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 126 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 189 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
 
-      READ_LONG 0x54 desc_strref
-          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-            READ_STRREF 0x54 desc
-            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-              REPLACE_TEXTUALLY ~%oldchain3%~ ~%newchain3%~
+ACTION_FOR_EACH sylvan IN
+      CHAN14  // Sylvan Chain
+      ILLAS04 // Illasera Sylvan Chain
+    BEGIN
+      COPY_EXISTING ~%sylvan%.ITM~ ~override~
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 126 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 189 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+
+        READ_LONG 0x54 desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF 0x54 desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldchain3%~ ~%newchain3%~
+              END
+              SAY_EVALUATED 0x54 ~%desc%~
             END
-            SAY_EVALUATED 0x54 ~%desc%~
-          END
-END
+    END
 
 ///////////////////////////////////////////////////////////////////////////
 // Aslyferund Elven Chain +5                                             //
