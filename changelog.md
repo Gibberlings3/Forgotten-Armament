@@ -15,6 +15,7 @@ July xx, 2023
   - Soul Reaver +6 (Item Upgrade mod): reduced dispel on hit to 10%; however, if EEex is installed it will bypass protections like PfMW. MR is also reduced to better align with changes to Carsomyr.
 - Added Ardanis' macros.tpa to use ADD_SPELL_HEADER.
 - Fixed Shield of the Falling Stars to update text for BGEE version.
+- Change bonus for Plate of Balduran, Pride of the Legion, and Armor of the Hart.
 - Corrected typo for Courtesan's Blade +2.
 - For stat item updates component, Crom was giving the incorrect Strength bonus. This has been corrected.
 

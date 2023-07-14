@@ -431,6 +431,7 @@
 
 #### Armor of the Hart +3
 - Immunity to fear
+- Constitution: +2
 
 #### Blue Dragon Plate
 - Electrical Resistance: +40% (previously +90%)
@@ -441,15 +442,14 @@
 
 #### Plate of Balduran
 - Remove Hit Point Bonus
-- Charisma: +3 (previously +1)
-- Regenerate 1 Hit Point per round
+- Immunity to level drain
 
 #### Plate of the Dark +1
 - Infravision up to 120 ft.
 - Cold Resistance: +15%
 
 #### Pride of the Legion +2
-- Immunity to level drain
+- Regenerate 1 Hit Point per round
 
 #### Shuruppak's Plate
 - Extra 1/2 attack per round

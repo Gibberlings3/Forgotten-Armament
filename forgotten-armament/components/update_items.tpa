@@ -3162,17 +3162,27 @@ ACTION_FOR_EACH drow IN
 ///////////////////////////////////////////////////////////////////////////
 // Plate of Balduran                                                     //
 // Remove Hit Point Bonus                                                //
-// Charisma: +3 (previously +1) and Regenerate 1 Hit Point per round     //
+// Provide Immunity to Level Drain                                       //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~WA2PLAT.ITM~ BEGIN
 OUTER_SPRINT oldplate1 @32900
 OUTER_SPRINT newplate1 @32901
+OUTER_SET five_level = RESOLVE_STR_REF (@32916)
+OUTER_SET four_level = RESOLVE_STR_REF (@32917)
+OUTER_SET three_level = RESOLVE_STR_REF (@32918)
+OUTER_SET two_level = RESOLVE_STR_REF (@32919)
+OUTER_SET one_level = RESOLVE_STR_REF (@32920)
 
     COPY_EXISTING ~WA2PLAT.ITM~ ~override~
       LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete = 18 END
-      LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 6 parameter1 = 3 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 87 timing = 2 resist_dispel = 0 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 98 target = 1 parameter1 = 6 parameter2 = 3 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 90 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 59 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%five_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%four_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%three_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%two_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%one_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 216 timing = 2 resist_dispel = 2 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -3305,11 +3315,11 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Armor of the Hart +3                                                  //
-// Fear Immunity                                                         //
+// Fear Immunity, Constitution +2                                        //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~PLAT16.ITM~ BEGIN
-OUTER_SPRINT oldplate8 @30000
-OUTER_SPRINT newplate8 @30001
+OUTER_SPRINT oldplate8 @32931
+OUTER_SPRINT newplate8 @32932
 OUTER_SET panic = RESOLVE_STR_REF (@30008)
 OUTER_SET morale = RESOLVE_STR_REF (@30009)
 
@@ -3326,6 +3336,7 @@ OUTER_SET morale = RESOLVE_STR_REF (@30009)
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 161 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 240 target = 1 parameter2 = 36 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 23 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 10 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -3339,26 +3350,15 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Pride of the Legion +2                                                //
-// Immunity to Level Drain                                               //
+// Regenerate 1 Hit Point per round                                      //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~PLAT15.ITM~ BEGIN
 OUTER_SPRINT oldplate9 @32914
 OUTER_SPRINT newplate9 @32915
-OUTER_SET five_level = RESOLVE_STR_REF (@32916)
-OUTER_SET four_level = RESOLVE_STR_REF (@32917)
-OUTER_SET three_level = RESOLVE_STR_REF (@32918)
-OUTER_SET two_level = RESOLVE_STR_REF (@32919)
-OUTER_SET one_level = RESOLVE_STR_REF (@32920)
 
     COPY_EXISTING ~PLAT15.ITM~ ~override~
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 90 timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 59 timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%five_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%four_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%three_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%two_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%one_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 216 timing = 2 resist_dispel = 2 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 98 target = 1 parameter1 = 6 parameter2 = 3 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 87 timing = 2 resist_dispel = 0 probability1 = 100 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -3394,7 +3394,7 @@ END
 
 ///////////////////////////////////////////////////////////////////////////
 // Fallorain's Plate +1                                                  //
-// Immunity to poison                                                     //
+// Immunity to poison                                                    //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~PLAT02.ITM~ BEGIN
 OUTER_SPRINT oldplate11 @32923

@@ -855,10 +855,8 @@ Armor Class: -~
 ///////////////////////////////////////////////////////////////////////////
 // Plate Armor                                                           //
 ///////////////////////////////////////////////////////////////////////////
-@32900 = ~Charisma: \+1
-– Hit Points: \+4~
-@32901 = ~Charisma: +3
-– Regenerate 1 Hit Point per round~
+@32900 = ~– Hit Points: \+4~
+@32901 = ~– Immunity to level drain~
 
 @32902 = ~Save vs. Spell: \+2~
 @32903 = ~Saving Throws: +2~
@@ -887,7 +885,7 @@ Equipped abilities:
 @32915 = ~STATISTICS:
 
 Equipped abilities:
-– Immunity to level drain~
+– Regenerate 1 Hit Point per round~
 
 @32916 = ~Five Levels Drained~
 @32917 = ~Four Levels Drained~
@@ -922,6 +920,13 @@ Equipped abilities:
 
 Equipped abilities:
 – Acid Resistance: +15%~
+
+@32931 = ~STATISTICS:~
+@32932 = ~STATISTICS:
+
+Equipped abilities: 
+– Immunity to fear
+– Constitution: +2~
 
 ///////////////////////////////////////////////////////////////////////////
 // Shields                                                               //
