@@ -17,6 +17,7 @@ July xx, 2023
 - Fixed Shield of the Falling Stars to update text for BGEE version.
 - Change bonus for Plate of Balduran, Pride of the Legion, and Armor of the Hart.
 - Corrected typo for Courtesan's Blade +2.
+- Corrected The Shadow's Blade +3 to not provide multiple backstab increases.
 - For stat item updates component, Crom was giving the incorrect Strength bonus. This has been corrected.
 
 ## Version 2.1
