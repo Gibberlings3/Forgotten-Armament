@@ -3537,9 +3537,46 @@ END*/
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
-// Shield of the Falling Stars +1                                        //
-// +10% resistance to missile damage                                     //
+// Amulet of Seldarine                                                   //
+// Magic Resistance increased to +25%                                    //
 ///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~AMUL27.ITM~ BEGIN
+OUTER_SPRINT oldamul1  @33400
+OUTER_SPRINT newamul1  @33401
+
+    COPY_EXISTING ~AMUL27.ITM~ ~override~ 
+      LPF ALTER_EFFECT INT_VAR check_globals = 1 match_opcode = 166 match_parameter1 = 25 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldamul1%~ ~%newamul1%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
+
+///////////////////////////////////////////////////////////////////////////
+// Greenstone Amulet                                                     //
+// Once Per Day Use Item                                                 //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~AMUL17.ITM~ BEGIN
+OUTER_SPRINT oldamul2  @33402
+OUTER_SPRINT newamul2  @33403
+
+    COPY_EXISTING ~AMUL17.ITM~ ~override~ 
+      LPF ALTER_ITEM_HEADER INT_VAR header_type = 3 charges = 1 drained = 3 flag_recharge = 1 END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldamul2%~ ~%newamul2%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+END
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////

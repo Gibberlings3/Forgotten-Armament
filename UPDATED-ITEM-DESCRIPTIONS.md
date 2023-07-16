@@ -10,7 +10,7 @@
 #### Azuredge
 - No alignment restriction to use
 
-#### Bereul's Retort +1
+#### Beruel's Retort +1
 - Returns to the wielder's hand when thrown
 
 #### Chill Axe +2
@@ -385,7 +385,7 @@
 - Fire Resistance: +10%
 - Electrical Resistance: +10%
 
-#### Mail of the Dead +2
+#### Mail of the Dead +2 (COMING SOON)
 - Fire Resistance: +10%
 
 #### Melodic Chain +3
@@ -472,6 +472,12 @@
 ## Accessories
 
 ### Amulets
+
+#### Amulet of the Seldarine (COMING SOON)
+- Magic Resistance: +25% (previously +10%)
+
+#### Greenstone Amulet (COMING SOON)
+- Becomes a once per day use item (previously vanished after charges expired)
 
 ### Boots
 
