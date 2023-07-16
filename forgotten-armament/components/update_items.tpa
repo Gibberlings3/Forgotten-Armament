@@ -3457,22 +3457,28 @@ END
 // Ankheg Plate                                                          //
 // +15% resistance to acid                                               //
 ///////////////////////////////////////////////////////////////////////////
-ACTION_IF FILE_EXISTS_IN_GAME ~PLAT06.ITM~ BEGIN
 OUTER_SPRINT oldplate13 @32929
 OUTER_SPRINT newplate13 @32930
 
-    COPY_EXISTING ~PLAT06.ITM~ ~override~
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 27 target = 1 parameter1 = 15 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+ACTION_FOR_EACH ankheg IN
+      PLAT06
+      PLAT06_
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%ankheg%.ITM~ BEGIN
+        COPY_EXISTING ~%ankheg%.ITM~ ~override~
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 27 target = 1 parameter1 = 15 parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+          LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 24 timing = 2 resist_dispel = 0 probability1 = 100 END
 
-      READ_LONG 0x54 desc_strref
-          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-            READ_STRREF 0x54 desc
-            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-              REPLACE_TEXTUALLY ~%oldplate13%~ ~%newplate13%~
-            END
-            SAY_EVALUATED 0x54 ~%desc%~
-          END
-END
+          READ_LONG 0x54 desc_strref
+              PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+                READ_STRREF 0x54 desc
+                INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                  REPLACE_TEXTUALLY ~%oldplate13%~ ~%newplate13%~
+                END
+                SAY_EVALUATED 0x54 ~%desc%~
+              END
+      END
+    END
 
 /*************************************************************************/
 ///////////////////////////////////////////////////////////////////////////
