@@ -862,10 +862,8 @@ Classe d'armure : -~
 ///////////////////////////////////////////////////////////////////////////
 // Plate Armor                                                           //
 ///////////////////////////////////////////////////////////////////////////
-@32900 = ~Charisme : \+1
-- Points de vie : +4~
-@32901 = ~Charisme : +3
-– Régénère 1 Point de vie par round~
+@32900 = ~- Points de vie : +4~
+@32901 = ~- Immunité à l'absorption de niveau~
 
 @32902 = ~Jet de sauvegarde contre les sorts : \+2~
 @32903 = ~Jets de sauvegarde : +2~
@@ -894,7 +892,7 @@ Capacités d'équipement :
 @32915 = ~PARAMÈTRES :
 
 Capacités d'équipement :
-– Immunité contre le drain de niveau~
+- Régénère 1 point de vie par round~
 
 @32916 = ~Cinq niveaux absorbés~
 @32917 = ~Quatre niveaux absorbés~
@@ -930,6 +928,13 @@ Capacités d'équipement :
 Capacités d'équipement :
 - Résistance à l'acide : +15 %~
 
+@32931 = ~PARAMÈTRES :~
+@32932 = ~PARAMÈTRES :
+
+Capacités d'équipement : 
+- Immunité à la peur
+- Constitution : +2~
+
 ///////////////////////////////////////////////////////////////////////////
 // Shields                                                               //
 ///////////////////////////////////////////////////////////////////////////
@@ -942,6 +947,15 @@ Capacités d'équipement :
 // Accessories                                                           //
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Amulets                                                               //
+///////////////////////////////////////////////////////////////////////////
+@33400 = ~10~
+@33401 = ~25~
+
+@33402 = ~débilité mentale~
+@33403 = ~débilité mentale, une fois par jour~
 
 ///////////////////////////////////////////////////////////////////////////
 // Bracers                                                               //
