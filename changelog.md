@@ -21,6 +21,7 @@ July xx, 2023
 - Corrected typo for Courtesan's Blade +2.
 - Corrected The Shadow's Blade +3 to not provide multiple backstab increases.
 - For stat item updates component, Crom was giving the incorrect Strength bonus. This has been corrected.
+- Component to add items gives Tazok (BG2) the Cloak of Balduran.
 
 ## Version 2.1
 
