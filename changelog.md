@@ -5,7 +5,7 @@ July xx, 2023
 ### Changed
 
 - Added item set bonuses component.
-- The "Update Existing In-Game Items" component added the following items:
+- The "Update Existing In-Game Items" component makes the following item changes:
   - Amulet of the Seldarine: +25% magic resistance.
   - Ankheg Plate: +15% acid resistance.
   - Armor of Faith: Protection from Evil.
