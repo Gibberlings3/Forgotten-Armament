@@ -1,6 +1,7 @@
 # Forgotten-Armament
 
 [![Latest Release](https://img.shields.io/github/v/release/gibberlings3/Forgotten-Armament?include_prereleases)](https://github.com/Gibberlings3/Forgotten-Armament/releases/latest)
+[![Github downloads (all releases)](https://img.shields.io/github/downloads/gibberlings3/Forgotten-Armament/total.svg?color=informational)](https://github.com/gibberlings3/Forgotten-Armament/releases)
 ![Language](https://img.shields.io/static/v1?label=language&message=english%20%7C%20french&color=informational)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macos%20%7C%20linux&color=informational)
 
