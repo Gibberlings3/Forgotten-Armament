@@ -3,6 +3,7 @@ IF
   Global("ImpForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
+    SetGlobal("MO#TOBItemUp","GLOBAL",0)
     SetGlobal("ImpForgeStuff","GLOBAL",0)
     GiveItemCreate("moblk01",Player1,0,0,0)
     StartDialogueNoSet(Player1)
@@ -13,6 +14,7 @@ IF
   Global("ImpForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
+    SetGlobal("MO#TOBItemUp","GLOBAL",0)
     SetGlobal("ImpForgeStuff","GLOBAL",0)
     GiveItemCreate("mo2h15",Player1,0,0,0)
     StartDialogueNoSet(Player1)

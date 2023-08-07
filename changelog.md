@@ -1,6 +1,6 @@
 ## Version 3.0
 
-July xx, 2023
+August xx, 2023
 
 ### Changed
 
@@ -22,6 +22,7 @@ July xx, 2023
 - Corrected The Shadow's Blade +3 to not provide multiple backstab increases.
 - For stat item updates component, Crom was giving the incorrect Strength bonus. This has been corrected.
 - Component to add items gives Tazok (BG2) the Cloak of Balduran.
+- Corrected bug with Cespenar Forging new items.
 
 ## Version 2.1
 
