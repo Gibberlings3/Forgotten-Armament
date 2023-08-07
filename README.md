@@ -63,7 +63,7 @@ This component will update the following melee weapons to provide an extra 1/2 a
 
 This component removes Critical Hit Immunity from Helmets and makes Shields immune to Critical Hits. Additionally, the following items will receive Critical Hit Immunity: Horned Helm of the Rock, Claw of Kazgaroth, Gargoyle Boots, Sensate Amulet, Blessed Bracers, Big Metal Unit, and Imaskari Bracer's of Immortality. Finally, the player will have the option to either allow or remove the Critical Hit Immunity many bosses and difficult foes have.
 
-### Add Set Bonuses to Items (coming soon)
+### Add Set Bonuses to Items
 
 This component adds item set bonuses to many of the items throughout the series. When a character wears multiple items of the same set, the character will receive additional bonuses. A detailed descriptions of the sets can be found [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-SET-BONUSES.md).
 

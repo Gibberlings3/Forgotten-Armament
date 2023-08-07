@@ -362,16 +362,16 @@
 #### Bladesinger Chain +4
 - Saving Throws: +1
 
-#### Crimson Chain +5 (COMING SOON)
+#### Crimson Chain +5
 - Regenerate 2 HP/round
 
-#### Drow Elven Chain +3 (COMING SOON)
+#### Drow Elven Chain +3
 - Physical Damage Resistance: +10%
 
-#### Drow Adamantine Chain +5 (COMING SOON)
+#### Drow Adamantine Chain +5
 - Physical Damage Resistance: +10%
 
-#### Drow Full Plate +5 (COMING SOON)
+#### Drow Full Plate +5
 - Physical Damage Resistance: +10%
 
 #### Elven Chain +1
@@ -385,7 +385,7 @@
 - Fire Resistance: +10%
 - Electrical Resistance: +10%
 
-#### Mail of the Dead +2 (COMING SOON)
+#### Mail of the Dead +2
 - Fire Resistance: +10%
 
 #### Melodic Chain +3
@@ -400,7 +400,7 @@
 
 ### Splint Mail Armors
 
-#### Armor of Faith +3 (COMING SOON)
+#### Armor of Faith +3
 - Protection from Evil
 
 #### Ashen Scales +2
@@ -411,7 +411,7 @@
 
 ### Plate Mail Armors
 
-#### Ankheg Plate Mail (COMING SOON)
+#### Ankheg Plate Mail
 - Acid Resistance: +15%
 
 #### Delver's Plate +2
@@ -473,10 +473,10 @@
 
 ### Amulets
 
-#### Amulet of the Seldarine (COMING SOON)
+#### Amulet of the Seldarine
 - Magic Resistance: +25% (previously +10%)
 
-#### Greenstone Amulet (COMING SOON)
+#### Greenstone Amulet
 - Becomes a once per day use item (previously vanished after charges expired)
 
 ### Boots
