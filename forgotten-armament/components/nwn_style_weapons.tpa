@@ -654,7 +654,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   END ELSE PATCH_IF (prof = 97) AND nwn_warham BEGIN
 
     // Update to 1d8 Damage
-    PATCH_IF !("%item_name%" STRING_EQUAL_CASE "MH#HAMM2.ITM") AND !("%item_name%" STRING_EQUAL_CASE "GIAFIR.ITM")BEGIN
+    PATCH_IF !("%item_name%" STRING_EQUAL_CASE "MH#HAMM2.ITM") AND !("%item_name%" STRING_EQUAL_CASE "GIAFIR.ITM") AND !("%item_name%" STRING_EQUAL_CASE "YAGAWH.ITM") BEGIN
       LPF ALTER_ITEM_HEADER INT_VAR dicesize=8 dicenumber=1 damage_bonus = ench END
     END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MOSPR06~ END
