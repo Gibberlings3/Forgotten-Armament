@@ -1,3 +1,11 @@
+## Version 3.1
+
+September xx, 2023
+
+### Changed
+
+- Updated NWN Style Weapons component to not change base damage on the hammer belonging to Yaga Shura.
+
 ## Version 3.0
 
 August 7, 2023
