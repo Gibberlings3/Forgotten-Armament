@@ -3551,7 +3551,8 @@ OUTER_SPRINT oldamul1  @33400
 OUTER_SPRINT newamul1  @33401
 
     COPY_EXISTING ~AMUL27.ITM~ ~override~ 
-      LPF ALTER_EFFECT INT_VAR check_globals = 1 match_opcode = 166 match_parameter1 = 25 END
+      //LPF ALTER_EFFECT INT_VAR check_globals = 1 match_opcode = 166 match_parameter1 = 25 END
+      LPF ALTER_EFFECT INT_VAR match_opcode = 166 match_parameter1 = 25 END
 
       READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
