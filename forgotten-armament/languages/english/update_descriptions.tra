@@ -250,6 +250,7 @@ Damage Type: Slashing~
 @30602 = ~Immunity to all forms of death magic~
 @30603 = ~Immunity to all forms of death magic
 – Immunity to disease
+– Immunity to level drain
 
 Combat abilities:
 – Undead must save vs. Death at -4 or be utterly destroyed~

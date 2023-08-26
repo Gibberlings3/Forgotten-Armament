@@ -784,6 +784,11 @@ OUTER_SPRINT oldkata3 @30604
 OUTER_SPRINT newkata3 @30605
 OUTER_SET diseased = RESOLVE_STR_REF (@30610)
 OUTER_SET striken = RESOLVE_STR_REF (@30611)
+OUTER_SET five_level = RESOLVE_STR_REF (@32916)
+OUTER_SET four_level = RESOLVE_STR_REF (@32917)
+OUTER_SET three_level = RESOLVE_STR_REF (@32918)
+OUTER_SET two_level = RESOLVE_STR_REF (@32919)
+OUTER_SET one_level = RESOLVE_STR_REF (@32920)
     
     COPY_EXISTING ~SW1H71.ITM~ ~override~
         LPF ADD_ITEM_EFFECT INT_VAR opcode = 177 type = 1 target = 2 parameter1 = 4 parameter2 = 3 timing = 1 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mesdie~ END
@@ -793,6 +798,14 @@ OUTER_SET striken = RESOLVE_STR_REF (@30611)
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%striken%~ timing = 2 resist_dispel = 0 probability1 = 100 END
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 7 timing = 2 resist_dispel = 0 probability1 = 100 END
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 78 timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 216 timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%five_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%four_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%three_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%two_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%one_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 59 timing = 2 resist_dispel = 2 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 90 timing = 2 resist_dispel = 2 probability1 100 END
 
 
         READ_LONG 0x54 desc_strref
