@@ -5,6 +5,7 @@ September xx, 2023
 ### Changed
 
 - Updated NWN Style Weapons component to not change base damage on the hammer belonging to Yaga Shura.
+- Hindo's Doom +4 now provides immunity to disease.
 
 ## Version 3.0
 

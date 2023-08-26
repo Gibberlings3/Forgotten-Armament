@@ -103,6 +103,7 @@
 #### Hindo's Doom +4
 - 2d10+8 vs Undead
 - Undead must save vs. Death at -4 or be utterly destroyed
+- Immunity to disease
 
 ### Long Swords
 

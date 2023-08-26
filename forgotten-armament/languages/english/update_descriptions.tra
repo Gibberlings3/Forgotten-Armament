@@ -249,6 +249,7 @@ Damage Type: Slashing~
 
 @30602 = ~Immunity to all forms of death magic~
 @30603 = ~Immunity to all forms of death magic
+– Immunity to disease
 
 Combat abilities:
 – Undead must save vs. Death at -4 or be utterly destroyed~
@@ -262,6 +263,9 @@ Damage Type: Slashing~
 
 @30608 = ~\+1 acid~
 @30609 = ~+1d4 acid~
+
+@30610 = ~Diseased~
+@30611 = ~Striken by a foul disease~
 
 ///////////////////////////////////////////////////////////////////////////
 // Long Sword                                                            //

@@ -782,11 +782,18 @@ OUTER_SPRINT oldkata2 @30602
 OUTER_SPRINT newkata2 @30603
 OUTER_SPRINT oldkata3 @30604
 OUTER_SPRINT newkata3 @30605
+OUTER_SET diseased = RESOLVE_STR_REF (@30610)
+OUTER_SET striken = RESOLVE_STR_REF (@30611)
     
     COPY_EXISTING ~SW1H71.ITM~ ~override~
         LPF ADD_ITEM_EFFECT INT_VAR opcode = 177 type = 1 target = 2 parameter1 = 4 parameter2 = 3 timing = 1 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mesdie~ END
         LPF ADD_ITEM_EFFECT INT_VAR opcode = 177 type = 1 target = 2 parameter1 = 4 parameter2 = 3 timing = 1 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~die~ END
         LPF ADD_ITEM_EFFECT INT_VAR opcode = 177 type = 1 target = 2 parameter1 = 4 parameter2 = 3 timing = 1 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~mo1h71~ END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%diseased%~ timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%striken%~ timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 7 timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 78 timing = 2 resist_dispel = 0 probability1 = 100 END
+
 
         READ_LONG 0x54 desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
