@@ -805,7 +805,7 @@ OUTER_SET one_level = RESOLVE_STR_REF (@32920)
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%two_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = ~%one_level%~ timing = 2 resist_dispel = 2 probability1 = 100 END
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 59 timing = 2 resist_dispel = 2 probability1 = 100 END
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 90 timing = 2 resist_dispel = 2 probability1 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 142 target = 1 parameter2 = 90 timing = 2 resist_dispel = 2 probability1 = 100 END
 
 
         READ_LONG 0x54 desc_strref
