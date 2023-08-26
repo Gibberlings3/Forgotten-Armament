@@ -67,6 +67,8 @@ This component removes Critical Hit Immunity from Helmets and makes Shields immu
 
 This component adds item set bonuses to many of the items throughout the series. When a character wears multiple items of the same set, the character will receive additional bonuses. A detailed descriptions of the sets can be found [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-SET-BONUSES.md).
 
+PLEASE NOTE: AI scripts need to be enabled for this component to work.
+
 ## Compatibility
 
 If you are upgrading from an earlier version of this mod, I recommend uninstalling all mod components and replacing all files with the new ones before doing a fresh install.
