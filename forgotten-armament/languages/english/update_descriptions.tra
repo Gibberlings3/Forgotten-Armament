@@ -330,6 +330,26 @@ THAC0 & Damage:
 THAC0: +4
 Damage: 1d8+4~
 
+@30716 = ~The last swing of a battle is more important than the first. Such is the philosophy embodied in this powerful weapon. Although the strange design of the Answerer makes it difficult to take the initiative in combat, with each hit it makes an opponent more vulnerable to subsequent attacks. 
+
+STATISTICS:
+
+Combat abilities:
+– Each hit lowers the target's Magic Resistance by 15% for 4 rounds
+– Each hit penalizes the target's Armor Class by 2 for 4 rounds~
+@30717 = ~The last swing of a battle is more important than the first. Such is the philosophy embodied in this powerful weapon. Although the strange design of the Answerer makes it difficult to take the initiative in combat, with each hit it makes an opponent more vulnerable to subsequent attacks. 
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– 25% chance of 1d8+4 slashing damage to any who damage the wielder~
+
+@30718 = ~Speed Factor: 9~
+@30719 = ~Speed Factor: 2~
+
+@30720 = ~Counter attack~
+
 ///////////////////////////////////////////////////////////////////////////
 // Mace                                                                  //
 ///////////////////////////////////////////////////////////////////////////

@@ -1029,6 +1029,60 @@ COPY ~forgotten-armament/eff/update_item/MO#EQ04.EFF~ ~override~ // MR Icon
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// The Answerer                                                          //
+// Remove on-hit enemy debuffs and add +2 bonus to AC and counterattack  //
+// any person who attacks the wielder                                    //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~SW1H77.ITM~ BEGIN
+OUTER_SPRINT oldlong9  @30716
+OUTER_SPRINT newlong9  @30717
+OUTER_SPRINT oldlong10 @30718
+OUTER_SPRINT newlong10 @30719
+
+COPY ~forgotten-armament/spl/update_item/moans01.spl~ ~override~ 
+      SAY NAME1 @30720
+      SAY NAME2 @30720
+      PATCH_FOR_EACH counter IN
+        balshld2
+        bdbarbde
+        bdsha12a
+        bdshld02
+        keldorn
+        leat23a
+        spcl237d
+        spimixd
+        sppr730d
+        sppr951d
+        sppr952d
+        spwi403d
+        spwi418d
+        mobtr22
+        solak1
+      BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~%counter%.SPL~ THEN BEGIN
+          LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 timing = 10 resist_dispel = 0 duration = 2 probability1 = 100 STR_VAR resource = ~%counter%~ END
+        END
+      END
+
+    COPY_EXISTING ~SW1H77.ITM~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR header_type=1 speed = 2 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 0 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 142 END
+      LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 166 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = 2 timing = 2 resist_dispel = 0 probability1 = 100 END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 232 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 1 probability1 = 25 STR_VAR resource = ~moans01~ END
+
+      READ_LONG 0x54 desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldlong9%~ ~%newlong9%~
+              REPLACE_TEXTUALLY ~%oldlong10%~ ~%newlong10%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Mace                                                                  //
 ///////////////////////////////////////////////////////////////////////////
