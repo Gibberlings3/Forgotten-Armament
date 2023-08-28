@@ -47,7 +47,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   // Patching for Scale Armor (Typically Dragon)
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Scale Armor") OR
            ("%item_name%" STRING_EQUAL_CASE "MH#DRAG1.ITM") OR    // Black Dragon Scale
-           ("%item_name%" STRING_EQUAL_CASE "DW#DRAG2.ITM") OR    // Green Dragon Scale
+           ("%item_name%" STRING_EQUAL_CASE "MH#DRAG2.ITM") OR    // Green Dragon Scale
            ("%item_name%" STRING_EQUAL_CASE "DW#ABYDA.ITM") BEGIN // Yellow Dragon Scale Armor
   
   // Patching for Plate Mail
