@@ -1,0 +1,69 @@
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
+  READ_BYTE  0x31 prof
+  READ_SHORT 0x1c type
+  READ_LONG  0x60 ench
+  READ_BYTE  0x18 handed
+  READ_LONG  0x6a fx_off ELSE 0
+  READ_SHORT 0x6e fx_ind ELSE 0
+  READ_SHORT 0x70 fx_num ELSE 0
+  SPRINT item_name ~%SOURCE_FILE%~
+  READ_STRREF 0x8   name
+  SET critmatch = 0
+  SET critamount = 0
+
+  PATCH_IF ("%name%" STRING_EQUAL_CASE "Leather Armor") BEGIN
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Studded Leather Armor") BEGIN
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Hide Armor") BEGIN
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Chain Mail") BEGIN
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Elven Chain Mail") BEGIN
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Splint Mail") BEGIN
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Plate Mail") OR
+           ("%item_name%" STRING_EQUAL_CASE "BDPLAT04.ITM") BEGIN
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Full Plate Mail") OR 
+           ("%item_name%" STRING_EQUAL_CASE "NPPLAT.ITM") BEGIN
+  END ELSE PATCH_IF (type = 2) AND 
+                    !(~%appearance%~ STRING_COMPARE_CASE ~2W~ = 0) AND 
+                    !(~%appearance%~ STRING_COMPARE_CASE ~3W~ = 0) AND
+                    !(~%appearance%~ STRING_COMPARE_CASE ~4W~ = 0) BEGIN
+    PATCH_PRINT ~%name% (%source%) not found in the iteration.~
+  END
+  BUT_ONLY
+  
+/* Crit Check Examples to compare DR
+  // Check if existing keen property
+  FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+    READ_SHORT (fx_off + 0x30 * index) opcode
+    PATCH_IF (opcode = 301) BEGIN
+      SET critmatch = 1
+      READ_LONG (fx_off + 0x30 * index + 4) param1
+    END
+  END
+
+  // Update Crit Threat Range 
+  PATCH_IF critmatch BEGIN
+      param1 += 1
+      LPF ALTER_EFFECT INT_VAR match_opcode = 301 parameter1 = param1 END
+
+  PATCH_IF critmatch BEGIN
+        // 18-20
+        PATCH_IF param1 = 2 BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang3%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        // 17-20
+        END ELSE PATCH_IF param1 = 3 BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang4%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        // 16-20
+        END ELSE PATCH_IF param1 = 4 BEGIN
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang5%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        END 
+      END
+    END
+*/

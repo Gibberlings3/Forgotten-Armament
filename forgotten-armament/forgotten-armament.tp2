@@ -209,3 +209,11 @@ BEGIN @25 DESIGNATED 25 LABEL ForgottenArmament-SetBonus
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
 
 INCLUDE ~forgotten-armament/components/set_bonus.tpa~
+
+///////////////////////////////////////////////////////////////////////////
+// Install Armor Overhaul                                                //
+///////////////////////////////////////////////////////////////////////////
+BEGIN @26 DESIGNATED 26 LABEL ForgottenArmament-ArmorOverhaul
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
+
+INCLUDE ~forgotten-armament/components/armor_overhaul.tpa~
