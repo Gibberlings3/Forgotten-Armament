@@ -36,7 +36,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
            ("%item_name%" STRING_EQUAL_CASE "C0BWAR2.ITM")  OR  // Whispering Links +2
            ("%item_name%" STRING_EQUAL_CASE "A!BCHAN1.ITM") OR  // Caster's Chain 
            ("%item_name%" STRING_EQUAL_CASE "BDCHAN05.ITM") OR  // Corwin's Armor +2 
-           PATCH_IF ("%name%" STRING_EQUAL_CASE "Corthala Family Armor") BEGIN // Corthala Family Armor
+           ("%name%" STRING_EQUAL_CASE "Corthala Family Armor") BEGIN // Corthala Family Armor
   
   // Patching for Elven Chain Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Elven Chain Mail") BEGIN
