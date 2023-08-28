@@ -2149,7 +2149,7 @@ END
 // On a critical hit, the wielder gains +1 Strength bonus for 2 rounds   // 
 // (non-cumulative)                                                      //
 ///////////////////////////////////////////////////////////////////////////
-ACTION_IF FILE_EXISTS_IN_GAME ~SW2H07.ITM~ BEGIN
+ACTION_IF (FILE_EXISTS_IN_GAME ~SW2H07.ITM~) AND (GAME_IS ~bgee~) BEGIN
 COPY ~forgotten-armament/spl/update_item/MO2H07.SPL~ ~override~
 OUTER_SPRINT oldtwohand6 @31512
 OUTER_SPRINT newtwohand6 @31513
@@ -2165,6 +2165,31 @@ OUTER_SPRINT newtwohand6 @31513
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
+END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+COPY ~forgotten-armament/spl/update_item/MO2H07.SPL~ ~override~
+OUTER_SPRINT oldtwohand6 @31512
+OUTER_SPRINT newtwohand6 @31513
+  
+  ACTION_FOR_EACH world_edge IN
+        SW2H07_ 
+        SW2H07A 
+      BEGIN
+        ACTION_IF FILE_EXISTS_IN_GAME ~%world_edge%.ITM~ BEGIN
+          COPY_EXISTING ~%world_edge%.ITM~ ~override~ 
+            LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 341 target = 1 parameter2 = 1 timing = 2 resist_dispel = 0 probability1 = 100 STR_VAR resource = ~MO2H07~ END
+
+            READ_LONG 0x54 desc_strref
+                PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+                  READ_STRREF 0x54 desc
+                  INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                    REPLACE_TEXTUALLY ~%oldtwohand6%~ ~%newtwohand6%~
+                  END
+                  SAY_EVALUATED 0x54 ~%desc%~
+                END
+        END
+      END
 END
 
 ///////////////////////////////////////////////////////////////////////////
