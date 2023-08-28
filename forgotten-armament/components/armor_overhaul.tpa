@@ -25,10 +25,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
                     !(~%appearance%~ STRING_COMPARE_CASE ~2W~ = 0) AND 
                     !(~%appearance%~ STRING_COMPARE_CASE ~3W~ = 0) AND
                     !(~%appearance%~ STRING_COMPARE_CASE ~4W~ = 0) BEGIN
-    PATCH_PRINT ~%name% (%source%) not found in the iteration.~
+    PATCH_PRINT ~%name% (%item_name%) not found in the iteration.~
   END
   BUT_ONLY
-  
+
 /* Crit Check Examples to compare DR
   // Check if existing keen property
   FOR (index = 0 ; index < fx_num ; ++index) BEGIN
