@@ -217,4 +217,6 @@ INCLUDE ~forgotten-armament/components/set_bonus.tpa~
 BEGIN @26 DESIGNATED 26 LABEL ForgottenArmament-ArmorOverhaul
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
 
+LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/armor_descriptions.tra~
+
 INCLUDE ~forgotten-armament/components/armor_overhaul.tpa~

@@ -433,7 +433,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "PLAT18.ITM") BEGIN
       READ_LONG 0xc desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-            READ_STRREF 0x54 desc
+            READ_STRREF 0xc desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%scale%~ ~%plate%~
             END
@@ -445,7 +445,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "OHDARMOR.ITM") BEGIN
       READ_LONG 0xc desc_strref
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-            READ_STRREF 0x54 desc
+            READ_STRREF 0xc desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%scale%~ ~%plate%~
             END
