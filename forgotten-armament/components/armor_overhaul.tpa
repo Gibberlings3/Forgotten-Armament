@@ -1,8 +1,5 @@
 COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
-  READ_BYTE  0x31 prof
   READ_SHORT 0x1c type
-  READ_LONG  0x60 ench
-  READ_BYTE  0x18 handed
   READ_LONG  0x6a fx_off ELSE 0
   READ_SHORT 0x6e fx_ind ELSE 0
   READ_SHORT 0x70 fx_num ELSE 0
@@ -69,9 +66,95 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
            ("%item_name%" STRING_EQUAL_CASE "A!BLEAT1.ITM") OR    // Bardic Leathers
            ("%item_name%" STRING_EQUAL_CASE "A!BLEAT2.ITM") OR    // Bardic Leathers +1
            ("%item_name%" STRING_EQUAL_CASE "BDCHAN01.ITM") BEGIN // Jegg's Leathers +2
+    slashingamount = 5
+    crushingamount = 5
+    piercingamount = 5
+    missileamount  = 5
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END
   
   // Patching for Hide Armor
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Hide Armor") BEGIN
+    slashingamount = 5
+    crushingamount = 5
+    piercingamount = 5
+    missileamount  = 5
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END
   
   // Patching for Chain Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Chain Mail") OR 
@@ -82,79 +165,306 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
            ("%item_name%" STRING_EQUAL_CASE "A!BCHAN1.ITM") OR  // Caster's Chain 
            ("%item_name%" STRING_EQUAL_CASE "BDCHAN05.ITM") OR  // Corwin's Armor +2 
            ("%name%" STRING_EQUAL_CASE "Corthala Family Armor") BEGIN // Corthala Family Armor
-  
+    /*
+    slashingamount = 10
+    crushingamount = 10
+    piercingamount = 10
+    missileamount  = 10
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END  
+  */
   // Patching for Elven Chain Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Elven Chain Mail") BEGIN
-  
+  /*  
+    slashingamount = 10
+    crushingamount = 10
+    piercingamount = 10
+    missileamount  = 10
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END  
+  */
   // Patching for Splint Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Splint Mail") BEGIN
-  
+    /*
+    slashingamount = 15
+    crushingamount = 15
+    piercingamount = 15
+    missileamount  = 15
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END  
+  */
   // Patching for Scale Armor (Typically Dragon)
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Scale Armor") OR
            ("%item_name%" STRING_EQUAL_CASE "MH#DRAG1.ITM") OR    // Black Dragon Scale
            ("%item_name%" STRING_EQUAL_CASE "MH#DRAG2.ITM") OR    // Green Dragon Scale
            ("%item_name%" STRING_EQUAL_CASE "DW#ABYDA.ITM") BEGIN // Yellow Dragon Scale Armor
-  
+    /*
+    slashingamount = 15
+    crushingamount = 15
+    piercingamount = 15
+    missileamount  = 15
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END  
+  */
+  PATCH_PRINT ~%name% (%item_name%) identified as scale mail.~
+
   // Patching for Plate Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Plate Mail") OR
            ("%item_name%" STRING_EQUAL_CASE "BDPLAT04.ITM") OR // Rhino Beatle
            ("%name%" STRING_EQUAL_CASE "Plate Mail Armor") OR // Plate Mail Armor
            ("%name%" STRING_EQUAL_CASE "Ankheg Plate Mail")BEGIN // Ankehg Plate Mail
-  
+    /*
+    slashingamount = 20
+    crushingamount = 20
+    piercingamount = 20
+    missileamount  = 20
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END  
+  */
   // Patching for Full Plate Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Full Plate Mail") OR 
            ("%name%" STRING_EQUAL_CASE "Firecam Full-Plate Armor") OR // Firecam Full Plate
            ("%item_name%" STRING_EQUAL_CASE "MH#PLAT4.ITM") BEGIN     // Plate of Solamnus +5
-  
+    /*
+    slashingamount = 30
+    crushingamount = 30
+    piercingamount = 30
+    missileamount  = 30
+    // Check if existing physical damage resistances
+    FOR (index = 0 ; index < fx_num ; ++index) BEGIN
+      READ_SHORT (fx_off + 0x30 * index) opcode
+      // Slashing Check
+      PATCH_IF (opcode = 86) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        slashingamount = param1 + slashingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+
+      // Crushing Check
+      PATCH_IF (opcode = 87) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        crushingamount = param1 + crushingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Piercing Check
+      PATCH_IF (opcode = 88) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        piercingamount = param1 + piercingamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+      
+      // Missile Check
+      PATCH_IF (opcode = 89) BEGIN
+        READ_LONG (fx_off + 0x30 * index + 4) param1
+        missileamount = param1 + missileamount
+        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+      END ELSE BEGIN
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+      END
+    END  
+  */
   // Patching for NOTHING! This is purposefully left out and used for testing purposes.
   END ELSE PATCH_IF (type = 2) AND 
-                    !(~%appearance%~ STRING_COMPARE_CASE ~2W~ = 0) AND 
-                    !(~%appearance%~ STRING_COMPARE_CASE ~3W~ = 0) AND
-                    !(~%appearance%~ STRING_COMPARE_CASE ~4W~ = 0) AND 
-                    !("%item_name%" STRING_EQUAL_CASE "X#FAI4.ITM") AND   // Battered Armor
-                    !("%item_name%" STRING_EQUAL_CASE "MISC58.ITM") AND   // Broken Armor 
+                    !(~%appearance%~ STRING_COMPARE_CASE ~2W~ = 0)    AND 
+                    !(~%appearance%~ STRING_COMPARE_CASE ~3W~ = 0)    AND
+                    !(~%appearance%~ STRING_COMPARE_CASE ~4W~ = 0)    AND 
+                    !("%item_name%" STRING_EQUAL_CASE "X#FAI4.ITM")   AND // Battered Armor
+                    !("%item_name%" STRING_EQUAL_CASE "MISC58.ITM")   AND // Broken Armor 
                     !("%item_name%" STRING_EQUAL_CASE "OHBNOSHU.ITM") AND // Noser Uniform
                     !("%item_name%" STRING_EQUAL_CASE "BDCHAN03.ITM") AND // Crusader Uniform
                     !("%item_name%" STRING_EQUAL_CASE "SECRET05.ITM") BEGIN // Big Metal Unit
-    PATCH_PRINT ~%name% (%item_name%) not found in the iteration.~
+    //PATCH_PRINT ~%name% (%item_name%) not found in the iteration.~
   END
   BUT_ONLY
-
-/* Crit Check Examples to compare DR
-  // Check if existing keen property
-  FOR (index = 0 ; index < fx_num ; ++index) BEGIN
-    READ_SHORT (fx_off + 0x30 * index) opcode
-    PATCH_IF (opcode = 301) BEGIN
-      SET critmatch = 1
-      READ_LONG (fx_off + 0x30 * index + 4) param1
-    END
-  END
-
-  // Update Crit Threat Range 
-  PATCH_IF critmatch BEGIN
-      param1 += 1
-      LPF ALTER_EFFECT INT_VAR match_opcode = 301 parameter1 = param1 END
-
-  PATCH_IF critmatch BEGIN
-        // 18-20
-        PATCH_IF param1 = 2 BEGIN
-          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang3%~
-          END
-          SAY_EVALUATED ~%offset%~ ~%desc%~
-        // 17-20
-        END ELSE PATCH_IF param1 = 3 BEGIN
-          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang4%~
-          END
-          SAY_EVALUATED ~%offset%~ ~%desc%~
-        // 16-20
-        END ELSE PATCH_IF param1 = 4 BEGIN
-          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-            REPLACE_TEXTUALLY ~%critrang2%~ ~%critrang5%~
-          END
-          SAY_EVALUATED ~%offset%~ ~%desc%~
-        END 
-      END
-    END
-*/
