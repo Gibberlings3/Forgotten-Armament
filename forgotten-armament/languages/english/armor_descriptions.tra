@@ -1,4 +1,77 @@
 // Forgotten Armament - Armor Descriptions
 
+///////////////////////////////////////////////////////////////////////////
+// Copied Verbatim from Item Names                                       //
+///////////////////////////////////////////////////////////////////////////
 @70000 = ~Scale~
+@70002 = ~Requires:~
+@70003 = ~Weight:~
+@70014 = ~Leather Armor~
+@70015 = ~Studded Leather Armor~
+@70016 = ~Studded Leather~
+@70017 = ~Hide Armor~
+@70018 = ~Chain Mail~
+@70019 = ~Chain Mail Armor~
+@70020 = ~Elven Chain Mail~
+@70021 = ~Splint Mail~
+@70022 = ~Scale Armor~
+@70023 = ~Plate Mail~
+@70024 = ~Plate Mail Armor~
+@70025 = ~Ankheg Plate Mail~
+@70026 = ~Full Plate Mail~
+@70027 = ~Firecam Full-Plate Armor~
+
+///////////////////////////////////////////////////////////////////////////
+// tra files to be added                                                 //
+///////////////////////////////////////////////////////////////////////////
 @70001 = ~Plate~
+
+// Leather
+@70004 = ~Maximum Dexterity: 22
+Physical Damage Resistance: +5%
+Requires:~
+
+// Studded Leather
+@70005 = ~Maximum Dexterity: 20
+Physical Damage Resistance: +5%
+Requires:~
+
+// Hide
+@70006 = ~Maximum Dexterity: 18
+Physical Damage Resistance: +5%
+Requires:~
+
+// Chain Mail
+@70007 = ~Maximum Dexterity: 16
+Physical Damage Resistance: +10%
+Requires:~
+
+// Mithral/Elven Chain Mail
+@70008 = ~Maximum Dexterity: 17
+Physical Damage Resistance: +10%
+Requires:~
+
+// Splint
+@70009 = ~Maximum Dexterity: 15
+Physical Damage Resistance: +15%
+Requires:~
+
+// Scale
+@70010 = ~Maximum Dexterity: 17
+Physical Damage Resistance: +15%
+Requires:~
+
+// Plate Mail
+@70011 = ~Maximum Dexterity: 14
+Physical Damage Resistance: +20%
+Requires:~
+
+// Full Plate Mail
+@70012 = ~Maximum Dexterity: 15
+Physical Damage Resistance: +30%
+Requires:~
+
+// Mithral Full Plate Mail
+@70013 = ~Maximum Dexterity: 16
+Physical Damage Resistance: +30%
+Requires:~
