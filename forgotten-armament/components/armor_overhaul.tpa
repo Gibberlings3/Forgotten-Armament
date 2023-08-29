@@ -157,14 +157,15 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     END
   
   // Patching for Chain Mail
-  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Chain Mail") OR 
-           ("%name%" STRING_EQUAL_CASE "Chain Mail Armor")  OR 
-           ("%item_name%" STRING_EQUAL_CASE "X#GARCH.ITM")  OR  // Bardic Chain
-           ("%item_name%" STRING_EQUAL_CASE "X#GARCH2.ITM") OR  // Bardic Chain 
-           ("%item_name%" STRING_EQUAL_CASE "C0BWAR2.ITM")  OR  // Whispering Links +2
-           ("%item_name%" STRING_EQUAL_CASE "A!BCHAN1.ITM") OR  // Caster's Chain 
-           ("%item_name%" STRING_EQUAL_CASE "BDCHAN05.ITM") OR  // Corwin's Armor +2 
-           ("%name%" STRING_EQUAL_CASE "Corthala Family Armor") BEGIN // Corthala Family Armor
+  END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Chain Mail")   OR 
+           ("%name%" STRING_EQUAL_CASE "Chain Mail Armor")      OR 
+           ("%item_name%" STRING_EQUAL_CASE "X#GARCH.ITM")      OR    // Bardic Chain
+           ("%item_name%" STRING_EQUAL_CASE "X#GARCH2.ITM")     OR    // Bardic Chain 
+           ("%item_name%" STRING_EQUAL_CASE "C0BWAR2.ITM")      OR    // Whispering Links +2
+           ("%item_name%" STRING_EQUAL_CASE "A!BCHAN1.ITM")     OR    // Caster's Chain 
+           ("%item_name%" STRING_EQUAL_CASE "BDCHAN05.ITM")     OR    // Corwin's Armor +2 
+           ("%name%" STRING_EQUAL_CASE "Corthala Family Armor") AND   // Corthala Family Armor
+           !("%item_name%" STRING_EQUAL_CASE "CHAN20.ITM")      BEGIN // White Dragon Scale (move to Scale Armor)
     /*
     slashingamount = 10
     crushingamount = 10
@@ -306,9 +307,12 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   */
   // Patching for Scale Armor (Typically Dragon)
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Scale Armor") OR
-           ("%item_name%" STRING_EQUAL_CASE "MH#DRAG1.ITM") OR    // Black Dragon Scale
-           ("%item_name%" STRING_EQUAL_CASE "MH#DRAG2.ITM") OR    // Green Dragon Scale
-           ("%item_name%" STRING_EQUAL_CASE "DW#ABYDA.ITM") BEGIN // Yellow Dragon Scale Armor
+           ("%item_name%" STRING_EQUAL_CASE "MH#DRAG1.ITM")    OR    // Black Dragon Scale
+           ("%item_name%" STRING_EQUAL_CASE "MH#DRAG2.ITM")    OR    // Green Dragon Scale
+           ("%item_name%" STRING_EQUAL_CASE "CHAN20.ITM")      OR    // White Dragon Scale
+           ("%item_name%" STRING_EQUAL_CASE "DW#ABYDA.ITM")    AND   // Yellow Dragon Scale Armor
+           !("%item_name%" STRING_EQUAL_CASE "OHDARMOR.ITM")   AND   // Silver Dragon Scale (move to Full Plate)
+           !("%item_name%" STRING_EQUAL_CASE "PLAT18.ITM")   BEGIN   // Red Dragon Scale    (move to Full Plate)
     /*
     slashingamount = 15
     crushingamount = 15
@@ -358,9 +362,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 
   // Patching for Plate Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Plate Mail") OR
-           ("%item_name%" STRING_EQUAL_CASE "BDPLAT04.ITM") OR // Rhino Beatle
-           ("%name%" STRING_EQUAL_CASE "Plate Mail Armor") OR // Plate Mail Armor
-           ("%name%" STRING_EQUAL_CASE "Ankheg Plate Mail")BEGIN // Ankehg Plate Mail
+           ("%item_name%" STRING_EQUAL_CASE "BDPLAT04.ITM")   OR    // Rhino Beatle
+           ("%name%" STRING_EQUAL_CASE "Plate Mail Armor")    OR    // Plate Mail Armor
+           ("%name%" STRING_EQUAL_CASE "Ankheg Plate Mail")   BEGIN // Ankehg Plate Mail
     /*
     slashingamount = 20
     crushingamount = 20
@@ -408,8 +412,20 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   */
   // Patching for Full Plate Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Full Plate Mail") OR 
-           ("%name%" STRING_EQUAL_CASE "Firecam Full-Plate Armor") OR // Firecam Full Plate
-           ("%item_name%" STRING_EQUAL_CASE "MH#PLAT4.ITM") BEGIN     // Plate of Solamnus +5
+           ("%name%" STRING_EQUAL_CASE "Firecam Full-Plate Armor") OR    // Firecam Full Plate
+           ("%item_name%" STRING_EQUAL_CASE "MH#PLAT4.ITM")        OR    // Plate of Solamnus +5
+           ("%item_name%" STRING_EQUAL_CASE "OHDARMOR.ITM")        OR    // Silver Dragon Scale (renaming to plate)
+           ("%item_name%" STRING_EQUAL_CASE "PLAT18.ITM")          BEGIN // Red Dragon Scale    (renaming to plate)
+    
+    // Rename Red Dragon Scale to Red Dragon Plate
+    PATCH_IF ("%item_name%" STRING_EQUAL_CASE "PLAT18.ITM") BEGIN
+      SAY NAME2 @70000
+    END
+
+    // Rename Silver Dragon Scale to Silver Dragon Plate
+    PATCH_IF ("%item_name%" STRING_EQUAL_CASE "OHDARMOR.ITM") BEGIN
+      SAY NAME2 @70001
+    END
     /*
     slashingamount = 30
     crushingamount = 30
