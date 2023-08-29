@@ -1,3 +1,12 @@
+///////////////////////////////////////////////////////////////////////////
+// Set Text Updates                                                      //
+///////////////////////////////////////////////////////////////////////////
+OUTER_SPRINT scale   @70000 // Scale
+OUTER_SPRINT plate   @70001 // Plate
+
+///////////////////////////////////////////////////////////////////////////
+// Iterate Through All Armor                                             //
+///////////////////////////////////////////////////////////////////////////
 COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   READ_SHORT 0x1c type
   READ_LONG  0x6a fx_off ELSE 0
@@ -15,6 +24,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   PATCH_IF ("%name%" STRING_EQUAL_CASE "Leather Armor") OR 
            ("%item_name%" STRING_EQUAL_CASE "C0BWAR1.ITM") OR  // Armor of the Grey Fox +3
            ("%item_name%" STRING_EQUAL_CASE "NPARM.ITM") BEGIN // Jansen AdventrureWear
+    /*
     slashingamount = 5
     crushingamount = 5
     piercingamount = 5
@@ -58,7 +68,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
       END
     END
-  
+  */
   // Patching for Studded Leather Armor
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Studded Leather Armor") OR 
            ("%name%" STRING_EQUAL_CASE "Studded Leather")   OR    // Studded Leather 
@@ -66,6 +76,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
            ("%item_name%" STRING_EQUAL_CASE "A!BLEAT1.ITM") OR    // Bardic Leathers
            ("%item_name%" STRING_EQUAL_CASE "A!BLEAT2.ITM") OR    // Bardic Leathers +1
            ("%item_name%" STRING_EQUAL_CASE "BDCHAN01.ITM") BEGIN // Jegg's Leathers +2
+    /*
     slashingamount = 5
     crushingamount = 5
     piercingamount = 5
@@ -109,9 +120,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
       END
     END
-  
+  */
   // Patching for Hide Armor
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Hide Armor") BEGIN
+    /*
     slashingamount = 5
     crushingamount = 5
     piercingamount = 5
@@ -155,7 +167,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
       END
     END
-  
+  */
   // Patching for Chain Mail
   END ELSE PATCH_IF ("%name%" STRING_EQUAL_CASE "Chain Mail")   OR 
            ("%name%" STRING_EQUAL_CASE "Chain Mail Armor")      OR 
@@ -419,12 +431,26 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     
     // Rename Red Dragon Scale to Red Dragon Plate
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "PLAT18.ITM") BEGIN
-      SAY NAME2 @70000
+      READ_LONG 0xc desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%scale%~ ~%plate%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
     END
 
     // Rename Silver Dragon Scale to Silver Dragon Plate
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "OHDARMOR.ITM") BEGIN
-      SAY NAME2 @70001
+      READ_LONG 0xc desc_strref
+          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+            READ_STRREF 0x54 desc
+            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%scale%~ ~%plate%~
+            END
+            SAY_EVALUATED 0x54 ~%desc%~
+          END
     END
     /*
     slashingamount = 30
