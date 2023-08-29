@@ -427,7 +427,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
            ("%name%" STRING_EQUAL_CASE "Firecam Full-Plate Armor") OR    // Firecam Full Plate
            ("%item_name%" STRING_EQUAL_CASE "MH#PLAT4.ITM")        OR    // Plate of Solamnus +5
            ("%item_name%" STRING_EQUAL_CASE "OHDARMOR.ITM")        OR    // Silver Dragon Scale (renaming to plate)
-           ("%item_name%" STRING_EQUAL_CASE "PLAT18.ITM")          BEGIN // Red Dragon Scale    (renaming to plate)
+           ("%item_name%" STRING_EQUAL_CASE "PLAT18")          BEGIN // Red Dragon Scale    (renaming to plate)
     
     // Rename Red Dragon Scale to Red Dragon Plate
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "PLAT18.ITM") BEGIN
