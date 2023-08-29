@@ -437,7 +437,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%scale%~ ~%plate%~
             END
-            SAY_EVALUATED 0x54 ~%desc%~
+            SAY_EVALUATED 0xc ~%desc%~
           END
     END
 
@@ -449,7 +449,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
               REPLACE_TEXTUALLY ~%scale%~ ~%plate%~
             END
-            SAY_EVALUATED 0x54 ~%desc%~
+            SAY_EVALUATED 0xc ~%desc%~
           END
     END
     /*
