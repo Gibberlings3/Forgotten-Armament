@@ -1,4 +1,27 @@
 ///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+// Armor Overhaul                                                        //
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Import Files                                                          //
+///////////////////////////////////////////////////////////////////////////
+ACTION_FOR_EACH dex_import IN
+      1 // 14 Max DEX
+      2 // 15 Max DEX
+      3 // 16 Max DEX
+      4 // 17 Max DEX
+      5 // 18 Max DEX
+      6 // 20 Max DEX
+      7 // 22 Max DEX
+    BEGIN
+      COPY ~forgotten-armament/spl/armor_overhaul/MOMDX0%dex_import%.SPL~             ~override/MOMDX0%dex_import%.SPL~
+      COPY ~forgotten-armament/spl/armor_overhaul/MOMDX%dex_import%%dex_import%.SPL~  ~override/MOMDX%dex_import%%dex_import%.SPL~
+      COPY ~forgotten-armament/eff/armor_overhaul/MOMDX0%dex_import%.EFF~             ~override/MOMDX0%dex_import%.EFF~
+    END
+
+///////////////////////////////////////////////////////////////////////////
 // Set Text Updates                                                      //
 ///////////////////////////////////////////////////////////////////////////
 OUTER_SPRINT nscale     @70000 // Scale (Name)
@@ -117,6 +140,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END
 
+    // 22 Max DEX
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx07~ END
+
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
       READ_LONG ~%offset%~ desc_strref
       PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -199,6 +225,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END
 
+    // 20 Max DEX
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx06~ END
+
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
       READ_LONG ~%offset%~ desc_strref
       PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -275,6 +304,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     END ELSE BEGIN
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END
+
+    // 18 Max DEX
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx05~ END
 
     // Need to account for RR CoC Abishai
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
@@ -367,6 +399,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "CHAN06.ITM") OR    // Mithral Chain Mail +4
              ("%item_name%" STRING_EQUAL_CASE "CHAN07.ITM") OR    // Chain +3
              ("%name%" STRING_EQUAL_CASE "%chain04%") BEGIN       // Elven Chain Mail
+      
+      // 17 Max DEX
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx04~ END
+
       PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
         READ_LONG ~%offset%~ desc_strref
         PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -380,6 +416,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     
     // Regular Chain
     END ELSE BEGIN
+      
+      // 16 Max DEX
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx03~ END
+
       PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
         READ_LONG ~%offset%~ desc_strref
         PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -457,6 +497,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     END ELSE BEGIN
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END  
+
+    // 15 Max DEX
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx02~ END
 
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
       READ_LONG ~%offset%~ desc_strref
@@ -541,6 +584,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END 
 
+    // 17 Max DEX
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx04~ END
+
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
       READ_LONG ~%offset%~ desc_strref
       PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -623,6 +669,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     END ELSE BEGIN
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END  
+
+    // 14 Max DEX
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx01~ END
 
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
       READ_LONG ~%offset%~ desc_strref
@@ -709,6 +758,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "BRUENPLA.ITM") OR    
              ("%item_name%" STRING_EQUAL_CASE "PLAT09.ITM")   OR 
              ("%item_name%" STRING_EQUAL_CASE "VISPLAT2.ITM") BEGIN
+      
+      // 16 Max DEX
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx03~ END
+
       PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
         READ_LONG ~%offset%~ desc_strref
         PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
@@ -720,6 +773,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
         END
       END
     END ELSE BEGIN
+      
+      // 15 Max DEX
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx02~ END
+
       PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
         READ_LONG ~%offset%~ desc_strref
         PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
