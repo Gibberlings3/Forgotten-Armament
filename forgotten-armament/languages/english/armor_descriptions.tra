@@ -75,3 +75,11 @@ Requires:~
 @70013 = ~Maximum Dexterity: 16
 Physical Damage Resistance: +30%
 Requires:~
+
+// Hide (Abishai)
+@70028 = ~Maximum Dexterity: 18
+Physical Damage Resistance: +5%
+Requires:
+ 6 Strength
+
+Weight:~

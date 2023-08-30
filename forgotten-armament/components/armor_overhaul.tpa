@@ -35,6 +35,7 @@ OUTER_SPRINT sleather02 @70016 // Studded Leather
 OUTER_SPRINT sleather03 @70005 // Studded Leather Desc
 OUTER_SPRINT hide01     @70017 // Hide
 OUTER_SPRINT hide02     @70006 // Hide Desc
+OUTER_SPRINT hide03     @70028 // Abishai Hide Desc
 OUTER_SPRINT chain01    @70018 // Chain Mail
 OUTER_SPRINT chain02    @70019 // Chain Mail Armor
 OUTER_SPRINT chain03    @70007 // Chain Mail Desc
@@ -308,15 +309,28 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     // 18 Max DEX
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~momdx05~ END
 
-    // Need to account for RR CoC Abishai
-    PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
-      READ_LONG ~%offset%~ desc_strref
-      PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-        READ_STRREF ~%offset%~ desc
-        INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-          REPLACE_TEXTUALLY ~%requires%~ ~%hide02%~
+    // Need to account for RR CoC Abishai which doesn't have "Requires:" in the description
+    PATCH_IF ("%item_name%" STRING_EQUAL_CASE "rr#abih.ITM") BEGIN
+      PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
+        READ_LONG ~%offset%~ desc_strref
+        PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+          READ_STRREF ~%offset%~ desc
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%weight%~ ~%hide03%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
         END
-        SAY_EVALUATED ~%offset%~ ~%desc%~
+      END
+    END ELSE BEGIN
+      PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
+        READ_LONG ~%offset%~ desc_strref
+        PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+          READ_STRREF ~%offset%~ desc
+          INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+            REPLACE_TEXTUALLY ~%requires%~ ~%hide02%~
+          END
+          SAY_EVALUATED ~%offset%~ ~%desc%~
+        END
       END
     END
 
