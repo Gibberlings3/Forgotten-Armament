@@ -145,39 +145,58 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_SHORT (fx_off + 0x30 * index) opcode
       // Slashing Check
       PATCH_IF (opcode = 86) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        slashingamount = param1 + slashingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) slash1
+        slashingmatch = 1
       END
 
       // Crushing Check
       PATCH_IF (opcode = 87) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        crushingamount = param1 + crushingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) crush1
+        crushingmatch = 1
       END
       
       // Piercing Check
       PATCH_IF (opcode = 88) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        piercingamount = param1 + piercingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) pierce1
+        piercingmatch = 1
       END
       
       // Missile Check
       PATCH_IF (opcode = 89) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        missileamount = param1 + missileamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) missile1
       END
+    END
+
+    // Add Slashing DR
+    PATCH_IF slashingmatch BEGIN
+      slashingamount = slash1 + slashingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Crushing DR
+    PATCH_IF crushingmatch BEGIN
+      crushingamount = crush1 + crushingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Piercing DR
+    PATCH_IF piercingmatch BEGIN
+      piercingamount = pierce1 + piercingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Missile DR
+    PATCH_IF missilematch BEGIN
+      missileamount = missile1 + missileamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END
 
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
@@ -203,39 +222,58 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_SHORT (fx_off + 0x30 * index) opcode
       // Slashing Check
       PATCH_IF (opcode = 86) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        slashingamount = param1 + slashingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) slash1
+        slashingmatch = 1
       END
 
       // Crushing Check
       PATCH_IF (opcode = 87) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        crushingamount = param1 + crushingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) crush1
+        crushingmatch = 1
       END
       
       // Piercing Check
       PATCH_IF (opcode = 88) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        piercingamount = param1 + piercingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) pierce1
+        piercingmatch = 1
       END
       
       // Missile Check
       PATCH_IF (opcode = 89) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        missileamount = param1 + missileamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) missile1
       END
+    END
+
+    // Add Slashing DR
+    PATCH_IF slashingmatch BEGIN
+      slashingamount = slash1 + slashingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Crushing DR
+    PATCH_IF crushingmatch BEGIN
+      crushingamount = crush1 + crushingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Piercing DR
+    PATCH_IF piercingmatch BEGIN
+      piercingamount = pierce1 + piercingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Missile DR
+    PATCH_IF missilematch BEGIN
+      missileamount = missile1 + missileamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END
 
     // Need to account for RR CoC Abishai
@@ -271,41 +309,59 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_SHORT (fx_off + 0x30 * index) opcode
       // Slashing Check
       PATCH_IF (opcode = 86) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        slashingamount = param1 + slashingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) slash1
+        slashingmatch = 1
       END
 
       // Crushing Check
       PATCH_IF (opcode = 87) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        crushingamount = param1 + crushingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) crush1
+        crushingmatch = 1
       END
       
       // Piercing Check
       PATCH_IF (opcode = 88) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        piercingamount = param1 + piercingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) pierce1
+        piercingmatch = 1
       END
       
       // Missile Check
       PATCH_IF (opcode = 89) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        missileamount = param1 + missileamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) missile1
       END
-    END  
+    END
 
+    // Add Slashing DR
+    PATCH_IF slashingmatch BEGIN
+      slashingamount = slash1 + slashingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Crushing DR
+    PATCH_IF crushingmatch BEGIN
+      crushingamount = crush1 + crushingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Piercing DR
+    PATCH_IF piercingmatch BEGIN
+      piercingamount = pierce1 + piercingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Missile DR
+    PATCH_IF missilematch BEGIN
+      missileamount = missile1 + missileamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
 
     // Mithral Chain (+1 Max DEX over non-mithral armor)
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "CHAN06.ITM") OR    // Mithral Chain Mail +4
@@ -348,39 +404,58 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_SHORT (fx_off + 0x30 * index) opcode
       // Slashing Check
       PATCH_IF (opcode = 86) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        slashingamount = param1 + slashingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) slash1
+        slashingmatch = 1
       END
 
       // Crushing Check
       PATCH_IF (opcode = 87) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        crushingamount = param1 + crushingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) crush1
+        crushingmatch = 1
       END
       
       // Piercing Check
       PATCH_IF (opcode = 88) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        piercingamount = param1 + piercingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) pierce1
+        piercingmatch = 1
       END
       
       // Missile Check
       PATCH_IF (opcode = 89) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        missileamount = param1 + missileamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) missile1
       END
+    END
+
+    // Add Slashing DR
+    PATCH_IF slashingmatch BEGIN
+      slashingamount = slash1 + slashingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Crushing DR
+    PATCH_IF crushingmatch BEGIN
+      crushingamount = crush1 + crushingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Piercing DR
+    PATCH_IF piercingmatch BEGIN
+      piercingamount = pierce1 + piercingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Missile DR
+    PATCH_IF missilematch BEGIN
+      missileamount = missile1 + missileamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END  
 
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
@@ -412,39 +487,58 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_SHORT (fx_off + 0x30 * index) opcode
       // Slashing Check
       PATCH_IF (opcode = 86) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        slashingamount = param1 + slashingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) slash1
+        slashingmatch = 1
       END
 
       // Crushing Check
       PATCH_IF (opcode = 87) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        crushingamount = param1 + crushingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) crush1
+        crushingmatch = 1
       END
       
       // Piercing Check
       PATCH_IF (opcode = 88) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        piercingamount = param1 + piercingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) pierce1
+        piercingmatch = 1
       END
       
       // Missile Check
       PATCH_IF (opcode = 89) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        missileamount = param1 + missileamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) missile1
       END
+    END
+
+    // Add Slashing DR
+    PATCH_IF slashingmatch BEGIN
+      slashingamount = slash1 + slashingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Crushing DR
+    PATCH_IF crushingmatch BEGIN
+      crushingamount = crush1 + crushingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Piercing DR
+    PATCH_IF piercingmatch BEGIN
+      piercingamount = pierce1 + piercingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Missile DR
+    PATCH_IF missilematch BEGIN
+      missileamount = missile1 + missileamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END 
 
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
@@ -471,43 +565,63 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     piercingamount = 20
     missileamount  = 20
     // Check if existing physical damage resistances
+    // Check if existing physical damage resistances
     FOR (index = 0 ; index < fx_num ; ++index) BEGIN
       READ_SHORT (fx_off + 0x30 * index) opcode
       // Slashing Check
       PATCH_IF (opcode = 86) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        slashingamount = param1 + slashingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) slash1
+        slashingmatch = 1
       END
 
       // Crushing Check
       PATCH_IF (opcode = 87) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        crushingamount = param1 + crushingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) crush1
+        crushingmatch = 1
       END
       
       // Piercing Check
       PATCH_IF (opcode = 88) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        piercingamount = param1 + piercingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) pierce1
+        piercingmatch = 1
       END
       
       // Missile Check
       PATCH_IF (opcode = 89) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        missileamount = param1 + missileamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) missile1
       END
+    END
+
+    // Add Slashing DR
+    PATCH_IF slashingmatch BEGIN
+      slashingamount = slash1 + slashingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Crushing DR
+    PATCH_IF crushingmatch BEGIN
+      crushingamount = crush1 + crushingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Piercing DR
+    PATCH_IF piercingmatch BEGIN
+      piercingamount = pierce1 + piercingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Missile DR
+    PATCH_IF missilematch BEGIN
+      missileamount = missile1 + missileamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
     END  
 
     PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
@@ -537,41 +651,59 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
       READ_SHORT (fx_off + 0x30 * index) opcode
       // Slashing Check
       PATCH_IF (opcode = 86) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        slashingamount = param1 + slashingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) slash1
+        slashingmatch = 1
       END
 
       // Crushing Check
       PATCH_IF (opcode = 87) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        crushingamount = param1 + crushingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) crush1
+        crushingmatch = 1
       END
       
       // Piercing Check
       PATCH_IF (opcode = 88) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        piercingamount = param1 + piercingamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) pierce1
+        piercingmatch = 1
       END
       
       // Missile Check
       PATCH_IF (opcode = 89) BEGIN
-        READ_LONG (fx_off + 0x30 * index + 4) param1
-        missileamount = param1 + missileamount
-        LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
-      END ELSE BEGIN
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+        READ_LONG (fx_off + 0x30 * index + 4) missile1
       END
-    END  
+    END
 
+    // Add Slashing DR
+    PATCH_IF slashingmatch BEGIN
+      slashingamount = slash1 + slashingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 86 parameter1 = slashingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 86 target = 1 parameter1 = slashingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Crushing DR
+    PATCH_IF crushingmatch BEGIN
+      crushingamount = crush1 + crushingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 87 parameter1 = crushingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 87 target = 1 parameter1 = crushingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Piercing DR
+    PATCH_IF piercingmatch BEGIN
+      piercingamount = pierce1 + piercingamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 88 parameter1 = piercingamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 88 target = 1 parameter1 = piercingamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
+
+    // Add Missile DR
+    PATCH_IF missilematch BEGIN
+      missileamount = missile1 + missileamount
+      LPF ALTER_EFFECT INT_VAR match_opcode = 89 parameter1 = missileamount END
+    END ELSE BEGIN
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 89 target = 1 parameter1 = missileamount parameter2 = 0 timing = 2 resist_dispel = 2 probability1 = 100 END
+    END
 
     // Mithral Field Plate +2 (+1 Max DEX over non-mithral armor)
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "BRUENPLA.ITM") OR    
