@@ -110,6 +110,14 @@ REQUIRE_PREDICATE GAME_IS ~bgee eet~ @3004
 INCLUDE ~forgotten-armament/components/breach.tpa~
 
 ///////////////////////////////////////////////////////////////////////////
+// Add Ruby Ray Scrolls to Trademeet Store                               //
+///////////////////////////////////////////////////////////////////////////
+BEGIN @27 DESIGNATED 27 LABEL ForgottenArmament-RubyRay
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @3002
+
+INCLUDE ~forgotten-armament/components/ruby_ray.tpa~
+
+///////////////////////////////////////////////////////////////////////////
 // Replace Boots of Speed (Paws of the Cheetah)                          //
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @8 DESIGNATED 8 LABEL ForgottenArmament-ReplaceSpeedBoots

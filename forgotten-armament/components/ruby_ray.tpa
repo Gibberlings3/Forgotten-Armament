@@ -1,0 +1,8 @@
+// Forgotten Armament - Add Ruby Ray Scrolls to Trademeet Store
+
+///////////////////////////////////////////////////////////////////////////
+// Gives Trademeet the Ruby Ray Scroll                                   //
+///////////////////////////////////////////////////////////////////////////
+COPY_EXISTING ~trmer04.sto~ ~override~
+    ADD_STORE_ITEM ~SCRL8G~ #0 #0 #0 ~IDENTIFIED~ #2
+
