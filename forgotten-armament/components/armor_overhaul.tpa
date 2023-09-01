@@ -412,6 +412,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     // Mithral Chain (+1 Max DEX over non-mithral armor)
     PATCH_IF ("%item_name%" STRING_EQUAL_CASE "CHAN06.ITM") OR    // Mithral Chain Mail +4
              ("%item_name%" STRING_EQUAL_CASE "CHAN07.ITM") OR    // Chain +3
+             ("%item_name%" STRING_EQUAL_CASE "BDCHAN05.ITM") OR  // Corwin's Chain
              ("%name%" STRING_EQUAL_CASE "%chain04%") BEGIN       // Elven Chain Mail
       
       // 17 Max DEX
