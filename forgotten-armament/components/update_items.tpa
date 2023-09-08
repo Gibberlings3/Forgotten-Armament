@@ -3682,6 +3682,22 @@ OUTER_SPRINT newamul2  @33403
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
+
+    COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
+    READ_LONG 0x34 sale_off  ELSE 0
+    READ_LONG 0x38 sale_num  ELSE 0
+    READ_LONG 0x2c itm_off   ELSE 0
+    READ_LONG 0x4c drink_off ELSE 0
+    READ_LONG 0x70 cure_off  ELSE 0
+    FOR (index = 0 ; index < sale_num ; ++index) BEGIN
+      READ_ASCII (sale_off +        (index * 0x1c)) item
+      PATCH_IF ("%item%" STRING_COMPARE_REGEXP "^_?[Aa][Mm][Uu][Ll]17$" = 0) BEGIN // Greenstone Amulet
+        //WRITE_SHORT (sale_off + 0x0a + (index * 0x1c)) 1
+        REMOVE_STORE_ITEM ~amul17~
+        ADD_STORE_ITEM ~amul17~ AT ~%index%~ #1 #0 #0 ~IDENTIFIED~ #1
+      END
+    END
+    BUT_ONLY
 END
 
 ///////////////////////////////////////////////////////////////////////////
