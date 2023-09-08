@@ -3698,6 +3698,15 @@ OUTER_SPRINT newamul2  @33403
       END
     END
     BUT_ONLY
+
+    COPY_EXISTING ~ar2101.are~ ~override~
+      LPF REPLACE_AREA_ITEM INT_VAR charges1=1 STR_VAR old_item=amul17 new_item=amul17 END
+
+    PATCH_IF FILE_EXISTS_IN_GAME ~MINSC7_.CRE~ BEGIN
+      COPY_EXISTING ~MINSC7_~ ~override~
+        REPLACE_CRE_ITEM ~AMUL17~ #1 #0 #0 ~UNSTEALABLE~ ~AMULET~ EQUIP
+    END
+
 END
 
 ///////////////////////////////////////////////////////////////////////////
