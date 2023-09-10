@@ -3707,6 +3707,11 @@ OUTER_SPRINT newamul2  @33403
         REPLACE_CRE_ITEM ~AMUL17~ #1 #0 #0 ~UNSTEALABLE~ ~AMULET~ EQUIP
     END
 
+    ACTION_IF GAME_IS ~bgee~ AND FILE_EXISTS_IN_GAME ~MINSC7.CRE~ BEGIN
+      COPY_EXISTING ~MINSC7.CRE~ ~override~
+        REPLACE_CRE_ITEM ~AMUL17~ #1 #0 #0 ~UNSTEALABLE~ ~AMULET~ EQUIP
+    END
+
 END
 
 ///////////////////////////////////////////////////////////////////////////
