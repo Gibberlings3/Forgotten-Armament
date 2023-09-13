@@ -10,6 +10,7 @@ September xx, 2023
 - World's Edge (BGEE) and Harbinger +2 (BG2EE) share the same item resource. Updated to ensure the correct item receives the updates.
 - Add Ruby Ray Scrolls to Trademeet Store component.
 - Only one charge on the Greenstone Amulet at all stores and the Beholder Lair.
+- Corrected bug on Bone Club where incorrect eff files were applied.
 
 ## Version 3.0
 
