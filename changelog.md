@@ -6,6 +6,7 @@ September xx, 2023
 
 - Updated NWN Style Weapons component to not change base damage on the hammer belonging to Yaga Shura.
 - Hindo's Doom +4 now provides immunity to disease and level drain.
+- Gram the Sword of Grief (upgraded) becomes a +6 enchanted weapon instead of +5.
 - World's Edge (BGEE) and Harbinger +2 (BG2EE) share the same item resource. Updated to ensure the correct item receives the updates.
 - Add Ruby Ray Scrolls to Trademeet Store component.
 - Only one charge on the Greenstone Amulet at all stores and the Beholder Lair.

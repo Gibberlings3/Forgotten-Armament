@@ -243,10 +243,8 @@
 #### Dragon Blade +3
 - +1d6 cold (previously +1)
 
-#### Gram the Sword of Grief +4
-- +4 weapon (previously +5)
-
-#### Gram the Sword of Grief +5
+#### Gram the Sword of Grief +6
+- +6 weapon enchantment (previously +5)
 - Hit target loses 1 point of Strength per hit for 2 rounds (replaces level drain)
 
 #### Silver Sword

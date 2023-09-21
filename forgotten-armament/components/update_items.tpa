@@ -2080,6 +2080,7 @@ END
 // Gram the Sword of Grief +4                                            //
 // +4 weapon (previously +5)                                             //
 ///////////////////////////////////////////////////////////////////////////
+/*
 ACTION_IF FILE_EXISTS_IN_GAME ~SW2H17.ITM~ BEGIN
 OUTER_SPRINT oldtwohand4 @31508
 OUTER_SPRINT newtwohand4 @31509
@@ -2099,17 +2100,22 @@ OUTER_SPRINT newtwohand4 @31509
             END
       END
 END
+*/
 
 ///////////////////////////////////////////////////////////////////////////
-// Gram the Sword of Grief +5                                            //
+// Gram the Sword of Grief +6                                            //
 // Hit target loses 1 point of Strength per hit for 5 rounds replaces    //
 // Each hit target must save vs. Death or lose 1 level                   //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF FILE_EXISTS_IN_GAME ~SW2H18.ITM~ BEGIN
+OUTER_SPRINT oldtwohand4 @31508
+OUTER_SPRINT newtwohand4 @31509
 OUTER_SPRINT oldtwohand5 @31510
 OUTER_SPRINT newtwohand5 @31511
 
     COPY_EXISTING ~SW2H18.ITM~ ~override~ 
+      WRITE_LONG 0x60 6
+      LPF ALTER_ITEM_HEADER INT_VAR header_type=1 thac0_bonus = 6 damage_bonus = 6 END
       LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 216 END
       LPF DELETE_EFFECT INT_VAR header_type = 1 match_opcode = 139 END
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 44 type = 1 target = 2 parameter1 = ~-1~ parameter2 = 0 timing = 0 resist_dispel = 2 duration = 12 probability1 = 100 END
@@ -2119,6 +2125,7 @@ OUTER_SPRINT newtwohand5 @31511
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+              REPLACE_TEXTUALLY ~%oldtwohand4%~ ~%newtwohand4%~
               REPLACE_TEXTUALLY ~%oldtwohand5%~ ~%newtwohand5%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
