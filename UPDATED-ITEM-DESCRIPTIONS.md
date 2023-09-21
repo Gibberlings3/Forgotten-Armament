@@ -133,11 +133,6 @@
   - vs. Neutral Good, Neutral Evil: +4 magic damage
   - vs. Other Alignments: +6 magic damage
 
-#### The Answerer +4
-- Removed on-hit bonuses
-- Armor Class: +2
-- 25% chance of 1d8+4 slashing damage to any who damage the wielder
-
 #### Tongue of Acid +3
 - +1d6 acid damage (previously +1d3)
 

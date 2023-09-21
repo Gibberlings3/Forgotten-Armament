@@ -6,7 +6,6 @@ September xx, 2023
 
 - Updated NWN Style Weapons component to not change base damage on the hammer belonging to Yaga Shura.
 - Hindo's Doom +4 now provides immunity to disease and level drain.
-- The Answerer +4 removed on-hit abilities, bonus +2 AC on equip, 25% chance to counterattack any character who hits the wielder.
 - World's Edge (BGEE) and Harbinger +2 (BG2EE) share the same item resource. Updated to ensure the correct item receives the updates.
 - Add Ruby Ray Scrolls to Trademeet Store component.
 - Only one charge on the Greenstone Amulet at all stores and the Beholder Lair.
