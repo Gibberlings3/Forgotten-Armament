@@ -3560,6 +3560,21 @@ OUTER_SPRINT newplate12 @32928
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
+
+  ACTION_IF !FILE_EXISTS_IN_GAME ~moyag01.itm~ BEGIN
+    COPY ~forgotten-armament/itm/update/moyag01.itm~ ~override~
+
+    ACTION_FOR_EACH yaga IN
+        yaga01  // Yaga-Shura Siege Camp
+        finyaga // Yaga-Shura Final 5
+      BEGIN
+        ACTION_IF FILE_EXISTS_IN_GAME ~%yaga%.CRE~ BEGIN
+
+          COPY_EXISTING ~%yaga%.CRE~ ~override~
+            ADD_CRE_ITEM ~moyag01~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~ARMOR~ EQUIP
+        END
+      END
+  END 
 END
 
 ///////////////////////////////////////////////////////////////////////////
