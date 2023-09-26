@@ -86,6 +86,9 @@
 #### Dragon's Breath +4 
 - 1d10 +4 damage (previously just 1d10)
 
+#### Ravager +6
+- Creatures immune to vorpal attacks will receive 1d10 slashing damage.
+
 #### Suryris Blade
 - 25% chance of kocking down an opponent with each successful attack (Save vs. Death negates)
 

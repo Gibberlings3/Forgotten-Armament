@@ -240,6 +240,9 @@ Combat abilities:
 @30510 = ~\+1d2~
 @30511 = ~+1d4~
 
+@30512 = ~10% chance of decapitating opponent with each successful attack~
+@30513 = ~10% chance of decapitating opponent with each successful attack. Creatures immune to vorpal attacks will receive 1d10 slashing damage.~
+
 ///////////////////////////////////////////////////////////////////////////
 // Katanas                                                               //
 ///////////////////////////////////////////////////////////////////////////

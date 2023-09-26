@@ -721,6 +721,28 @@ OUTER_SPRINT newhalb6 @30511
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Ravager +6                                                            //
+// +1d10 slashing damage if enemy is immune to vorpal                    //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF FILE_EXISTS_IN_GAME ~HALB11.ITM~ BEGIN
+OUTER_SPRINT oldhalb7 @30512
+OUTER_SPRINT newhalb7 @30513
+
+    COPY_EXISTING ~HALB11.ITM~ ~override~
+      LPF CLONE_EFFECT INT_VAR match_opcode = 13 opcode = 12 parameter1 = 0 parameter2 = 16777216 dicenumber = 1 dicesize = 10 savingthrow = 0 savebonus = 0 END
+
+        PATCH_FOR_EACH offset IN 0xc 0x54 BEGIN
+        READ_LONG ~%offset%~ desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF ~%offset%~ desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldhalb7%~ ~%newhalb7%~
+              END
+              SAY_EVALUATED ~%offset%~ ~%desc%~
+            END
+      END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Katana                                                                //
 ///////////////////////////////////////////////////////////////////////////
