@@ -2143,15 +2143,17 @@ OUTER_SPRINT newtwohand5 @31511
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 44 type = 1 target = 2 parameter1 = ~-1~ parameter2 = 0 timing = 0 resist_dispel = 2 duration = 12 probability1 = 100 END
       LPF ADD_ITEM_EFFECT INT_VAR opcode = 142 type = 1 target = 2 parameter2 = 91 timing = 0 resist_dispel = 2 duration = 12 probability1 = 100 END
 
-      READ_LONG 0x54 desc_strref
-          PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
-            READ_STRREF 0x54 desc
-            INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-              REPLACE_TEXTUALLY ~%oldtwohand4%~ ~%newtwohand4%~
-              REPLACE_TEXTUALLY ~%oldtwohand5%~ ~%newtwohand5%~
+      PATCH_FOR_EACH offset IN 0xc 0x54 BEGIN
+        READ_LONG ~%offset%~ desc_strref
+            PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+              READ_STRREF ~%offset%~ desc
+              INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                REPLACE_TEXTUALLY ~%oldtwohand4%~ ~%newtwohand4%~
+                REPLACE_TEXTUALLY ~%oldtwohand5%~ ~%newtwohand5%~
+              END
+              SAY_EVALUATED ~%offset%~ ~%desc%~
             END
-            SAY_EVALUATED 0x54 ~%desc%~
-          END
+      END
 END
 
 ///////////////////////////////////////////////////////////////////////////
