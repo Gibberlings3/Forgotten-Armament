@@ -93,6 +93,7 @@ INCLUDE ~forgotten-armament/components/add_items_nwn.tpa~
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @21 DESIGNATED 21 LABEL ForgottenArmament-UpdateItems
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~0~ @3003
 
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/update_descriptions.tra~
@@ -177,6 +178,7 @@ INCLUDE ~forgotten-armament/components/nwn_style_weapons.tpa~
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @4 DESIGNATED 4 LABEL ForgottenArmament-StatIncreaseItems
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~0~ @3003
 
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/item_descriptions.tra~
 
@@ -187,6 +189,7 @@ INCLUDE ~forgotten-armament/components/stat_item_update.tpa~
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @19 DESIGNATED 19 LABEL ForgottenArmament-NerfAPR
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~0~ @3003
 
 INCLUDE ~forgotten-armament/components/nerf_apr.tpa~
 
@@ -195,6 +198,7 @@ INCLUDE ~forgotten-armament/components/nerf_apr.tpa~
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @23 DESIGNATED 23 SUBCOMPONENT @22 LABEL ForgottenArmament-CritImmunity1
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~0~ @3003
 
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/crit_descriptions.tra~
 
@@ -205,6 +209,7 @@ INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
 
 BEGIN @24 DESIGNATED 24 SUBCOMPONENT @22 LABEL ForgottenArmament-CritImmunity2
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~0~ @3003
 
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/crit_descriptions.tra~
 
@@ -212,10 +217,11 @@ OUTER_SET boss_immune=1
 INCLUDE ~forgotten-armament/components/crit_immunity.tpa~
 
 ///////////////////////////////////////////////////////////////////////////
-// Nerf APR Increasing One-Handed Melee Weapons                          //
+// Add Set Bonuses to Items                                              //
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @25 DESIGNATED 25 LABEL ForgottenArmament-SetBonus
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @3000
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~0~ @3003
 
 INCLUDE ~forgotten-armament/components/set_bonus.tpa~
 
@@ -224,6 +230,8 @@ INCLUDE ~forgotten-armament/components/set_bonus.tpa~
 ///////////////////////////////////////////////////////////////////////////
 BEGIN @26 DESIGNATED 26 LABEL ForgottenArmament-ArmorOverhaul
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @3005
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~1040~ @3003
+REQUIRE_PREDICATE !MOD_IS_INSTALLED ~setup-item_rev.tp2~ ~1042~ @3003
 
 LOAD_TRA ~forgotten-armament/languages/%LANGUAGE%/armor_descriptions.tra~
 
