@@ -3341,7 +3341,7 @@ OUTER_SPRINT oldplate2 @32902
 OUTER_SPRINT newplate2 @32903
 
     COPY_EXISTING ~PLAT11.ITM~ ~override~
-      LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 37 parameter1 = 1 END
+      //LPF ALTER_ITEM_EFFECT INT_VAR check_globals = 1 match_opcode = 37 parameter1 = 1 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 33 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 34 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 35 target = 1 parameter1 = 2 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
