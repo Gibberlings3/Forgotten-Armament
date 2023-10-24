@@ -193,5 +193,14 @@ ACTION_FOR_EACH wormsor_set IN
 ///////////////////////////////////////////////////////////////////////////
 // Copy .BCS file to override folder                                     //
 ///////////////////////////////////////////////////////////////////////////
+/*
 COPY ~forgotten-armament/baf/moset1.baf~ ~override/moset1.bcs~
   COMPILE_BAF_TO_BCS
+*/
+
+ACTION_IF FILE_EXISTS_IN_GAME ~moset1.bcs~ BEGIN
+  EXTEND_TOP ~moset1.bcs~ ~forgotten-armament/baf/moset1.baf~
+END ELSE BEGIN
+  COPY ~forgotten-armament/baf/moset1.baf~ ~override/moset1.bcs~
+    COMPILE_BAF_TO_BCS
+END
