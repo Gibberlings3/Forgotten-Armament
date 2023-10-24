@@ -77,7 +77,7 @@ Ce composant ajoute des bonus, si plusieurs pièces d'équipement assorties sont
 
 Si vous effectuez une mise à jour à partir d'une version antérieure de ce mod, je vous recommande de désinstaller tous les composants du mod et de remplacer tous les fichiers par les nouveaux avant de procéder à une nouvelle installation.
 
-J'ai examiné et résolu les problèmes de compatibilité avec plusieurs mods d'objets, notamment :Made in Heaven: Item Pack, Sod2BG2 items, et The Calling Exotic Item Pack. Si vous remarquez un problème de compatibilité avec d'autres mods, en particulier ceux listés ici, merci de me le faire savoir afin que je puisse le corriger.
+J'ai examiné et résolu les problèmes de compatibilité avec plusieurs mods d'objets, notamment: Sod2BG2 items et The Calling Exotic Item Pack. Si vous remarquez un problème de compatibilité avec d'autres mods, en particulier ceux listés ici, merci de me le faire savoir afin que je puisse le corriger.
 
 ## Remerciements
 
