@@ -1097,6 +1097,33 @@ Requires:
 
 Weight: 3
 
+#### Scimitar of Pestilence +3
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#scimitar-of-pestilence-3)
+
+The blade of this scimitar constantly oozes an oily green substance. Anyone or anything struck by the weapon has a chance of being poisoned and/or contracting a disease.
+
+STATISTICS:
+
+Combat abilities:
+- 10% chance that the target must save vs. Death or be afflicted by a foul disease, thereby losing 2 points of Strength (non-cumulative) and becoming slowed for 3 rounds
+
+THACO: +3
+
+Damage: 1D8+3, +1d6 poison damage
+
+Damage type: Slashing
+
+Speed Factor: 2
+
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+
+Type: One-handed
+
+Requires: 
+
+10 Strength
+
+Weight: 3
 
 #### Spider's Kiss +2 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#spiders-kiss-2)

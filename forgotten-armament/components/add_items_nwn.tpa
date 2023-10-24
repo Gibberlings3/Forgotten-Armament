@@ -547,6 +547,24 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Scimitar of Pestilence +3 - Assign to Captain Egeissag         //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/spl/MO1H76.SPL~ ~override/MO1H76.SPL~
+    COPY ~forgotten-armament/itm/MO1H76.ITM~ ~override/MO1H76.ITM~
+        SAY NAME1 @11200
+        SAY NAME2 @11208
+        SAY UNIDENTIFIED_DESC @11201
+        SAY DESC @11209
+        WRITE_ASCII 0x58 ohrcswh1
+        WRITE_LONG 0x34 4000
+
+    COPY_EXISTING ~SENGUA03.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MO1H76~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
+        SET_BG2_PROFICIENCY ~PROFICIENCYSCIMITARWAKISASHININJATO~ 5
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Spears                                                                //
 ///////////////////////////////////////////////////////////////////////////

@@ -176,6 +176,9 @@ Assigned to Vongoethe in Amkethran - [Item Description](https://github.com/Gibbe
 #### Laughing Blade +2 
 Assigned to Samia in Windspear Hills Dungeon - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#laughing-blade-2)
 
+#### Scimitar of Pestilence +3
+Assigned to Captain Egeissage in Sendai's Enclave - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#scimitar-of-pestilence-3)
+
 #### Spider's Kiss +2 
 Assigned to Pai'Na below Graveyard District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#spiders-kiss-2)
 

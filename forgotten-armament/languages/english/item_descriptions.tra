@@ -822,7 +822,7 @@ Requires:
 Weight: 5~
 
 ///////////////////////////////////////////////////////////////////////////
-// Blade of the Gladiator +2 (NWN2)  NOT INCLUDED                                    //
+// Blade of the Gladiator +2 (NWN2)                                      //
 ///////////////////////////////////////////////////////////////////////////
 @10712 = ~Blade of the Gladiator +1~
 @10713 = ~Long ago, the formians built great subterranean cities and vast, cavernous empires. Societies of war, they reveled in the blood and glory of the gladiatorial pit, where slaves and prisoners fought for their cruel amusement. One such gladiator was the human Ajan, who stole the blade of his formian master and used it to escape to the surface with Zoe, his love. It is said that all who wield it are bound for greatness.
@@ -1258,6 +1258,28 @@ Speed Factor: 4
 Proficiency Type: Scimitar/Wakizashi/Ninjatō
 Type: One-handed
 Requires:
+ 10 Strength
+
+Weight: 3~
+
+///////////////////////////////////////////////////////////////////////////
+// Scimitar of Pestilence +3 (NWN2)                                      //
+///////////////////////////////////////////////////////////////////////////
+@11208 = ~Scimitar of Pestilence +3~
+@11209 = ~The blade of this scimitar constantly oozes an oily green substance. Anyone or anything struck by the weapon has a chance of being poisoned and/or contracting a disease.
+
+STATISTICS:
+
+Combat abilities:
+– 10% chance that the target must save vs. Death or be afflicted by a foul disease, thereby losing 2 points of Strength (non-cumulative) and becoming slowed for 3 rounds
+
+THACO: +3
+Damage: 1D8+3, +1d6 poison damage
+Damage type: Slashing
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: One-handed
+Requires: 
  10 Strength
 
 Weight: 3~
