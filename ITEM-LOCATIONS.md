@@ -121,6 +121,9 @@ Assigned to Droth in AR3100 - [Item Description](https://github.com/Gibberlings3
 
 ### Long Swords
 
+#### The Gladiator +1
+Assigned to Greywolf outside of the Nashkel Mines - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#the-gladiator-1)
+
 #### Intercession +1 
 Assigned to Meilum outside Firewine Bridge - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#intercession-1)
 

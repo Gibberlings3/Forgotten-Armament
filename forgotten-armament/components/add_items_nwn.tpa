@@ -303,20 +303,25 @@ END
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 
-/*
 ///////////////////////////////////////////////////////////////////////////
-// Create Blade of the Gladiator + 2 - Assign to        //
+// Create Blade of the Gladiator + 1 - Assign to Greywolf                //
 ///////////////////////////////////////////////////////////////////////////
-ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+ACTION_IF (GAME_IS ~bgee eet~) BEGIN
+    COPY ~forgotten-armament/spl/MO2H02.SPL~ ~override/MO1H06.SPL~
     COPY ~forgotten-armament/itm/MO1H06.ITM~ ~override/MO1H06.ITM~
-        SAY NAME1 @10710
+        SAY NAME1 @10700
         SAY NAME2 @10712
-        SAY UNIDENTIFIED_DESC @10711
+        SAY UNIDENTIFIED_DESC @10701
         SAY DESC @10713
         WRITE_LONG 0x34 4000
 
+    COPY_EXISTING ~GREYWO.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MO1H06~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
 
-END*/
+    // Move Varscona
+    COPY_EXISTING ~RAEMON.CRE~ ~override~
+        REPLACE_CRE_ITEM ~SW1H06~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
+END
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////

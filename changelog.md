@@ -12,6 +12,7 @@ October xx, 2023
 - Add Ruby Ray Scrolls to Trademeet Store component.
 - Only one charge on the Greenstone Amulet at all stores and the Beholder Lair.
 - Corrected bug on Bone Club where incorrect eff files were applied.
+- Added the following items: The Gladiator Blade +1,
 
 ## Version 3.0
 

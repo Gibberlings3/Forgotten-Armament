@@ -644,6 +644,34 @@ Weight: 5
 
 ### Long Swords
 
+#### The Gladiator +1
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#the-gladiator-1)
+
+Long ago, the formians built great subterranean cities and vast, cavernous empires. Societies of war, they reveled in the blood and glory of the gladiatorial pit, where slaves and prisoners fought for their cruel amusement. One such gladiator was the human Ajan, who stole the blade of his formian master and used it to escape to the surface with Zoe, his love. It is said that all who wield it are bound for greatness.
+
+STATISTICS:
+
+Combat abilities:
+– Deals an extra 1d8 points of slashing damage on a critical hit
+
+THAC0: +1
+
+Damage: 1d8+1
+
+Damage type: Slashing
+
+Speed Factor: 3
+
+Proficiency Type: Long Sword
+
+Type: One-handed
+
+Requires:
+
+6 Strength
+
+Weight: 3
+
 #### Intercession +1 
 (Taken from IWD) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#intercession-1)
 
