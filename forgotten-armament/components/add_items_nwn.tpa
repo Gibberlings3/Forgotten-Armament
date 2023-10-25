@@ -307,7 +307,7 @@ END
 // Create Blade of the Gladiator + 1 - Assign to Greywolf                //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF (GAME_IS ~bgee eet~) BEGIN
-    COPY ~forgotten-armament/spl/MO2H02.SPL~ ~override/MO1H06.SPL~
+    COPY ~forgotten-armament/spl/MO1H06.SPL~ ~override/MO1H06.SPL~
     COPY ~forgotten-armament/itm/MO1H06.ITM~ ~override/MO1H06.ITM~
         SAY NAME1 @10700
         SAY NAME2 @10712
@@ -321,6 +321,22 @@ ACTION_IF (GAME_IS ~bgee eet~) BEGIN
     // Move Varscona
     COPY_EXISTING ~RAEMON.CRE~ ~override~
         REPLACE_CRE_ITEM ~SW1H06~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
+// Create Darksteel Long Sword + 1 - Assign to Moorlock                  //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bgee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MO1H08.ITM~ ~override/MO1H08.ITM~
+        SAY NAME1 @10700
+        SAY NAME2 @10714
+        SAY UNIDENTIFIED_DESC @10701
+        SAY DESC @10715
+        WRITE_LONG 0x34 3000
+
+    COPY_EXISTING ~MOORLOCK.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MO1H08~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
+        SET_BG2_PROFICIENCY ~PROFICIENCYLONGSWORD~ 4
 END
 
 ///////////////////////////////////////////////////////////////////////////

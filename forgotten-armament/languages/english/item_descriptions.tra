@@ -844,6 +844,25 @@ Requires:
 Weight: 3~
 
 ///////////////////////////////////////////////////////////////////////////
+// Darksteel Long Sword +1 (NWN2)                                         //
+///////////////////////////////////////////////////////////////////////////
+@10714 = ~Darksteel Long Sword +1~
+@10715 = ~Darksteel is silvery in hue when polished or cut, but its exposed surfaces have a deep, gleaming purple luster. This alloy of meteoric iron and steel is tempered with rare, magical oils to give the metal its uncanny abilities. Darksteel is commonly used in the crafting of magic items related to storms or lightning.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d8+1, +1 electrical damage
+Damage type: Slashing
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Maces                                                                 //
 ///////////////////////////////////////////////////////////////////////////

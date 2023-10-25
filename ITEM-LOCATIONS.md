@@ -121,6 +121,9 @@ Assigned to Droth in AR3100 - [Item Description](https://github.com/Gibberlings3
 
 ### Long Swords
 
+#### Darksteel Long Sword +1
+Assigned to Moorlock in Durlag's Tower - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#darksteel-long-sword-1)
+
 #### The Gladiator +1
 Assigned to Greywolf outside of the Nashkel Mines - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#the-gladiator-1)
 

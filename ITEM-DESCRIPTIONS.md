@@ -644,6 +644,32 @@ Weight: 5
 
 ### Long Swords
 
+#### Darksteel Long Sword +1
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#darksteel-long-sword-1)
+
+Darksteel is silvery in hue when polished or cut, but its exposed surfaces have a deep, gleaming purple luster. This alloy of meteoric iron and steel is tempered with rare, magical oils to give the metal its uncanny abilities. Darksteel is commonly used in the crafting of magic items related to storms or lightning.
+
+STATISTICS:
+
+THAC0: +1
+
+Damage: 1d8+1, +1 electrical damage
+
+Damage type: Slashing
+
+Speed Factor: 4
+
+Proficiency Type: Long Sword
+
+Type: One-handed
+
+Requires:
+
+6 Strength
+
+Weight: 4
+
+
 #### The Gladiator +1
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#the-gladiator-1)
 
