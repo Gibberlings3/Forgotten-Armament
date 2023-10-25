@@ -1393,6 +1393,37 @@ ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Lathar's Last Belt - Assign to Karun the Black                        //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBL09.ITM~ ~override/MOBL09.ITM~
+        SAY NAME1 @13500
+        SAY NAME2 @13521
+        SAY UNIDENTIFIED_DESC @13501
+        SAY DESC @13522
+        WRITE_ASCII 0x58 cbelt09
+        WRITE_LONG 0x34 10000
+        PATCH_FOR_EACH kill_spl IN
+          idsp031
+          ohbcsfd
+          spin961
+          sppr708
+          spwi054
+          spwi713
+          spin951
+          spwi912
+          spwi960
+        BEGIN
+            ACTION_IF FILE_EXISTS_IN_GAME ~%kill_spl%.SPL~ BEGIN
+                LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~%kill_spl%~ END
+            END
+        END
+
+    COPY_EXISTING ~GROMG08.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBL09~ #0 #0 #0 ~UNSTEALABLE~ ~BELT~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Boots                                                                 //
 ///////////////////////////////////////////////////////////////////////////

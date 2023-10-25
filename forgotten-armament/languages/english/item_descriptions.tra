@@ -2913,13 +2913,33 @@ Weight: 2~
 ///////////////////////////////////////////////////////////////////////////
 // Swordsman's Belt (NWN2)                                               //
 ///////////////////////////////////////////////////////////////////////////
-@13517 = ~Swordsman's Belt~
-@13518 = ~To honor those warriors who accomplish great deeds within the ranks of the Purple Dragon Knights, King Azoun IV had the Royal Magician Vangerdahast create these belts. His daughter, Alusair, now continues that tradition, occasionally offering these belts to entice proven adventurers into joining the ranks of the Purple Dragons.
+@13519 = ~Swordsman's Belt~
+@13520 = ~To honor those warriors who accomplish great deeds within the ranks of the Purple Dragon Knights, King Azoun IV had the Royal Magician Vangerdahast create these belts. His daughter, Alusair, now continues that tradition, occasionally offering these belts to entice proven adventurers into joining the ranks of the Purple Dragons.
 
 STATISTICS:
 
 Equipped abilities:
 – +10% resistance to slashing damage
+
+
+Weight: 2~
+
+///////////////////////////////////////////////////////////////////////////
+// Lathar's Last Belt (NWN2)                                             //
+///////////////////////////////////////////////////////////////////////////
+@13521 = ~Lathar's Last Belt~
+@13522 = ~Lathar was a wizard of little renown who thought himself worthy to test a powerful archmage in a magical duel. Knowing his rival's penchant for death magic, Lathar crafted this special belt to grant himself immunity against such wizardry.
+The day of the duel came and the two wizards squared off against each other. The archmage flung nasty fingers of death and invoked powerful power word kills left and right and all the while Lathar laughed.
+
+"Do your worst!" Lathar said, mocking his rival.
+
+The archmage frowned. Then with a clever smile he snapped his fingers and summoned forth a dire bear which promptly swallowed poor Lathar in just one bite.
+
+STATISTICS:
+
+Equipped abilities:
+– Spell Immunity: Finger of Death
+– Spell Immunity: Power Word, Kill
 
 
 Weight: 2~

@@ -2260,6 +2260,26 @@ Equipped abilities:
 Weight: 2
 
 
+#### Lathar's Last Belt
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#lathars-last-belt)
+
+Lathar was a wizard of little renown who thought himself worthy to test a powerful archmage in a magical duel. Knowing his rival's penchant for death magic, Lathar crafted this special belt to grant himself immunity against such wizardry.
+The day of the duel came and the two wizards squared off against each other. The archmage flung nasty fingers of death and invoked powerful power word kills left and right and all the while Lathar laughed.
+
+"Do your worst!" Lathar said, mocking his rival.
+
+The archmage frowned. Then with a clever smile he snapped his fingers and summoned forth a dire bear which promptly swallowed poor Lathar in just one bite.
+
+STATISTICS:
+
+Equipped abilities:
+– Spell Immunity: Finger of Death
+– Spell Immunity: Power Word, Kill
+
+
+Weight: 2
+
+
 #### Sash of Shimmering 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#sash-of-shimmering)
 
@@ -2272,6 +2292,7 @@ Equipped abilities:
 
 
 Weight: 2
+
 
 #### Swordsman's Belt
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#swordsmans-belt)

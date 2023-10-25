@@ -29,7 +29,7 @@ OUTER_SET morale = RESOLVE_STR_REF (@30009)
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 24 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 23 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 106 timing = 2 resist_dispel = 2 probability1 = 100 END
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 296 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~cdhorror~END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 296 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~cdhorror~ END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 106 target = 1 parameter1 = 1 parameter2 = 1 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 36 timing = 2 resist_dispel = 2 probability1 = 100 END
       LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 161 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 END
