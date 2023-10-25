@@ -4,7 +4,6 @@ November xx, 2023
 
 ### Changed
 
-- Updated NWN Style Weapons component to not change base damage on the hammer belonging to Yaga Shura.
 - Hindo's Doom +4 now provides immunity to disease and level drain.
 - Gram the Sword of Grief (upgraded) becomes a +6 enchanted weapon instead of +5.
 - Ravager +6 now deals 1d10 slashing damage if a creature is immune to the vorpal strike.
