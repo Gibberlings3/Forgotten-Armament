@@ -271,6 +271,9 @@ Assign to Entu in the Planar Sphere - [Item Description](https://github.com/Gibb
 #### Doron's Mistake
 Assigned to Mogadish in Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#dorons-mistake) 
 
+#### Eveningchain
+Assigned to Captain Egeissag in Sendai's Enclave - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#eveningchain) 
+
 ### Plate Mail Armors
 
 #### Deep Guardian's Plate

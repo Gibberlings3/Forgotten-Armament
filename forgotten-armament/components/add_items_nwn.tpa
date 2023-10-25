@@ -313,7 +313,7 @@ ACTION_IF (GAME_IS ~bgee eet~) BEGIN
         SAY NAME2 @10712
         SAY UNIDENTIFIED_DESC @10701
         SAY DESC @10713
-        WRITE_LONG 0x34 4000
+        WRITE_LONG 0x34 3000
 
     COPY_EXISTING ~GREYWO.CRE~ ~override~
         REPLACE_CRE_ITEM ~MO1H06~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
@@ -556,8 +556,8 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
         SAY NAME2 @11208
         SAY UNIDENTIFIED_DESC @11201
         SAY DESC @11209
-        WRITE_ASCII 0x58 ohrcswh1
-        WRITE_LONG 0x34 4000
+        WRITE_ASCII 0x58 csw1h30
+        WRITE_LONG 0x34 6000
 
     COPY_EXISTING ~SENGUA03.CRE~ ~override~
         REPLACE_CRE_ITEM ~MO1H76~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
@@ -867,6 +867,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 
     COPY_EXISTING ~OBSHAL07.CRE~ ~override~
         REPLACE_CRE_ITEM ~MOCM02~ #0 #0 #0 ~UNSTEALABLE~ ~ARMOR~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
+// Create Eveningchain - Assign to Captain Egeissag                      //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCM03.ITM~ ~override/MOCM03.ITM~
+        SAY NAME1 @12600
+        SAY NAME2 @12608
+        SAY UNIDENTIFIED_DESC @12601
+        SAY DESC @12609
+        WRITE_ASCII 0x58 cchan13
+        WRITE_LONG 0x34 10000
+
+    COPY_EXISTING ~SENGUA03.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOCM03~ #0 #0 #0 ~UNSTEALABLE~ ~ARMOR~ EQUIP
 END
 
 ///////////////////////////////////////////////////////////////////////////

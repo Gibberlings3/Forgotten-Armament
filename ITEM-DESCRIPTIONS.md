@@ -1723,6 +1723,23 @@ Requires:
 
 Weight: 10
 
+#### Eveningchain
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#eveningchain)
+
+For those who pair the disciplines of steel and spell, this armor seems crafted to fit them, as they bridge the daylight realm of war and the nighttime realm of magic. And as this armor allows its user to cast freely, so does it protect them from being instantly slain by certain spells - promising that it will not allow them swift passage into the hands of death.
+
+STATISTICS:
+
+Equipped abilities:
+- Immunity to all forms of death magic
+
+Armor Class: 2 (0 vs. slashing, 3 vs. crushing)
+
+Requires:
+
+5 Strength
+
+Weight: 8
 
 ### Plate Mail Armors
 
