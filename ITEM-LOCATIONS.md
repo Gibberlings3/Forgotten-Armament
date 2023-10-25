@@ -172,7 +172,7 @@ Assign to Ihtafeer in Druid Grove - [Item Description](https://github.com/Gibber
 Assigned to Tracea Carol in Ulgoth's Beard and assigned to N'ashtar in Underdark - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#remembrance-3)
 
 #### Staff of Balpheron +1 - Sorcerer/Wizard Only 
-Assigned to Vongoethe in Amkethran - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#staff-of-balpheron-1---sorcererwizard-only)
+Assigned to Karun the Black in Saradush - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#staff-of-balpheron-1---sorcererwizard-only)
 
 ### Scimitars
 

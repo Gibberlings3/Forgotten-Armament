@@ -500,7 +500,7 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
-// Create Staff of Balpheron +1 - Assign to Vongoethe Inventory          //
+// Create Staff of Balpheron +1 - Assign to Karun the Black              //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
     COPY ~forgotten-armament/itm/MOSTA03.ITM~ ~override/MOSTA03.ITM~
@@ -511,8 +511,8 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
         WRITE_ASCII 0x58 cstaf16
         WRITE_LONG 0x34 3000
 
-    COPY_EXISTING ~AMLICH01.CRE~ ~override~
-        ADD_CRE_ITEM ~MOSTA03~ #0 #0 #0 ~NONE~ ~INV~
+    COPY_EXISTING ~GROMG08.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOSTA03~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
 END
 
 ///////////////////////////////////////////////////////////////////////////
