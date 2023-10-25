@@ -1414,7 +1414,7 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
           spwi912
           spwi960
         BEGIN
-            ACTION_IF FILE_EXISTS_IN_GAME ~%kill_spl%.SPL~ BEGIN
+            PATCH_IF FILE_EXISTS_IN_GAME ~%kill_spl%.SPL~ BEGIN
                 LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 timing = 2 resist_dispel = 2 probability1 = 100 STR_VAR resource = ~%kill_spl%~ END
             END
         END
