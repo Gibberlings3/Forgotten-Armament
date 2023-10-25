@@ -2130,6 +2130,11 @@ Weight: 10~
 STATISTICS:
 
 Equipped abilities:
+– Open Locks: -5%
+– Find Traps: -5%
+– Pick Pockets: -20%
+– Move Silently: -10%
+– Spellcasting is not disabled
 – Immunity to all forms of death magic
 
 Armor Class: 2 (0 vs. slashing, 3 vs. crushing)
@@ -2901,6 +2906,20 @@ STATISTICS:
 
 Equipped abilities:
 – +20% resistance to slashing damage
+
+
+Weight: 2~
+
+///////////////////////////////////////////////////////////////////////////
+// Swordsman's Belt (NWN2)                                               //
+///////////////////////////////////////////////////////////////////////////
+@13517 = ~Swordsman's Belt~
+@13518 = ~To honor those warriors who accomplish great deeds within the ranks of the Purple Dragon Knights, King Azoun IV had the Royal Magician Vangerdahast create these belts. His daughter, Alusair, now continues that tradition, occasionally offering these belts to entice proven adventurers into joining the ranks of the Purple Dragons.
+
+STATISTICS:
+
+Equipped abilities:
+– +10% resistance to slashing damage
 
 
 Weight: 2~

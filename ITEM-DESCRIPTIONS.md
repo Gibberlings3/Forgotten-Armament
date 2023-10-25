@@ -2246,6 +2246,20 @@ Equipped abilities:
 Weight: 2
 
 
+#### Greater Swordsman's Belt
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#greater-swordsmans-belt)
+
+To honor those warriors who accomplish great deeds within the ranks of the Purple Dragon Knights, King Azoun IV had the Royal Magician Vangerdahast create these belts. His daughter, Alusair, now continues that tradition, occasionally offering these belts to entice proven adventurers into joining the ranks of the Purple Dragons.
+
+STATISTICS:
+
+Equipped abilities:
+- +20% resistance to slashing damage
+
+
+Weight: 2
+
+
 #### Sash of Shimmering 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#sash-of-shimmering)
 
@@ -2259,15 +2273,15 @@ Equipped abilities:
 
 Weight: 2
 
-#### Greater Swordsman's Belt
-(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#greater-swordsmans-belt)
+#### Swordsman's Belt
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#swordsmans-belt)
 
 To honor those warriors who accomplish great deeds within the ranks of the Purple Dragon Knights, King Azoun IV had the Royal Magician Vangerdahast create these belts. His daughter, Alusair, now continues that tradition, occasionally offering these belts to entice proven adventurers into joining the ranks of the Purple Dragons.
 
 STATISTICS:
 
 Equipped abilities:
-- +20% resistance to slashing damage
+- +10% resistance to slashing damage
 
 
 Weight: 2

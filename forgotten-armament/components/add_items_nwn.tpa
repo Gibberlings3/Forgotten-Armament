@@ -1370,6 +1370,29 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Swordsman's Belt - Assign to Ziatar and Galvarey                      //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBL08.ITM~ ~override/MOBL08.ITM~
+        SAY NAME1 @13500
+        SAY NAME2 @13519
+        SAY UNIDENTIFIED_DESC @13501
+        SAY DESC @13520
+        WRITE_ASCII 0x58 cbelt06
+        WRITE_LONG 0x34 2000
+
+    ACTION_FOR_EACH swds_blt IN
+      jagalvar // Galvarey
+      bdziatar // Ziatar
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%swds_blt%.CRE~ BEGIN
+        COPY_EXISTING ~%swds_blt%.CRE~ ~override~
+            REPLACE_CRE_ITEM ~MOBL08~ #0 #0 #0 ~UNSTEALABLE~ ~BELT~ EQUIP
+      END
+    END
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Boots                                                                 //
 ///////////////////////////////////////////////////////////////////////////

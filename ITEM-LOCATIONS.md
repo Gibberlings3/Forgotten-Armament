@@ -372,11 +372,14 @@ Assigned to Maferan in Guarded Compound (Temple District) - [Item Description](h
 #### Grainstone Belt - Monk Only
 Assigned to Lemzenn at Two-Fold Temple - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#grainstone-belt---monk-only) 
 
+#### Greater Swordsman's Belt
+Assigned to Captain Egeissag in Sendai's Enclave - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#greater-swordsmans-belt)
+
 #### Sash of Shimmering
 Assigned to Tracea Carol in Ulgoth's Beard and Kayardi in Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#sash-of-shimmering)
 
-#### Greater Swordsman's Belt
-Assigned to Captain Egeissag in Sendai's Enclave - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#greater-swordsmans-belt)
+#### Swordsman's Belt
+Assigned to Ziatar (SoD) and Galvarey (Jaheira's Harper Quest) - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#swordsmans-belt)
 
 ### Boots 
 
