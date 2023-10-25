@@ -652,7 +652,7 @@ Long ago, the formians built great subterranean cities and vast, cavernous empir
 STATISTICS:
 
 Combat abilities:
-– Deals an extra 1d8 points of slashing damage on a critical hit
+- Deals an extra 1d8 points of slashing damage on a critical hit
 
 THAC0: +1
 
@@ -671,6 +671,7 @@ Requires:
 6 Strength
 
 Weight: 3
+
 
 #### Intercession +1 
 (Taken from IWD) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#intercession-1)
@@ -1097,6 +1098,7 @@ Requires:
 
 Weight: 3
 
+
 #### Scimitar of Pestilence +3
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#scimitar-of-pestilence-3)
 
@@ -1124,6 +1126,7 @@ Requires:
 10 Strength
 
 Weight: 3
+
 
 #### Spider's Kiss +2 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#spiders-kiss-2)
@@ -1723,6 +1726,7 @@ Requires:
 
 Weight: 10
 
+
 #### Eveningchain
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#eveningchain)
 
@@ -1740,6 +1744,7 @@ Requires:
 5 Strength
 
 Weight: 8
+
 
 ### Plate Mail Armors
 
@@ -2224,6 +2229,19 @@ STATISTICS:
 
 Equipped abilities:
 - Magic Resistance: +10%
+
+
+Weight: 2
+
+#### Greater Swordsman's Belt
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#greater-swordsmans-belt)
+
+To honor those warriors who accomplish great deeds within the ranks of the Purple Dragon Knights, King Azoun IV had the Royal Magician Vangerdahast create these belts. His daughter, Alusair, now continues that tradition, occasionally offering these belts to entice proven adventurers into joining the ranks of the Purple Dragons.
+
+STATISTICS:
+
+Equipped abilities:
+- +20% resistance to slashing damage
 
 
 Weight: 2

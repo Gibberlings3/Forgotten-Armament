@@ -2873,6 +2873,20 @@ Equipped abilities:
 Weight: 2~
 
 ///////////////////////////////////////////////////////////////////////////
+// Greater Swordsman's Belt (NWN2)                                       //
+///////////////////////////////////////////////////////////////////////////
+@13517 = ~Greater Swordsman's Belt~
+@13518 = ~To honor those warriors who accomplish great deeds within the ranks of the Purple Dragon Knights, King Azoun IV had the Royal Magician Vangerdahast create these belts. His daughter, Alusair, now continues that tradition, occasionally offering these belts to entice proven adventurers into joining the ranks of the Purple Dragons.
+
+STATISTICS:
+
+Equipped abilities:
+– +20% resistance to slashing damage
+
+
+Weight: 2~
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Boots                                                                 //
 ///////////////////////////////////////////////////////////////////////////

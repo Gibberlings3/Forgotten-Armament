@@ -1338,6 +1338,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Greater Swordsman's Belt - Assign to Captain Egeissag                 //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBL07.ITM~ ~override/MOBL07.ITM~
+        SAY NAME1 @13500
+        SAY NAME2 @13517
+        SAY UNIDENTIFIED_DESC @13501
+        SAY DESC @13518
+        WRITE_ASCII 0x58 cbelt06
+        WRITE_LONG 0x34 6000
+
+    COPY_EXISTING ~SENGUA03.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBL07~ #0 #0 #0 ~UNSTEALABLE~ ~BELT~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Boots                                                                 //
 ///////////////////////////////////////////////////////////////////////////
