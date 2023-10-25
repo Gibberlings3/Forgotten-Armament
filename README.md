@@ -73,8 +73,6 @@ PLEASE NOTE: AI scripts need to be enabled for this component to work.
 
 If you are upgrading from an earlier version of this mod, I recommend uninstalling all mod components and replacing all files with the new ones before doing a fresh install.
 
-I have reviewed and deconflicted any compatibility issues with multiple item mods to include: Sod2BG2 items and The Calling Exotic Item Pack. If you do notice a compatibility issue with other mods, especially the ones listed here, please let me know so I can correct it.
-
 NWN2 Style Weapons and Update Items Setting an Ability Score to Increment the Increase components should be installed AFTER any mods that add new weapons or items to the game.
 
 Do not install the NWN2 Style Weapons component with other mods that alter weapons like Scales of Balance.  

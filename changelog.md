@@ -1,6 +1,6 @@
 ## Version 4.0
 
-October xx, 2023
+November xx, 2023
 
 ### Changed
 

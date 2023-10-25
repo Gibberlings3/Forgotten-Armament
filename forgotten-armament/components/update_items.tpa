@@ -3030,6 +3030,26 @@ OUTER_SPRINT newchain1 @32601
           END
       END
     END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~MOCM03.ITM~ BEGIN
+      COPY_EXISTING ~MOCM03.ITM~ ~override~
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 33 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 34 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 35 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 36 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 37 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 resist_dispel = 0 probability1 = 100 END
+
+        PATCH_FOR_EACH offset IN 0x50 0x54 BEGIN
+          READ_LONG ~%offset%~ desc_strref
+              PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
+                READ_STRREF ~%offset%~ desc
+                INNER_PATCH_SAVE desc ~%desc%~ BEGIN
+                  REPLACE_TEXTUALLY ~%oldchain1%~ ~%newchain1%~
+                END
+                SAY_EVALUATED ~%offset%~ ~%desc%~
+              END
+        END
+    END
 END
 
 ///////////////////////////////////////////////////////////////////////////
