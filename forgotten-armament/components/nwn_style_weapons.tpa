@@ -1296,11 +1296,6 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   // DART ---------------------------------------------------------------------//
   END ELSE PATCH_IF (prof = 106) AND nwn_dart BEGIN
 
-    PATCH_IF !("%item_name%" STRING_EQUAL_CASE "MH#DART1.ITM") AND !("%item_name%" STRING_EQUAL_CASE "MH#DART2.ITM") BEGIN
-      // Update to 1d4 damage
-      LPF ALTER_ITEM_HEADER INT_VAR header_type=2 dicesize=4 dicenumber=1 END
-    END
-
     // Check if existing keen property
     FOR (index = 0 ; index < fx_num ; ++index) BEGIN
       READ_SHORT (fx_off + 0x30 * index) opcode
