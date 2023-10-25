@@ -165,6 +165,9 @@ Assigned to Akae in Windspear Hills Dungeon - [Item Description](https://github.
 
 ### Quarterstaves
 
+#### Mage Shield - Sorcerer/Wizard Only
+Assign to Tolgerias in the Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#mage-shield---sorcererwizard-only)
+
 #### Rakshasa Staff +3 - Sorcerer/Wizard Only 
 Assign to Ihtafeer in Druid Grove - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#rakshasa-staff-3---sorcererwizard-only)
 

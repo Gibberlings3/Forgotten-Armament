@@ -516,6 +516,29 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Mage Shield - Assign to Tolgerias                                     //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOSTA04.ITM~ ~override/MOSTA04.ITM~
+        SAY NAME1 @11100
+        SAY NAME2 @11108
+        SAY UNIDENTIFIED_DESC @11101
+        SAY DESC @11109
+        WRITE_ASCII 0x58 cstaf16
+        WRITE_LONG 0x34 3000
+
+    ACTION_FOR_EACH tolg IN
+      tolger
+      tolger2
+    BEGIN
+      ACTION_IF FILE_EXISTS_IN_GAME ~%tolg%.CRE~ BEGIN
+        COPY_EXISTING ~%tolg%.CRE~ ~override~
+            REPLACE_CRE_ITEM ~MOSTA04~ #0 #0 #0 ~UNSTEALABLE~ ~WEAPON1~ EQUIP
+      END
+    END
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Scimitars                                                             //
 ///////////////////////////////////////////////////////////////////////////

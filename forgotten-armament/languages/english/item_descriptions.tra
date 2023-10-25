@@ -1186,6 +1186,29 @@ Requires:
 Weight: 3~
 
 ///////////////////////////////////////////////////////////////////////////
+// Mage Shield (NWN2)                                                    //
+///////////////////////////////////////////////////////////////////////////
+@11108 = ~Mage Shield~
+@11109 = ~Staffs of this kind provide much needed protection for arcane spellcasters. The level of defense varies with each example, but all are useful. Most bear no specific maker's mark, created for utility rather than notoriety.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +3
+– Can memorize one extra 1st-level spell
+
+THAC0: +1
+Damage: 1d6+1
+Damage type: Crushing
+Speed Factor: 2
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Scimitars                                                             //
 ///////////////////////////////////////////////////////////////////////////

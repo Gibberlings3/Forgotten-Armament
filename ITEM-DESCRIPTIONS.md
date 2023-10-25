@@ -996,6 +996,36 @@ Weight: 3
 
 ### Quarterstaves
 
+#### Mage Shield - Sorcerer/Wizard Only 
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#mage-shield---sorcererwizard-only)
+
+Staffs of this kind provide much needed protection for arcane spellcasters. The level of defense varies with each example, but all are useful. Most bear no specific maker's mark, created for utility rather than notoriety.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +3
+- Can memorize one extra 1st-level spell
+
+THAC0: +1
+
+Damage: 1d6+1
+
+Damage type: Crushing
+
+Speed Factor: 2
+
+Proficiency Type: Quarterstaff
+
+Type: Two-handed
+
+Requires:
+
+5 Strength
+
+Weight: 3
+
+
 #### Rakshasa Staff +3 - Sorcerer/Wizard Only 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#rakshasa-staff-3---sorcererwizard-only)
 
@@ -2273,8 +2303,8 @@ The archmage frowned. Then with a clever smile he snapped his fingers and summon
 STATISTICS:
 
 Equipped abilities:
-– Spell Immunity: Finger of Death
-– Spell Immunity: Power Word, Kill
+- Spell Immunity: Finger of Death
+- Spell Immunity: Power Word, Kill
 
 
 Weight: 2
