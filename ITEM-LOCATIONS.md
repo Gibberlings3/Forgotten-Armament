@@ -418,6 +418,9 @@ Replaces Paws of the Cheetah from Renal Bloodscalp - [Item Description](https://
 #### Bracers of Artifice
 Assigned to Aurumach Rilmani in the Watcher's Keep Final Seal - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#bracers-of-artifice)
 
+#### Bracers of Bruising
+Assigned to Anarg in the Athkatla Bridge District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#bracers-of-bruising)
+
 #### Bracers of the Inner Planes
 Assigned to Illasera - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#bracers-of-the-inner-planes)
 

@@ -2466,6 +2466,22 @@ Equipped abilities:
 
 Weight: 2
 
+
+#### Bracers of Bruising
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#bracers-of-bruising)
+
+The Bracers of Bruising were commissioned by leaders of the Night Masks to promote cruelty and ruthlessness in the criminal organization's street-level operatives. The bracers have circulated among the most thuggish members of the gang for years, never remaining in the hands of one owner for long.
+
+While the bracers are not "cursed" in the literal sense of the word, acquiring them has always been something of a mixed blessing. While they increase the wearer's power, they also tend to make their owner a target for other criminals covetous of the bracers' power - not to mention the status they afford one as "Westgate's Biggest Thug."
+
+STATISTICS:
+
+Equipped Abilities:
+- Strength: +2
+
+Weight: 2
+
+
 #### Bracers of the Inner Planes
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#bracers-of-the-inner-planes)
 
