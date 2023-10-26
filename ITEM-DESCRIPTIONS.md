@@ -2708,3 +2708,16 @@ Equipped Abilities:
 
 Weight: 0
 
+
+#### Nentyarch's Band 
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#nentyarchs-band)
+
+The ring bears the mark of three concentric circles that signifies the Circle of Leth. Led by the Nentyarch this hierarchy is an incredibly powerful group of druids that dwells in the Forest of Lethyr near Rawlinswood, to the northwest of Rashemen. The ring looks ancient and its surfaces are well worn - not through normal wear, but as if it had been exposed to the elements for decades.
+
+STATISTICS:
+
+Equipped Abilities:
+- Wisdom: +3
+- Can memorize one extra 7th-level Druid spell
+
+Weight: 0

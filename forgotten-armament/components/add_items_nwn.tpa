@@ -1782,3 +1782,19 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
     COPY_EXISTING ~SENLICH.CRE~ ~override~
         ADD_CRE_ITEM ~MORNG02~ #0 #0 #0 ~NONE~ ~INV~
 END
+
+///////////////////////////////////////////////////////////////////////////
+// Create Nentyarch's Band - Assign to Nyalee                            //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MORNG07.ITM~ ~override/MORNG07.ITM~
+        SAY NAME1 @14200
+        SAY NAME2 @14208
+        SAY UNIDENTIFIED_DESC @14201
+        SAY DESC @14209
+        WRITE_ASCII 0x58 cring03
+        WRITE_LONG 0x34 10000
+
+    COPY_EXISTING ~HGNYA01.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MORNG01~ #0 #0 #0 ~UNSTEALABLE~ ~LRING~ EQUIP
+END
