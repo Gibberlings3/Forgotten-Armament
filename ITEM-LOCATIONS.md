@@ -416,10 +416,13 @@ Replaces Paws of the Cheetah from Renal Bloodscalp - [Item Description](https://
 ### Bracers
 
 #### Bracers of Artifice
-Assign to Aurumach Rilmani in the Watcher's Keep Final Seal - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#bracers-of-artifice)
+Assigned to Aurumach Rilmani in the Watcher's Keep Final Seal - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#bracers-of-artifice)
+
+#### Bracers of the Inner Planes
+Assigned to Illasera - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#bracers-of-the-inner-planes)
 
 #### Imaskari Bracers of Immortality
-Assign to Berenn in the Fire Giant Temple - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#imaskari-bracers-of-immortality)
+Assigned to Berenn in the Fire Giant Temple - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#imaskari-bracers-of-immortality)
 
 ### Cloaks
 

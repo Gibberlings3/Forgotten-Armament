@@ -1676,6 +1676,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Bracers of Artifice - Assign to Aurumach Rilmani               //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBR04.ITM~ ~override/MOBR04.ITM~
+        SAY NAME1 @13900
+        SAY NAME2 @13906
+        SAY UNIDENTIFIED_DESC @13901
+        SAY DESC @13907MO
+        WRITE_ASCII 0x58 cbrac14
+        WRITE_LONG 0x34 10000
+
+    COPY_EXISTING ~ILLASERA.CRE~ ~override~ 
+        REPLACE_CRE_ITEM ~MOBR04~ #0 #0 #0 ~UNSTEALABLE~ ~GLOVES~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Helmets                                                               //
 ///////////////////////////////////////////////////////////////////////////

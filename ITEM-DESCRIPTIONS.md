@@ -2466,6 +2466,21 @@ Equipped abilities:
 
 Weight: 2
 
+#### Bracers of the Inner Planes
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#bracers-of-the-inner-planes)
+
+These bracers shield the wearer from the hostile environments found in the elemental planes as well as the Positive and Negative Material planes.
+
+STATISTICS:
+
+Equipped Abilities:
+- Fire Resistance: +20%
+- Cold Resistance: +20%
+- Electrical Resistance: +20%
+- Acid Resistance: +20%
+
+Weight: 2
+
 
 #### Imaskari Bracers of Immortality 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#imaskari-bracers-of-immortality)
