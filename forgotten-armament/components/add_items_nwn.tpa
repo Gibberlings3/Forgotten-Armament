@@ -1796,5 +1796,21 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
         WRITE_LONG 0x34 10000
 
     COPY_EXISTING ~HGNYA01.CRE~ ~override~
-        REPLACE_CRE_ITEM ~MORNG01~ #0 #0 #0 ~UNSTEALABLE~ ~LRING~ EQUIP
+        REPLACE_CRE_ITEM ~MORNG07~ #0 #0 #0 ~UNSTEALABLE~ ~LRING~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
+// Create Ring of Universal Energy Resistance - Assign to Vongoethe      //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MORNG08.ITM~ ~override/MORNG08.ITM~
+        SAY NAME1 @14200
+        SAY NAME2 @14210
+        SAY UNIDENTIFIED_DESC @14201
+        SAY DESC @14211
+        WRITE_ASCII 0x58 gring01
+        WRITE_LONG 0x34 10000
+
+    COPY_EXISTING ~AMLICH01.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MORNG08~ #0 #0 #0 ~UNSTEALABLE~ ~LRING~ EQUIP
 END

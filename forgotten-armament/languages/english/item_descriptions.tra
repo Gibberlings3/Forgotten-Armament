@@ -3542,7 +3542,7 @@ Equipped Abilities:
 Weight: 0~
 
 ///////////////////////////////////////////////////////////////////////////
-// Nentyarch's Band (NWN2)                                              //
+// Nentyarch's Band (NWN2)                                               //
 ///////////////////////////////////////////////////////////////////////////
 @14208 = ~Nentyarch's Band~
 @14209 = ~The ring bears the mark of three concentric circles that signifies the Circle of Leth. Led by the Nentyarch this hierarchy is an incredibly powerful group of druids that dwells in the Forest of Lethyr near Rawlinswood, to the northwest of Rashemen. The ring looks ancient and its surfaces are well worn - not through normal wear, but as if it had been exposed to the elements for decades.
@@ -3552,5 +3552,21 @@ STATISTICS:
 Equipped Abilities:
 – Wisdom: +3
 – Can memorize one extra 7th-level Druid spell
+
+Weight: 0~
+
+///////////////////////////////////////////////////////////////////////////
+// Ring of Universal Energy Resistance (NWN2)                            //
+///////////////////////////////////////////////////////////////////////////
+@14210 = ~Ring of Universal Energy Resistance~
+@14211 = ~This gold ring is imprinted with symbols representing the five energy types: fire, cold, electricity, acid, sonic.
+
+STATISTICS:
+
+Equipped Abilities:
+– Fire Resistance: +20%
+– Cold Resistance: +20%
+– Electrical Resistance: +20%
+– Acid Resistance: +20%
 
 Weight: 0~

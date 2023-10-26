@@ -473,3 +473,6 @@ Assigned to Layene in the Twisted Rune - [Item Description](https://github.com/G
 
 #### Nentyarch's Band
 Assigned to Nyalee in the Temple of Bhaal (Forest of Mir) - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#nentyarchs-band)
+
+#### Ring of Universal Energy Resistance
+Assigned to Vongoethe in Amkethran - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#ring-of-universal-energy-resistance)

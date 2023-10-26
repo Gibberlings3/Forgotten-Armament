@@ -2721,3 +2721,19 @@ Equipped Abilities:
 - Can memorize one extra 7th-level Druid spell
 
 Weight: 0
+
+
+#### Ring of Universal Energy Resistance
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#ring-of-universal-energy-resistance)
+
+This gold ring is imprinted with symbols representing the five energy types: fire, cold, electricity, acid, sonic.
+
+STATISTICS:
+
+Equipped Abilities:
+- Fire Resistance: +20%
+- Cold Resistance: +20%
+- Electrical Resistance: +20%
+- Acid Resistance: +20%
+
+Weight: 0
