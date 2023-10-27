@@ -255,9 +255,10 @@ OUTER_SPRINT newbast6 @30111
           PATCH_IF (desc_strref >= 0 && desc_strref < 2147483646) BEGIN
             READ_STRREF 0x54 desc
             INNER_PATCH_SAVE desc ~%desc%~ BEGIN
-              REPLACE_TEXTUALLY ~%oldbast3%~ ~%newbast3%~
+              //REPLACE_TEXTUALLY ~%oldbast3%~ ~%newbast3%~
               REPLACE_TEXTUALLY ~%oldbast4%~ ~%newbast4%~
-              REPLACE_TEXTUALLY ~%oldbast6%~ ~%newbast6%~
+              REPLACE_TEXTUALLY ~%oldbast3%~ ~%newbast6%~
+              //REPLACE_TEXTUALLY ~%oldbast6%~ ~%newbast6%~
             END
             SAY_EVALUATED 0x54 ~%desc%~
           END
