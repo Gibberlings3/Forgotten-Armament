@@ -438,8 +438,14 @@ Assign to Aurumach Rilmani in the Watcher's Keep Final Seal - [Item Description]
 #### Balhodrie's Constant Hearth - Thief Only
 Assigned to Ketta in the Guarded Compound (Temple District) - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#balhodries-constant-hearth---thief-only)
 
+#### Cape of the Fire Bath
+Assigned to Conster in the Windspear Hills Dungeon - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#cape-of-the-fire-bath)  
+
 #### Cloak of Burdened Spirits
 Assigned to Berenn in the Fire Giant Temple - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#cloak-of-burdened-spirits)  
+
+#### Finch's Comforting Cloak
+Assigned to Shyressa in the Twisted Rune - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#finchs-comforting-cloak)  
 
 #### Mantle of Gram the Mouse - Paladin Only
 Assigned to Reynald de Chatillon in the Bridge District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#mantle-of-gram-the-mouse---paladin-only) 

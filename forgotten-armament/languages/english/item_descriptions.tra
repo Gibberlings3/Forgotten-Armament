@@ -3219,6 +3219,36 @@ Equipped abilities:
 Weight: 3~
 
 ///////////////////////////////////////////////////////////////////////////
+// Finch's Comforting Cloak (NWN2)                                       //
+///////////////////////////////////////////////////////////////////////////
+@13714 = ~Finch's Comforting Cloak~
+@13715 = ~In the early days of his travels, Finch found Mayram, a monk of Torm, protecting a fellow group of travelers from a group of bandits. After helping her fight them off, he agreed to walk with her a ways farther. As they traveled together, the two became close friends, and Finch found himself falling in love with the young monk. Knowing they would part ways soon, and that their chosen lifestyles would never match, Finch gave Mayram his magical cloak, his most prized possession. The night before they were to arrive at their destination, they were attacked by a group of Malarite beast cultists, and the two fought vainly against greater strength and numbers. Finch fell before their assault, gravely wounded - but Mayram gave her last strength to save him, fighting until all of their enemies had been slain. She then gave the dying Finch back his cloak so that he could benefit from its magics - and perished immediately afterwards. Finch did his best to try and have her fellow monks resurrect her: but they only told him that her spirit had been taken into the very court of Torm, and that they could never undo so great an honor. Wracked with guilt and his unspoken feelings, Finch sold the cloak to a merchant and gave the money to the church, and again went on his travels... and sung of Mayram only once since.
+
+STATISTICS:
+
+Equipped abilities:
+– Maximum Hit Points: +15
+– Acid Resistance: +10%
+– Fire Resistance: +10%
+– Immunity to fear
+
+Weight: 3~
+
+///////////////////////////////////////////////////////////////////////////
+// Cape of the Fire Bath (NWN2)                                          //
+///////////////////////////////////////////////////////////////////////////
+@13716 = ~Cape of the Fire Bath~
+@13717 = ~Common among clerics and other powerful followers of Kossuth, these cloaks of resistance are brilliant red and embroidered with images of flames. The wearer can withstand both extremely hot weather and mystical fire damage.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +20%
+– Saving Throws: +2
+
+Weight: 3~
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Gauntlets                                                             //
 ///////////////////////////////////////////////////////////////////////////

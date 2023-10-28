@@ -1598,6 +1598,38 @@ ACTION_IF (GAME_IS ~bgee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Finch's Comforting Cloak - Assign to Shyressa                  //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCLK08.ITM~ ~override/MOCLK08.ITM~
+        SAY NAME1 @13700
+        SAY NAME2 @13714
+        SAY UNIDENTIFIED_DESC @13701
+        SAY DESC @13715
+        WRITE_ASCII 0x58 cclck07
+        WRITE_LONG 0x34 10000
+
+    COPY_EXISTING ~HLSHYR.CRE~ ~override~ 
+        REPLACE_CRE_ITEM ~MOCLK08~ #0 #0 #0 ~UNSTEALABLE~ ~CLOAK~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
+// Create Cape of the Fire Bath - Assign to Conster                      //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCLK09.ITM~ ~override/MOCLK09.ITM~
+        SAY NAME1 @13700
+        SAY NAME2 @13716
+        SAY UNIDENTIFIED_DESC @13701
+        SAY DESC @13717
+        WRITE_ASCII 0x58 cclck01
+        WRITE_LONG 0x34 4000
+
+    COPY_EXISTING ~FIRMAG01.CRE~ ~override~ 
+        REPLACE_CRE_ITEM ~MOCLK09~ #0 #0 #0 ~UNSTEALABLE~ ~CLOAK~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Gauntlets                                                             //
 ///////////////////////////////////////////////////////////////////////////
