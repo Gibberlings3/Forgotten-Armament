@@ -12,7 +12,7 @@ November xx, 2023
 - Only one charge on the Greenstone Amulet at all stores and the Beholder Lair.
 - Corrected bug on Bone Club where incorrect eff files were applied.
 - Updated Purifier +5 description updates.
-- Added the following items: The Gladiator Blade +1, Scimitar of Pestilence +3, Eveningchain, Swordsman's Belt, Greater Swordsman's Belt, Darksteel Long Sword +1, Lathar's Last Belt, Mage Shield, Nentyarch's Band, Ring of Universal Energy Resistance, Bracers of the Inner Planes, Bracers of Bruising,
+- Added the following items: The Gladiator Blade +1, Scimitar of Pestilence +3, Eveningchain, Swordsman's Belt, Greater Swordsman's Belt, Darksteel Long Sword +1, Lathar's Last Belt, Mage Shield, Nentyarch's Band, Ring of Universal Energy Resistance, Bracers of the Inner Planes, Bracers of Bruising, Mantle of Kossuth, 
 
 ## Version 3.0
 

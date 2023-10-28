@@ -1582,6 +1582,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Mantle of Kossuth - Assign to Mutamin                          //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bgee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCLK07.ITM~ ~override/MOCLK07.ITM~
+        SAY NAME1 @13700
+        SAY NAME2 @13712
+        SAY UNIDENTIFIED_DESC @13701
+        SAY DESC @13713
+        WRITE_ASCII 0x58 cclck04
+        WRITE_LONG 0x34 2000
+
+    COPY_EXISTING ~MUTAMI.CRE~ ~override~ 
+        REPLACE_CRE_ITEM ~MOCLK07~ #0 #0 #0 ~UNSTEALABLE~ ~CLOAK~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Gauntlets                                                             //
 ///////////////////////////////////////////////////////////////////////////

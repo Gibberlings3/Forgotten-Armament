@@ -2597,6 +2597,19 @@ Equipped abilities:
 Weight: 3
 
 
+#### Mantle of Kossuth
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#mantle-of-kossuth)
+
+Common among clerics and other powerful followers of Kossuth, these cloaks are brilliant red and embroidered with images of flames. With it, the wearer can withstand the ravages of both natural and magical flames.
+
+STATISTICS:
+
+Equipped abilities:
+- Fire Resistance: +10%
+
+Weight: 3
+
+
 ### Gauntlets
 
 #### Elder Oak Gloves - Druid Only 

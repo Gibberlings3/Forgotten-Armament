@@ -444,6 +444,9 @@ Assigned to Berenn in the Fire Giant Temple - [Item Description](https://github.
 #### Mantle of Gram the Mouse - Paladin Only
 Assigned to Reynald de Chatillon in the Bridge District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#mantle-of-gram-the-mouse---paladin-only) 
 
+#### Mantle of Kossuth
+Assigned to Mutamin Zone 3500 - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#mantle-of-kossuth) 
+
 ### Gauntlets
 
 #### Elder Oak Gloves - Druid Only
