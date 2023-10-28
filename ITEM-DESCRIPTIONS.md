@@ -2627,6 +2627,19 @@ Equipped abilities:
 Weight: 3
 
 
+#### Greater Mantle of Spell Resistance 
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#greater-mantle-of-spell-resistance)
+
+This embroidered garment is worn over normal clothing or armor. A favored defensive tool of powerful spellcasters, it grants the wearer significant resistance to all spells.
+
+STATISTICS:
+
+Equipped abilities:
+- Magic Resistance: +20%
+
+Weight: 3
+
+
 #### Mantle of Gram the Mouse - Paladin Only 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#mantle-of-gram-the-mouse---paladin-only)
 

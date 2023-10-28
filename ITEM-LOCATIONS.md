@@ -450,6 +450,9 @@ Assigned to Captain Egeissag in Sendai's Enclave - [Item Description](https://gi
 #### Finch's Comforting Cloak
 Assigned to Shyressa in the Twisted Rune - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#finchs-comforting-cloak)  
 
+#### Greater Mantle of Spell Resistance
+Assigned to Necre in the Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#greater-mantle-of-spell-resistance)  
+
 #### Mantle of Gram the Mouse - Paladin Only
 Assigned to Reynald de Chatillon in the Bridge District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#mantle-of-gram-the-mouse---paladin-only) 
 

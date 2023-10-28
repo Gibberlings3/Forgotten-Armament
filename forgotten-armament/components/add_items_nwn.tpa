@@ -1646,6 +1646,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Greater Mantle of Spell Resistance - Assign to Necre           //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCLK11.ITM~ ~override/MOCLK11.ITM~
+        SAY NAME1 @13700
+        SAY NAME2 @13720
+        SAY UNIDENTIFIED_DESC @13701
+        SAY DESC @13721
+        WRITE_ASCII 0x58 cclck03
+        WRITE_LONG 0x34 8000
+
+    COPY_EXISTING ~OBSHAL03.CRE~ ~override~ 
+        REPLACE_CRE_ITEM ~MOCLK11~ #0 #0 #0 ~UNSTEALABLE~ ~CLOAK~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Gauntlets                                                             //
 ///////////////////////////////////////////////////////////////////////////
