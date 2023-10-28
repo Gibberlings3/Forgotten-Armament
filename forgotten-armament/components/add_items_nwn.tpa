@@ -1662,6 +1662,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Cloak of Blackflame - Assign to Hindra Jae'llat                //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCLK12.ITM~ ~override/MOCLK12.ITM~
+        SAY NAME1 @13700
+        SAY NAME2 @13722
+        SAY UNIDENTIFIED_DESC @13701
+        SAY DESC @13723
+        WRITE_ASCII 0x58 cclck05
+        WRITE_LONG 0x34 8000
+
+    COPY_EXISTING ~JAEL01.CRE~ ~override~ 
+        REPLACE_CRE_ITEM ~MOCLK12~ #0 #0 #0 ~UNSTEALABLE~ ~CLOAK~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Gauntlets                                                             //
 ///////////////////////////////////////////////////////////////////////////

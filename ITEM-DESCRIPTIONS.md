@@ -2595,6 +2595,21 @@ Equipped abilities:
 Weight: 80
 
 
+#### Cloak of the Blackflame
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#cloak-of-the-blackflame)
+
+This cloak resembles a tangle of thick, black cobwebs when not worn, but smoothes into a woven black cloak of coarse threads when donned. It protects its wearer from energy-draining attacks.
+
+Such cloaks originated in the halls of Sorcere in the city of Menzoberranzan where they are used by drow necromancers to protect themselves from their own creations. This cloak is an adaptation for use in the surface realm.
+
+STATISTICS:
+
+Equipped abilities:
+- Immunity to level drain
+
+Weight: 3
+
+
 #### Cloak of the Heavens
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#cloak-of-the-heavens)
 

@@ -444,6 +444,9 @@ Assigned to Conster in the Windspear Hills Dungeon - [Item Description](https://
 #### Cloak of Burdened Spirits
 Assigned to Berenn in the Fire Giant Temple - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#cloak-of-burdened-spirits)  
 
+#### Cloak of the Blackflame
+Assigned to Hindra Jae'llat in House Jae'llat - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#cloak-of-the-blackflame) 
+
 #### Cloak of the Heavens
 Assigned to Captain Egeissag in Sendai's Enclave - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#cloak-of-the-heavens) 
 
