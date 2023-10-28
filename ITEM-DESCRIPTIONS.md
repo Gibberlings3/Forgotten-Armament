@@ -2595,6 +2595,22 @@ Equipped abilities:
 Weight: 80
 
 
+#### Cloak of the Heavens
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#cloak-of-the-heavens)
+
+Sacred to the goddess Eldath - the goddess of peace and quiet places - this cloak was passed down from generations of her faithful, designed to keep them safe if they had to travel outside of their quiet communities.
+
+STATISTICS:
+
+Equipped abilities:
+- Maximum Hit Points: +15
+- Saving Throws: +5
+- Immunity to fear
+- Immunity to Critical Hits
+
+Weight: 3
+
+
 #### Finch's Comforting Cloak 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#finchs-comforting-cloak)
 

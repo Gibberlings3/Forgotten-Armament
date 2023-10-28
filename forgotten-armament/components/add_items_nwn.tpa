@@ -1630,6 +1630,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Cloak of the Heavens - Assign to Captain Egeissag              //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCLK10.ITM~ ~override/MOCLK10.ITM~
+        SAY NAME1 @13700
+        SAY NAME2 @13718
+        SAY UNIDENTIFIED_DESC @13701
+        SAY DESC @13719
+        WRITE_ASCII 0x58 cclck01
+        WRITE_LONG 0x34 12000
+
+    COPY_EXISTING ~SENGUA03.CRE~ ~override~ 
+        REPLACE_CRE_ITEM ~MOCLK10~ #0 #0 #0 ~UNSTEALABLE~ ~CLOAK~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Gauntlets                                                             //
 ///////////////////////////////////////////////////////////////////////////
