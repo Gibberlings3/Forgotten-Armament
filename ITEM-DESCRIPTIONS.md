@@ -2595,6 +2595,21 @@ Equipped abilities:
 Weight: 80
 
 
+#### Cloak of the Bat
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#cloak-of-the-bat)
+
+Known only by his nickname, Stiletto the thief became renowned for his amazing skill at burglary. He claimed he could get in and out of the most secure, heavily guarded treasure rooms without ever getting caught. Once, on a dare, he snuck into Zhentil Keep and stole a ring from Fzoul's high chambers. Getting in seemed to be easy, but escaping turned out to be more difficult. When Stiletto found himself surrounded by multiple guards, the secret of his career was revealed. Stiletto turned into a bat and flew out through a window.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +2
+- Infravision up to 120 ft.
+- Hide In Shadows: +10%
+
+Weight: 3
+
+
 #### Cloak of the Blackflame
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#cloak-of-the-blackflame)
 
