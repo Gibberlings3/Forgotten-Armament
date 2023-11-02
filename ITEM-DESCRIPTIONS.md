@@ -2450,6 +2450,20 @@ Equipped abilities:
 Weight: 4
 
 
+#### Boots of Sun Soul
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#boots-of-the-sun-soul)
+
+The original version of these boots were said to be worn by the wise wanderer, Teki Jin, of Kara-Tur. As he traveled and grew in strength, Teki was joined by students who would follow in his path. When a student left to travel their own path, Teki would pass his old boots to his student, to remind them that every path under the sun should be walked in the wisdom of the past. After his death, many copies of his boots would show up in stores, each supposedly handed down from Teki to a student. Even if these copies are nothing more than clever forgeries, they do seem to assist the wearer in avoiding enemy attacks.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +3
+- Dexterity: +3 (Monks only)
+
+Weight: 4
+
+
 #### Dragon Slippers 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#dragon-slippers-replace-boots-of-speed-component-only) 
 

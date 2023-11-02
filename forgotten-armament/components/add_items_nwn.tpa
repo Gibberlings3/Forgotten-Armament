@@ -1524,6 +1524,23 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Boots of the Sun Soul - Assign to Anishai                      //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBT11.ITM~ ~override/MOBT11.ITM~
+        SAY NAME1 @13600
+        SAY NAME2 @13620
+        SAY UNIDENTIFIED_DESC @13601
+        SAY DESC @13621
+        WRITE_ASCII 0x58 cboot02
+        WRITE_LONG 0x34 8000
+    COPY ~forgotten-armament/eff/MOBT11.EFF~ ~override/MOBT11.EFF~
+
+    COPY_EXISTING ~THIEF7.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBT11~ #0 #0 #0 ~UNSTEALABLE~ ~BOOTS~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Cloaks                                                                //
 ///////////////////////////////////////////////////////////////////////////

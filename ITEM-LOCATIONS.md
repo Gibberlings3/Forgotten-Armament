@@ -402,13 +402,16 @@ Replaces Paws of the Cheetah from Lothander and the Bounty Hunter (Planar Sphere
 Replaces Paws of the Cheetah from Tankard Tree store in Saradush - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-hardiness-3)
 
 #### Boots of Striding +1
-Assigned to Anarg in Docks District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-striding-1)
+Assigned to Anarg in Bridge District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-striding-1)
 
 #### Boots of Striding +2
 Assigned to Boz in the Underdark - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-striding-2) 
 
 #### Boots of Striding +3
 Assigned to Yaga-Shura in Siege Camp - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-striding-3)
+
+#### Boots of the Sun Soul
+Assigned to Anishai iin the Docks District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-the-sun-soul)
 
 #### Dragon Slippers (Replace Boots of Speed Component ONLY)
 Replaces Paws of the Cheetah from Illasera the Quick - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#dragon-slippers)
