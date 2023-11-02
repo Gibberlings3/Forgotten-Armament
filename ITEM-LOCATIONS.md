@@ -369,6 +369,9 @@ Assigned to Aawill (Planar Hunter) - [Item Description](https://github.com/Gibbe
 #### Belt of Agility +2
 Assigned to Togan in Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#belt-of-agility-2)
 
+#### Construct Girdle
+Assigned to Anishai in the Docks District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#construct-girdle)
+
 #### Ceremonial Uthgardt Belt
 Assigned to Pai'Na under the Graveyard District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#ceremonial-uthgardt-belt)
 

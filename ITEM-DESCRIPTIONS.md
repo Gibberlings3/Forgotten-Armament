@@ -2261,6 +2261,24 @@ Charge abilities:
 Weight: 2
 
 
+#### Construct Girdle
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#construct-girdle)
+
+Designed to mimic the power and resilience of the most well-crafted golem, this belt grants the wearer tremendous strength and resistance to strikes on even the most critical areas. Unfortunately, this item also has the tendency to duplicate a golem's weaknesses as well, slowing the user down a great deal and making their skin brittle, rock-like, and more vulnerable to certain types of attacks.
+
+STATISTICS:
+
+Equipped abilities:
+- Strength: +6
+- Dexterity: -6
+- Immunity to backstab, hold, and paralysis
+- -50% resistance to crushing damage
+- May only be removed with a Remove Curse spell
+
+
+Weight: 2
+
+
 #### Ceremonial Uthgardt Belt 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#ceremonial-uthgardt-belt)
 

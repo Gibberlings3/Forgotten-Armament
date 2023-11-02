@@ -1470,6 +1470,21 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Construct Girdle - Assign to Anishai                           //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBL10.ITM~ ~override/MOBL10.ITM~
+        SAY NAME1 @13500
+        SAY NAME2 @13523
+        SAY UNIDENTIFIED_DESC @13501
+        SAY DESC @13524
+        WRITE_ASCII 0x58 cbelt09
+        WRITE_LONG 0x34 10000
+
+    COPY_EXISTING ~THIEF7.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBL10~ #0 #0 #0 ~UNSTEALABLE~ ~BELT~ EQUIP
+END
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Boots                                                                 //
 ///////////////////////////////////////////////////////////////////////////
