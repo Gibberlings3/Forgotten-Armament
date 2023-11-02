@@ -1215,6 +1215,35 @@ Weight: 3
 
 ### Short Swords
 
+#### Ichthia's Neck-Knife
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#ichthias-neck---knife)
+
+Spellcasters facilitate research by bartering magic, and though the practice does not usually span across planes, some resources just cannot be had locally. Such is the case for Ichthia, a sorceress currently peddling finely crafted implements of death. Though never seen, the cost of her shadowy aid is well known: she barters in souls, usually with people not aware of their worth. The original owners of a Neck-Knife are often dead on the inside themselves.
+
+STATISTICS:
+
+Combat abilities:
+- Each hit drains 3 Hit Points from the target and transfers them to the wielder. This will not heal beyond the wielder's maximum.
+
+THAC0: +2
+
+Damage: 1d6+2
+
+Damage type: Piercing
+
+Speed Factor: 2
+
+Proficiency Type: Short Sword
+
+Type: One-handed
+
+Requires:
+
+5 Strength
+
+Weight: 3
+
+
 #### Sloth +2 
 (Taken from IWD) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#sloth-2)
 

@@ -190,6 +190,9 @@ Assigned to Pai'Na below Graveyard District - [Item Description](https://github.
 
 ### Short Swords
 
+#### Ichthia's Neck-Knife
+Assigned to Mae'Var in the Docks District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#ichthias-neck---knife)
+
 #### Sloth +2 
 Assigned to Damien in the Underdark - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#sloth-2)
 
