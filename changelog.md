@@ -12,7 +12,7 @@ November xx, 2023
 - Only one charge on the Greenstone Amulet at all stores and the Beholder Lair.
 - Corrected bug on Bone Club where incorrect eff files were applied.
 - Updated Purifier +5 description updates.
-- Fixed bug where Rakshasa Staff +3 had no melee header to attack.
+- Fixed multiple minor item bugs.
 - Added the following items: The Gladiator Blade +1, Scimitar of Pestilence +3, Eveningchain, Swordsman's Belt, Greater Swordsman's Belt, Darksteel Long Sword +1, Lathar's Last Belt, Mage Shield, Nentyarch's Band, Ring of Universal Energy Resistance, Bracers of the Inner Planes, Bracers of Bruising, Mantle of Kossuth, Finch's Comforting Cloak, Cape of the Fire Bath, Cloak of the Heavens, Greater Mantle of Spell Resistance, Cloak of the Blackflame, Cloak of the Bat, Ichthia's Neck-Knife, Boots of the Sun Soul, Construct Girdle, 
 
 ## Version 3.0
