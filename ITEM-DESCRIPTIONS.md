@@ -2254,6 +2254,20 @@ Equipped abilities:
 Weight: 1
 
 
+#### The Amulet of Protected Dalliances
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#the-amulet-of-protected-dalliances)
+
+The half-elf ranger Craylin acquired a dangerous addiction to the companionship of dryads, nymphs, and sylphs. Though lacking in willpower, the ranger was exceedingly bright - he commissioned this protective amulet to increase his chance of survival when pursuing his "hobby."
+
+STATISTICS:
+
+Equipped abilities:
+- Immunity to charm, confusion, and domination
+- Charisma: +1
+
+Weight: 1
+
+
 #### The Ancient Sermon - Cleric Only 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#the-ancient-sermon---cleric-only)
 

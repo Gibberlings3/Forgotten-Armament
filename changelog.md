@@ -1,11 +1,11 @@
 ## Version 4.0
 
-November xx, 2023
+November 8, 2023
 
 ### Changed
 
 - Added new Armor Overhaul component.
-- Added 30+ new items.
+- Added 28 new items.
 - Hindo's Doom +4 now provides immunity to disease and level drain.
 - Gram the Sword of Grief (upgraded) becomes a +6 enchanted weapon instead of +5.
 - Ravager +6 now deals 1d10 slashing damage if a creature is immune to the vorpal strike.
@@ -15,7 +15,6 @@ November xx, 2023
 - Corrected bug on Bone Club where incorrect eff files were applied.
 - Updated Purifier +5 description updates.
 - Fixed multiple minor item bugs.
-- Added the following items: The Gladiator Blade +1, Scimitar of Pestilence +3, Eveningchain, Swordsman's Belt, Greater Swordsman's Belt, Darksteel Long Sword +1, Lathar's Last Belt, Mage Shield, Nentyarch's Band, Ring of Universal Energy Resistance, Bracers of the Inner Planes, Bracers of Bruising, Mantle of Kossuth, Finch's Comforting Cloak, Cape of the Fire Bath, Cloak of the Heavens, Greater Mantle of Spell Resistance, Cloak of the Blackflame, Cloak of the Bat, Ichthia's Neck-Knife, Boots of the Sun Soul, Construct Girdle, Dragon Slippers, Kitten Slippers, Darksteel Chain +1, Salamander Hide Studded Leather Armor, Dragon Disciple's Robe, 
 
 ## Version 3.0
 

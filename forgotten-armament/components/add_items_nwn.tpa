@@ -1358,6 +1358,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// The Amulet of Protected Dalliances - Assign to Dalok in Druid Grove   //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOAM07.ITM~ ~override/MOAM07.ITM~
+        SAY NAME1 @13400
+        SAY NAME2 @13416
+        SAY UNIDENTIFIED_DESC @13401
+        SAY DESC @13417
+        WRITE_ASCII 0x58 camul17
+        WRITE_LONG 0x34 6000
+
+    COPY_EXISTING ~CEDRUID2.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOAM07~ #0 #0 #0 ~UNSTEALABLE~ ~AMULET~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Belts                                                                 //
 ///////////////////////////////////////////////////////////////////////////

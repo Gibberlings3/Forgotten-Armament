@@ -364,6 +364,9 @@ Assigned to Diaytha in Sendai's Enclave - [Item Description](https://github.com/
 #### Periapt of Wisdom +2
 Assigned to Stalman in the Guarded Compound (Temple District) - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#periapt-of-wisdom-2)
 
+#### The Amulet of Protected Dalliances
+Assigned to Dalok in Druid Grove - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#the-amulet-of-protected-dalliances)
+
 #### The Ancient Sermon - Cleric Only
 Assigned to Ameralis Zauviir in Watcher's Keep - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#the-ancient-sermon---cleric-only)
 
