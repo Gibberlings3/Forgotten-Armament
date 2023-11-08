@@ -39,6 +39,9 @@ END
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
     COPY_EXISTING ~PBHUNT05.CRE~ ~override~ // Replace from Bounty Hunter in Planar Prison
         REPLACE_CRE_ITEM ~MOBT04~ #0 #0 #0 ~UNSTEALABLE~ ~BOOTS~ EQUIP
+
+    COPY_EXISTING ~RENAL.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBT04~ #0 #0 #0 ~UNSTEALABLE~ ~BOOTS~ EQUIP
 END
 
 ///////////////////////////////////////////////////////////////////////////
@@ -58,8 +61,12 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 
     COPY_EXISTING ~SARBAR01.STO~ ~override~
         ADD_STORE_ITEM ~MOBT06~ #0 #0 #0 ~IDENTIFIED~ #1
+
+    COPY_EXISTING ~ILLASERA.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBT06~ #0 #0 #0 ~UNSTEALABLE~ ~BOOTS~ EQUIP
 END
 
+/*
 ///////////////////////////////////////////////////////////////////////////
 // Kitten Slippers Replaced from Renal Bloodscalp                        //
 ///////////////////////////////////////////////////////////////////////////
@@ -91,3 +98,4 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
     COPY_EXISTING ~ILLASERA.CRE~ ~override~
         REPLACE_CRE_ITEM ~MOBT08~ #0 #0 #0 ~UNSTEALABLE~ ~BOOTS~ EQUIP // Edit Name
 END
+*/

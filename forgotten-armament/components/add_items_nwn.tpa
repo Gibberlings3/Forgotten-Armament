@@ -1556,6 +1556,38 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Kitten Slippers - Assign to Captain Haegan                     //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBT07.ITM~ ~override/MOBT07.ITM~
+        SAY NAME1 @13600
+        SAY NAME2 @13616
+        SAY UNIDENTIFIED_DESC @13601
+        SAY DESC @13617
+        WRITE_ASCII 0x58 cboot02
+        WRITE_LONG 0x34 6000
+
+    COPY_EXISTING ~HAEGAN.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBT07~ #0 #0 #0 ~UNSTEALABLE~ ~BOOTS~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
+// Create Dragon Slippers - Assign to Conster                            //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOBT08.ITM~ ~override/MOBT08.ITM~ 
+        SAY NAME1 @13600
+        SAY NAME2 @13618
+        SAY UNIDENTIFIED_DESC @13601
+        SAY DESC @13619
+        WRITE_ASCII 0x58 cboot02
+        WRITE_LONG 0x34 10000
+
+    COPY_EXISTING ~FIRMAG01.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOBT08~ #0 #0 #0 ~UNSTEALABLE~ ~BOOTS~ EQUIP 
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Cloaks                                                                //
 ///////////////////////////////////////////////////////////////////////////

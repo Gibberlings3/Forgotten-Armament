@@ -399,10 +399,10 @@ Assigned to Ziatar (SoD) and Galvarey (Jaheira's Harper Quest) - [Item Descripti
 Replaces Paws of the Cheetah from Drasus and the Token Machine in the Spellhold Maze - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-hardiness-1)
 
 #### Boots of Hardiness +2 (Replace Boots of Speed Component ONLY)
-Replaces Paws of the Cheetah from Lothander and the Bounty Hunter (Planar Sphere) - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-hardiness-2)
+Replaces Paws of the Cheetah from Lothander, the Bounty Hunter (Planar Sphere) and Renal Bloodscalp - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-hardiness-2)
 
 #### Boots of Hardiness +3 (Replace Boots of Speed Component ONLY)
-Replaces Paws of the Cheetah from Tankard Tree store in Saradush - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-hardiness-3)
+Replaces Paws of the Cheetah from Tankard Tree store in Saradush and from Illasera the Quick - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-hardiness-3)
 
 #### Boots of Striding +1
 Assigned to Anarg in Bridge District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-striding-1)
@@ -416,11 +416,11 @@ Assigned to Yaga-Shura in Siege Camp - [Item Description](https://github.com/Gib
 #### Boots of the Sun Soul
 Assigned to Anishai iin the Docks District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#boots-of-the-sun-soul)
 
-#### Dragon Slippers (Replace Boots of Speed Component ONLY)
-Replaces Paws of the Cheetah from Illasera the Quick - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#dragon-slippers)
+#### Dragon Slippers
+Assigned to Conster in Windspear Hills - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#dragon-slippers)
 
-#### Kitten Slippers (Replace Boots of Speed Component ONLY)
-Replaces Paws of the Cheetah from Renal Bloodscalp - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#kitten-slippers)
+#### Kitten Slippers
+Assigned to Captain Haegan in Slums District - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#kitten-slippers)
 
 ### Bracers
 
