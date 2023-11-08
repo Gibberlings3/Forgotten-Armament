@@ -39,6 +39,10 @@ This component replaces Boots of Speed (Paws of the Cheetah) with other boot opt
 
 This component adds a couple of Breach scrolls to Sorcerous Sundries.
 
+### Add Ruby Ray Scrolls to Trademeet Store
+
+This component adds a couple Ruby Ray scrolls to one of the merchants at Trademeet.
+
 ### NWN2 Style Weapons
 
 This component updates all weapons to match weapons in NWN2 to include damage, damage type, and critical threat range/damage. This includes all weapons added by mods. A detailed description of the new base weapon stats is [here](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/NWN2_STYLE_WEAPONS.md).
