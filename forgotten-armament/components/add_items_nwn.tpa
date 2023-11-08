@@ -948,6 +948,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Darksteel Chain +1 - Assign to Duergar in Chateau Irenicus     //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOCM04.ITM~ ~override/MOCM03.ITM~
+        SAY NAME1 @12600
+        SAY NAME2 @12610
+        SAY UNIDENTIFIED_DESC @12601
+        SAY DESC @12611
+        WRITE_ASCII 0x58 cchan08
+        WRITE_LONG 0x34 6000
+
+    COPY_EXISTING ~DUERGAR1.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOCM04~ #0 #0 #0 ~UNSTEALABLE~ ~ARMOR~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Plate Mail Armors                                                     //
 ///////////////////////////////////////////////////////////////////////////

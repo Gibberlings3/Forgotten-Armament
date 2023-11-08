@@ -2189,6 +2189,23 @@ Requires:
 Weight: 8~
 
 ///////////////////////////////////////////////////////////////////////////
+// Darksteel Chain +1 (NWN2)                                             //
+///////////////////////////////////////////////////////////////////////////
+@12610 = ~Darksteel Chain +1~
+@12611 = ~Darksteel is silvery in hue when polished or cut, but its exposed surfaces have a deep, gleaming purple luster. This alloy of meteoric iron and steel is tempered with rare, magical oils to give the metal its uncanny abilities.
+
+STATISTICS:
+
+Equipped abilities:
+– Acid Resistance: +10%
+
+Armor Class: 4 (2 vs. slashing, 6 vs. crushing)
+Requires:
+ 8 Strength
+
+Weight: 10~
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Splint Mail Armors                                                    //
 ///////////////////////////////////////////////////////////////////////////

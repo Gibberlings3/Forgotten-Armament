@@ -1793,6 +1793,25 @@ Requires:
 Weight: 45
 
 
+#### Darksteel Chain +1
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#darksteel-chain-1)
+
+Darksteel is silvery in hue when polished or cut, but its exposed surfaces have a deep, gleaming purple luster. This alloy of meteoric iron and steel is tempered with rare, magical oils to give the metal its uncanny abilities.
+
+STATISTICS:
+
+Equipped abilities:
+- Acid Resistance: +10%
+
+Armor Class: 4 (2 vs. slashing, 6 vs. crushing)
+
+Requires:
+
+8 Strength
+
+Weight: 10
+
+
 #### Doron's Mistake 
 (Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#dorons-mistake)
 

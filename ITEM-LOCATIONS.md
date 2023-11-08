@@ -277,6 +277,9 @@ Assigned to Tam in Candlekeep Underground and Rengarrd in the Temple Sewers - [I
 #### Baleful Mail
 Assign to Entu in the Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#baleful-mail) 
 
+#### Darksteel Chain +1
+Assigned to Duergar in Chateau Irenicus - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#darksteel-chain-1) 
+
 #### Doron's Mistake
 Assigned to Mogadish in Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#dorons-mistake) 
 
