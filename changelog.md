@@ -4,6 +4,8 @@ November xx, 2023
 
 ### Changed
 
+- Added new Armor Overhaul component.
+- Added 30+ new items.
 - Hindo's Doom +4 now provides immunity to disease and level drain.
 - Gram the Sword of Grief (upgraded) becomes a +6 enchanted weapon instead of +5.
 - Ravager +6 now deals 1d10 slashing damage if a creature is immune to the vorpal strike.
