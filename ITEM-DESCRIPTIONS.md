@@ -1752,6 +1752,26 @@ Requires:
 Weight: 6
 
 
+#### Salamander Hide Studded Leather Armor
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#salamander-hide-studded-leather)
+
+This hide, from a lizard-like creature native to the Elemental Plane of Fire, is supple and easier to work than dragon hide. Armor crafted from salamander hide offers the wearer some protection from fire and physical damage.
+
+STATISTICS:
+
+Equipped abilities:
+- Fire Resistance: +10%
+- +5% resistance to slashing, piercing, and crushing damage
+
+Armor Class: 6 (4 vs. slashing, 5 vs. piercing and missile)
+
+Requires:
+
+6 Strength
+
+Weight: 6
+
+
 ### Chain Mail Armors
 
 #### Anti-Venom Chainmail 

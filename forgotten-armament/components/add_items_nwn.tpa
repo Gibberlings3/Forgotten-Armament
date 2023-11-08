@@ -889,6 +889,22 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Salamander Hide Studded Leather Armor - Assign to Bandit       //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MOLEA04.ITM~ ~override/MOLEA04.ITM~
+        SAY NAME1 @12400
+        SAY NAME2 @12404
+        SAY UNIDENTIFIED_DESC @12401
+        SAY DESC @12405
+        WRITE_ASCII 0x58 cleat18
+        WRITE_LONG 0x34 6000
+
+    COPY_EXISTING ~FIRBAN02.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MOLEA04~ #0 #0 #0 ~UNSTEALABLE~ ~ARMOR~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Chain Mail Armors                                                     //
 ///////////////////////////////////////////////////////////////////////////
@@ -951,7 +967,7 @@ END
 // Create Darksteel Chain +1 - Assign to Duergar in Chateau Irenicus     //
 ///////////////////////////////////////////////////////////////////////////
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
-    COPY ~forgotten-armament/itm/MOCM04.ITM~ ~override/MOCM03.ITM~
+    COPY ~forgotten-armament/itm/MOCM04.ITM~ ~override/MOCM04.ITM~
         SAY NAME1 @12600
         SAY NAME2 @12610
         SAY UNIDENTIFIED_DESC @12601

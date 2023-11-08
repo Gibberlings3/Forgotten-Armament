@@ -269,6 +269,9 @@ Assigned to Dalok in Druid Grove - [Item Description](https://github.com/Gibberl
 #### Black Flame Armor
 Assigned to Togan in Planar Sphere - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#black-flame-armor)
 
+#### Salamander Hide Studded Leather Armor
+Assigned to Bandit in the Windspear Hills - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#salamander-hide-studded-leather-armor)
+
 ### Chain Mail Armors
 
 #### Anti-Venom Chainmail
