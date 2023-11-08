@@ -69,6 +69,44 @@ This component adds item set bonuses to many of the items throughout the series.
 
 PLEASE NOTE: AI scripts need to be enabled for this component to work.
 
+### Armor Overhaul
+
+This component is yet another armor overhaul component for players to choose. I understand there are a myriad of other options; however, I do things a little bit differently that may be enticing to some players. The biggest difference between my armor overhaul compared to others that exist is I am setting the armor user's Dex so it cannot go beyond the max Dex the armor allows, akin to 3.5e. Other mods will either reduce Dex by x amount or y percent while mine prohibits going over the max via repeating effects. This means the player can't equip Plate Mail which drops a character's max Dex to 14 then equip gloves of Dexterity to boost Dex to 18. It will still be limited and no amount of Dex increasing items, abilities, or spells will raise it beyond the max. Below will be the new values I am looking at: 
+
+Full Plate Mail
+- Max Dex: 15
+- Physical Damage Resistance: +30% 
+
+Plate Mail
+- Max Dex: 14
+- Physical Damage Resistance: +20% 
+
+Scale
+- Max Dex: 17
+- Physical Damage Resistance: +15% 
+
+Splint
+- Max Dex: 15
+- Physical Damage Resistance: +15% 
+
+Chain
+- Max Dex: 16
+- Physical Damage Resistance: +10% 
+
+Hide
+- Max Dex: 18
+- Physical Damage Resistance: +5% 
+  
+Studded Leather
+- Max Dex: 20
+- Physical Damage Resistance: +5% 
+
+Leather
+- Max Dex: 22
+- Physical Damage Resistance: +5% 
+
+PLEASE NOTE: Mithral and Elven chain armors allow an increase to max Dex by +1. 
+
 ## Compatibility
 
 If you are upgrading from an earlier version of this mod, I recommend uninstalling all mod components and replacing all files with the new ones before doing a fresh install.
