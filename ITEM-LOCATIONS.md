@@ -244,6 +244,9 @@ Assigned to Blind Priest in the Temple District - [Item Description](https://git
 
 ### Robes
 
+#### Dragon Disciple's Robe
+Assigned to Conster in the Windspear Hills - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#dragon-disciple-robe)
+
 #### Robe of Enfusing
 Assigned to Layene in the Twisted Rune - [Item Description](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-DESCRIPTIONS.md#robe-of-enfusing)
 

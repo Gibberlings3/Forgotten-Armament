@@ -1632,6 +1632,21 @@ Weight: 4
 
 ### Robes
 
+#### Dragon Disciple's Robe
+(Taken from NWN2) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#dragon-disciples-robe)
+
+These robes were specifically crafted for a dragon disciple who's name has been lost to time. Other casters may wear and use the robes; however, their true potential becomes unlocked when worn by a dragon disciple.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +2 
+- Can memorize one extra 3rd-level spell
+- Decrease spellcasting time by 1 (Dragon Disciple's only)
+
+Weight: 3
+
+
 #### Robe of Enfusing 
 (Taken from IWD) - [Item Location](https://github.com/Gibberlings3/Forgotten-Armament/blob/main/ITEM-LOCATIONS.md#robe-of-enfusing)
 

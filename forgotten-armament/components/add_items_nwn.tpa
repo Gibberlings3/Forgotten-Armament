@@ -829,6 +829,23 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END
 
 ///////////////////////////////////////////////////////////////////////////
+// Create Dragon Disciple's Robe - Assign to Conster                     //
+///////////////////////////////////////////////////////////////////////////
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+    COPY ~forgotten-armament/itm/MORB04.ITM~ ~override/MORB04.ITM~
+        SAY NAME1 @12200
+        SAY NAME2 @12210
+        SAY UNIDENTIFIED_DESC @12201
+        SAY DESC @12211
+        WRITE_ASCII 0x58 cclck09
+        WRITE_LONG 0x34 8000
+    COPY ~forgotten-armament/eff/MORB04.EFF~ ~override/MORB04.EFF~
+
+    COPY_EXISTING ~FIRMAG01.CRE~ ~override~
+        REPLACE_CRE_ITEM ~MORB04~ #0 #0 #0 ~UNSTEALABLE~ ~ARMOR~ EQUIP
+END
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Leather Armors                                                        //
 ///////////////////////////////////////////////////////////////////////////

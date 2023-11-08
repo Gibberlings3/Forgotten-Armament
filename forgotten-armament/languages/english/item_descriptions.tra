@@ -1978,6 +1978,21 @@ Equipped abilities:
 Weight: 3~
 
 ///////////////////////////////////////////////////////////////////////////
+// Dragon Disciple's Robe (NWN2)                                         //
+///////////////////////////////////////////////////////////////////////////
+@12210 = ~Dragon Disciple's Robe~
+@12211 = ~These robes were specifically crafted for a dragon disciple who's name has been lost to time. Other casters may wear and use the robes; however, their true potential becomes unlocked when worn by a dragon disciple.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2 
+– Can memorize one extra 3rd-level spell
+– Decrease spellcasting time by 1 (Dragon Disciple's only)
+
+Weight: 3~
+
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // Leather Armors                                                        //
 ///////////////////////////////////////////////////////////////////////////
