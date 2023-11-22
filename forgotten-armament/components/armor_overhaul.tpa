@@ -36,6 +36,18 @@ ACTION_IF !FILE_EXISTS_IN_GAME ~moyag01.itm~ AND imp_yaga BEGIN
     END
 END 
 
+// Update Corthala Family Armor Minimum Dexterity to 16
+ACTION_IF FILE_EXISTS_IN_GAME ~NPCHAN.ITM~ BEGIN
+  COPY_EXISTING ~NPCHAN.ITM~ ~override~
+    WRITE_LONG 0x2c 16
+END
+
+// Update Corthala Family Blade Minimum Dexterity to 16
+ACTION_IF FILE_EXISTS_IN_GAME ~NPSW04.ITM~ BEGIN
+  COPY_EXISTING ~NPSW04.ITM~ ~override~
+    WRITE_LONG 0x2c 16
+END
+
 ///////////////////////////////////////////////////////////////////////////
 // Set Text Updates                                                      //
 ///////////////////////////////////////////////////////////////////////////
