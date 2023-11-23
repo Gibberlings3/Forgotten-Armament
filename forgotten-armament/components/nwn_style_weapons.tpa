@@ -980,7 +980,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   // FLAIL/MORNINGSTAR --------------------------------------------------------//
   END ELSE PATCH_IF (prof = 100) AND nwn_flailmorn BEGIN
     // Update damage to 1d8 Piercing or Crushing
-    LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 damage_bonus = ench damage_type=6 END
+    PATCH_IF !("%item_name%" STRING_EQUAL_CASE "mobha23a.ITM") BEGIN
+      LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 damage_bonus = ench damage_type=6 END
+    END
 
     // Check if existing keen property
     FOR (index = 0 ; index < fx_num ; ++index) BEGIN
