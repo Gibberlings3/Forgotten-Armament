@@ -217,7 +217,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
   // LONGSWORD and KATANA (changing to 19-20/x2 Slashing) ---------------------//
   END ELSE PATCH_IF ((prof = 90) AND nwn_lngswrd) OR ((prof = 94) AND nwn_katana) BEGIN
     // Update to 1d8 damage for longsword
-    PATCH_IF (prof = 90) AND !("%item_name%" STRING_EQUAL_CASE "CA#MOVSW.ITM") AND !("%item_name%" STRING_EQUAL_CASE "BLAKBLAD.ITM") AND !("%item_name%" STRING_EQUAL_CASE "MOBHA28A.ITM") BEGIN
+    PATCH_IF (prof = 90) AND !("%item_name%" STRING_EQUAL_CASE "CA#MOVSW.ITM") AND !("%item_name%" STRING_EQUAL_CASE "BLAKBLAD.ITM") AND !("%item_name%" STRING_EQUAL_CASE "MOBHA28A.ITM") AND !("%item_name%" STRING_EQUAL_CASE "FINSOL02.ITM") BEGIN
       LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 END
     END
 

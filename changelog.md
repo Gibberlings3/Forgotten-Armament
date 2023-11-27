@@ -5,7 +5,7 @@ December xx, 2023
 ### Changed
 
 - Updated min dex requirements for Corthala Family Armor and Blade with Armor Overhaul Component.
-- Added exception for Black Blade of Disaster for NWN Style Weapons.
+- Added exception for Black Blade of Disaster and Fallen Solar longsword for NWN Style Weapons.
 
 ## Version 4.0
 
