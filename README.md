@@ -115,14 +115,15 @@ PLEASE NOTE: Mithral and Elven chain armors allow an increase to max Dex by +1.
 
 If you are upgrading from an earlier version of this mod, I recommend uninstalling all mod components and replacing all files with the new ones before doing a fresh install.
 
-NWN2 Style Weapons and Update Items Setting an Ability Score to Increment the Increase components should be installed AFTER any mods that add new weapons or items to the game.
+NWN2 Style Weapons, Update Items Setting an Ability Score to Increment the Increase, and my Armor Overhaul components should be installed AFTER any mods that add new weapons or items to the game.
 
-Do not install the NWN2 Style Weapons component with other mods that alter weapons like Scales of Balance.  
+Do not install the NWN2 Style Weapons component with other mods that alter weapons like Scales of Balance.
+
+Do not install the Armor Overhaul component with other mods that perform an armor overhaul like Item Revisions and YARAS.
 
 ## Special Thanks
 
 - Auve for support in the creation, inspiration, testing, and feedback for this mod.
-- JohnBob for translating into French.
 - Bubb and CamDawg_G3 for their usual expertise, guidance, and assistance with coding.
 - Suy for providing code to toggle critical hit immunity.
 - Ardanis for ADD_SPELL_HEADER code in the macros.tpa.
