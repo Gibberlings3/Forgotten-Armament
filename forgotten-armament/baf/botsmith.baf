@@ -6,6 +6,7 @@ THEN
     SetGlobal("MO#TOBItemUp","GLOBAL",0)
     SetGlobal("ImpForgeStuff","GLOBAL",0)
     GiveItemCreate("moblk01",Player1,0,0,0)
+    SetGlobal("ItemMaker","GLOBAL",1)
     StartDialogueNoSet(Player1)
 END
 
@@ -17,5 +18,6 @@ THEN
     SetGlobal("MO#TOBItemUp","GLOBAL",0)
     SetGlobal("ImpForgeStuff","GLOBAL",0)
     GiveItemCreate("mo2h15",Player1,0,0,0)
+    SetGlobal("ItemMaker","GLOBAL",1)
     StartDialogueNoSet(Player1)
 END
