@@ -184,7 +184,7 @@ END
 ///////////////////////////////////////////////////////////////////////////
 // Create Will of Atar +1 - Assign to Adventurer Mart                    //
 ///////////////////////////////////////////////////////////////////////////
-ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
     COPY ~forgotten-armament/itm/MOHAL02.ITM~ ~override/MOHAL02.ITM~
         SAY NAME1 @10500
         SAY NAME2 @10504
@@ -193,8 +193,10 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
         WRITE_ASCII 0x58 chalb06
         WRITE_LONG 0x34 3000
 
-    COPY_EXISTING ~RIBALD.STO~ ~override~
+    ACTION_IF FILE_EXISTS_IN_GAME ~RIBALD.STO~ THEN BEGIN
+        COPY_EXISTING ~RIBALD.STO~ ~override~
             ADD_STORE_ITEM ~MOHAL02~ #0 #0 #0 ~IDENTIFIED~ #1
+    END
 END
 
 ///////////////////////////////////////////////////////////////////////////
